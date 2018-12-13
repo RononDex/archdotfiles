@@ -1,0 +1,5 @@
+[Added Associations]
+inode/directory=org.kde.dolphin.desktop;
+
+[Default Applications]
+inode/directory=org.kde.dolphin.desktop;

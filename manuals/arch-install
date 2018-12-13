@@ -1,0 +1,46 @@
+1. Set keyboard layouts in
+/etc/X11/xorg.conf.d/20-keyboard.conf
+
+Section "InputClass"
+    Identifier "keyboard"
+    MatchIsKeyboard "yes"
+    Option "XkbLayout" "ch"
+    Option "XkbVariant" "de"
+EndSection
+
+
+~/.xinitrc:
+setxkbmap ch -variant de
+
+2. zsh
+install zsh
+install zsh-completions
+chsh -s full-path-to-shell
+install oh-my-zsh
+
+3. Network manager
+pacman -S networkmanager
+systemctl enable NetworkManager
+pacman -S gnome-keyring (for wifi wpa keyring)
+
+4. Window manager
+i3-gaps
+polybar
+lxterminal
+xsession
+light-git (AUR)
+flameshot (AUR)
+compton
+arc-gtk theme (AUR)
+lxappearance
+...
+
+5. Display manager
+lightdm
+webkit greeter
+litarvan (theme)
+
+5. lock screen
+light-locker
+
+
