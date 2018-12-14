@@ -168,7 +168,7 @@ bindsym $mod+r mode "resize"
 ###############################################
 
 # Lockscreen
-bindsym $mod+l exec i3lock
+bindsym $mod+l exec light-locker-command -l
 
 # Screenshot controls
 bindsym $mod+shift+p exec flameshot full -c
@@ -197,7 +197,7 @@ client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 client.background       #ffffff
 
 # Execs
-exec xrandr --dpi 266                                                   # only for high dpi (change dpi to match your screen)
+exec --no-startup-id light-locker &
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec_always --no-startup-id feh --bg-fill ~/wallpapers/373692.jpg
 exec_always --no-startup-id compton
