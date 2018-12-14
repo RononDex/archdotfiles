@@ -43,6 +43,13 @@ lxappearance
 nerd-fonts-complete (AUR)
 ...
 
+5. Sound
+install pulseaudio
+install alsa
+install pulseaudio-alsa
+install pulseaudio-jack
+install pulseaudio-bluetooth
+
 5. Display manager
 lightdm
 webkit greeter
