@@ -32,6 +32,7 @@ cp -R ~/github/archdotfiles ~/
 
 4. Window manager
 i3-gaps
+adobe-source-code-pro-fonts
 polybar
 lxterminal
 xsession
@@ -49,6 +50,7 @@ install alsa
 install pulseaudio-alsa
 install pulseaudio-jack
 install pulseaudio-bluetooth
+install pavucontrol (audio control gdk)
 
 5. Display manager
 lightdm
@@ -58,4 +60,14 @@ litarvan (theme)
 5. lock screen
 light-locker
 
+6. bluetooth
+install bluez
+install bluez-utils
+systemctl enable bluetooth
+systemctl start bluetooth
+install blueman (GDK bluetooth interface)
 
+
+7. Steam
+Install Steam
+Install Steam-fonts (AUR)
