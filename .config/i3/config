@@ -199,5 +199,5 @@ client.background       #ffffff
 # Execs
 exec --no-startup-id light-locker &
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-exec_always --no-startup-id feh --bg-fill ~/wallpapers/373692.jpg
+exec_always --no-startup-id feh --bg-fill ~/wallpapers/PillarsOfCreations.jpg
 exec_always --no-startup-id compton

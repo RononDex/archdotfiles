@@ -11,14 +11,16 @@ foreground = #ccffffff
 line-color = ${bar/bottom.background}
 line-size = 16
 
-spacing = 2
-padding-right = 5
-module-margin = 4
+spacing = 1
+padding-right = 3
+module-margin = 2
 
-font-0 = FontAwesome:size=6;-1
-font-1 = MaterialIcons:size=8;0
-font-2 = Termsynu:size=8:antialias=false;-2
-font-3 = FontAwesome:size=8;0
+separator = |
+
+font-0 = SourceCodePro:size=7;-1
+font-1 = MaterialIcons:size=6;0
+font-2 = Termsynu:size=8:antialias=false;0
+font-3 = FontAwesome:size=7;0
 
 modules-left = powermenu mpd
 modules-right = pulseaudio backlight wireless-network wired-network battery1 battery2 date
@@ -54,11 +56,13 @@ modules-right = cpu memory
 
 [module/backlight]
 type = custom/script
-exec = light -G
+exec = ~/.config/polybar/backlight.sh
 scroll-up = light -A 5
 scroll-down = light -U 5
 interval = 0.05
-format = "LUM:   <label>%"
+label = %output%
+format = " <label>"
+
 
 [module/battery1]
 type = internal/battery
@@ -67,9 +71,9 @@ full-at = 98
 adapter=ADP1
 battery=BAT1
 
-format-charging = BAT1: <animation-charging> <label-charging>
-format-discharging = BAT1: <ramp-capacity> <label-discharging>
-format-full = BAT1: <ramp-capacity> <label-full>
+format-charging =  <animation-charging> <label-charging>
+format-discharging = <ramp-capacity> <label-discharging>
+format-full = <ramp-capacity> <label-full>
 
 ramp-capacity-0 = 
 ramp-capacity-0-foreground = #f53c3c
@@ -79,13 +83,12 @@ ramp-capacity-2 = 
 ramp-capacity-3 = 
 ramp-capacity-4 = 
 
-bar-capacity-width = 10
 bar-capacity-format = %{+u}%{+o}%fill%%empty%%{-u}%{-o}
 bar-capacity-fill = █
 bar-capacity-fill-foreground = #ddffffff
-bar-capacity-fill-font = 3
+bar-capacity-fill-font = 2
 bar-capacity-empty = █
-bar-capacity-empty-font = 3
+bar-capacity-empty-font = 2
 bar-capacity-empty-foreground = #44ffffff
 
 animation-charging-0 = 
@@ -103,12 +106,6 @@ inherit=module/battery1
 adapter=ADP1
 battery=BAT2
 
-format-charging = BAT2: <animation-charging> <label-charging>
-format-discharging = BAT2: <ramp-capacity> <label-discharging>
-format-full = BAT2: <ramp-capacity> <label-full>
-
-
-
 [module/cpu]
 type = internal/cpu
 interval = 0.5
@@ -116,28 +113,28 @@ format = <label> <ramp-coreload>
 label = CPU
 
 ramp-coreload-0 = ▁
-ramp-coreload-0-font = 2
+ramp-coreload-0-font = 5
 ramp-coreload-0-foreground = #aaff77
 ramp-coreload-1 = ▂
-ramp-coreload-1-font = 2
+ramp-coreload-1-font = 5
 ramp-coreload-1-foreground = #aaff77
 ramp-coreload-2 = ▃
-ramp-coreload-2-font = 2
+ramp-coreload-2-font = 5
 ramp-coreload-2-foreground = #aaff77
 ramp-coreload-3 = ▄
-ramp-coreload-3-font = 2
+ramp-coreload-3-font = 5
 ramp-coreload-3-foreground = #aaff77
 ramp-coreload-4 = ▅
-ramp-coreload-4-font = 2
+ramp-coreload-4-font = 5
 ramp-coreload-4-foreground = #fba922
 ramp-coreload-5 = ▆
-ramp-coreload-5-font = 2
+ramp-coreload-5-font = 5
 ramp-coreload-5-foreground = #fba922
 ramp-coreload-6 = ▇
-ramp-coreload-6-font = 2
+ramp-coreload-6-font = 5
 ramp-coreload-6-foreground = #ff5555
 ramp-coreload-7 = █
-ramp-coreload-7-font = 2
+ramp-coreload-7-font = 5
 ramp-coreload-7-foreground = #ff5555
 
 [module/date]
@@ -229,7 +226,7 @@ type = internal/pulseaudio
 ; If not, uses default sink
 sink = 
 
-Use PA_VOLUME_UI_MAX (~153%) if true, or PA_VOLUME_NORM (100%) if false
+;Use PA_VOLUME_UI_MAX (~153%) if true, or PA_VOLUME_NORM (100%) if false
 ; Default: true
 use-ui-max = true
 
@@ -237,13 +234,14 @@ use-ui-max = true
 ; Default: 5
 interval = 5
 
-Available tokens:
+;Available tokens:
 ;   %percentage% (default)
-label-volume = VOL:   %percentage%%
+label-volume = %percentage%%
 
 ; Available tokens:
 ;   %percentage% (default)
 label-muted = 🔇 muted
+label-muted-font = 1
 label-muted-foreground = #66
 
 ; Only applies if <ramp-volume> is used
