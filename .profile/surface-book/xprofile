@@ -1,0 +1,29 @@
+#!/bin/sh
+
+# --------------------------------------------
+# Actions / exports when X11 is initialized
+# --------------------------------------------
+#
+# --------------------------------------------
+# Surface book HiDPI and input settings
+# --------------------------------------------
+
+export GDK_SCALE=2                                      # Set GDK_SCALE to 2 to enable HiDPI support in GDK applications
+export display=:0                                       # Set default display
+export MSBuildSDKsPath=/opt/dotnet/sdk/2.2.100/Sdks/    # Path to MSBuild (whatch version). Used to compile dotnet applications
+
+setxkbmap ch -variant de                                # Set keyboard mapping to ch-de
+
+
+# --------------------------------------------
+# Input methods
+# --------------------------------------------
+
+# Set TouchPad natural scroll
+idd=$(xinput --list | grep 'Microsoft Surface Keyboard Touchpad' | awk '{print $7}'| cut -d'=' -f2)
+xinput --set-prop $idd "libinput Natural Scrolling Enabled" 1
+
+
+# Set tap to click
+idd=$(xinput --list | grep 'Microsoft Surface Keyboard Touchpad' | awk '{print $7}'| cut -d'=' -f2)
+xinput --set-prop $idd "libinput Tapping Enabled" 1
