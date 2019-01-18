@@ -97,3 +97,10 @@ export PS1="[%* - %D] %d: "
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 source /usr/share/nvm/init-nvm.sh
+
+# Load and execute custom profiles
+if [ -d ~/.profile ] ; then
+    if [ -f ~/.profile/bashprofile ] ; then
+        source ~/.profile/bashprofile
+    fi
+fi
