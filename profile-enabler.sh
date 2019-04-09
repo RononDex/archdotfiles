@@ -41,4 +41,4 @@ if ! [[ $selectedProfile =~ $re ]] ; then
    echo "error: Not a number$NC" >&2; exit -1;
 fi
 
-echo
+echo ${profiles[$selectedProfile-1]}
