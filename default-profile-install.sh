@@ -1,1 +1,6 @@
-git clone https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
+
+if [ ! -d ~/.oh-my-zsh/themes/powerlevel10k ]
+then
+    echo "Cloning powerlevel10k"
+    git clone https://github.com/romkatv/powerlevel10k.git ~/.oh-my-zsh/themes/powerlevel10k
+fi
