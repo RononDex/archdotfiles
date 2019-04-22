@@ -10,6 +10,20 @@
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME=powerlevel10k/powerlevel10k
 
+# PowerLevel10k theme settings
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir vcs)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(root_indicator time os_icon)
+POWERLEVEL9K_PROMPT_ON_NEWLINE=true
+POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX=""
+POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="> "
+POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
+POWERLEVEL9K_CONTEXT_DEFAULT_BACKGROUND='darkgrey'
+POWERLEVEL9K_CONTEXT_DEFAULT_FOREGROUND='white'
+POWERLEVEL9K_VCS_CLEAN_BACKGROUND='springgreen3'
+POWERLEVEL9K_DIR_DEFAULT_BACKGROUND='dodgerblue3'
+POWERLEVEL9K_DIR_HOME_BACKGROUND='dodgerblue3'
+POWERLEVEL9K_DIR_HOME_SUBFOLDER_BACKGROUND='dodgerblue3'
+
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in ~/.oh-my-zsh/themes/
