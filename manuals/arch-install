@@ -23,6 +23,7 @@ sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install
 pacman -S networkmanager
 systemctl enable NetworkManager
 pacman -S gnome-keyring (for wifi wpa keyring)
+pacman -S network-manager-applet
 
 4. dotfiles
 mkdir github

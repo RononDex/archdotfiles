@@ -47,7 +47,7 @@ fi
 echo
 echo "Copying default files...."
 
-cp -r defaults ~/
+cp -r defaults/ ~/
 
 # Copy profile files
 echo
