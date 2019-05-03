@@ -61,7 +61,7 @@ bash ./default-profile-install.sh
 
 # Run profile specific profile installer if it exists
 echo
-ProfileInstallScriptPath=${profiles[$selectedProfile -1]}profile-enabler.sh
+ProfileInstallScriptPath=${profiles[$selectedProfile -1]}/profile-enabler.sh
 if [ -f "$ProfileInstallScriptPath" ]; then
    bash $ProfileInstallScriptPath
 fi
