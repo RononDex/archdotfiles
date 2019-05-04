@@ -1,9 +1,11 @@
+[section/base]
+include-file = ~/.config/polybar/constants
+
 [bar/top]
-monitor = eDP-1
+inherit = section/base
+
 width = 100%
 height = 48
-
-dpi=266
 
 background = #FF111111
 foreground = #ccffffff
@@ -33,11 +35,11 @@ modules-left = powermenu mpd
 modules-right = pulseaudio backlight wireless-network wired-network battery1 battery2 date
 
 [bar/bottom]
-monitor = eDP-1
+inherit = section/base
+
 bottom = true
 width = 100%
 height = 55
-dpi=266
 
 background = ${bar/top.background}
 foreground = ${bar/top.foreground}
