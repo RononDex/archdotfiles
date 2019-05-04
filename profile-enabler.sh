@@ -47,7 +47,7 @@ fi
 echo
 echo "Copying default files...."
 
-cp -r defaults/ ~/
+cp -ra $scriptDir/defaults/. ~/
 
 # Copy profile files
 echo

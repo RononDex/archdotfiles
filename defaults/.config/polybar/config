@@ -5,7 +5,7 @@ height = 48
 
 dpi=266
 
-background = #88000000
+background = #FF111111
 foreground = #ccffffff
 
 line-color = ${bar/bottom.background}
@@ -201,7 +201,7 @@ interface = wlp3s0
 interval = 3.0
 ping-interval = 10
 
-format-connected = WLAN: <ramp-signal> <label-connected> 
+format-connected = WLAN: <ramp-signal> <label-connected>
 label-connected = "%essid% ↑%upspeed% ↓%downspeed%"
 upspeed = %upspeed%
 label-disconnected =    not connected
@@ -232,7 +232,7 @@ type = internal/pulseaudio
 
 ; Sink to be used, if it exists (find using `pacmd list-sinks`, name field)
 ; If not, uses default sink
-sink = 
+sink =
 
 ;Use PA_VOLUME_UI_MAX (~153%) if true, or PA_VOLUME_NORM (100%) if false
 ; Default: true
