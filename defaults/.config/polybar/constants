@@ -1,2 +1,6 @@
 [section/base]
 dpi=90
+
+[bar/top]
+modules-right = pulseaudio backlight wireless-network battery1 battery2 date
+modules-left = powermenu mpd
