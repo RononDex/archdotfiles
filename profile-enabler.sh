@@ -31,9 +31,12 @@ for d in $profilesFolder* ; do
     profiles+=("$d")
     i=$((i+1))
 done
-read selectedProfile
+echo
+printf "Enter number: "
 
 # Let user select a profile
+read selectedProfile
+
 echo
 
 re='^[0-9]+$'
