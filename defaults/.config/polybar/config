@@ -47,8 +47,6 @@ foreground = ${bar/top.foreground}
 line-color = ${bar/top.background}
 line-size = 2
 
-modules-left = i3
-modules-right = cpu memory
 
 border-top-size = ${bar/top.border-bottom-size}
 border-top-color = ${bar/top.border-bottom-color}

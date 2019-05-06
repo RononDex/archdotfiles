@@ -5,3 +5,7 @@ monitor = eDP-1
 [bar/top]
 modules-right = pulseaudio backlight wireless-network battery1 battery2 date
 modules-left = powermenu mpd
+
+[bar/bottom]
+modules-left = i3
+modules-right = cpu memory
