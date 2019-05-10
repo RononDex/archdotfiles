@@ -19,12 +19,3 @@ setxkbmap ch -variant de                                # Set keyboard mapping t
 # --------------------------------------------
 # Input methods
 # --------------------------------------------
-
-# Set TouchPad natural scroll
-idd=$(xinput --list | grep 'Microsoft Surface Keyboard Touchpad' | awk '{print $7}'| cut -d'=' -f2)
-xinput --set-prop $idd "libinput Natural Scrolling Enabled" 1
-
-
-# Set tap to click
-idd=$(xinput --list | grep 'Microsoft Surface Keyboard Touchpad' | awk '{print $7}'| cut -d'=' -f2)
-xinput --set-prop $idd "libinput Tapping Enabled" 1
