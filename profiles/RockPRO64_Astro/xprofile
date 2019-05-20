@@ -1,0 +1,7 @@
+#!/bin/sh
+
+# --------------------------------------------
+# Actions / exports when X11 is initialized
+# --------------------------------------------
+
+setxkbmap ch -variant de                                # Set keyboard mapping to ch-de

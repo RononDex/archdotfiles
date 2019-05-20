@@ -1,16 +1,6 @@
-1. Set keyboard layouts in
-/etc/X11/xorg.conf.d/20-keyboard.conf
-
-Section "InputClass"
-    Identifier "keyboard"
-    MatchIsKeyboard "yes"
-    Option "XkbLayout" "ch"
-    Option "XkbVariant" "de"
-EndSection
-
-
-~/.xinitrc:
-setxkbmap ch -variant de
+1. Install profile
+git clone https://github.com/RononDex/archdotfiles
+sh profile-enabler.sh
 
 2. zsh
 install zsh
@@ -24,12 +14,6 @@ pacman -S networkmanager
 systemctl enable NetworkManager
 pacman -S gnome-keyring (for wifi wpa keyring)
 pacman -S network-manager-applet
-
-4. dotfiles
-mkdir github
-cd github 
-git clone https://github.com/RononDex/archdotfiles
-cp -R ~/github/archdotfiles ~/
 
 4. Window manager
 i3-gaps

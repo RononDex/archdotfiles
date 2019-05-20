@@ -1,0 +1,16 @@
+1. Install profile
+git clone https://github.com/RononDex/archdotfiles
+sh profile-enabler.sh
+
+2. zsh
+install zsh
+install zsh-completions
+chsh -s full-path-to-shell
+install oh-my-zsh
+sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+
+3. Network manager
+pacman -S networkmanager
+systemctl enable NetworkManager
+pacman -S gnome-keyring (for wifi wpa keyring)
+pacman -S network-manager-applet
