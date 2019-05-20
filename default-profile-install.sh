@@ -13,3 +13,7 @@ chmod +x ~/.profile/bashprofile
 chmod +x ~/.config/i3/config
 chmod +x ~/.config/polybar/config
 chmod +x ~/.config/polybar/launch.sh
+
+
+echo "Installing stuff..."
+sudo pacman -Sy  otf-fira-code
