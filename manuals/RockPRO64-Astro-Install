@@ -9,8 +9,5 @@ chsh -s full-path-to-shell
 install oh-my-zsh
 sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 
-3. Network manager
-pacman -S networkmanager
-systemctl enable NetworkManager
-pacman -S gnome-keyring (for wifi wpa keyring)
-pacman -S network-manager-applet
+3. INDI 3rd party library:
+https://aur.archlinux.org/packages/libindi_3rdparty/

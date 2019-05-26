@@ -14,4 +14,4 @@ chmod +x ~/.config/polybar/config
 chmod +x ~/.config/polybar/launch.sh
 
 echo "Installing stuff..."
-sudo pacman -Sy otf-fira-code
+sudo pacman -Sy otf-fira-code --noconfirm

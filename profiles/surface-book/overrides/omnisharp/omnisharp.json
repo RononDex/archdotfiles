@@ -1,0 +1,7 @@
+{
+    "RoslynExtensionsOptions": {
+        "LocationPaths": [
+            "~/.omnisharp/Rozlynator"
+        ]
+    }
+}
