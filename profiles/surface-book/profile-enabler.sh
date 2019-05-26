@@ -12,7 +12,9 @@ then
     mkdir ~/.omnisharp
 fi
 
-cp -Ra $scriptDir/overrides/omnisharp ~/.omnisharp
+echo "Setting up omnisharp for vscode..."
+rm -rf ~/.omnisharp
+cp -Raf $scriptDir/overrides/omnisharp ~/.omnisharp
 
 echo "Installing stuff..."
 sudo pacman -Sy xf86-input-wacom --noconfirm
