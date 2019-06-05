@@ -2,6 +2,7 @@
     "RoslynExtensionsOptions": {
         "LocationPaths": [
             "/home/cobra/.omnisharp/Rozlynator"
-        ]
+        ],
+	"enableAnalyzersSupport": true,	
     }
 }
