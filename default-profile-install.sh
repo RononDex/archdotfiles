@@ -15,3 +15,6 @@ chmod +x ~/.config/polybar/launch.sh
 
 echo "Installing stuff..."
 sudo pacman -Sy otf-fira-code --noconfirm
+
+echo "Copying some default files ..."
+cp defaults/vscode_custom.css ~/vscode_custom.css
