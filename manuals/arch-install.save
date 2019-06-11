@@ -1,0 +1,79 @@
+1. Set keyboard layouts in
+/etc/X11/xorg.conf.d/20-keyboard.conf
+
+Section "InputClass"
+    Identifier "keyboard"
+    MatchIsKeyboard "yes"
+    Option "XkbLayout" "ch"
+nerds    Option "XkbVariant" "de"
+EndSection
+
+
+~/.xinitrc:
+setxkbmap ch -variant de
+
+2. zsh
+install zsh
+install zsh-completions
+chsh -s full-path-to-shell
+install oh-my-zsh
+sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+
+3. Network manager
+pacman -S networkmanager
+systemctl enable NetworkManager
+pacman -S gnome-keyring (for wifi wpa keyring)
+
+4. dotfiles
+mkdir github
+cd github 
+git clone https://github.com/RononDex/archdotfiles
+cp -R ~/github/archdotfiles ~/
+
+4. Window manager
+i3-gaps
+adobe-source-code-pro-fonts (Use as console font)
+https://aur.archlinux.org/ttf-material-icons.git (AUR)
+polybar
+lxterminal
+xsession
+light-git (AUR)
+flameshot (AUR)
+compton
+arc-gtk theme (AUR)
+lxappearance
+nerd-fonts-complete (AUR)
+...
+
+5. Sound
+install pulseaudio
+install alsa
+install pulseaudio-alsa
+install pulseaudio-jack
+install pulseaudio-bluetooth
+install pavucontrol (audio control gdk)
+
+5. Display manager
+lightdm
+webkit greeter
+litarvan (theme)
+
+5. lock screen
+light-locker
+
+6. bluetooth
+install bluez
+install bluez-utils
+systemctl enable bluetooth
+systemctl start bluetooth
+install blueman (GDK bluetooth interface)
+
+7. Other stuff
+nautilus
+autofs, cifs
+samba
+vlc
+
+7. Steam
+Install Steam
+Install Steam-fonts (AUR)
