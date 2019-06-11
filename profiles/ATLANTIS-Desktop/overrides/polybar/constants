@@ -1,6 +1,4 @@
 [section/base]
-dpi=266
-monitor = eDP-1
 
 [bar/top]
 modules-right = pulseaudio backlight wireless-network battery1 battery2 date
