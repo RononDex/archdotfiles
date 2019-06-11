@@ -30,7 +30,6 @@ sudo pacman -Sy bash-completion zsh zsh-completions networkmanager gnome-keyring
 echo "Installing AUR packages..."
 echo "polybar..."
 InstallAurPackage "polybar" "https://aur.archlinux.org/polybar.git"
-InstallAurPackage "nerd-fonts-complete" "https://aur.archlinux.org/nerd-fonts-complete.git"
 
 currentUser=$(whoami)
 sudo usermod -G lp ${currentUser}
