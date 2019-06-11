@@ -36,6 +36,9 @@ chmod +x ~/.config/i3/config
 chmod +x ~/.config/polybar/config
 chmod +x ~/.config/polybar/launch.sh
 
+echo "Changing default shell to zsh"
+chsh -s /bin/zsh
+
 echo "Installing stuff..."
 sudo pacman -Sy otf-fira-code bash-completition zsh zsh-completitions light --noconfirm
 
