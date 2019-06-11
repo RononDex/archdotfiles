@@ -1,3 +1,6 @@
+if [ ! -d ~/.oh-my-zsh ]
+    sh -c "$(wget -O- https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+fi
 
 if [ ! -d ~/.oh-my-zsh/themes/powerlevel10k ]
 then
