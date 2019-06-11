@@ -25,7 +25,7 @@ cp $scriptDir/overrides/polybar/constants ~/.config/polybar/constants
 sudo cp $scriptDir/overrides/xorg/20-keybord.conf /etc/X11/xorg.conf.d/20-keyboard.conf
 
 echo "Installing stuff..."
-sudo pacman -Sy bash-completion zsh zsh-completions networkmanager gnome-keyring network-manager-applet xorg lightdm firefox adobe-source-code-pro-fonts --noconfirm
+sudo pacman -Sy bash-completion zsh zsh-completions networkmanager gnome-keyring network-manager-applet xorg lightdm firefox adobe-source-code-pro-fonts i3-gaps --noconfirm
 
 echo "Installing AUR packages..."
 echo "polybar..."
@@ -33,5 +33,3 @@ InstallAurPackage "polybar" "https://aur.archlinux.org/polybar.git"
 
 currentUser=$(whoami)
 sudo usermod -G lp ${currentUser}
-
-
