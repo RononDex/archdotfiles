@@ -1,5 +1,5 @@
 [section/base]
-dpi = 80
+dpi = 120
 
 [bar/top]
 modules-right = pulseaudio backlight wireless-network battery1 battery2 date
