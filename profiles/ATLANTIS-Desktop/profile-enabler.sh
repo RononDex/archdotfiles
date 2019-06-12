@@ -15,6 +15,7 @@ sudo pacman -Sy i3-gaps nvidia lib32-nvidia-utils --noconfirm --needed
 echo "Installing AUR packages..."
 echo "polybar..."
 InstallAurPackage "polybar" "https://aur.archlinux.org/polybar.git"
+InstallAurPackage "msbuild-stable" "https://aur.archlinux.org/msbuild-stable.git"
 
 currentUser=$(whoami)
 sudo usermod -G lp ${currentUser}
