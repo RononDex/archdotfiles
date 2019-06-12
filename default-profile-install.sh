@@ -1,29 +1,15 @@
 #!/bin/sh
-
-InstallAurPackage() {
-    if [ ! -d ~/packages ]
-    then
-        mkdir ~/packages
-    fi
-
-    if [ ! -d ~/packages/$1 ]
-    then
-        cd ~/packages
-        git clone $2
-    else
-        cd ~/packages/$1
-        git pull
-    fi
-    makepkg -sic
-}
+. functions.sh
 
 if [ ! -d ~/.oh-my-zsh ]
 then
+    cd ~
     sh -c "$(wget -O- https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 fi
 
 if [ ! -d ~/.oh-my-zsh/themes/powerlevel10k ]
 then
+    cd ~/.oh-my-zsh/themes/powerlevel10k
     echo "Cloning powerlevel10k"
     git clone https://github.com/romkatv/powerlevel10k.git ~/.oh-my-zsh/themes/powerlevel10k
 fi
@@ -40,7 +26,11 @@ echo "Changing default shell to zsh"
 chsh -s /bin/zsh
 
 echo "Installing stuff..."
-sudo pacman -Sy otf-fira-code bash-completition zsh zsh-completitions light --noconfirm
+sudo pacman -Sy otf-fira-code bash-completition zsh zsh-completitions light git --noconfirm --needed
+sudo pacman -Sy bash-completion zsh zsh-completions networkmanager gnome-keyring network-manager-applet xorg xorg-xinit lightdm firefox adobe-source-code-pro-fonts --noconfirm --needed
+sudo pacman -Sy lightdm-webkit-theme-litarvan --noconfirm --needed
+
+sudo systemctl enable NetworkManager
 
 echo "Installing AUR packages"
 echo "nerd fonts ..."

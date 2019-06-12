@@ -20,6 +20,7 @@ echo "   Tino's Profile enabler"
 echo "--------------------------------------------"
 echo
 
+chmod +x ./functions.sh
 
 # List available profiles
 echo "Available profiles: "

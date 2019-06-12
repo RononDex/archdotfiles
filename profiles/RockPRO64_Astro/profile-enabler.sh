@@ -8,9 +8,8 @@ echo "Updating system"
 sudo pacman -Syu --noconfirm
 
 echo "Installing basic stuff / XFCE"
-sudo pacman -Sy bash-completion zsh zsh-completions networkmanager gnome-keyring network-manager-applet xorg xfce4 lightdm firefox --noconfirm
-sudo pacman -Sy gpsd libdc1394 kstars
-sudo systemctl enable NetworkManager
+sudo pacman -Sy xfce4 --noconfirm --needed
+sudo pacman -Sy gpsd libdc1394 kstars --noconfirm --needed
 
 sudo cp $scriptDir/overrides/xorg/20-keybord.conf /etc/X11/xorg.conf.d/20-keyboard.conf
 
