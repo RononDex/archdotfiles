@@ -9,7 +9,7 @@ fi
 
 if [ ! -d ~/.oh-my-zsh/themes/powerlevel10k ]
 then
-    cd ~/.oh-my-zsh/themes/powerlevel10k
+    cd ~/.oh-my-zsh/themes
     echo "Cloning powerlevel10k"
     git clone https://github.com/romkatv/powerlevel10k.git ~/.oh-my-zsh/themes/powerlevel10k
 fi
@@ -28,7 +28,7 @@ chsh -s /bin/zsh
 echo "Installing stuff..."
 sudo pacman -Sy otf-fira-code bash-completition zsh zsh-completitions light git --noconfirm --needed
 sudo pacman -Sy bash-completion zsh zsh-completions networkmanager gnome-keyring network-manager-applet xorg xorg-xinit lightdm firefox adobe-source-code-pro-fonts --noconfirm --needed
-sudo pacman -Sy lightdm-webkit-theme-litarvan --noconfirm --needed
+sudo pacman -Sy lightdm-webkit-theme-litarvan feh --noconfirm --needed
 
 sudo systemctl enable NetworkManager
 
