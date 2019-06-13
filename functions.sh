@@ -15,5 +15,5 @@ InstallAurPackage() {
         git pull
     fi
     cd ~/packages/$1
-    makepkg -sic
+    makepkg -sic --noconfirm --needed
 }
