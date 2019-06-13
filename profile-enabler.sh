@@ -1,4 +1,5 @@
 #!/bin/sh
+. functions.sh
 cd "$(dirname "$0")"
 
 # --------------------------------------------
@@ -61,7 +62,7 @@ cp -ra ${profiles[$selectedProfile-1]}/. ~/.profile/
 
 # Run default profile-installer
 echo
-bash ./default-profile-install.sh
+. ./default-profile-install.sh
 
 # Run profile specific profile installer if it exists
 echo

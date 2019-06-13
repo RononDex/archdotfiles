@@ -1,6 +1,4 @@
 #!/bin/sh
-. functions.sh
-
 if [ ! -d ~/.oh-my-zsh ]
 then
     cd ~
