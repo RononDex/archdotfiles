@@ -27,7 +27,7 @@ InstallAurPackage "polybar" "https://aur.archlinux.org/polybar.git"
 InstallAurPackage "msbuild-stable" "https://aur.archlinux.org/msbuild-stable.git"
 InstallAurPackage "signal" "https://aur.archlinux.org/signal.git"
 InstallAurPackage "visual-studio-code-bin" "https://aur.archlinux.org/visual-studio-code-bin.git"
-InstallAurPackage "steam-fonts1" "https://aur.archlinux.org/steam-fonts.git"
+InstallAurPackage "steam-fonts" "https://aur.archlinux.org/steam-fonts.git"
 
 echo "Enabling lightdm ..."
 sudo systemctl enable lightdm.service
