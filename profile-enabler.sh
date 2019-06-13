@@ -1,5 +1,5 @@
 #!/bin/sh
-. functions.sh
+. ./functions.sh
 cd "$(dirname "$0")"
 
 # --------------------------------------------
