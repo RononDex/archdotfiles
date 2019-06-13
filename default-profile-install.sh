@@ -1,4 +1,7 @@
 #!/bin/sh
+
+sudo pacman -Sy wget git --noconfirm --needed
+
 if [ ! -d ~/.oh-my-zsh ]
 then
     cd ~
