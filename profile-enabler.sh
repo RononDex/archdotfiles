@@ -67,7 +67,7 @@ bash ./default-profile-install.sh
 echo
 ProfileInstallScriptPath=${profiles[$selectedProfile -1]}/profile-enabler.sh
 if [ -f "$ProfileInstallScriptPath" ]; then
-   bash $ProfileInstallScriptPath
+   . $ProfileInstallScriptPath
 fi
 
 echo

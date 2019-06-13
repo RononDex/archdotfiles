@@ -1,6 +1,4 @@
 #!/bin/sh
-. ../../functions.sh
-
 scriptDir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 
 sudo cp $scriptDir/overrides/lightdm.conf /etc/lightdm/lightdm.conf
