@@ -29,5 +29,8 @@ InstallAurPackage "signal" "https://aur.archlinux.org/signal.git"
 InstallAurPackage "visual-studio-code-bin.git" "https://aur.archlinux.org/visual-studio-code-bin.git"
 InstallAurPackage "steam-fonts1" "https://aur.archlinux.org/steam-fonts.git"
 
+echo "Enabling lightdm ..."
+sudo systemctl enable lightdm.service
+
 currentUser=$(whoami)
 sudo usermod -G lp ${currentUser}
