@@ -11,7 +11,7 @@ cp $scriptDir/overrides/polybar/constants ~/.config/polybar/constants
 sudo cp $scriptDir/overrides/xorg/20-keybord.conf /etc/X11/xorg.conf.d/20-keyboard.conf
 
 echo "Installing stuff..."
-sudo pacman -Sy i3-gaps nvidia lib32-nvidia-utils --noconfirm --needed
+sudo pacman -Sy i3-gaps nvidia lib32-nvidia-utils flameshoot --noconfirm --needed
 
 echo "Installing AUR packages..."
 echo "polybar..."
@@ -19,6 +19,7 @@ InstallAurPackage "polybar" "https://aur.archlinux.org/polybar.git"
 InstallAurPackage "msbuild-stable" "https://aur.archlinux.org/msbuild-stable.git"
 InstallAurPackage "signal" "https://aur.archlinux.org/signal.git"
 InstallAurPackage "visual-studio-code-bin.git" "https://aur.archlinux.org/visual-studio-code-bin.git"
+InstallAurPackage "steam-fonts1" "https://aur.archlinux.org/steam-fonts.git"
 
 currentUser=$(whoami)
 sudo usermod -G lp ${currentUser}
