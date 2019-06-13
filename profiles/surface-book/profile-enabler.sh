@@ -19,7 +19,7 @@ rm -rf ~/.omnisharp
 cp -Raf $scriptDir/overrides/omnisharp ~/.omnisharp
 
 echo "Installing stuff..."
-sudo pacman -Sy i3-gaps xf86-input-wacom flameshot --noconfirm --needed
+sudo pacman -Sy i3-gaps xf86-input-wacom flameshot dmenu --noconfirm --needed
 
 echo "Installing AUR packages..."
 echo "polybar..."

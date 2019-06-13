@@ -33,6 +33,7 @@ sudo systemctl enable NetworkManager
 echo "Installing AUR packages"
 echo "nerd fonts ..."
 InstallAurPackage "nerd-fonts-complete" "https://aur.archlinux.org/nerd-fonts-complete.git"
+InstallAurPackage "xinit-xsession" "https://aur.archlinux.org/xinit-xsession.git"
 
 echo "Copying some default files ..."
 cp defaults/vscode_custom.css ~/vscode_custom.css
