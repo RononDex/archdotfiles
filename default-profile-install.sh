@@ -29,7 +29,7 @@ chsh -s /bin/zsh
 echo "Installing stuff..."
 sudo pacman -Sy powerline-fonts otf-fira-code bash-completition zsh zsh-completitions light git --noconfirm --needed
 sudo pacman -Sy bash-completion networkmanager gnome-keyring network-manager-applet xorg xorg-xinit lightdm firefox adobe-source-code-pro-fonts --noconfirm --needed
-sudo pacman -Sy lightdm-webkit-theme-litarvan feh lxterminal compton alsa pulseaudio pavucontrol --noconfirm --needed
+sudo pacman -Sy lightdm-webkit-theme-litarvan feh lxterminal compton alsa pulseaudio pulseaudio-jack pulseaudio-bluetooth pavucontrol --noconfirm --needed
 
 sudo systemctl enable NetworkManager
 
