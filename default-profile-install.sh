@@ -27,7 +27,7 @@ echo "Changing default shell to zsh"
 chsh -s /bin/zsh
 
 echo "Installing stuff..."
-sudo pacman -Sy powerline-fonts otf-fira-code bash-completition zsh zsh-completitions light git --noconfirm --needed
+sudo pacman -Sy powerline-fonts otf-fira-code otf-fira-mono otf-fira-sans ttf-fira-code ttf-fira-mono ttf-fira-sans bash-completion zsh zsh-completions light git --noconfirm --needed
 sudo pacman -Sy bash-completion networkmanager gnome-keyring network-manager-applet xorg xorg-xinit lightdm firefox adobe-source-code-pro-fonts --noconfirm --needed
 sudo pacman -Sy lightdm-webkit-theme-litarvan feh lxterminal compton alsa pulseaudio pulseaudio-jack pulseaudio-bluetooth pulseaudio-alsa pavucontrol arc-gtk-theme nautilus --noconfirm --needed
 
