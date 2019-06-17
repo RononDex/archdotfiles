@@ -9,7 +9,7 @@ cp $scriptDir/overrides/polybar/constants ~/.config/polybar/constants
 sudo cp $scriptDir/overrides/xorg/20-keybord.conf /etc/X11/xorg.conf.d/20-keyboard.conf
 sudo cp $scriptDir/overrides/xorg/21-touchpad.conf /etc/X11/xorg.conf.d/21-touchpad.conf
 
-if [ ! -d ~/.oh-my-zsh/themes/powerlevel10k ]
+if [ ! -d ~/.omnisharp ]
 then
     mkdir ~/.omnisharp
 fi
@@ -28,6 +28,7 @@ InstallAurPackage "msbuild-stable" "https://aur.archlinux.org/msbuild-stable.git
 InstallAurPackage "signal" "https://aur.archlinux.org/signal.git"
 InstallAurPackage "visual-studio-code-bin" "https://aur.archlinux.org/visual-studio-code-bin.git"
 InstallAurPackage "steam-fonts" "https://aur.archlinux.org/steam-fonts.git"
+InstallAurPackage "keeweb" "https://aur.archlinux.org/keeweb.git"
 
 echo "Enabling lightdm ..."
 sudo systemctl enable lightdm.service
