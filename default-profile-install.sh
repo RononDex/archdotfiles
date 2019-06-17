@@ -24,7 +24,10 @@ chmod +x ~/.config/polybar/config
 chmod +x ~/.config/polybar/launch.sh
 
 echo "Changing default shell to zsh"
-chsh -s /bin/zsh
+if [[ "$SHELL" != "/bin/zsh" ]]
+then
+    chsh -s /bin/zsh
+fi
 
 echo "Installing stuff..."
 sudo pacman -Sy powerline-fonts otf-fira-code otf-fira-mono otf-fira-sans ttf-fira-code ttf-fira-mono ttf-fira-sans bash-completion zsh zsh-completions light git --noconfirm --needed

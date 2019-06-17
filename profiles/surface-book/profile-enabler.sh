@@ -9,7 +9,7 @@ cp $scriptDir/overrides/polybar/constants ~/.config/polybar/constants
 sudo cp $scriptDir/overrides/xorg/20-keybord.conf /etc/X11/xorg.conf.d/20-keyboard.conf
 sudo cp $scriptDir/overrides/xorg/21-touchpad.conf /etc/X11/xorg.conf.d/21-touchpad.conf
 
-if [ ! -d ~/.oh-my-zsh/themes/powerlevel10k ]
+if [ ! -d ~/.omnisharp ]
 then
     mkdir ~/.omnisharp
 fi
