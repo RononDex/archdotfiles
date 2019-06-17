@@ -1,10 +1,16 @@
 [section/base]
-dpi = 110
+dpi = 140
 
 [bar/top]
+monitor = DP-2
 modules-right = pulseaudio backlight wireless-network battery1 battery2 date
 modules-left = powermenu mpd
 
+height = 30
+
 [bar/bottom]
+monitor = DP-2
 modules-left = i3
 modules-right = cpu memory
+
+height = 40

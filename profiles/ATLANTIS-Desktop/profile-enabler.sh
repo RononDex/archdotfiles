@@ -9,8 +9,9 @@ cp $scriptDir/overrides/polybar/constants ~/.config/polybar/constants
 sudo cp $scriptDir/overrides/xorg/20-keybord.conf /etc/X11/xorg.conf.d/20-keyboard.conf
 
 echo "Installing stuff..."
-sudo pacman -Sy i3-gaps nvidia lib32-nvidia-utils dmenu flameshot --noconfirm --needed
+sudo pacman -Sy i3-gaps nvidia lib32-nvidia-utils dmenu flameshot teamspeak3 --noconfirm --needed
 sudo nvidia-xconfig
+
 
 echo "Installing AUR packages..."
 echo "polybar..."
