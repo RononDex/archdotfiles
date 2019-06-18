@@ -343,3 +343,8 @@ label-urgent-padding = 2
 ; Separator in between workspaces
 label-separator = |
 label-separator-padding = 2
+
+[module/network-traffic]
+type = custom/script
+exec = ~/.config/polybar/network-traffic.sh
+tail = true

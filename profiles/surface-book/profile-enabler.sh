@@ -19,7 +19,7 @@ rm -rf ~/.omnisharp
 cp -Raf $scriptDir/overrides/omnisharp ~/.omnisharp
 
 echo "Installing stuff..."
-sudo pacman -Sy i3-gaps xf86-input-wacom flameshot dmenu flameshot teamspeak3 --noconfirm --needed
+sudo pacman -Sy i3-gaps xf86-input-wacom flameshot vlc dmenu flameshot teamspeak3 --noconfirm --needed
 
 echo "Installing AUR packages..."
 echo "polybar..."
@@ -29,6 +29,9 @@ InstallAurPackage "signal" "https://aur.archlinux.org/signal.git"
 InstallAurPackage "visual-studio-code-bin" "https://aur.archlinux.org/visual-studio-code-bin.git"
 InstallAurPackage "steam-fonts" "https://aur.archlinux.org/steam-fonts.git"
 InstallAurPackage "keeweb" "https://aur.archlinux.org/keeweb.git"
+
+gpg --recv-key A87FF9DF48BF1C90
+InstallAurPackage "spotify" "https://aur.archlinux.org/spotify.git"
 
 echo "Enabling lightdm ..."
 sudo systemctl enable lightdm.service

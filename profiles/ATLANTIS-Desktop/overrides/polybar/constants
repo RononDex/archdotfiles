@@ -3,7 +3,7 @@ dpi = 140
 
 [bar/top]
 monitor = DP-2
-modules-right = pulseaudio backlight wireless-network battery1 battery2 date
+modules-right = mpd pulseaudio network-traffic wireless-network battery1 battery2 date
 modules-left = powermenu mpd
 
 height = 30
