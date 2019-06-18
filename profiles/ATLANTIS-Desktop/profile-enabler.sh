@@ -12,6 +12,14 @@ echo "Installing stuff..."
 sudo pacman -Sy i3-gaps nvidia lib32-nvidia-utils dmenu flameshot teamspeak3 --noconfirm --needed
 sudo nvidia-xconfig
 
+if [ ! -d ~/.omnisharp ]
+then
+    mkdir ~/.omnisharp
+fi
+
+echo "Setting up omnisharp for vscode..."
+rm -rf ~/.omnisharp
+cp -Raf $scriptDir/../surface-book/overrides/omnisharp ~/.omnisharp
 
 echo "Installing AUR packages..."
 echo "polybar..."
