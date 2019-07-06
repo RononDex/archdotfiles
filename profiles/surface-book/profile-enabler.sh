@@ -29,6 +29,7 @@ InstallAurPackage "signal" "https://aur.archlinux.org/signal.git"
 InstallAurPackage "visual-studio-code-bin" "https://aur.archlinux.org/visual-studio-code-bin.git"
 InstallAurPackage "steam-fonts" "https://aur.archlinux.org/steam-fonts.git"
 InstallAurPackage "keeweb" "https://aur.archlinux.org/keeweb.git"
+InstallAurPackage "nuget4" "https://aur.archlinux.org/nuget4.git"
 
 gpg --recv-key A87FF9DF48BF1C90
 InstallAurPackage "spotify" "https://aur.archlinux.org/spotify.git"
