@@ -17,7 +17,6 @@ border-bottom-size = 3
 border-bottom-color = #FF333333
 
 tray-position = right
-tray-maxsize = 40
 wm-restack = i3
 override-redirect = false
 
@@ -245,7 +244,7 @@ interval = 5
 ;Available tokens:
 ;   %percentage% (default)
 label-volume = %percentage%%
-format-volume = <ramp-volume> <label-volume>
+format-volume = VOL: <ramp-volume> <label-volume>
 
 ; Available tokens:
 ;   %percentage% (default)

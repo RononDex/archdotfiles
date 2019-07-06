@@ -23,7 +23,7 @@ cp -Raf $scriptDir/../surface-book/overrides/omnisharp ~/.omnisharp
 
 echo "Installing AUR packages..."
 echo "polybar..."
-crenstallAurPackage "polybar" "https://aur.archlinux.org/polybar.git"
+InstallAurPackage "polybar" "https://aur.archlinux.org/polybar.git"
 InstallAurPackage "msbuild-stable" "https://aur.archlinux.org/msbuild-stable.git"
 InstallAurPackage "signal" "https://aur.archlinux.org/signal.git"
 InstallAurPackage "visual-studio-code-bin" "https://aur.archlinux.org/visual-studio-code-bin.git"
@@ -41,3 +41,5 @@ sudo systemctl enable lightdm.service
 
 currentUser=$(whoami)
 sudo usermod -G lp ${currentUser}
+sudo usermod -G input ${currentUser}
+sudo usermod -G video ${currentUser}

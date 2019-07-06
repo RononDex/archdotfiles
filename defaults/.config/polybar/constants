@@ -6,6 +6,7 @@ modules-right = pulseaudio backlight wireless-network battery1 battery2 date
 modules-left = powermenu mpd
 
 height = 48
+tray-maxsize = 30
 
 [bar/bottom]
 modules-left = i3
