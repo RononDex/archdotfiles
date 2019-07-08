@@ -7,7 +7,10 @@ modules-right = pulseaudio backlight wireless-network battery1 battery2 date
 modules-left = powermenu mpd
 
 tray-maxsize = 40
+height = 40
 
 [bar/bottom]
 modules-left = i3
 modules-right = cpu memory
+
+height = 40
