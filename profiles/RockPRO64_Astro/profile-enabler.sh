@@ -11,6 +11,7 @@ echo "Installing basic stuff / XFCE"
 sudo pacman -Sy xfce4 --noconfirm --needed
 
 sudo cp $scriptDir/overrides/xorg/20-keybord.conf /etc/X11/xorg.conf.d/20-keyboard.conf
+sudo cp $scriptDir/overrides/.xinitrc ~/.xinitrc
 
 echo "Installing Kstars, ekos and indi ..."
 sudo pacman -Sy gpsd libdc1394 kstars --noconfirm --needed
@@ -28,6 +29,8 @@ currentUser=$(whoami)
 sudo usermod -G lp ${currentUser}
 sudo usermod -G input ${currentUser}
 sudo usermod -G video ${currentUser}
+
+sudo chown cobra ~/.xinitrc
 
 
 InstallIndiDrivers() {

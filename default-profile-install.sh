@@ -39,7 +39,7 @@ sudo pacman -Sy bash-completion networkmanager gnome-keyring network-manager-app
 sudo pacman -Sy lightdm-webkit-theme-litarvan feh lxterminal compton alsa pulseaudio pulseaudio-jack pulseaudio-bluetooth pulseaudio-alsa pavucontrol arc-gtk-theme arc-icon-theme nautilus --noconfirm --needed
 sudo pacman -Sy java-runtime-common jre-openjdk ntfs-3g autofs --noconfirm --needed
 sudo pacman -Sy bash-completion networkmanager gnome-keyring network-manager-applet xorg xorg-xinit lightdm firefox adobe-source-code-pro-fonts --noconfirm --needed
-sudo pacman -Sy python samba libmpdclient bc ranger w3m --needed --noconfirm
+sudo pacman -Sy python samba libmpdclient bc ranger w3m xorg-server binutils --needed --noconfirm
 
 sudo systemctl enable NetworkManager
 
