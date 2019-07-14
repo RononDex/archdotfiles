@@ -2,6 +2,7 @@
 
 scriptDir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 
+sudo pacman -Syy
 sudo pacman -Syu --noconfirm
 sudo pacman -Sy wget git --noconfirm --needed
 
