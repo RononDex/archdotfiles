@@ -48,6 +48,7 @@ echo "nerd fonts ..."
 InstallAurPackage "nerd-fonts-complete" "https://aur.archlinux.org/nerd-fonts-complete.git"
 InstallAurPackage "xinit-xsession" "https://aur.archlinux.org/xinit-xsession.git"
 InstallAurPackage "nrclient2-free" "https://aur.archlinux.org/nrclient2-free.git"
+InstallAurPackage "debtap" "https://aur.archlinux.org/debtap.git"
 
 echo "Copying some default files ..."
 cp defaults/vscode_custom.css ~/vscode_custom.css

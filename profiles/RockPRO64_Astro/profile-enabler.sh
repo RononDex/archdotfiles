@@ -14,9 +14,14 @@ sudo cp $scriptDir/overrides/xorg/20-keybord.conf /etc/X11/xorg.conf.d/20-keyboa
 
 echo "Installing Kstars, ekos and indi ..."
 sudo pacman -Sy gpsd libdc1394 kstars --noconfirm --needed
-sudo pacman -Sy --nnoconfirm --needed breeze-icons binutils patch cmake make libraw libindi gpsd gcc
+sudo pacman -Sy --nnoconfirm --needed opencv ccfits breeze-icons binutils patch cmake make libraw libindi gpsd gcc
+
+InstallAurPackage "libhdf5" "https://aur-dev.archlinux.org/libhdf5.git"
+
 CloneOrUpdateGitRepoToPackages "indi" "https://github.com/indilib/indi"
 InstallIndiDrivers
+CloneOrUpdateGitRepoToPackages "PlanetaryImager" "https://github.com/GuLinux/PlanetaryImager"
+InstallPlanetaryImager
 
 echo "Adjust user permissions"
 currentUser=$(whoami)
@@ -35,4 +40,12 @@ InstallIndiDrivers() {
     cmake -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_BUILD_TYPE=Debug ../../3rdparty
     make
     sudo make install
+}
+
+InstallPlanetaryImager() {
+    cd ~/packages/PlanetaryImager
+    mkdir build
+    cd build
+    cmake .. -DCMAKE_INSTALL_PREFIX=/usr
+    make all && sudo make install
 }
