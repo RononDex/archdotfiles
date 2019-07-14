@@ -1,6 +1,26 @@
 #!/bin/sh
 scriptDir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 
+InstallIndiDrivers() {
+    cd ~/packages/indi/build
+    mkdir 3rdparty
+    cd 3rdparty
+    cmake -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_BUILD_TYPE=Debug ../../3rdparty
+    make
+    sudo make install
+    cmake -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_BUILD_TYPE=Debug ../../3rdparty
+    make
+    sudo make install
+}
+
+InstallPlanetaryImager() {
+    cd ~/packages/PlanetaryImager
+    mkdir build
+    cd build
+    cmake .. -DCMAKE_INSTALL_PREFIX=/usr
+    make all && sudo make install
+}
+
 echo "Please ensure that Arch Linux ARM was correclty setup prior to launching this profile installer!"
 echo "Exit with Ctrl+C if not setup properly yet"
 
@@ -31,24 +51,3 @@ sudo usermod -G input ${currentUser}
 sudo usermod -G video ${currentUser}
 
 sudo chown cobra ~/.xinitrc
-
-
-InstallIndiDrivers() {
-    cd ~/packages/indi/build
-    mkdir 3rdparty
-    cd 3rdparty
-    cmake -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_BUILD_TYPE=Debug ../../3rdparty
-    make
-    sudo make install
-    cmake -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_BUILD_TYPE=Debug ../../3rdparty
-    make
-    sudo make install
-}
-
-InstallPlanetaryImager() {
-    cd ~/packages/PlanetaryImager
-    mkdir build
-    cd build
-    cmake .. -DCMAKE_INSTALL_PREFIX=/usr
-    make all && sudo make install
-}
