@@ -343,6 +343,8 @@ label-urgent-padding = 2
 label-separator = |
 label-separator-padding = 2
 
+ws-icon-0 =1;>
+
 [module/network-traffic]
 type = custom/script
 exec = ~/.config/polybar/network-traffic.sh

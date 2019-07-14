@@ -1,6 +1,13 @@
 #!/bin/sh
 
 InstallAurPackage() {
+    CloneOrUpdateGitRepoToPackages $1 $2
+    cd ~/packages/$1
+    makepkg -sic --noconfirm --needed
+}
+
+CloneOrUpdateGitRepoToPackages() {
+    echo "Cloning / updating " $2
     if [ ! -d ~/packages ]
     then
         mkdir ~/packages
@@ -14,6 +21,4 @@ InstallAurPackage() {
         cd ~/packages/$1
         git pull
     fi
-    cd ~/packages/$1
-    makepkg -sic --noconfirm --needed
 }

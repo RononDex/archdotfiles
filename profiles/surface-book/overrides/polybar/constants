@@ -13,4 +13,4 @@ height = 40
 modules-left = i3
 modules-right = cpu memory
 
-height = 40
+height = 50
