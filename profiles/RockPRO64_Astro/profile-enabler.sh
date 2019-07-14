@@ -21,6 +21,15 @@ InstallPlanetaryImager() {
     make all && sudo make install
 }
 
+InstallPHD2() {
+    cd ~/packages/phd2
+    mkdir -p compiled
+    cd compiled
+    cmake ..
+    make
+    ln -sf /user/cobra/packages/phd2/compiled/phd2.bin /usr/bin/phd2
+}
+
 echo "Please ensure that Arch Linux ARM was correclty setup prior to launching this profile installer!"
 echo "Exit with Ctrl+C if not setup properly yet"
 
@@ -43,6 +52,8 @@ CloneOrUpdateGitRepoToPackages "indi" "https://github.com/indilib/indi"
 InstallIndiDrivers
 CloneOrUpdateGitRepoToPackages "PlanetaryImager" "https://github.com/GuLinux/PlanetaryImager"
 InstallPlanetaryImager
+CloneOrUpdateGitRepoToPackages "phd2" "https://github.com/OpenPHDGuiding/phd2.git"
+InstallPHD2
 
 echo "Adjust user permissions"
 currentUser=$(whoami)
