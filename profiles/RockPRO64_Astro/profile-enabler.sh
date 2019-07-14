@@ -27,7 +27,7 @@ InstallPHD2() {
     cd compiled
     cmake ..
     make
-    sudo ln -sf /user/cobra/packages/phd2/compiled/phd2.bin /usr/bin/phd2
+    sudo ln -sf /home/cobra/packages/phd2/compiled/phd2.bin /usr/bin/phd2
 }
 
 echo "Please ensure that Arch Linux ARM was correclty setup prior to launching this profile installer!"
