@@ -50,8 +50,6 @@ InstallAurPackage "libhdf5" "https://aur-dev.archlinux.org/libhdf5.git"
 
 CloneOrUpdateGitRepoToPackages "indi" "https://github.com/indilib/indi"
 InstallIndiDrivers
-CloneOrUpdateGitRepoToPackages "PlanetaryImager" "https://github.com/GuLinux/PlanetaryImager"
-InstallPlanetaryImager
 CloneOrUpdateGitRepoToPackages "phd2" "https://github.com/OpenPHDGuiding/phd2.git"
 InstallPHD2
 
