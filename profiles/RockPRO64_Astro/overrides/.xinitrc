@@ -39,4 +39,4 @@ if [ -d ~/.profile ] ; then
     fi
 fi
 
-exec i3
+exec startcfce4
