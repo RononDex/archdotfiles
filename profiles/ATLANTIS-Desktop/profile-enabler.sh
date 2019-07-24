@@ -1,6 +1,36 @@
 #!/bin/sh
 scriptDir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 
+InstallIndiDrivers() {
+    mkdir ~/packages/indi/build
+    cd ~/packages/indi/build
+    mkdir ~/packages/indi/build/3rdparty
+    cd ~/packages/indi/build/3rdparty
+    cmake -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_BUILD_TYPE=Debug ../../3rdparty
+    make
+    sudo make install
+    cmake -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_BUILD_TYPE=Debug ../../3rdparty
+    make
+    sudo make install
+}
+
+InstallPlanetaryImager() {
+    cd ~/packages/PlanetaryImager
+    mkdir build
+    cd build
+    cmake .. -DCMAKE_INSTALL_PREFIX=/usr
+    make all && sudo make install
+}
+
+InstallPHD2() {
+    cd ~/packages/phd2
+    mkdir -p compiled
+    cd compiled
+    cmake ..
+    make
+    sudo ln -sf /home/cobra/packages/phd2/compiled/phd2.bin /usr/bin/phd2
+}
+
 sudo cp $scriptDir/overrides/lightdm.conf /etc/lightdm/lightdm.conf
 sudo cp $scriptDir/overrides/lightdm-webkit2-greeter.conf /etc/lightdm/lightdm-webkit2-greeter.conf
 sudo cp $scriptDir/overrides/lightdm-bg.jpg /usr/share/lightdm-webkit/themes/litarvan/images/background.jpg
@@ -9,7 +39,8 @@ cp $scriptDir/overrides/polybar/constants ~/.config/polybar/constants
 sudo cp $scriptDir/overrides/xorg/20-keybord.conf /etc/X11/xorg.conf.d/20-keyboard.conf
 
 echo "Installing stuff..."
-sudo pacman -Sy i3-gaps nvidia lib32-nvidia-utils vlc dmenu flameshot teamspeak3 cabextract  --noconfirm --needed
+sudo pacman -Sy i3-gaps nvidia vlc dmenu flameshot teamspeak3 cabextract --noconfirm --needed
+sudo pacman -Sy lib32-nvidia-utils --noconfirm --needed
 sudo nvidia-xconfig
 
 if [ ! -d ~/.omnisharp ]
@@ -35,6 +66,16 @@ InstallAurPackage "nuget4" "https://aur.archlinux.org/nuget4.git"
 
 gpg --recv-key A87FF9DF48BF1C90
 InstallAurPackage "spotify" "https://aur.archlinux.org/spotify.git"
+
+echo "installing astro stuff..."
+InstallAurPackage "libhdf5" "https://aur-dev.archlinux.org/libhdf5.git"
+
+CloneOrUpdateGitRepoToPackages "indi" "https://github.com/indilib/indi"
+InstallIndiDrivers
+CloneOrUpdateGitRepoToPackages "PlanetaryImager" "https://github.com/GuLinux/PlanetaryImager"
+InstallPlanetaryImager
+CloneOrUpdateGitRepoToPackages "phd2" "https://github.com/OpenPHDGuiding/phd2.git"
+InstallPHD2
 
 echo "Enabling lightdm ..."
 sudo systemctl enable lightdm.service
