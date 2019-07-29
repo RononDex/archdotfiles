@@ -58,5 +58,6 @@ currentUser=$(whoami)
 sudo usermod -G lp ${currentUser}
 sudo usermod -G input ${currentUser}
 sudo usermod -G video ${currentUser}
+sudo usermod -G uucp ${currentUser}
 
 sudo chown cobra ~/.xinitrc
