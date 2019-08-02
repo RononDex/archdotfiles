@@ -43,6 +43,9 @@ sudo pacman -Sy bash-completion networkmanager gnome-keyring libftdi ccfits netw
 sudo pacman -Sy python samba opencv pkgconfig gtest gmock wxgtk2 libmpdclient bc ranger w3m xorg-server binutils keychain --needed --noconfirm
 
 sudo systemctl enable NetworkManager
+sudo systemctl start NetworkManager
+sudo systemctl enable autofs
+sudo systemctl start autofs
 
 echo "Installing AUR packages"
 echo "nerd fonts ..."
