@@ -63,6 +63,7 @@ InstallAurPackage "keeweb" "https://aur.archlinux.org/keeweb.git"
 InstallAurPackage "python-vdf" "https://aur.archlinux.org/python-vdf.git"
 InstallAurPackage "protontricks" "https://aur.archlinux.org/protontricks.git"
 InstallAurPackage "nuget4" "https://aur.archlinux.org/nuget4.git"
+InstallAurPackage "bitwarden" "https://aur.archlinux.org/bitwarden.git"
 
 gpg --recv-key A87FF9DF48BF1C90
 InstallAurPackage "spotify" "https://aur.archlinux.org/spotify.git"
@@ -84,3 +85,6 @@ currentUser=$(whoami)
 sudo usermod -G lp ${currentUser}
 sudo usermod -G input ${currentUser}
 sudo usermod -G video ${currentUser}
+
+echo "Setting up shares ..."
+SetupAutofsForSmbShare "ATLANTIS-SRV" "/Documents ://192.168.1.12/Documents /Downloads ://192.168.1.12/Downloads /Software ://192.168.1.12/Software /Astrophotography ://192.168.1.12/Astrophotography /Backup ://192.168.1.12/Backup"

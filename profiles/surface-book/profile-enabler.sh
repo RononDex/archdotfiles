@@ -30,6 +30,7 @@ InstallAurPackage "visual-studio-code-bin" "https://aur.archlinux.org/visual-stu
 InstallAurPackage "steam-fonts" "https://aur.archlinux.org/steam-fonts.git"
 CloneOrUpdateGitRepoToPackages "keeweb" "https://aur.archlinux.org/keeweb.git"
 InstallAurPackage "nuget4" "https://aur.archlinux.org/nuget4.git"
+InstallAurPackage "bitwarden" "https://aur.archlinux.org/bitwarden.git"
 
 gpg --recv-key A87FF9DF48BF1C90
 InstallAurPackage "spotify" "https://aur.archlinux.org/spotify.git"
