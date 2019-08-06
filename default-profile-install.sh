@@ -34,6 +34,12 @@ then
     chsh -s /bin/zsh
 fi
 
+echo "Configuring pacman ..."
+sudo cp defaults/pacman.conf /etc/pacman.conf
+sudo cp defaults/mirrorlist /etc/pacman.d/mirrorlist
+sudo chmod 744 /etc/pacman.conf
+sudo chmod 744 /etc/pacman.d/mirrorlist
+
 echo "Installing stuff..."
 sudo pacman -Sy powerline-fonts gcc boost ffmpeg make cmake otf-fira-code otf-fira-mono otf-fira-sans ttf-fira-code ttf-fira-mono ttf-fira-sans bash-completion zsh zsh-completions light git --noconfirm --needed
 sudo pacman -Sy bash-completion networkmanager gnome-keyring network-manager-applet xorg xorg-xinit lightdm firefox adobe-source-code-pro-fonts neofetch --noconfirm --needed

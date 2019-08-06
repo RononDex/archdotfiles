@@ -1,0 +1,54 @@
+##
+## Arch Linux repository mirrorlist
+## Filtered by mirror score from mirror status page
+## Generated on 2018-12-01
+##
+
+## Switzerland
+Server = http://pkg.adfinis-sygroup.ch/archlinux/$repo/os/$arch
+## Germany
+Server = http://mirror.selfnet.de/archlinux/$repo/os/$arch
+## Germany
+Server = http://mirror.united-gameserver.de/archlinux/$repo/os/$arch
+## Czechia
+Server = http://gluttony.sin.cvut.cz/arch/$repo/os/$arch
+## Germany
+Server = http://archlinux.thaller.ws/$repo/os/$arch
+## Germany
+Server = http://arch.unixpeople.org/$repo/os/$arch
+## Germany
+Server = http://ftp.halifax.rwth-aachen.de/archlinux/$repo/os/$arch
+## Germany
+Server = http://mirror.ubrco.de/archlinux/$repo/os/$arch
+## Germany
+Server = http://ftp.fau.de/archlinux/$repo/os/$arch
+## Germany
+Server = http://archlinux.nullpointer.io/$repo/os/$arch
+## Germany
+Server = http://mirror.orbit-os.com/archlinux/$repo/os/$arch
+## Germany
+Server = http://mirror.23media.de/archlinux/$repo/os/$arch
+## United States
+Server = http://mirrors.ocf.berkeley.edu/archlinux/$repo/os/$arch
+## France
+Server = http://mirror.archlinux.ikoula.com/archlinux/$repo/os/$arch
+## France
+Server = http://mirror.armbrust.me/archlinux/$repo/os/$arch
+## Germany
+Server = http://ftp.tu-chemnitz.de/pub/linux/archlinux/$repo/os/$arch
+## Germany
+Server = http://repo.itmettke.de/archlinux/$repo/os/$arch
+## Germany
+Server = http://arch.jensgutermuth.de/$repo/os/$arch
+## Germany
+Server = http://ftp.gwdg.de/pub/linux/archlinux/$repo/os/$arch
+## Germany
+Server = http://mirror.f4st.host/archlinux/$repo/os/$arch
+## Austria
+Server = http://mirror.digitalnova.at/archlinux/$repo/os/$arch
+## Belgium
+Server = http://archlinux.mirror.kangaroot.net/$repo/os/$arch
+## Germany
+Server = http://ftp.spline.inf.fu-berlin.de/mirrors/archlinux/$repo/os/$arch
+## Germany
+Server = http://archlinux.honkgong.info/$repo/os/$arch
