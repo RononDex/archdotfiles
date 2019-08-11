@@ -63,5 +63,9 @@ InstallAurPackage "xinit-xsession" "https://aur.archlinux.org/xinit-xsession.git
 InstallAurPackage "nrclient2-free" "https://aur.archlinux.org/nrclient2-free.git"
 InstallAurPackage "debtap" "https://aur.archlinux.org/debtap.git"
 
+echo "Enabling nrclient ..."
+sudo systemctl enable nrclient
+sudo systemctl start nrclient
+
 echo "Copying some default files ..."
 cp defaults/vscode_custom.css ~/vscode_custom.css
