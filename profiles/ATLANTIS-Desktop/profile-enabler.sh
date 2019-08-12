@@ -53,7 +53,7 @@ rm -rf ~/.omnisharp
 cp -Raf $scriptDir/../surface-book/overrides/omnisharp ~/.omnisharp
 
 echo "Installing AUR packages..."
-echo "polybar..."
+InstallAurPackage "nvm" "https://aur.archlinux.org/nvm.git"
 InstallAurPackage "polybar" "https://aur.archlinux.org/polybar.git"
 InstallAurPackage "msbuild-stable" "https://aur.archlinux.org/msbuild-stable.git"
 InstallAurPackage "signal" "https://aur.archlinux.org/signal.git"
