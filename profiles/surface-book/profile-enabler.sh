@@ -19,14 +19,14 @@ rm -rf ~/.omnisharp
 cp -Raf $scriptDir/overrides/omnisharp ~/.omnisharp
 
 echo "Installing stuff..."
-sudo pacman -Sy i3-gaps xf86-input-wacom flameshot vlc dmenu flameshot teamspeak3 --noconfirm --needed
+sudo pacman -Sy i3-gaps xf86-input-wacom code flameshot vlc dmenu flameshot teamspeak3 blueman --noconfirm --needed
 
 echo "Installing AUR packages..."
 echo "polybar..."
+InstallAurPackage "nvm" "https://aur.archlinux.org/nvm.git"
 InstallAurPackage "polybar" "https://aur.archlinux.org/polybar.git"
 InstallAurPackage "msbuild-stable" "https://aur.archlinux.org/msbuild-stable.git"
 InstallAurPackage "signal" "https://aur.archlinux.org/signal.git"
-InstallAurPackage "visual-studio-code-bin" "https://aur.archlinux.org/visual-studio-code-bin.git"
 InstallAurPackage "steam-fonts" "https://aur.archlinux.org/steam-fonts.git"
 CloneOrUpdateGitRepoToPackages "keeweb" "https://aur.archlinux.org/keeweb.git"
 InstallAurPackage "nuget4" "https://aur.archlinux.org/nuget4.git"

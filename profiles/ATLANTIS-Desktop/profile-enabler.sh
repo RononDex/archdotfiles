@@ -39,7 +39,7 @@ cp $scriptDir/overrides/polybar/constants ~/.config/polybar/constants
 sudo cp $scriptDir/overrides/xorg/20-keybord.conf /etc/X11/xorg.conf.d/20-keyboard.conf
 
 echo "Installing stuff..."
-sudo pacman -Sy i3-gaps nvidia vlc dmenu flameshot teamspeak3 cabextract --noconfirm --needed
+sudo pacman -Sy i3-gaps nvidia vlc code dmenu flameshot teamspeak3 cabextract blueman --noconfirm --needed
 sudo pacman -Sy lib32-nvidia-utils --noconfirm --needed
 sudo nvidia-xconfig
 
@@ -57,7 +57,6 @@ echo "polybar..."
 InstallAurPackage "polybar" "https://aur.archlinux.org/polybar.git"
 InstallAurPackage "msbuild-stable" "https://aur.archlinux.org/msbuild-stable.git"
 InstallAurPackage "signal" "https://aur.archlinux.org/signal.git"
-InstallAurPackage "visual-studio-code-bin" "https://aur.archlinux.org/visual-studio-code-bin.git"
 InstallAurPackage "steam-fonts" "https://aur.archlinux.org/steam-fonts.git"
 InstallAurPackage "keeweb" "https://aur.archlinux.org/keeweb.git"
 InstallAurPackage "python-vdf" "https://aur.archlinux.org/python-vdf.git"
