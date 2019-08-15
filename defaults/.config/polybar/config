@@ -28,9 +28,11 @@ separator = |
 
 font-0 = SourceCodePro:size=6.5;-1
 font-1 = SourceCodePro:size=6.5;0
-font-2 = MaterialIcons:size=6.5:antialias=false;0
-font-3 = FontAwesome:size=7.5;0
+font-2 = FuraMono Nerd Font Mono:size=8:antialias=false;0
+font-3 = FuraMono Nerd Font Mono:size=15:antialias=true;5
 font-4 = SourceCodePro:size=7.5;0
+font-5 = Material Icons:size=8:antialias=true;0
+font-6 = NotoEmoji Nerd Font Mono:size=8:antialias=true;0
 
 [bar/bottom]
 inherit = section/base
@@ -81,6 +83,7 @@ format-charging =  <animation-charging> <label-charging>
 format-discharging = <ramp-capacity> <label-discharging>
 format-full = <ramp-capacity> <label-full>
 
+ramp-capacity-font=4
 ramp-capacity-0 = 
 ramp-capacity-0-foreground = #f53c3c
 ramp-capacity-1 = 
@@ -92,9 +95,9 @@ ramp-capacity-4 = 
 bar-capacity-format = %{+u}%{+o}%fill%%empty%%{-u}%{-o}
 bar-capacity-fill = █
 bar-capacity-fill-foreground = #ddffffff
-bar-capacity-fill-font = 2
+bar-capacity-fill-font = 3
 bar-capacity-empty = █
-bar-capacity-empty-font = 2
+bar-capacity-empty-font = 3
 bar-capacity-empty-foreground = #44ffffff
 
 animation-charging-0 = 
@@ -106,7 +109,6 @@ animation-charging-framerate = 750
 
 [module/battery2]
 type = internal/battery
-full-at = 98
 inherit=module/battery1
 
 adapter=ADP1
@@ -248,8 +250,7 @@ format-volume = VOL: <ramp-volume> <label-volume>
 
 ; Available tokens:
 ;   %percentage% (default)
-label-muted = muted
-label-muted-font = 4
+label-muted = 🔇
 label-muted-foreground = #66
 
 ; Only applies if <ramp-volume> is used
