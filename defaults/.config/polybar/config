@@ -61,6 +61,7 @@ font-2 = FontAwesome:size=10;-2
 font-3 = NotoSans-Regular:size=8;-1
 font-4 = SourceCodePro:size=10;-1
 font-5 = 5Free:size=8:antialias=false;0
+font-6 = mplus Nerd Font Mono:size=7:antialias=true;0
 
 [module/backlight]
 type = custom/script
@@ -246,7 +247,7 @@ interval = 5
 ;Available tokens:
 ;   %percentage% (default)
 label-volume = %percentage%%
-format-volume = VOL: <ramp-volume> <label-volume>
+format-volume = <ramp-volume> <label-volume>
 
 ; Available tokens:
 ;   %percentage% (default)
@@ -320,23 +321,19 @@ label-mode-foreground = #000
 #label-mode-background = ${colors.primary}
 
 ; focused = Active workspace on focused monitor
-label-focused = %index%
 label-focused-background = #444
 #label-focused-underline = ${module/bspwm.label-focused-underline}
 label-focused-padding = 3
 
 ; unfocused = Inactive workspace on any monitor
-label-unfocused = %index%
 label-unfocused-padding = 3
 
 ; visible = Active workspace on unfocused monitor
-label-visible = %index%
 #label-visible-background = ${self.label-focused-background}
 #label-visible-underline = ${self.label-focused-underline}
 label-visible-padding = 3
 
 ; urgent = Workspace with urgency hint set
-label-urgent = %index%
 #label-urgent-background = ${module/bspwm.label-urgent-background}
 label-urgent-padding = 2
 
@@ -344,7 +341,7 @@ label-urgent-padding = 2
 label-separator = |
 label-separator-padding = 2
 
-ws-icon-0 =1;>
+ws-icon-0 =1;〉
 
 [module/network-traffic]
 type = custom/script

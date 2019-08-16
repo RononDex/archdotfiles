@@ -37,7 +37,7 @@ sudo pacman -Sy lightdm-webkit-theme-litarvan feh lxterminal compton alsa pulsea
 sudo pacman -Sy java-runtime-common jre-openjdk ntfs-3g autofs --noconfirm --needed
 sudo pacman -Sy bash-completion networkmanager gnome-keyring libftdi ccfits network-manager-applet xorg xorg-xinit lightdm firefox adobe-source-code-pro-fonts --noconfirm --needed
 sudo pacman -Sy python samba opencv pkgconfig gtest gmock wxgtk2 libmpdclient bc ranger w3m xorg-server binutils keychain --needed --noconfirm
-sudo pacman -Sy htop --needed --noconfirm
+sudo pacman -Sy htop perl-anyevent-i3 perl-json-xs --needed --noconfirm
 
 sudo systemctl enable NetworkManager
 sudo systemctl start NetworkManager
