@@ -1,34 +1,7 @@
 #!/bin/sh
 scriptDir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 
-InstallIndiDrivers() {
-    cd ~/packages/indi/build
-    mkdir 3rdparty
-    cd 3rdparty
-    cmake -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_BUILD_TYPE=Debug ../../3rdparty
-    make
-    sudo make install
-    cmake -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_BUILD_TYPE=Debug ../../3rdparty
-    make
-    sudo make install
-}
-
-InstallPlanetaryImager() {
-    cd ~/packages/PlanetaryImager
-    mkdir build
-    cd build
-    cmake .. -DCMAKE_INSTALL_PREFIX=/usr
-    make all && sudo make install
-}
-
-InstallPHD2() {
-    cd ~/packages/phd2
-    mkdir -p compiled
-    cd compiled
-    cmake ..
-    make
-    sudo ln -sf /home/cobra/packages/phd2/compiled/phd2.bin /usr/bin/phd2
-}
+. ./../../funcitons/astroFunctions.sh
 
 echo "Please ensure that Arch Linux ARM was correclty setup prior to launching this profile installer!"
 echo "Exit with Ctrl+C if not setup properly yet"

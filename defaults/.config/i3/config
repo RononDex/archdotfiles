@@ -30,7 +30,7 @@ font pango:monospace 8
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec lxterminal
+bindsym $mod+Return exec xfce4-terminal
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -208,9 +208,9 @@ exec --no-startup-id nm-applet &
 exec --no-startup-id blueman-applet &
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh &
 exec_always --no-startup-id feh --bg-fill ~/wallpapers/M51.jpg &
-exec_always --no-startup-id pkill compton
-exec_always --no-startup-id compton
-exec --no-startup-id lxterminal &
-exec --no-startup-id lxterminal -e htop &
-exec --no-startup-id lxterminal -e ranger &
-exec --no-startup-id lxterminal -e cava &
+exec_always --no-startup-id pkill compton &
+exec_always --no-startup-id compton &
+exec --no-startup-id xfce4-terminal --initial-title=MainTerminal --title=MainTerminal &
+exec --no-startup-id xfce4-terminal --initial-title=htop --title=htop -e htop &
+exec --no-startup-id xfce4-terminal --initial-title=ranger --title=ranger -e ranger &
+exec --no-startup-id xfce4-terminal --initial-title=cava --title=cava -e cava &

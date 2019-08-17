@@ -1,6 +1,8 @@
 #!/bin/sh
 scriptDir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 
+. $scriptDir/../../functions/astroFunctions.sh
+
 sudo cp $scriptDir/overrides/lightdm.conf /etc/lightdm/lightdm.conf
 sudo cp $scriptDir/overrides/lightdm-webkit2-greeter.conf /etc/lightdm/lightdm-webkit2-greeter.conf
 sudo cp $scriptDir/overrides/lightdm-bg.jpg /usr/share/lightdm-webkit/themes/litarvan/images/background.jpg
@@ -39,6 +41,19 @@ InstallAurPackage "spotify" "https://aur.archlinux.org/spotify.git"
 echo "Enabling lightdm ..."
 sudo systemctl enable lightdm.service
 
+echo "Setting up shares ..."
+SetupAutofsForSmbShare "ATLANTIS-SRV" "/Documents ://10.0.0.2/Documents /Downloads ://10.0.0.2/Downloads /Software ://10.0.0.2/Software /Astrophotography ://10.0.0.2/Astrophotography /Backup ://10.0.0.2/Backup"
+
+echo "Setting up astro stuff .."
+sudo pacman -Sy gpsd libdc1394 kstars --noconfirm --needed
+sudo pacman -Sy --nnoconfirm --needed opencv ccfits breeze-icons binutils patch cmake make libraw libindi gpsd gcc
+
+CloneOrUpdateGitRepoToPackages "indi" "https://github.com/indilib/indi"
+InstallIndiDrivers
+CloneOrUpdateGitRepoToPackages "phd2" "https://github.com/OpenPHDGuiding/phd2.git"
+InstallPHD2
+
+echo "Adjust user permissions"
 currentUser=$(whoami)
 sudo usermod -G lp ${currentUser}
 sudo usermod -G input ${currentUser}
@@ -46,6 +61,3 @@ sudo usermod -G video ${currentUser}
 sudo usermod -G uucp ${currentUser}
 
 chmod +x ~/.profile/bashprofile
-
-echo "Setting up shares ..."
-SetupAutofsForSmbShare "ATLANTIS-SRV" "/Documents ://10.0.0.2/Documents /Downloads ://10.0.0.2/Downloads /Software ://10.0.0.2/Software /Astrophotography ://10.0.0.2/Astrophotography /Backup ://10.0.0.2/Backup"
