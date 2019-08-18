@@ -199,16 +199,15 @@ client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 
 client.background       #ffffff
 
-# Load layouts
-exec --no-startup-id "i3-msg 'workspace 1; append_layout /home/cobra/.i3/workspace-1.json'"
+# Load layouts / workspaces
+exec --no-startup-id ~/.i3/workspaces/load-workspaces.sh
 
 # Execs
 exec --no-startup-id light-locker &
 exec --no-startup-id nm-applet &
 exec --no-startup-id blueman-applet &
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh &
+exec_always --no-startup-id ~/.config/polybar/launch.sh &
 exec_always --no-startup-id feh --bg-fill ~/wallpapers/M51.jpg &
-exec_always --no-startup-id pkill compton &
 exec_always --no-startup-id compton &
 exec --no-startup-id xfce4-terminal --initial-title=MainTerminal --title=MainTerminal &
 exec --no-startup-id xfce4-terminal --initial-title=htop --title=htop -e htop &

@@ -10,6 +10,8 @@ sudo cp $scriptDir/overrides/litarvan/styles.css /usr/share/lightdm-webkit/theme
 cp $scriptDir/overrides/polybar/constants ~/.config/polybar/constants
 sudo cp $scriptDir/overrides/xorg/20-keybord.conf /etc/X11/xorg.conf.d/20-keyboard.conf
 sudo cp $scriptDir/overrides/xorg/21-touchpad.conf /etc/X11/xorg.conf.d/21-touchpad.conf
+rm -rf ~/.i3
+cp -r $scriptDir/overrides/.i3 ~/.i3
 
 if [ ! -d ~/.omnisharp ]
 then
@@ -22,6 +24,8 @@ cp -Raf $scriptDir/overrides/omnisharp ~/.omnisharp
 
 echo "Installing stuff..."
 sudo pacman -Sy i3-gaps xf86-input-wacom code flameshot vlc dmenu flameshot teamspeak3 blueman --noconfirm --needed
+sudo systemctl enable bluetooth
+sudo systemctl start bluetooth
 
 echo "Installing AUR packages..."
 echo "polybar..."
@@ -61,3 +65,4 @@ sudo usermod -G video ${currentUser}
 sudo usermod -G uucp ${currentUser}
 
 chmod +x ~/.profile/bashprofile
+chmod +x ~/.i3/workspaces/load-workspaces.sh

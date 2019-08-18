@@ -14,6 +14,7 @@ chmod +x ~/.config/i3/config
 chmod +x ~/.config/polybar/config
 chmod +x ~/.config/polybar/launch.sh
 chmod +x ~/.config/polybar/network-traffic.sh
+chmod +x ~/.config/xfce4/terminal/terminalrc
 
 echo "Changing default shell to zsh"
 if [[ "$SHELL" != "/bin/zsh" ]]
