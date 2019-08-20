@@ -24,7 +24,7 @@ rm -rf ~/.omnisharp
 cp -Raf $scriptDir/overrides/omnisharp ~/.omnisharp
 
 echo "Installing stuff..."
-sudo pacman -Sy i3-gaps xf86-input-wacom code flameshot vlc dmenu flameshot teamspeak3 blueman --noconfirm --needed
+sudo pacman -Sy i3-gaps xf86-input-wacom flameshot vlc dmenu flameshot teamspeak3 blueman --noconfirm --needed
 sudo systemctl enable bluetooth
 sudo systemctl start bluetooth
 
@@ -38,6 +38,7 @@ InstallAurPackage "steam-fonts" "https://aur.archlinux.org/steam-fonts.git"
 CloneOrUpdateGitRepoToPackages "keeweb" "https://aur.archlinux.org/keeweb.git"
 InstallAurPackage "nuget4" "https://aur.archlinux.org/nuget4.git"
 InstallAurPackage "bitwarden" "https://aur.archlinux.org/bitwarden.git"
+InstallAurPackage "visual-studio-code-bin" "https://aur.archlinux.org/visual-studio-code-bin.git"
 
 gpg --recv-key A87FF9DF48BF1C90
 gpg --recv-key 4773BD5E130D1D45

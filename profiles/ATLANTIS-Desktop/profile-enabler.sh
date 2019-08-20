@@ -39,7 +39,7 @@ cp $scriptDir/overrides/polybar/constants ~/.config/polybar/constants
 sudo cp $scriptDir/overrides/xorg/20-keybord.conf /etc/X11/xorg.conf.d/20-keyboard.conf
 
 echo "Installing stuff..."
-sudo pacman -Sy i3-gaps nvidia vlc code dmenu flameshot teamspeak3 cabextract blueman --noconfirm --needed
+sudo pacman -Sy i3-gaps nvidia vlc dmenu flameshot teamspeak3 cabextract blueman --noconfirm --needed
 sudo pacman -Sy lib32-nvidia-utils --noconfirm --needed
 sudo nvidia-xconfig
 
@@ -63,6 +63,7 @@ InstallAurPackage "python-vdf" "https://aur.archlinux.org/python-vdf.git"
 InstallAurPackage "protontricks" "https://aur.archlinux.org/protontricks.git"
 InstallAurPackage "nuget4" "https://aur.archlinux.org/nuget4.git"
 InstallAurPackage "bitwarden" "https://aur.archlinux.org/bitwarden.git"
+InstallAurPackage "visual-studio-code-bin" "https://aur.archlinux.org/visual-studio-code-bin.git"
 
 gpg --recv-key A87FF9DF48BF1C90
 InstallAurPackage "spotify" "https://aur.archlinux.org/spotify.git"
