@@ -1,0 +1,98 @@
+// vim:ts=4:sw=4:et
+{
+    "border": "pixel",
+    "floating": "auto_off",
+    "layout": "splitv",
+    "percent": 0.233333333333333,
+    "type": "con",
+    "nodes": [
+        {
+            "border": "pixel",
+            "current_border_width": 1,
+            "floating": "auto_off",
+            "geometry": {
+               "height": 434,
+               "width": 654,
+               "x": 0,
+               "y": 0
+            },
+            "name": "Terminal - ranger",
+            "percent": 0.5,
+            "swallows": [
+               {
+                  "title": "^ranger$",
+               }
+            ],
+            "type": "con"
+        },
+    ]
+}
+
+{
+    "border": "pixel",
+    "current_border_width": 1,
+    "floating": "auto_off",
+    "geometry": {
+       "height": 434,
+       "width": 654,
+       "x": 0,
+       "y": 0
+    },
+    "name": "Terminal - i3-save-tree --workspace 1 > ~/workspace-1.json",
+    "percent": 0.516666666666667,
+    "swallows": [
+       {
+         "title": "^MainTerminal$",
+       }
+    ],
+    "type": "con"
+}
+
+{
+    // splitv split container with 2 children
+    "border": "pixel",
+    "floating": "auto_off",
+    "layout": "splitv",
+    "percent": 0.25,
+    "type": "con",
+    "nodes": [
+        {
+            "border": "pixel",
+            "current_border_width": 1,
+            "floating": "auto_off",
+            "geometry": {
+               "height": 434,
+               "width": 654,
+               "x": 0,
+               "y": 0
+            },
+            "name": "Terminal - htop",
+            "percent": 0.1,
+            "swallows": [
+               {
+                  "title": "^htop$",
+               }
+            ],
+            "type": "con"
+        },
+        {
+            "border": "pixel",
+            "current_border_width": 1,
+            "floating": "auto_off",
+            "geometry": {
+               "height": 434,
+               "width": 654,
+               "x": 0,
+               "y": 0
+            },
+            "name": "Terminal - cava",
+            "percent": 0.9,
+            "swallows": [
+               {
+                  "title": "^cava$",
+               }
+            ],
+            "type": "con"
+        }
+    ]
+}

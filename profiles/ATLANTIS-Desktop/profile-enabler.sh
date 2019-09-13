@@ -38,9 +38,17 @@ sudo cp $scriptDir/overrides/litarvan/styles.css /usr/share/lightdm-webkit/theme
 cp $scriptDir/overrides/polybar/constants ~/.config/polybar/constants
 sudo cp $scriptDir/overrides/xorg/20-keybord.conf /etc/X11/xorg.conf.d/20-keyboard.conf
 
+mkdir ~/.i3
+mkdir ~/.i3/workspaces
+mkdir ~/.i3/scripts
+
+cp $scriptDir/overrides/.i3/workspaces/load-workspaces.sh ~/.i3/workspaces/load-workspaces.sh
+cp $scriptDir/overrides/.i3/workspaces/workspace-1.json ~/.i3/workspaces/workspace-1.json
+cp $scriptDir/overrides/.i3/scripts/launch-autostart.sh ~/.i3/scripts/launch-autostart.sh
+
 echo "Installing stuff..."
 sudo pacman -Sy i3-gaps nvidia vlc dmenu flameshot teamspeak3 cabextract blueman --noconfirm --needed
-sudo pacman -Sy lib32-nvidia-utils --noconfirm --needed
+sudo pacman -Sy lib32-nvidia-utils remmina --noconfirm --needed
 sudo nvidia-xconfig
 
 if [ ! -d ~/.omnisharp ]
@@ -64,6 +72,7 @@ InstallAurPackage "protontricks" "https://aur.archlinux.org/protontricks.git"
 InstallAurPackage "nuget4" "https://aur.archlinux.org/nuget4.git"
 InstallAurPackage "bitwarden" "https://aur.archlinux.org/bitwarden.git"
 InstallAurPackage "visual-studio-code-bin" "https://aur.archlinux.org/visual-studio-code-bin.git"
+InstallAurPackage "remmina-plugin-rdesktop" "https://aur.archlinux.org/remmina-plugin-rdesktop.git"
 
 gpg --recv-key A87FF9DF48BF1C90
 InstallAurPackage "spotify" "https://aur.archlinux.org/spotify.git"
