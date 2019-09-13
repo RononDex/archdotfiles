@@ -63,10 +63,10 @@ InstallPHD2
 
 echo "Adjust user permissions"
 currentUser=$(whoami)
-sudo usermod -G lp ${currentUser}
-sudo usermod -G input ${currentUser}
-sudo usermod -G video ${currentUser}
-sudo usermod -G uucp ${currentUser}
+sudo usermod -a -G lp ${currentUser}
+sudo usermod -a -G input ${currentUser}
+sudo usermod -a -G vide ${currentUser}
+sudo usermod -a -G uucp ${currentUser}
 
 chmod +x ~/.profile/bashprofile
 chmod +x ~/.i3/workspaces/load-workspaces.sh
