@@ -88,8 +88,9 @@ InstallPlanetaryImager
 CloneOrUpdateGitRepoToPackages "phd2" "https://github.com/OpenPHDGuiding/phd2.git"
 InstallPHD2
 
-echo "Enabling lightdm ..."
+echo "Enabling services ..."
 sudo systemctl enable lightdm.service
+sudo systemctl enable ckb-next-daemon
 
 currentUser=$(whoami)
 sudo usermod -a -G lp ${currentUser}
