@@ -6,7 +6,7 @@ inherit = section/base
 
 width = 100%
 
-background = #FF111111
+background = #AA111111
 foreground = #ccffffff
 
 line-color = ${bar/bottom.background}
