@@ -65,7 +65,7 @@ echo "Adjust user permissions"
 currentUser=$(whoami)
 sudo usermod -a -G lp ${currentUser}
 sudo usermod -a -G input ${currentUser}
-sudo usermod -a -G vide ${currentUser}
+sudo usermod -a -G video ${currentUser}
 sudo usermod -a -G uucp ${currentUser}
 
 chmod +x ~/.profile/bashprofile
