@@ -19,4 +19,4 @@ This repository is structured into the following folders:
 1. defaults: Contains all the default files that install all the base files into ~/
 2. profiles: Contains one subfolder per profile, with overrides for the base profile.
 
-![Screenshot](https://raw.githubusercontent.com/RononDex/archdotfiles/Screenshot.png)
+![Screenshot](https://github.com/RononDex/archdotfiles/raw/master/Screenshot.png)
