@@ -74,6 +74,13 @@ InstallAurPackage "bitwarden" "https://aur.archlinux.org/bitwarden.git"
 InstallAurPackage "visual-studio-code-bin" "https://aur.archlinux.org/visual-studio-code-bin.git"
 InstallAurPackage "remmina-plugin-rdesktop" "https://aur.archlinux.org/remmina-plugin-rdesktop.git"
 InstallAurPackage "ckb-next" "https://aur.archlinux.org/ckb-next.git"
+InstallAurPackage "openhmd-git" "https://aur.archlinux.org/openhmd-git.git"
+InstallAurPackage "SteamVR-OpenHMD" "https://github.com/ChristophHaag/SteamVR-OpenHMD"
+MakePackage "SteamVR-OpenHMD"
+
+# Setup Oculus HMD steam vr driver
+ln -s /usr/lib/steamvr/openhmd ~/.steam/steam/steamapps/common/SteamVR/drivers/openhmd
+
 
 gpg --recv-key A87FF9DF48BF1C90
 InstallAurPackage "spotify" "https://aur.archlinux.org/spotify.git"

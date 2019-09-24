@@ -52,3 +52,11 @@ SetupAutofsForSmbShare() {
         sudo systemctl restart autofs
     fi
 }
+
+MakePackage() {
+    cd ~/packages/$1
+    mkdir build
+    cd build
+    cmake ..
+    make
+}
