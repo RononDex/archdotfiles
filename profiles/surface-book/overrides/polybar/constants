@@ -3,8 +3,8 @@ dpi=266
 monitor = eDP1
 
 [bar/top]
-modules-right = pulseaudio backlight wireless-network battery1 battery2 date
-modules-left = powermenu mpd
+modules-right = wireless-network battery1 battery2 date
+modules-left = powermenu pulseaudio backlight mpd
 
 tray-maxsize = 40
 height = 40

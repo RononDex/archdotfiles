@@ -11,7 +11,7 @@ foreground = #ccffffff
 
 line-color = ${bar/bottom.background}
 line-size = 10
-tray-padding = 5
+tray-padding = 3
 
 border-bottom-size = 3
 border-bottom-color = #FF333333
@@ -26,13 +26,13 @@ module-margin = 2
 
 separator = |
 
-font-0 = SourceCodePro:size=6.5;-1
-font-1 = SourceCodePro:size=6.5;0
-font-2 = FuraMono Nerd Font Mono:size=8:antialias=false;0
-font-3 = FuraMono Nerd Font Mono:size=15:antialias=true;5
-font-4 = SourceCodePro:size=7.5;0
-font-5 = Material Icons:size=8:antialias=true;0
-font-6 = NotoEmoji Nerd Font Mono:size=8:antialias=true;0
+font-0 = SourceCodePro:size=6.5;3
+font-1 = SourceCodePro:size=6.5;3
+font-2 = FuraMono Nerd Font Mono:size=8:antialias=false;3
+font-3 = FuraMono Nerd Font Mono:size=15:antialias=true;9
+font-4 = SourceCodePro:size=7.5;3
+font-5 = Material Icons:size=6.5:antialias=true;3
+font-6 = NotoEmoji Nerd Font Mono:size=8:antialias=true;3
 
 [bar/bottom]
 inherit = section/base
@@ -96,9 +96,9 @@ ramp-capacity-4 = 
 bar-capacity-format = %{+u}%{+o}%fill%%empty%%{-u}%{-o}
 bar-capacity-fill = █
 bar-capacity-fill-foreground = #ddffffff
-bar-capacity-fill-font = 3
+bar-capacity-fill-font = 4
 bar-capacity-empty = █
-bar-capacity-empty-font = 3
+bar-capacity-empty-font = 4
 bar-capacity-empty-foreground = #44ffffff
 
 animation-charging-0 = 
@@ -106,6 +106,7 @@ animation-charging-1 = 
 animation-charging-2 = 
 animation-charging-3 = 
 animation-charging-4 = 
+animation-charging-font = 4
 animation-charging-framerate = 750
 
 [module/battery2]
@@ -271,7 +272,7 @@ ramp-headphones-1 = 
 [module/powermenu]
 type = custom/menu
 
-format-padding = 1
+format-padding = 2
 
 label-open = 
 label-close = 
@@ -291,14 +292,16 @@ menu-1-0-foreground = #fba922
 menu-1-0-exec = menu_open-0
 menu-1-1 = Reboot
 menu-1-1-foreground = #fba922
-menu-1-1-exec = sudo reboot
+menu-1-1-exec = reboot
 
 menu-2-0 = Power off
 menu-2-0-foreground = #fba922
-menu-2-0-exec = sudo poweroff
+menu-2-0-exec = poweroff
 menu-2-1 = Cancel
 menu-2-1-foreground = #fba922
 menu-2-1-exec = menu_open-0
+
+label-separator = "  "
 
 [module/clock]
 type = internal/date
@@ -341,7 +344,7 @@ label-urgent-padding = 2
 label-separator = |
 label-separator-padding = 2
 
-ws-icon-0 =1;〉
+ws-icon-0 =1;〉_
 
 [module/network-traffic]
 type = custom/script
