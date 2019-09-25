@@ -42,6 +42,9 @@ sudo pacman -Sy bash-completion networkmanager gnome-keyring libftdi ccfits netw
 sudo pacman -Sy python samba opencv pkgconfig gtest gmock wxgtk2 libmpdclient bc ranger w3m xorg-server binutils keychain --needed --noconfirm
 sudo pacman -Sy htop unzip shadow perl-anyevent-i3 perl-json-xs git-lfs --needed --noconfirm
 
+git lfs install
+git lfs pull
+
 sudo systemctl enable NetworkManager
 sudo systemctl start NetworkManager
 sudo systemctl enable autofs
