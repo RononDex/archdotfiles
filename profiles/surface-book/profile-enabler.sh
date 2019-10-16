@@ -55,7 +55,11 @@ sudo pacman -Sy gpsd libdc1394 kstars --noconfirm --needed
 sudo pacman -Sy --noconfirm --needed opencv ccfits breeze-icons binutils patch cmake make libraw libindi gpsd gcc
 
 CloneOrUpdateGitRepoToPackages "indi" "https://github.com/indilib/indi"
+InstallAurPackage "erfa" "https://aur.archlinux.org/erfa.git"
 InstallAurPackage "libindi_3rdparty" "https://aur.archlinux.org/libindi_3rdparty.git"
+InstallAurPackage "python-astropy" "https://aur.archlinux.org/python-astropy.git"
+InstallAurPackage "wcslib62" "https://aur.archlinux.org/wcslib62.git"
+InstallAurPackage "astrometry.net" "https://aur.archlinux.org/astrometry.net.git"
 # InstallIndiDriver "indi_canon_ccd"
 # InstallIndiDriver "indi_asi_ccd"
 CloneOrUpdateGitRepoToPackages "phd2" "https://github.com/OpenPHDGuiding/phd2.git"
