@@ -71,6 +71,7 @@ InstallAurPackage "python-vdf" "https://aur.archlinux.org/python-vdf.git"
 InstallAurPackage "protontricks" "https://aur.archlinux.org/protontricks.git"
 InstallAurPackage "nuget4" "https://aur.archlinux.org/nuget4.git"
 InstallAurPackage "bitwarden" "https://aur.archlinux.org/bitwarden.git"
+InstallAurPackage "msbuild-16-bin" "https://aur.archlinux.org/msbuild-16-bin.git"
 InstallAurPackage "visual-studio-code-bin" "https://aur.archlinux.org/visual-studio-code-bin.git"
 InstallAurPackage "remmina-plugin-rdesktop" "https://aur.archlinux.org/remmina-plugin-rdesktop.git"
 InstallAurPackage "ckb-next" "https://aur.archlinux.org/ckb-next.git"
@@ -98,6 +99,7 @@ InstallPHD2
 echo "Enabling services ..."
 sudo systemctl enable lightdm.service
 sudo systemctl enable ckb-next-daemon
+sudo systemctl start ckb-next-daemon
 
 currentUser=$(whoami)
 sudo usermod -a -G lp ${currentUser}
