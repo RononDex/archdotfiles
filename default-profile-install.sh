@@ -64,6 +64,9 @@ then
     git clone https://github.com/romkatv/powerlevel10k.git ~/.oh-my-zsh/themes/powerlevel10k
 fi
 
+echo "Setting up vim..."
+BasicVimInstall
+
 echo "Installing AUR packages"
 InstallAurPackage "nerd-fonts-complete" "https://aur.archlinux.org/nerd-fonts-complete.git"
 InstallAurPackage "xinit-xsession" "https://aur.archlinux.org/xinit-xsession.git"
