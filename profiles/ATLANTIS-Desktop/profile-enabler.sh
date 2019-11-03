@@ -48,7 +48,7 @@ cp $scriptDir/overrides/.i3/scripts/launch-autostart.sh ~/.i3/scripts/launch-aut
 
 echo "Installing stuff..."
 sudo pacman -Sy i3-gaps nvidia vlc dmenu flameshot teamspeak3 cabextract blueman --noconfirm --needed
-sudo pacman -Sy lib32-nvidia-utils remmina --noconfirm --needed
+sudo pacman -Sy lib32-nvidia-utils remmina prusa-slicer --noconfirm --needed
 sudo nvidia-xconfig
 
 if [ ! -d ~/.omnisharp ]
