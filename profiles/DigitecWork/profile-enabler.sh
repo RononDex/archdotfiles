@@ -17,9 +17,8 @@ cp $scriptDir/overrides/.i3/workspaces/workspace-1.json ~/.i3/workspaces/workspa
 cp $scriptDir/overrides/.i3/scripts/launch-autostart.sh ~/.i3/scripts/launch-autostart.sh
 
 echo "Installing stuff..."
-sudo pacman -Sy i3-gaps nvidia vlc dmenu flameshot cabextract --noconfirm --needed
-sudo pacman -Sy lib32-nvidia-utils remmina --noconfirm --needed
-sudo nvidia-xconfig
+sudo pacman -Sy i3-gaps mesa vlc dmenu flameshot cabextract --noconfirm --needed
+sudo pacman -Sy remmina --noconfirm --needed
 
 if [ ! -d ~/.omnisharp ]
 then
@@ -34,11 +33,12 @@ echo "Installing AUR packages..."
 InstallAurPackage "nvm" "https://aur.archlinux.org/nvm.git"
 InstallAurPackage "polybar" "https://aur.archlinux.org/polybar.git"
 InstallAurPackage "msbuild-stable" "https://aur.archlinux.org/msbuild-stable.git"
-InstallAurPackage "signal" "https://aur.archlinux.org/signal.git"
-InstallAurPackage "steam-fonts" "https://aur.archlinux.org/steam-fonts.git"
+InstallAurPackage "signal-desktop-bin" "https://aur.archlinux.org/signal-desktop-bin.git"
 InstallAurPackage "python-vdf" "https://aur.archlinux.org/python-vdf.git"
+InstallAurPackage "protontricks" "https://aur.archlinux.org/protontricks.git"
 InstallAurPackage "nuget4" "https://aur.archlinux.org/nuget4.git"
 InstallAurPackage "bitwarden" "https://aur.archlinux.org/bitwarden.git"
+InstallAurPackage "msbuild-16-bin" "https://aur.archlinux.org/msbuild-16-bin.git"
 InstallAurPackage "visual-studio-code-bin" "https://aur.archlinux.org/visual-studio-code-bin.git"
 InstallAurPackage "remmina-plugin-rdesktop" "https://aur.archlinux.org/remmina-plugin-rdesktop.git"
 InstallAurPackage "ckb-next" "https://aur.archlinux.org/ckb-next.git"
@@ -49,11 +49,13 @@ InstallAurPackage "spotify" "https://aur.archlinux.org/spotify.git"
 echo "Enabling services ..."
 sudo systemctl enable lightdm.service
 sudo systemctl enable ckb-next-daemon
+sudo systemctl start ckb-next-daemon
 
 currentUser=$(whoami)
 sudo usermod -a -G lp ${currentUser}
 sudo usermod -a -G input ${currentUser}
 sudo usermod -a -G video ${currentUser}
+sudo usermod -a -G uucp ${currentUser}
 
 echo "Setting up shares ..."
-SetupAutofsForSmbShare "ATLANTIS-SRV" "/Documents ://10.0.0.2/Documents /Downloads ://10.0.0.2/Downloads /Software ://10.0.0.2/Software /Astrophotography ://10.0.0.2/Astrophotography /Backup ://10.0.0.2/Backup"
+# SetupAutofsForSmbShare "ATLANTIS-SRV" "/Documents ://192.168.1.12/Documents /Downloads ://192.168.1.12/Downloads /Software ://192.168.1.12/Software /Astrophotography ://192.168.1.12/Astrophotography /Backup ://192.168.1.12/Backup"
