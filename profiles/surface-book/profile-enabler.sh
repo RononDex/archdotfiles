@@ -13,6 +13,7 @@ sudo cp $scriptDir/overrides/xorg/21-touchpad.conf /etc/X11/xorg.conf.d/21-touch
 cp $scriptDir/overrides/.i3/workspaces/load-workspaces.sh ~/.i3/workspaces/load-workspaces.sh
 cp $scriptDir/overrides/.i3/workspaces/workspace-1.json ~/.i3/workspaces/workspace-1.json
 cp $scriptDir/overrides/.i3/scripts/launch-autostart.sh ~/.i3/scripts/launch-autostart.sh
+cp $scriptDir/overrides/dunst/dunstrc ~/.config/dunst/dunstrc
 
 if [ ! -d ~/.omnisharp ]
 then
@@ -61,8 +62,6 @@ InstallAurPackage "libindi_3rdparty" "https://aur.archlinux.org/libindi_3rdparty
 InstallAurPackage "python-astropy" "https://aur.archlinux.org/python-astropy.git"
 InstallAurPackage "wcslib62" "https://aur.archlinux.org/wcslib62.git"
 InstallAurPackage "astrometry.net" "https://aur.archlinux.org/astrometry.net.git"
-# InstallIndiDriver "indi_canon_ccd"
-# InstallIndiDriver "indi_asi_ccd"
 CloneOrUpdateGitRepoToPackages "phd2" "https://github.com/OpenPHDGuiding/phd2.git"
 InstallPHD2
 
