@@ -21,6 +21,7 @@ cp -f $scriptDir/overrides/.i3/scripts/launch-autostart.sh ~/.i3/scripts/launch-
 echo "Installing stuff..."
 sudo pacman -Sy i3-gaps mesa dunst libnotify notification-daemon vlc dmenu flameshot light-locker cabextract --noconfirm --needed
 sudo pacman -Sy remmina --noconfirm --needed
+sudo pacman -Sy nginx-mainline --noconfirm --needed
 
 if [ ! -d ~/.omnisharp ]
 then
