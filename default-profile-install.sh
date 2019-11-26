@@ -17,6 +17,7 @@ chmod +x ~/.config/polybar/network-traffic.sh
 chmod +x ~/.config/xfce4/terminal/terminalrc
 chmod +x ~/.i3/scripts/launch-compton.sh
 chmod +x ~/.i3/scripts/launch-autostart.sh
+chmod +x ~/.i3/scripts/set-background.sh
 
 echo "Changing default shell to zsh"
 if [[ "$SHELL" != "/bin/zsh" ]]
@@ -80,4 +81,4 @@ sudo systemctl enable nrclient
 sudo systemctl start nrclient
 
 echo "Copying some default files ..."
-cp defaults/vscode_custom.css ~/vscode_custom.css
+cp $scriptDir/defaults/vscode_custom.css ~/vscode_custom.css

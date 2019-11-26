@@ -11,4 +11,3 @@ export display=:1                                       # Set default display
 export MSBuildSDKsPath=/opt/dotnet/sdk/$(dotnet --version)/Sdks
 
 setxkbmap ch -variant de                                # Set keyboard mapping to ch-de
-wal -i "$(< "${HOME}/wallpapers/")" -f ~/.config/wal/colors.json
