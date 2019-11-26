@@ -8,17 +8,18 @@ sudo cp $scriptDir/overrides/litarvan/styles.css /usr/share/lightdm-webkit/theme
 cp $scriptDir/overrides/polybar/constants ~/.config/polybar/constants
 sudo cp $scriptDir/overrides/xorg/20-keybord.conf /etc/X11/xorg.conf.d/20-keyboard.conf
 cp $scriptDir/overrides/polybar/network-traffic.sh ~/.config/polybar/network-traffic.sh
+cp $scriptDir/overrides/xfce4/terminalrc ~/.config/xfce4/terminal/terminalrc
 
 mkdir ~/.i3
 mkdir ~/.i3/workspaces
 mkdir ~/.i3/scripts
 
-cp $scriptDir/overrides/.i3/workspaces/load-workspaces.sh ~/.i3/workspaces/load-workspaces.sh
-cp $scriptDir/overrides/.i3/workspaces/workspace-1.json ~/.i3/workspaces/workspace-1.json
-cp $scriptDir/overrides/.i3/scripts/launch-autostart.sh ~/.i3/scripts/launch-autostart.sh
+cp -f $scriptDir/overrides/.i3/workspaces/load-workspaces.sh ~/.i3/workspaces/load-workspaces.sh
+cp -f $scriptDir/overrides/.i3/workspaces/workspace-1.json ~/.i3/workspaces/workspace-1.json
+cp -f $scriptDir/overrides/.i3/scripts/launch-autostart.sh ~/.i3/scripts/launch-autostart.sh
 
 echo "Installing stuff..."
-sudo pacman -Sy i3-gaps mesa dunst vlc dotnet-sdk dmenu flameshot light-locker cabextract --noconfirm --needed
+sudo pacman -Sy i3-gaps mesa dunst libnotify notification-daemon vlc dmenu flameshot light-locker cabextract --noconfirm --needed
 sudo pacman -Sy remmina --noconfirm --needed
 
 if [ ! -d ~/.omnisharp ]
@@ -33,12 +34,9 @@ cp -Raf $scriptDir/../surface-book/overrides/omnisharp ~/.omnisharp
 echo "Installing AUR packages..."
 InstallAurPackage "nvm" "https://aur.archlinux.org/nvm.git"
 InstallAurPackage "polybar" "https://aur.archlinux.org/polybar.git"
-InstallAurPackage "msbuild-stable" "https://aur.archlinux.org/msbuild-stable.git"
 InstallAurPackage "signal-desktop-bin" "https://aur.archlinux.org/signal-desktop-bin.git"
-InstallAurPackage "python-vdf" "https://aur.archlinux.org/python-vdf.git"
-InstallAurPackage "protontricks" "https://aur.archlinux.org/protontricks.git"
+InstallAurPackage "mono-nightly" "https://aur.archlinux.org/mono-nightly.git"
 InstallAurPackage "nuget4" "https://aur.archlinux.org/nuget4.git"
-InstallAurPackage "mono-git" "https://aur.archlinux.org/mono-git.git"
 InstallAurPackage "bitwarden" "https://aur.archlinux.org/bitwarden.git"
 InstallAurPackage "msbuild-16-bin" "https://aur.archlinux.org/msbuild-16-bin.git"
 InstallAurPackage "visual-studio-code-bin" "https://aur.archlinux.org/visual-studio-code-bin.git"
@@ -49,6 +47,8 @@ InstallAurPackage "nodejs-azure-cli" "https://aur.archlinux.org/nodejs-azure-cli
 
 gpg --recv-key A87FF9DF48BF1C90
 InstallAurPackage "spotify" "https://aur.archlinux.org/spotify.git"
+
+sudo pacman -Sy dotnet-sdk dotnet-runtime dotnet-host --noconfirm --needed
 
 if [ ! -d ~/Downloads ]
 then
@@ -72,6 +72,14 @@ sudo usermod -a -G lp ${currentUser}
 sudo usermod -a -G input ${currentUser}
 sudo usermod -a -G video ${currentUser}
 sudo usermod -a -G uucp ${currentUser}
+
+echo "Increasing inotify max watches ..."
+if [ ! -f /etc/sysctl.conf ]
+then
+    echo "fs.inotify.max_user_watches = 1638400" | sudo tee -a /etc/sysctl.conf
+    echo "fs.inotify.max_user_instances = 1638400" | sudo tee -a /etc/sysctl.conf
+    sudo sysctl -p
+fi
 
 echo "Setting up shares ..."
 # SetupAutofsForSmbShare "ATLANTIS-SRV" "/Documents ://192.168.1.12/Documents /Downloads ://192.168.1.12/Downloads /Software ://192.168.1.12/Software /Astrophotography ://192.168.1.12/Astrophotography /Backup ://192.168.1.12/Backup"

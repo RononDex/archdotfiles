@@ -1,5 +1,5 @@
 [section/base]
-dpi = 105
+dpi = 115
 
 [bar/top]
 monitor = DP-1
@@ -7,7 +7,7 @@ modules-right = mpd pulseaudio network-traffic wireless-network battery1 battery
 modules-left = powermenu mpd
 
 height = 25
-tray-maxsize = 20
+tray-maxsize = 22
 
 [bar/bottom]
 monitor = DP-1
