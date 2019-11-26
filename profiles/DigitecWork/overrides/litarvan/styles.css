@@ -1,14 +1,15 @@
 html {
   width: 100%;
   height: 100vh;
-  zoom: 1.5;
+  zoom: 1;
 }
 
 body {
   background: black;
 }
 
-html, body {
+html,
+body {
   margin: 0;
 }
 
@@ -73,7 +74,14 @@ html, body {
   transition: opacity 250ms ease-in-out;
 }
 
-#loading.hidden, splash.hidden, login.hidden, users.hidden, desktops.hidden, body.hidden, app.hidden, #app-container.hidden {
+#loading.hidden,
+splash.hidden,
+login.hidden,
+users.hidden,
+desktops.hidden,
+body.hidden,
+app.hidden,
+#app-container.hidden {
   opacity: 0;
 }
 
@@ -86,6 +94,8 @@ html, body {
   display: inline-block;
 }*/
 
-app, users, desktops {
+app,
+users,
+desktops {
   display: none;
 }

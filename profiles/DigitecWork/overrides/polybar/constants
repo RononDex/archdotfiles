@@ -1,17 +1,17 @@
 [section/base]
-dpi = 140
+dpi = 105
 
 [bar/top]
-monitor = DP-0
+monitor = DP-1
 modules-right = mpd pulseaudio network-traffic wireless-network battery1 battery2 date
 modules-left = powermenu mpd
 
-height = 30
-tray-maxsize = 30
+height = 25
+tray-maxsize = 20
 
 [bar/bottom]
-monitor = DP-0
+monitor = DP-1
 modules-left = i3
 modules-right = cpu memory
 
-height = 40
+height = 25
