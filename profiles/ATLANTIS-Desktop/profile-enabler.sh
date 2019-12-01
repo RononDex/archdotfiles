@@ -90,9 +90,15 @@ echo "installing astro stuff..."
 InstallAurPackage "libhdf5" "https://aur-dev.archlinux.org/libhdf5.git"
 
 CloneOrUpdateGitRepoToPackages "indi" "https://github.com/indilib/indi"
-InstallIndiDrivers
-CloneOrUpdateGitRepoToPackages "PlanetaryImager" "https://github.com/GuLinux/PlanetaryImager"
-InstallPlanetaryImager
+MakePackage "indi"
+InstallAurPackage "erfa" "https://aur.archlinux.org/erfa.git"
+CloneOrUpdateGitRepoToPackages "indi-3rdparty" "--depth=1 https://github.com/indilib/indi-3rdparty"
+InstallIndiDriver "indi-gphoto"
+InstallIndiDriver "libasi"
+InstallIndiDriver "indi-asi"
+InstallAurPackage "python-astropy" "https://aur.archlinux.org/python-astropy.git"
+InstallAurPackage "wcslib62" "https://aur.archlinux.org/wcslib62.git"
+InstallAurPackage "astrometry.net" "https://aur.archlinux.org/astrometry.net.git"
 CloneOrUpdateGitRepoToPackages "phd2" "https://github.com/OpenPHDGuiding/phd2.git"
 InstallPHD2
 
