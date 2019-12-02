@@ -39,4 +39,6 @@ if [ -d ~/.profile ] ; then
     fi
 fi
 
+sh ~/.scripts/updateBackground.sh &                       # Update LightDM background (delay of 5min)
+
 exec i3

@@ -67,3 +67,11 @@ BasicVimInstall() {
         git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
     fi
 }
+
+SetupBackgroundsFolderForBing() {
+    if [ ! -d /usr/share/backgrounds/currentBingImage ]
+    then
+        currentUser=$(whoami)
+        sudo chown -R $currentUser:$currentUser /usr/share/backgrounds/
+    fi
+}

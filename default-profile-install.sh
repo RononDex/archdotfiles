@@ -40,7 +40,7 @@ sudo pacman -Sy bash-completion networkmanager gnome-keyring network-manager-app
 sudo pacman -Sy lightdm-webkit-theme-litarvan feh xfce4-terminal compton alsa pulseaudio pulseaudio-jack pulseaudio-bluetooth pulseaudio-alsa pavucontrol arc-gtk-theme arc-icon-theme nautilus --noconfirm --needed
 sudo pacman -Sy java-runtime-common jre-openjdk ntfs-3g autofs --noconfirm --needed
 sudo pacman -Sy vim bash-completion networkmanager gnome-keyring libftdi ccfits network-manager-applet xorg xorg-xinit lightdm firefox adobe-source-code-pro-fonts --noconfirm --needed
-sudo pacman -Sy python samba opencv pkgconfig gtest gmock wxgtk2 libmpdclient bc ranger w3m xorg-server binutils keychain --needed --noconfirm
+sudo pacman -Sy python python-pip samba opencv pkgconfig gtest gmock wxgtk2 libmpdclient bc ranger w3m xorg-server binutils keychain --needed --noconfirm
 sudo pacman -Sy htop unzip shadow perl-anyevent-i3 perl-json-xs git-lfs python-pywal --needed --noconfirm
 sudo pacman -Sy openvpn networkmanager-openvpn --needed --noconfirm
 
@@ -82,3 +82,5 @@ sudo systemctl start nrclient
 
 echo "Copying some default files ..."
 cp $scriptDir/defaults/vscode_custom.css ~/vscode_custom.css
+sudo rm -rf /usr/share/backgrounds/*
+SetupBackgroundsFolderForBing
