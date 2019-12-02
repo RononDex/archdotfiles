@@ -20,7 +20,7 @@ cp -f $scriptDir/overrides/.i3/scripts/launch-autostart.sh ~/.i3/scripts/launch-
 
 echo "Installing stuff..."
 sudo pacman -Sy i3-gaps mesa dunst libnotify notification-daemon vlc dmenu flameshot light-locker cabextract --noconfirm --needed
-sudo pacman -Sy remmina --noconfirm --needed
+sudo pacman -Sy remmina openldap --noconfirm --needed
 sudo pacman -Sy nginx-mainline --noconfirm --needed
 
 if [ ! -d ~/.omnisharp ]
@@ -37,6 +37,7 @@ InstallAurPackage "nvm" "https://aur.archlinux.org/nvm.git"
 InstallAurPackage "polybar" "https://aur.archlinux.org/polybar.git"
 InstallAurPackage "signal-desktop-bin" "https://aur.archlinux.org/signal-desktop-bin.git"
 InstallAurPackage "mono-nightly" "https://aur.archlinux.org/mono-nightly.git"
+InstallAurPackage "xsp" "https://aur.archlinux.org/xsp.git"
 InstallAurPackage "nuget4" "https://aur.archlinux.org/nuget4.git"
 InstallAurPackage "bitwarden" "https://aur.archlinux.org/bitwarden.git"
 InstallAurPackage "msbuild-16-bin" "https://aur.archlinux.org/msbuild-16-bin.git"
@@ -44,6 +45,7 @@ InstallAurPackage "visual-studio-code-bin" "https://aur.archlinux.org/visual-stu
 InstallAurPackage "ckb-next" "https://aur.archlinux.org/ckb-next.git"
 InstallAurPackage "ms-teams" "https://aur.archlinux.org/ms-teams.git"
 InstallAurPackage "nodejs-azure-cli" "https://aur.archlinux.org/nodejs-azure-cli.git"
+InstallAurPackage "rider" "https://aur.archlinux.org/rider.git"
 
 gpg --recv-key A87FF9DF48BF1C90
 InstallAurPackage "spotify" "https://aur.archlinux.org/spotify.git"
@@ -83,3 +85,12 @@ fi
 
 echo "Setting up shares ..."
 # SetupAutofsForSmbShare "ATLANTIS-SRV" "/Documents ://192.168.1.12/Documents /Downloads ://192.168.1.12/Downloads /Software ://192.168.1.12/Software /Astrophotography ://192.168.1.12/Astrophotography /Backup ://192.168.1.12/Backup"
+
+echo "Setting up nginx ..."
+if grep -q "fastcgi_param  SCRIPT_FILENAME    \$document_root\$fastcgi_script_name;" "/etc/nginx/fastcgi_params" ; then
+    echo "nginx seems to already have been setup"
+else
+    echo "fastcgi_param  PATH_INFO          \"\";" | sudo tee -a /etc/nginx/fastcgi_params
+    echo "fastcgi_param  SCRIPT_FILENAME    \$document_root\$fastcgi_script_name;" | sudo tee -a /etc/nginx/fastcgi_params
+    sudo mkdir /etc/nginx/sites-available
+fi
