@@ -18,7 +18,7 @@ function readJson {
   fi;
 }
 
-# sleep 5m
+sleep 1m
 
 wget "http://www.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1"
 mv "HPImageArchive.aspx?format=js&idx=0&n=1" /tmp/currentBingImage.json

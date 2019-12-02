@@ -18,6 +18,7 @@ chmod +x ~/.config/xfce4/terminal/terminalrc
 chmod +x ~/.i3/scripts/launch-compton.sh
 chmod +x ~/.i3/scripts/launch-autostart.sh
 chmod +x ~/.i3/scripts/set-background.sh
+chmod +x ~/.scripts/updateLoginBackground.sh
 
 echo "Changing default shell to zsh"
 if [[ "$SHELL" != "/bin/zsh" ]]
