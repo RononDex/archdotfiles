@@ -8,6 +8,7 @@
 # Surface book HiDPI and input settings
 # --------------------------------------------
 
+export EDITOR=vim
 export GDK_SCALE=1                                      # Set GDK_SCALE to 2 to enable HiDPI support in GDK applications
 #export QT_SCALE_FACTOR=1                                # Set QT scaling to 2 to enable HiDPI support in QT applications
 export display=:1                                       # Set default display

@@ -7,6 +7,7 @@
 # --------------------------------------------
 # Surface book HiDPI and input settings
 # --------------------------------------------
+export EDITOR=vim
 export display=:1                                       # Set default display
 export MSBuildSDKsPath=/opt/dotnet/sdk/$(dotnet --version)/Sdks
 
