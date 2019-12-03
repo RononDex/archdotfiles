@@ -39,11 +39,4 @@ if [ -d ~/.profile ] ; then
     fi
 fi
 
-sh $HOME/.scripts/updateBackground.sh &                       # Update LightDM background (delay of 5min)
-
-exec i3 & wmpid=$!
-
-sleep 5
-$HOME/.scripts/updateLoginBackground.sh                       # Update LightDM background (delay of 5min)
-
-wait $wmpid
+exec i3

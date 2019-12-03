@@ -74,12 +74,17 @@ echo "Installing AUR packages"
 InstallAurPackage "nerd-fonts-complete" "https://aur.archlinux.org/nerd-fonts-complete.git"
 InstallAurPackage "xinit-xsession" "https://aur.archlinux.org/xinit-xsession.git"
 InstallAurPackage "nrclient2-free" "https://aur.archlinux.org/nrclient2-free.git"
-InstallAurPackage "debtap" "https://aur.archlinux.org/debtap.git"
 InstallAurPackage "cava" "https://aur.archlinux.org/cava.git"
+InstallAurPackage "dcron" "https://aur.archlinux.org/dcron.git"
 
-echo "Enabling nrclient ..."
+echo "Enabling services ..."
 sudo systemctl enable nrclient
 sudo systemctl start nrclient
+sudo systemctl enable dcron
+sudo systemctl start dcron
+
+echo "Applying default cron-config ..."
+crontab ~/.defaultCronConfig
 
 echo "Copying some default files ..."
 cp $scriptDir/defaults/vscode_custom.css ~/vscode_custom.css

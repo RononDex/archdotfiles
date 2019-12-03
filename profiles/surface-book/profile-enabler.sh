@@ -75,6 +75,7 @@ sudo usermod -a -G lp ${currentUser}
 sudo usermod -a -G input ${currentUser}
 sudo usermod -a -G video ${currentUser}
 sudo usermod -a -G uucp ${currentUser}
+sudo usermod -a -G users ${currentUser}
 
 chmod +x ~/.profile/bashprofile
 chmod +x ~/.i3/workspaces/load-workspaces.sh

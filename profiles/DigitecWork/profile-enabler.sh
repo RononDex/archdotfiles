@@ -74,6 +74,7 @@ sudo usermod -a -G lp ${currentUser}
 sudo usermod -a -G input ${currentUser}
 sudo usermod -a -G video ${currentUser}
 sudo usermod -a -G uucp ${currentUser}
+sudo usermod -a -G users ${currentUser}
 
 echo "Increasing inotify max watches ..."
 if [ ! -f /etc/sysctl.conf ]

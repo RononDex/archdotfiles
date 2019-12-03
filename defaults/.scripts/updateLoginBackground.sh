@@ -18,8 +18,6 @@ function readJson {
   fi;
 }
 
-sleep 1m
-
 wget "http://www.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1"
 mv "HPImageArchive.aspx?format=js&idx=0&n=1" /tmp/currentBingImage.json
 FILEURL=`node -p "require('/tmp/currentBingImage.json').images[0].url"`
