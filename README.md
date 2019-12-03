@@ -31,7 +31,7 @@ sh profile-enabler.sh
 ```
 
 This will take a while to run, go grab a coffee or exercise :)
-Once the script has finished, simply reboot into your finished and ready to use system (you might have to enter `exit` once during the installation process, it sometimes gets stuck in the zsh after installing it. After entering `exit` it will continue installation)
+Once the script has finished, simply reboot into your finished and ready to use system (**you might have to enter `exit` once during the installation process, it sometimes gets stuck in the zsh after installing it. After entering `exit` it will continue installation**)
 
 # data structure
 
