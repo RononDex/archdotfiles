@@ -84,6 +84,7 @@ ln -s /usr/lib/steamvr/openhmd ~/.steam/steam/steamapps/common/SteamVR/drivers/o
 
 
 gpg --recv-key A87FF9DF48BF1C90
+gpg --recv-key 4773BD5E130D1D45
 InstallAurPackage "spotify" "https://aur.archlinux.org/spotify.git"
 
 echo "installing astro stuff..."

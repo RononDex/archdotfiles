@@ -48,6 +48,7 @@ InstallAurPackage "nodejs-azure-cli" "https://aur.archlinux.org/nodejs-azure-cli
 InstallAurPackage "rider" "https://aur.archlinux.org/rider.git"
 
 gpg --recv-key A87FF9DF48BF1C90
+gpg --recv-key 4773BD5E130D1D45
 InstallAurPackage "spotify" "https://aur.archlinux.org/spotify.git"
 
 sudo pacman -Sy dotnet-sdk dotnet-runtime dotnet-host --noconfirm --needed
