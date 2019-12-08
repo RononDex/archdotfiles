@@ -77,6 +77,7 @@ InstallAurPackage "remmina-plugin-rdesktop" "https://aur.archlinux.org/remmina-p
 InstallAurPackage "ckb-next" "https://aur.archlinux.org/ckb-next.git"
 InstallAurPackage "openhmd-git" "https://aur.archlinux.org/openhmd-git.git"
 InstallAurPackage "SteamVR-OpenHMD" "https://github.com/ChristophHaag/SteamVR-OpenHMD"
+InstallAurPackage "vdf" "https://github.com/ValvePython/vdf"
 MakePackage "SteamVR-OpenHMD"
 
 # Setup Oculus HMD steam vr driver
