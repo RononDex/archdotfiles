@@ -1,6 +1,8 @@
 #!/bin/sh
 scriptDir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 
+. $scriptDir/../../functions/astroFunctions.sh
+
 sudo cp $scriptDir/overrides/lightdm.conf /etc/lightdm/lightdm.conf
 sudo cp $scriptDir/overrides/lightdm-webkit2-greeter.conf /etc/lightdm/lightdm-webkit2-greeter.conf
 sudo cp $scriptDir/overrides/lightdm-bg.jpg /usr/share/lightdm-webkit/themes/litarvan/images/background.jpg
