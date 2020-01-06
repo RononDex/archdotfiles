@@ -8,7 +8,7 @@ killall -q compton
 while pgrep -u $UID -x compton >/dev/null; do sleep 1; done
 
 # Launch
-sleep 0.1s
+sleep 0.5s
 compton -bc
 
 echo "Compton launched..."

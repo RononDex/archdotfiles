@@ -199,8 +199,6 @@ client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 
 client.background       #ffffff
 
-# Load layouts / workspaces
-exec --no-startup-id ~/.i3/workspaces/load-workspaces.sh
 
 # Execs
 exec --no-startup-id light-locker &
@@ -208,6 +206,8 @@ exec --no-startup-id nm-applet &
 exec --no-startup-id blueman-applet &
 exec --no-startup-id dunst &
 exec_always --no-startup-id ~/.config/polybar/launch.sh &
-exec --no-startup-id ~/.i3/scripts/launch-autostart.sh
 exec_always --no-startup-id ~/.i3/scripts/launch-compton.sh
+# Load layouts / workspaces
+exec --no-startup-id ~/.i3/workspaces/load-workspaces.sh
+exec --no-startup-id ~/.i3/scripts/launch-autostart.sh
 exec_always --no-startup-id ~/.i3/scripts/set-background.sh
