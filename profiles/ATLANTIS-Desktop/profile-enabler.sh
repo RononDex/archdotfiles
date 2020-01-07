@@ -78,6 +78,8 @@ InstallAurPackage "ckb-next" "https://aur.archlinux.org/ckb-next.git"
 InstallAurPackage "openhmd-git" "https://aur.archlinux.org/openhmd-git.git"
 InstallAurPackage "SteamVR-OpenHMD" "https://github.com/ChristophHaag/SteamVR-OpenHMD"
 InstallAurPackage "vdf" "https://github.com/ValvePython/vdf"
+InstallAurPackage "freerdp-git" "https://aur.archlinux.org/freerdp-git.git"
+InstallAurPackage "openh264-git" "https://aur.archlinux.org/openh264-git.git"
 MakePackage "SteamVR-OpenHMD"
 
 # Setup Oculus HMD steam vr driver

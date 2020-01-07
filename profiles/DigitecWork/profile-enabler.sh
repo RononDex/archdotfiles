@@ -46,6 +46,8 @@ InstallAurPackage "ckb-next" "https://aur.archlinux.org/ckb-next.git"
 InstallAurPackage "ms-teams" "https://aur.archlinux.org/ms-teams.git"
 InstallAurPackage "nodejs-azure-cli" "https://aur.archlinux.org/nodejs-azure-cli.git"
 InstallAurPackage "rider" "https://aur.archlinux.org/rider.git"
+InstallAurPackage "freerdp-git" "https://aur.archlinux.org/freerdp-git.git"
+InstallAurPackage "openh264-git" "https://aur.archlinux.org/openh264-git.git"
 
 gpg --recv-key A87FF9DF48BF1C90
 gpg --recv-key 4773BD5E130D1D45
