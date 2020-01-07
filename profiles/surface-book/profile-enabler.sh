@@ -26,7 +26,7 @@ cp -Raf $scriptDir/overrides/omnisharp ~/.omnisharp
 
 echo "Installing stuff..."
 sudo pacman -Sy i3-gaps xf86-input-wacom dunst libnotify notification-daemon flameshot vlc dmenu flameshot teamspeak3 blueman --noconfirm --needed
-sudo pacman -Sy texlive-most --needed --noconfirm
+sudo pacman -Sy texlive-most xournalpp --needed --noconfirm
 sudo systemctl enable bluetooth
 sudo systemctl start bluetooth
 
@@ -48,8 +48,24 @@ gpg --recv-key A87FF9DF48BF1C90
 gpg --recv-key 4773BD5E130D1D45
 InstallAurPackage "spotify" "https://aur.archlinux.org/spotify.git"
 
+echo "Installing fix for surface book eraser ..."
+sudo pip3 install -U evdev
+CloneOrUpdateGitRepoToPackages "linux-surface-fix-eraser" "https://github.com/StollD/linux-surface-fix-eraser"
+cd ~/packages/linux-surface-fix-eraser
+sudo cp linux-surface-fix-eraser.py /usr/local/bin/
+sudo cp linux-surface-fix-eraser.service /etc/systemd/system/
+sudo systemctl enable --now linux-surface-fix-eraser
+
 echo "Enabling lightdm ..."
 sudo systemctl enable lightdm.service
+
+echo "Setting up Touchscreen"
+if grep -q "MOZ_USE_XINPUT2 DEFAULT=1" "/etc/security/pam_env.conf" ; then
+    echo "Touchscreen stuff already setup"
+else
+    echo "\r\nMOZ_USE_XINPUT2 DEFAULT=1\r\n" | sudo tee -a /etc/security/pam_env.conf
+    sudo mkdir /etc/nginx/sites-available
+fi
 
 echo "Setting up shares ..."
 SetupAutofsForSmbShare "ATLANTIS-SRV" "/Documents ://10.0.0.2/Documents /Downloads ://10.0.0.2/Downloads /Software ://10.0.0.2/Software /Astrophotography ://10.0.0.2/Astrophotography /Backup ://10.0.0.2/Backup"
