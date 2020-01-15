@@ -28,7 +28,7 @@ cp -Raf $scriptDir/overrides/omnisharp ~/.omnisharp
 
 echo "Installing stuff..."
 sudo pacman -Sy i3-gaps xf86-input-wacom dunst libnotify notification-daemon flameshot vlc dmenu flameshot teamspeak3 blueman --noconfirm --needed
-sudo pacman -Sy texlive-most xournalpp --needed --noconfirm
+sudo pacman -Sy texlive-most xournalpp remmina --needed --noconfirm
 sudo systemctl enable bluetooth
 sudo systemctl start bluetooth
 
@@ -45,6 +45,8 @@ InstallAurPackage "bitwarden" "https://aur.archlinux.org/bitwarden.git"
 InstallAurPackage "visual-studio-code-bin" "https://aur.a--needed --noconfirmrchlinux.org/visual-studio-code-bin.git"
 InstallAurPackage "msbuild-16-bin" "https://aur.archlinux.org/msbuild-16-bin.git"
 InstallAurPackage "nodejs-azure-cli" "https://aur.archlinux.org/nodejs-azure-cli.git"
+InstallAurPackage "openh264" "https://aur.archlinux.org/openh264.git"
+InstallAurPackage "freerdp-git" "https://aur.archlinux.org/freerdp-git.git"
 
 gpg --recv-key A87FF9DF48BF1C90
 gpg --recv-key 4773BD5E130D1D45
