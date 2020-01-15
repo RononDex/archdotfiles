@@ -16,3 +16,6 @@ export MSBuildSDKsPath=/opt/dotnet/sdk/$(dotnet --version)/Sdks
 
 wal -i "$(< "${HOME}/wallpapers/")" -f ~/.config/wal/colors.json
 setxkbmap ch -variant de                                # Set keyboard mapping to ch-de
+
+# Download new background photo
+sh ~/.scripts/updateLoginBackground.sh &

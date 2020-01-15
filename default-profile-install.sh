@@ -90,3 +90,4 @@ echo "Copying some default files ..."
 cp $scriptDir/defaults/vscode_custom.css ~/vscode_custom.css
 sudo rm -rf /usr/share/backgrounds/*
 SetupBackgroundsFolderForBing
+sh ~/.scripts/updateLoginBackground.sh # Execute it ones, to get a new background
