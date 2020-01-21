@@ -76,7 +76,7 @@ SetupAutofsForSmbShare "ATLANTIS-SRV" "/Documents ://10.0.0.2/Documents /Downloa
 
 echo "Setting up astro stuff .."
 sudo pacman -Sy gpsd libdc1394 kstars --noconfirm --needed
-sudo pacman -Sy --noconfirm --needed opencv ccfits breeze-icons binutils patch cmake make libraw libindi gpsd gcc
+sudo pacman -Sy --noconfirm --needed wcslib opencv ccfits breeze-icons binutils patch cmake make libraw libindi gpsd gcc
 
 CloneOrUpdateGitRepoToPackages "indi" "https://github.com/indilib/indi"
 MakePackage "indi"
@@ -86,7 +86,6 @@ InstallIndiDriver "indi-gphoto"
 InstallIndiDriver "libasi"
 InstallIndiDriver "indi-asi"
 InstallAurPackage "python-astropy" "https://aur.archlinux.org/python-astropy.git"
-InstallAurPackage "wcslib62" "https://aur.archlinux.org/wcslib62.git"
 InstallAurPackage "astrometry.net" "https://aur.archlinux.org/astrometry.net.git"
 CloneOrUpdateGitRepoToPackages "phd2" "https://github.com/OpenPHDGuiding/phd2.git"
 InstallPHD2

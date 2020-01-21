@@ -57,7 +57,7 @@ echo "Setting up oh-my-zsh ..."
 if [ ! -d ~/.oh-my-zsh ]
 then
     cd ~
-    sh -c "$(wget -O- https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+    sh -c "$(wget -O- https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" --unattended
 fi
 
 if [ ! -d ~/.oh-my-zsh/themes/powerlevel10k ]
