@@ -8,6 +8,7 @@ sudo cp $scriptDir/overrides/lightdm-webkit2-greeter.conf /etc/lightdm/lightdm-w
 sudo cp $scriptDir/overrides/lightdm-bg.jpg /usr/share/lightdm-webkit/themes/litarvan/images/background.jpg
 sudo cp $scriptDir/overrides/litarvan/styles.css /usr/share/lightdm-webkit/themes/litarvan/styles.css
 cp $scriptDir/overrides/polybar/constants ~/.config/polybar/constants
+sudo cp $scriptDir/overrides/xorg/10-monitor.conf /etc/X11/xorg.conf.d/10-monitor.conf
 sudo cp $scriptDir/overrides/xorg/20-keybord.conf /etc/X11/xorg.conf.d/20-keyboard.conf
 
 mkdir ~/.i3
@@ -89,6 +90,9 @@ sudo usermod -a -G input ${currentUser}
 sudo usermod -a -G video ${currentUser}
 sudo usermod -a -G uucp ${currentUser}
 sudo usermod -a -G users ${currentUser}
+
+chmod +x ~/.profile/bashprofile
+chmod +x ~/.i3/workspaces/load-workspaces.sh
 
 echo "Setting up shares ..."
 SetupAutofsForSmbShare "ATLANTIS-SRV" "/Documents ://192.168.1.12/Documents /Downloads ://192.168.1.12/Downloads /Software ://192.168.1.12/Software /Astrophotography ://192.168.1.12/Astrophotography /Backup ://192.168.1.12/Backup"
