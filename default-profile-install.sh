@@ -1,6 +1,6 @@
 #!/bin/sh
 
-scriptDir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+scriptDir="$(cd "$(dirname "${BASH_SOURCE[0]}")" >/dev/null 2>&1 && pwd)"
 
 sudo pacman -Syy
 sudo pacman -Syu --noconfirm
@@ -21,8 +21,7 @@ chmod +x ~/.i3/scripts/set-background.sh
 chmod +x ~/.scripts/updateLoginBackground.sh
 
 echo "Changing default shell to zsh"
-if [[ "$SHELL" != "/bin/zsh" ]]
-then
+if [[ "$SHELL" != "/bin/zsh" ]]; then
     chsh -s /bin/zsh
 fi
 
@@ -42,7 +41,7 @@ sudo pacman -Sy lightdm-webkit-theme-litarvan feh xfce4-terminal compton alsa pu
 sudo pacman -Sy java-runtime-common jre-openjdk ntfs-3g autofs --noconfirm --needed
 sudo pacman -Sy vim bash-completion networkmanager gnome-keyring libftdi ccfits network-manager-applet xorg xorg-xinit lightdm firefox adobe-source-code-pro-fonts --noconfirm --needed
 sudo pacman -Sy python python-pip samba opencv pkgconfig gtest gmock wxgtk2 libmpdclient bc ranger w3m xorg-server binutils keychain --needed --noconfirm
-sudo pacman -Sy htop unzip shadow perl-anyevent-i3 perl-json-xs git-lfs python-pywal --needed --noconfirm
+sudo pacman -Sy htop unzip shadow perl-anyevent-i3 perl-json-xs git-lfs python-pywal fzf --needed --noconfirm
 sudo pacman -Sy zsh-syntax-highlighting openvpn networkmanager-openvpn zathura zathura-cb zathura-pdf-mupdf zathura-ps --needed --noconfirm
 
 git lfs install
@@ -54,14 +53,12 @@ sudo systemctl enable autofs
 sudo systemctl start autofs
 
 echo "Setting up oh-my-zsh ..."
-if [ ! -d ~/.oh-my-zsh ]
-then
+if [ ! -d ~/.oh-my-zsh ]; then
     cd ~
     sh -c "$(wget -O- https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" --unattended
 fi
 
-if [ ! -d ~/.oh-my-zsh/themes/powerlevel10k ]
-then
+if [ ! -d ~/.oh-my-zsh/themes/powerlevel10k ]; then
     cd ~/.oh-my-zsh/themes
     echo "Cloning powerlevel10k"
     git clone https://github.com/romkatv/powerlevel10k.git ~/.oh-my-zsh/themes/powerlevel10k
