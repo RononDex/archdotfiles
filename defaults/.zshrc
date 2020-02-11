@@ -11,7 +11,7 @@ autoload -U compinit
 zstyle ':completion:*' menu select
 zmodload zsh/complist
 compinit
-_comp_options+=(globdots)		# Include hidden files.
+_comp_options+=(globdots) # Include hidden files.
 
 # vi mode
 bindkey -v
@@ -138,11 +138,25 @@ export PS1="[%* - %D] %d: "
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 source /usr/share/nvm/init-nvm.sh
 
+# All default aliases
+if [ -d ~/.scripts ]; then
+  if [ -f ~/.scripts/alias.sh ]; then
+    source ~/.scripts/alias.sh
+  fi
+fi
+
+# Alias for system update
+if [ -d ~/.scripts ]; then
+  if [ -f ~/.scripts/setProfileUpdateAlias.sh ]; then
+    source ~/.scripts/setProfileUpdateAlias.sh
+  fi
+fi
+
 # Load and execute custom profiles
-if [ -d ~/.profile ] ; then
-    if [ -f ~/.profile/bashprofile ] ; then
-        source ~/.profile/bashprofile
-    fi
+if [ -d ~/.profile ]; then
+  if [ -f ~/.profile/bashprofile ]; then
+    source ~/.profile/bashprofile
+  fi
 fi
 
 # All default aliases
