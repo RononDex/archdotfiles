@@ -1,6 +1,8 @@
 #!/bin/sh
+scriptDirRoot="$(cd "$(dirname "${BASH_SOURCE[0]}")" >/dev/null 2>&1 && pwd)"
+cd "$scriptDirRoot"
+git pull
 . ./functions/functions.sh
-cd "$(dirname "$0")"
 
 # --------------------------------------------
 # Script to install / enable a profile
@@ -78,6 +80,11 @@ ProfileInstallScriptPath=${profileName}/profile-enabler.sh
 if [ -f "$ProfileInstallScriptPath" ]; then
     . $ProfileInstallScriptPath
 fi
+
+profileDirName=$(basename $profileName)
+echo "$profileDirName"
+echo "#!/bin/sh" >~/.scripts/setProfileUpdateAlias.sh
+echo "alias up='sh $scriptDirRoot/profile-enabler.sh $profileDirName'" >>~/.scripts/setProfileUpdateAlias.sh
 
 echo
 echo "DONE!"

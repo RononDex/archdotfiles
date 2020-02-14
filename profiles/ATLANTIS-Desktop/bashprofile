@@ -11,3 +11,9 @@ alias nuget="mono /usr/local/bin/nuget.exe"                                 # Ad
 # ( ) # Hide shell job control messages.
 (cat ~/.cache/wal/sequences &)
 eval $(keychain --eval --quiet id_rsa)                                      # Initializes the keychain
+
+# Turn off screensaver
+export DISPLAY=:0.0
+xset s off
+xset s noblank
+xset -dpms
