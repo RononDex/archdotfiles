@@ -10,6 +10,10 @@ sudo cp $scriptDir/overrides/xorg/20-keybord.conf /etc/X11/xorg.conf.d/20-keyboa
 sudo cp $scriptDir/overrides/xorg/20-intel.conf /etc/X11/xorg.conf.d/20-intel.conf
 cp $scriptDir/overrides/polybar/network-traffic.sh ~/.config/polybar/network-traffic.sh
 cp $scriptDir/overrides/xfce4/terminalrc ~/.config/xfce4/terminal/terminalrc
+mkdir ~/.screenlayout
+cp $scriptDir/overrides/.screenlayout/3-screens.sh ~/.screenlayout/3-screens.sh
+
+chmod +x ~/.screenlayout/3-screens.sh
 
 mkdir ~/.i3
 mkdir ~/.i3/workspaces

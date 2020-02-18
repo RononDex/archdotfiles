@@ -15,3 +15,6 @@ setxkbmap ch -variant de                                # Set keyboard mapping t
 
 # Download new background photo
 sh ~/.scripts/updateLoginBackground.sh &
+
+# Set screen layout
+sh ~/.screenlayout/3-screens.sh
