@@ -1,5 +1,5 @@
 [section/base]
-dpi = 115
+dpi = 130
 
 [bar/top]
 monitor = HDMI3
