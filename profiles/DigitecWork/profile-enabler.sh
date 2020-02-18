@@ -7,6 +7,7 @@ sudo cp $scriptDir/overrides/lightdm-bg.jpg /usr/share/lightdm-webkit/themes/lit
 sudo cp $scriptDir/overrides/litarvan/styles.css /usr/share/lightdm-webkit/themes/litarvan/styles.css
 cp $scriptDir/overrides/polybar/constants ~/.config/polybar/constants
 sudo cp $scriptDir/overrides/xorg/20-keybord.conf /etc/X11/xorg.conf.d/20-keyboard.conf
+sudo cp $scriptDir/overrides/xorg/20-intel.conf /etc/X11/xorg.conf.d/20-intel.conf
 cp $scriptDir/overrides/polybar/network-traffic.sh ~/.config/polybar/network-traffic.sh
 cp $scriptDir/overrides/xfce4/terminalrc ~/.config/xfce4/terminal/terminalrc
 
@@ -20,7 +21,7 @@ cp -f $scriptDir/overrides/.i3/scripts/launch-autostart.sh ~/.i3/scripts/launch-
 
 echo "Installing stuff..."
 sudo pacman -Sy i3-gaps mesa dunst libnotify notification-daemon vlc dmenu flameshot light-locker cabextract --noconfirm --needed
-sudo pacman -Sy remmina openldap --noconfirm --needed
+sudo pacman -Sy remmina openldap xf86-video-intel --noconfirm --needed
 sudo pacman -Sy nginx-mainline --noconfirm --needed
 
 if [ ! -d ~/.omnisharp ]

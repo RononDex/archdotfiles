@@ -2,7 +2,7 @@
 dpi = 115
 
 [bar/top]
-monitor = HDMI-3
+monitor = HDMI3
 modules-right = mpd pulseaudio network-traffic wireless-network battery1 battery2 date
 modules-left = powermenu mpd
 
@@ -10,7 +10,7 @@ height = 25
 tray-maxsize = 22
 
 [bar/bottom]
-monitor = HDMI-3
+monitor = HDMI3
 modules-left = i3
 modules-right = cpu memory
 
