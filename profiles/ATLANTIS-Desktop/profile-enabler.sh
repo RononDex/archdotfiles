@@ -20,7 +20,7 @@ cp $scriptDir/overrides/.i3/workspaces/workspace-1.json ~/.i3/workspaces/workspa
 cp $scriptDir/overrides/.i3/scripts/launch-autostart.sh ~/.i3/scripts/launch-autostart.sh
 
 echo "Installing stuff..."
-sudo pacman -Sy i3-gaps nvidia vlc dunst libnotify notification-daemon dmenu flameshot teamspeak3 cabextract blueman --noconfirm --needed
+sudo pacman -Sy i3-gaps nvidia vlc dunst libnotify notification-daemon dmenu flameshot teamspeak3 cabextract blueman signal-desktop --noconfirm --needed
 sudo pacman -Sy lib32-nvidia-utils remmina pulseaudio-bluetooth prusa-slicer texlive-most --noconfirm --needed
 sudo nvidia-xconfig
 
@@ -36,15 +36,11 @@ cp -Raf $scriptDir/../surface-book/overrides/omnisharp ~/.omnisharp
 echo "Installing AUR packages..."
 InstallAurPackage "nvm" "https://aur.archlinux.org/nvm.git"
 InstallAurPackage "polybar" "https://aur.archlinux.org/polybar.git"
-InstallAurPackage "msbuild-stable" "https://aur.archlinux.org/msbuild-stable.git"
-InstallAurPackage "signal-desktop-bin" "https://aur.archlinux.org/signal-desktop-bin.git"
 InstallAurPackage "steam-fonts" "https://aur.archlinux.org/steam-fonts.git"
 InstallAurPackage "keeweb" "https://aur.archlinux.org/keeweb.git"
 InstallAurPackage "python-vdf" "https://aur.archlinux.org/python-vdf.git"
 InstallAurPackage "protontricks" "https://aur.archlinux.org/protontricks.git"
-InstallAurPackage "nuget4" "https://aur.archlinux.org/nuget4.git"
 InstallAurPackage "bitwarden" "https://aur.archlinux.org/bitwarden.git"
-InstallAurPackage "msbuild-16-bin" "https://aur.archlinux.org/msbuild-16-bin.git"
 InstallAurPackage "visual-studio-code-bin" "https://aur.archlinux.org/visual-studio-code-bin.git"
 InstallAurPackage "remmina-plugin-rdesktop" "https://aur.archlinux.org/remmina-plugin-rdesktop.git"
 InstallAurPackage "ckb-next" "https://aur.archlinux.org/ckb-next.git"

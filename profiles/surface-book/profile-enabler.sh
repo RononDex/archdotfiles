@@ -27,8 +27,8 @@ rm -rf ~/.omnisharp
 cp -Raf $scriptDir/overrides/omnisharp ~/.omnisharp
 
 echo "Installing stuff..."
-sudo pacman -Sy i3-gaps light xf86-input-wacom dunst libnotify notification-daemon flameshot vlc dmenu flameshot teamspeak3 blueman --noconfirm --needed
-sudo pacman -Sy texlive-most pulseaudio-bluetooth xournalpp remmina --needed --noconfirm
+sudo pacman -Sy i3-gaps light xf86-input-wacom dunst libnotify notification-daemon  vlc dmenu flameshot teamspeak3 blueman --noconfirm --needed
+sudo pacman -Sy texlive-most pulseaudio-bluetooth xournalpp remmina signal-desktop --needed --noconfirm
 sudo systemctl enable bluetooth
 sudo systemctl start bluetooth
 
@@ -36,14 +36,10 @@ echo "Installing AUR packages..."
 echo "polybar..."
 InstallAurPackage "nvm" "https://aur.archlinux.org/nvm.git"
 InstallAurPackage "polybar" "https://aur.archlinux.org/polybar.git"
-InstallAurPackage "signal-desktop-bin" "https://aur.archlinux.org/signal-desktop-bin.git"
 InstallAurPackage "steam-fonts" "https://aur.archlinux.org/steam-fonts.git"
 CloneOrUpdateGitRepoToPackages "keeweb" "https://aur.archlinux.org/keeweb.git"
-InstallAurPackage "mono-nightly" "https://aur.archlinux.org/mono-nightly.git"
-InstallAurPackage "nuget4" "https://aur.archlinux.org/nuget4.git"
 InstallAurPackage "bitwarden" "https://aur.archlinux.org/bitwarden.git"
 InstallAurPackage "visual-studio-code-bin" "https://aur.archlinux.org/visual-studio-code-bin.git"
-InstallAurPackage "msbuild-16-bin" "https://aur.archlinux.org/msbuild-16-bin.git"
 InstallAurPackage "nodejs-azure-cli" "https://aur.archlinux.org/nodejs-azure-cli.git"
 InstallAurPackage "openh264" "https://aur.archlinux.org/openh264.git"
 InstallAurPackage "freerdp-git" "https://aur.archlinux.org/freerdp-git.git"
