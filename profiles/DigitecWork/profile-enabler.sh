@@ -72,7 +72,8 @@ wget https://dot.net/v1/dotnet-install.sh -O ~/Downloads/dotnet-install.sh
 sudo ~/Downloads/dotnet-install.sh --install-dir /opt/dotnet -channel Current -version latest
 
 echo "Setting up xrdp ..."
-sudo echo "allowed_users=anybody" > /etc/X11/Xwrapper.config
+sudo rm /etc/X11/Xwrapper.config
+echo "allowed_users=anybody" | sudo tee /etc/X11/Xwrapper.config
 
 echo "Enabling services ..."
 sudo systemctl enable lightdm.service
