@@ -64,6 +64,9 @@ if [ ! -d ~/.oh-my-zsh/themes/powerlevel10k ]; then
     git clone https://github.com/romkatv/powerlevel10k.git ~/.oh-my-zsh/themes/powerlevel10k
 fi
 
+echo "Copying default ranger config ..."
+ranger --copy-config=all
+
 echo "Setting up vim..."
 BasicVimInstall
 
