@@ -50,6 +50,8 @@ InstallAurPackage "rider" "https://aur.archlinux.org/rider.git"
 InstallAurPackage "freerdp-git" "https://aur.archlinux.org/freerdp-git.git"
 InstallAurPackage "openh264-git" "https://aur.archlinux.org/openh264-git.git"
 InstallAurPackage "teams-for-linux" "https://aur.archlinux.org/teams-for-linux.git"
+InstallAurPackage "xrdp" "https://aur.archlinux.org/xrdp.git"
+InstallAurPackage "xorgxrdp" "https://aur.archlinux.org/xorgxrdp.git"
 
 gpg --recv-key A87FF9DF48BF1C90
 gpg --recv-key 4773BD5E130D1D45
@@ -69,10 +71,17 @@ sh ~/Downloads/installcredprovider.sh
 wget https://dot.net/v1/dotnet-install.sh -O ~/Downloads/dotnet-install.sh
 sudo ~/Downloads/dotnet-install.sh --install-dir /opt/dotnet -channel Current -version latest
 
+echo "Setting up xrdp ..."
+sudo echo "allowed_users=anybody" > /etc/X11/Xwrapper.config
+
 echo "Enabling services ..."
 sudo systemctl enable lightdm.service
 sudo systemctl enable ckb-next-daemon
 sudo systemctl start ckb-next-daemon
+sudo systemctl enable xrdp
+sudo systemctl start xrdp
+sudo systemctl enable xrdp-sesman
+sudo systemctl start xrdp-sesman
 
 currentUser=$(whoami)
 sudo usermod -a -G lp ${currentUser}
