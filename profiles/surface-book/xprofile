@@ -9,13 +9,13 @@
 # --------------------------------------------
 
 export EDITOR=vim
-export GDK_SCALE=2                                      # Set GDK_SCALE to 2 to enable HiDPI support in GDK applications
+export GDK_SCALE=2 # Set GDK_SCALE to 2 to enable HiDPI support in GDK applications
 # export QT_SCALE_FACTOR=2                                # Set QT scaling to 2 to enable HiDPI support in QT applications
-export display=:0                                       # Set default display
-export MSBuildSDKsPath=/opt/dotnet/sdk/$(dotnet --version)/Sdks
+export display=:0 # Set default display
+export MSBuildSDKsPath=/usr/share/dotnet/sdk/$(dotnet --version)/Sdks
 
-wal -i "$(< "${HOME}/wallpapers/")" -f ~/.config/wal/colors.json
-setxkbmap ch -variant de                                # Set keyboard mapping to ch-de
+wal -i "$(<"${HOME}/wallpapers/")" -f ~/.config/wal/colors.json
+setxkbmap ch -variant de # Set keyboard mapping to ch-de
 
 # Download new background photo
 sh ~/.scripts/updateLoginBackground.sh &
