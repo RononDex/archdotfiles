@@ -1,5 +1,5 @@
 #!/bin/sh
-scriptDir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+scriptDir="$(cd "$(dirname "${BASH_SOURCE[0]}")" >/dev/null 2>&1 && pwd)"
 
 . $scriptDir/../../functions/astroFunctions.sh
 . $scriptDir/../../functions/bitbox.sh
@@ -17,8 +17,7 @@ cp $scriptDir/overrides/.i3/workspaces/workspace-1.json ~/.i3/workspaces/workspa
 cp $scriptDir/overrides/.i3/scripts/launch-autostart.sh ~/.i3/scripts/launch-autostart.sh
 cp $scriptDir/overrides/dunst/dunstrc ~/.config/dunst/dunstrc
 
-if [ ! -d ~/.omnisharp ]
-then
+if [ ! -d ~/.omnisharp ]; then
     mkdir ~/.omnisharp
 fi
 
@@ -27,8 +26,8 @@ rm -rf ~/.omnisharp
 cp -Raf $scriptDir/overrides/omnisharp ~/.omnisharp
 
 echo "Installing stuff..."
-sudo pacman -Sy i3-gaps light xf86-input-wacom dunst libnotify notification-daemon  vlc dmenu flameshot teamspeak3 blueman --noconfirm --needed
-sudo pacman -Sy texlive-most pulseaudio-bluetooth xournalpp remmina signal-desktop --needed --noconfirm
+sudo pacman -Sy i3-gaps light xf86-input-wacom dunst libnotify notification-daemon vlc dmenu flameshot teamspeak3 blueman --noconfirm --needed
+sudo pacman -Sy texlive-most pulseaudio-bluetooth aspnet-runtime xournalpp remmina signal-desktop --needed --noconfirm
 sudo systemctl enable bluetooth
 sudo systemctl start bluetooth
 
@@ -60,7 +59,7 @@ echo "Enabling lightdm ..."
 sudo systemctl enable lightdm.service
 
 echo "Setting up Touchscreen"
-if grep -q "MOZ_USE_XINPUT2 DEFAULT=1" "/etc/security/pam_env.conf" ; then
+if grep -q "MOZ_USE_XINPUT2 DEFAULT=1" "/etc/security/pam_env.conf"; then
     echo "Touchscreen stuff already setup"
 else
     echo "\r\nMOZ_USE_XINPUT2 DEFAULT=1\r\n" | sudo tee -a /etc/security/pam_env.conf
