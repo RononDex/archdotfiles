@@ -81,6 +81,8 @@ echo "Enabling services ..."
 sudo systemctl enable lightdm.service
 sudo systemctl enable ckb-next-daemon
 sudo systemctl start ckb-next-daemon
+sudo systemctl enable nrclient
+sudo systemctl start nrclient
 
 echo "Setup mail"
 mw cron 5

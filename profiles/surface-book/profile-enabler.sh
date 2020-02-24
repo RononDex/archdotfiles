@@ -57,8 +57,10 @@ sudo cp linux-surface-fix-eraser.py /usr/local/bin/
 sudo cp linux-surface-fix-eraser.service /etc/systemd/system/
 sudo systemctl enable --now linux-surface-fix-eraser
 
-echo "Enabling lightdm ..."
+echo "Enabling services ..."
 sudo systemctl enable lightdm.service
+sudo systemctl enable nrclient
+sudo systemctl start nrclient
 
 echo "Setting up Touchscreen"
 if grep -q "MOZ_USE_XINPUT2 DEFAULT=1" "/etc/security/pam_env.conf"; then

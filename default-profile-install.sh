@@ -78,8 +78,6 @@ InstallAurPackage "cava" "https://aur.archlinux.org/cava.git"
 InstallAurPackage "dcron" "https://aur.archlinux.org/dcron.git"
 
 echo "Enabling services ..."
-sudo systemctl enable nrclient
-sudo systemctl start nrclient
 sudo systemctl enable dcron
 sudo systemctl start dcron
 
