@@ -52,7 +52,8 @@ let g:OmniSharp_server_stdio = 1
 let g:OmniSharp_server_display_loading = 1
 let g:OmniSharp_highlight_types = 3
 let g:OmniSharp_selector_ui = 'fzf'
-
+let g:OmniSharp_diagnostic_showid = 1
+let g:syntastic_cs_checkers = ['code_checker']
 
 " Cursor style
 let &t_ti.="\e[1 q"
