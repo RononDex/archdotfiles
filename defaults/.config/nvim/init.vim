@@ -10,6 +10,7 @@ Plug 'prabirshrestha/asyncomplete.vim'
 Plug 'OmniSharp/omnisharp-vim'
 Plug 'aklt/plantuml-syntax'
 Plug 'pangloss/vim-javascript'
+Plug 'arcticicestudio/nord-vim'
 
 call plug#end()
 
@@ -86,5 +87,5 @@ nmap <C-w><down> <C-w>-
 let g:airline#extensions#tabline#enabled = 1
 
 " Color sheme
-colorscheme spacegray
+colorscheme nord
 let g:spacegray_low_contrast = 1
