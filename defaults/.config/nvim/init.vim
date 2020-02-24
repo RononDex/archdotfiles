@@ -1,22 +1,18 @@
-" Basic settings
-set nocompatible
-filetype off
 
-" Load Plugin with Vundle
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+call plug#begin()
 
-Plugin 'scrooloose/nerdtree'
-Plugin 'easymotion/vim-easymotion'
-Plugin 'tpope/vim-fugitive'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'ajh17/spacegray.vim'
-Bundle 'OmniSharp/omnisharp-vim'
+Plug 'preservim/nerdtree'
+Plug 'easymotion/vim-easymotion'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'arcticicestudio/nord-vim'
+Plug 'prabirshrestha/asyncomplete.vim'
+Plug 'OmniSharp/omnisharp-vim'
+Plug 'aklt/plantuml-syntax'
+Plug 'pangloss/vim-javascript'
 
-call vundle#end()            " required
+call plug#end()
 
-" Basic options
 syntax on
 filetype plugin indent on
 let mapleader = ","
@@ -38,7 +34,7 @@ set termguicolors
 
 " EasyMotion stuff
 let g:EasyMotion_do_mapping = 0 " Disable default mappings
-nnoremap <space> <NOP> 
+nnoremap <space> <NOP>
 nmap <space> <Plug>(easymotion-jumptoanywhere)
 let g:EasyMotion_smartcase = 1
 let g:EasyMotion_keys = 'hklyuiopnmqwertzxcvbasdjf'
@@ -49,6 +45,10 @@ let g:EasyMotion_re_anywhere = '\v' .
 
 " Omnisharp config
 let g:OmniSharp_server_stdio = 1
+let g:OmniSharp_server_display_loading = 1
+let g:OmniSharp_highlight_types = 3
+let g:OmniSharp_selector_ui = 'fzf'
+
 
 " Cursor style
 let &t_ti.="\e[1 q"
@@ -61,7 +61,7 @@ autocmd VimEnter * NERDTree
 " Jump to the main window.
 autocmd VimEnter * wincmd p
 " Auto close Nerdtree if its the only window left
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") 
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree")
       \ && b:NERDTree.isTabTree()) | q | endif
 
 " Split window

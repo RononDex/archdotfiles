@@ -41,7 +41,6 @@ cp -Raf $scriptDir/../surface-book/overrides/omnisharp ~/.omnisharp
 echo "Installing AUR packages..."
 InstallAurPackage "nvm" "https://aur.archlinux.org/nvm.git"
 InstallAurPackage "polybar" "https://aur.archlinux.org/polybar.git"
-InstallAurPackage "xsp" "https://aur.archlinux.org/xsp.git"
 InstallAurPackage "bitwarden" "https://aur.archlinux.org/bitwarden.git"
 InstallAurPackage "visual-studio-code-bin" "https://aur.archlinux.org/visual-studio-code-bin.git"
 InstallAurPackage "ckb-next" "https://aur.archlinux.org/ckb-next.git"
@@ -49,9 +48,10 @@ InstallAurPackage "nodejs-azure-cli" "https://aur.archlinux.org/nodejs-azure-cli
 InstallAurPackage "rider" "https://aur.archlinux.org/rider.git"
 InstallAurPackage "freerdp-git" "https://aur.archlinux.org/freerdp-git.git"
 InstallAurPackage "openh264-git" "https://aur.archlinux.org/openh264-git.git"
-InstallAurPackage "teams-for-linux" "https://aur.archlinux.org/teams-for-linux.git"
 InstallAurPackage "xrdp" "https://aur.archlinux.org/xrdp.git"
 InstallAurPackage "xorgxrdp" "https://aur.archlinux.org/xorgxrdp.git"
+InstallAurPackage "mutt-wizard-git" "https://aur.archlinux.org/mutt-wizard-git.git"
+InstallAurPackage "protonmail-bridge" "https://aur.archlinux.org/protonmail-bridge.git"
 
 gpg --recv-key A87FF9DF48BF1C90
 gpg --recv-key 4773BD5E130D1D45
@@ -90,6 +90,9 @@ sudo usermod -a -G input ${currentUser}
 sudo usermod -a -G video ${currentUser}
 sudo usermod -a -G uucp ${currentUser}
 sudo usermod -a -G users ${currentUser}
+
+echo "Setup mail"
+mw cron 5
 
 echo "Increasing inotify max watches ..."
 if [ ! -f /etc/sysctl.conf ]

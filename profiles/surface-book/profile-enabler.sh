@@ -42,6 +42,8 @@ InstallAurPackage "visual-studio-code-bin" "https://aur.archlinux.org/visual-stu
 InstallAurPackage "nodejs-azure-cli" "https://aur.archlinux.org/nodejs-azure-cli.git"
 InstallAurPackage "openh264" "https://aur.archlinux.org/openh264.git"
 InstallAurPackage "freerdp-git" "https://aur.archlinux.org/freerdp-git.git"
+InstallAurPackage "mutt-wizard-git" "https://aur.archlinux.org/mutt-wizard-git.git"
+InstallAurPackage "protonmail-bridge" "https://aur.archlinux.org/protonmail-bridge.git"
 
 gpg --recv-key A87FF9DF48BF1C90
 gpg --recv-key 4773BD5E130D1D45
@@ -84,6 +86,9 @@ InstallAurPackage "python-astropy" "https://aur.archlinux.org/python-astropy.git
 InstallAurPackage "astrometry.net" "https://aur.archlinux.org/astrometry.net.git"
 CloneOrUpdateGitRepoToPackages "phd2" "https://github.com/OpenPHDGuiding/phd2.git"
 InstallPHD2
+
+echo "Setup mail"
+mw cron 5
 
 echo "Adjust user permissions"
 currentUser=$(whoami)

@@ -49,6 +49,8 @@ InstallAurPackage "SteamVR-OpenHMD" "https://github.com/ChristophHaag/SteamVR-Op
 InstallAurPackage "vdf" "https://github.com/ValvePython/vdf"
 InstallAurPackage "freerdp-git" "https://aur.archlinux.org/freerdp-git.git"
 InstallAurPackage "openh264-git" "https://aur.archlinux.org/openh264-git.git"
+InstallAurPackage "mutt-wizard-git" "https://aur.archlinux.org/mutt-wizard-git.git"
+InstallAurPackage "protonmail-bridge" "https://aur.archlinux.org/protonmail-bridge.git"
 MakePackage "SteamVR-OpenHMD"
 
 # Setup Oculus HMD steam vr driver
@@ -79,6 +81,9 @@ echo "Enabling services ..."
 sudo systemctl enable lightdm.service
 sudo systemctl enable ckb-next-daemon
 sudo systemctl start ckb-next-daemon
+
+echo "Setup mail"
+mw cron 5
 
 currentUser=$(whoami)
 sudo usermod -a -G lp ${currentUser}
