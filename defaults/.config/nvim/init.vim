@@ -13,6 +13,7 @@ Plug 'pangloss/vim-javascript'
 Plug 'arcticicestudio/nord-vim'
 Plug 'junegunn/fzf', { 'do': './install --bin' }
 Plug 'junegunn/fzf.vim'
+Plug 'sheerun/vim-polyglot'
 
 call plug#end()
 
