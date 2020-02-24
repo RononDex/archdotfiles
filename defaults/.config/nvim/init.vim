@@ -11,6 +11,8 @@ Plug 'OmniSharp/omnisharp-vim'
 Plug 'aklt/plantuml-syntax'
 Plug 'pangloss/vim-javascript'
 Plug 'arcticicestudio/nord-vim'
+Plug 'junegunn/fzf', { 'do': './install --bin' }
+Plug 'junegunn/fzf.vim'
 
 call plug#end()
 
@@ -82,6 +84,9 @@ nmap <C-w><left> <C-w><
 nmap <C-w><right> <C-w>>
 nmap <C-w><up> <C-w>+
 nmap <C-w><down> <C-w>-
+
+" FzF
+map <C-p> :Files<Return>
 
 " Airline configuraiton
 let g:airline#extensions#tabline#enabled = 1
