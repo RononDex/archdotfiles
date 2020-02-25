@@ -123,6 +123,7 @@ autocmd VimEnter * wincmd p
 " Auto close Nerdtree if its the only window left
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree")
       \ && b:NERDTree.isTabTree()) | q | endif
+let NERDTreeShowHidden=1
 
 " Split window
 nmap ss :split<Return><C-w>w
@@ -144,6 +145,7 @@ nmap <C-w><down> <C-w>-
 
 " FzF
 map <C-p> :Files<Return>
+let $FZF_DEFAULT_COMMAND = 'find .'
 
 " Airline configuraiton
 let g:airline#extensions#tabline#enabled = 1
