@@ -14,6 +14,7 @@ Plug 'arcticicestudio/nord-vim'
 Plug 'junegunn/fzf', { 'do': './install --bin' }
 Plug 'junegunn/fzf.vim'
 Plug 'sheerun/vim-polyglot'
+Plug 'joshdick/onedark.vim'
 Plug 'dense-analysis/ale'
 
 call plug#end()
@@ -36,6 +37,8 @@ set ignorecase
 set smartcase
 set showmatch
 set termguicolors
+set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
+let g:airline#extensions#tabline#enabled = 1
 
 " EasyMotion stuff
 let g:EasyMotion_do_mapping = 0 " Disable default mappings
@@ -108,7 +111,7 @@ nnoremap <Leader>ss :OmniSharpStartServer<CR>
 nnoremap <Leader>sp :OmniSharpStopServer<CR>
 
 " Enable snippet completion
-" let g:OmniSharp_want_snippet=1
+let g:OmniSharp_want_snippet=1
 
 " Cursor style
 let &t_ti.="\e[1 q"
@@ -116,14 +119,12 @@ let &t_SI.="\e[5 q"
 let &t_EI.="\e[1 q"
 let &t_te.="\e[0 q"
 
-" Start NERDTree
-autocmd VimEnter * NERDTree
-" Jump to the main window.
-autocmd VimEnter * wincmd p
 " Auto close Nerdtree if its the only window left
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree")
       \ && b:NERDTree.isTabTree()) | q | endif
 let NERDTreeShowHidden=1
+nmap <leader>bb :NERDTree<Return>
+nmap <leader>bv :NERDTreeVCS<Return>
 
 " Split window
 nmap ss :split<Return><C-w>w
@@ -151,5 +152,5 @@ let $FZF_DEFAULT_COMMAND = 'find .'
 let g:airline#extensions#tabline#enabled = 1
 
 " Color sheme
-colorscheme nord
+colorscheme onedark
 let g:spacegray_low_contrast = 1
