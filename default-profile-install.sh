@@ -70,6 +70,14 @@ ranger --copy-config=all
 echo "Setting up vim..."
 BasicVimInstall
 
+echo "Setting up git"
+if grep -q "~/.scripts/gitalias" "~/.gitconfig" ; then
+    echo "Git aliases already set up"
+else
+    echo "[include]" >> ~/.gitconfig
+    echo "    path = ~/.scripts/gitalias" >> ~/.gitconfig
+fi
+
 echo "Installing AUR packages"
 InstallAurPackage "nerd-fonts-complete" "https://aur.archlinux.org/nerd-fonts-complete.git"
 InstallAurPackage "xinit-xsession" "https://aur.archlinux.org/xinit-xsession.git"

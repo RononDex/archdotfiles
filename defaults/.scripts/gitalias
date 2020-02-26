@@ -1,0 +1,7 @@
+[alias]
+    st = status
+    rbi = rebase --interactive
+    rba = rebase --abort
+    rbc = rebase --continue
+    rbs = rebase --skip
+    ca = commit --amend
