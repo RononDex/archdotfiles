@@ -144,6 +144,9 @@ nmap <C-w><right> <C-w>>
 nmap <C-w><up> <C-w>+
 nmap <C-w><down> <C-w>-
 
+" Terminal mode
+:tnoremap <Esc> <C-\><C-n>
+
 " FzF
 map <C-p> :Files<Return>
 let $FZF_DEFAULT_COMMAND = 'find .'

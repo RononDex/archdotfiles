@@ -53,6 +53,11 @@ InstallAurPackage "mutt-wizard-git" "https://aur.archlinux.org/mutt-wizard-git.g
 InstallAurPackage "protonmail-bridge" "https://aur.archlinux.org/protonmail-bridge.git"
 MakePackage "SteamVR-OpenHMD"
 
+echo "Installing screenkey"
+sudo pacman -Sy python2-setuptools --needed --noconfirm
+InstallAurPackage "python2-distutils-extra" "https://aur.archlinux.org/python2-distutils-extra.git"
+InstallAurPackage "screenkey" "https://aur.archlinux.org/screenkey.git"
+
 # Setup Oculus HMD steam vr driver
 ln -s /usr/lib/steamvr/openhmd ~/.steam/steam/steamapps/common/SteamVR/drivers/openhmd
 

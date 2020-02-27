@@ -45,6 +45,11 @@ InstallAurPackage "freerdp-git" "https://aur.archlinux.org/freerdp-git.git"
 InstallAurPackage "mutt-wizard-git" "https://aur.archlinux.org/mutt-wizard-git.git"
 InstallAurPackage "protonmail-bridge" "https://aur.archlinux.org/protonmail-bridge.git"
 
+echo "Installing screenkey"
+sudo pacman -Sy python2-setuptools --needed --noconfirm
+InstallAurPackage "python2-distutils-extra" "https://aur.archlinux.org/python2-distutils-extra.git"
+InstallAurPackage "screenkey" "https://aur.archlinux.org/screenkey.git"
+
 gpg --recv-key A87FF9DF48BF1C90
 gpg --recv-key 4773BD5E130D1D45
 InstallAurPackage "spotify" "https://aur.archlinux.org/spotify.git"
