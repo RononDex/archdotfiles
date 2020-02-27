@@ -16,6 +16,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'joshdick/onedark.vim'
 Plug 'dense-analysis/ale'
+Plug 'editorconfig/editorconfig-vim'
 
 call plug#end()
 
@@ -113,6 +114,16 @@ nnoremap <Leader>sp :OmniSharpStopServer<CR>
 " Enable snippet completion
 let g:OmniSharp_want_snippet=1
 
+" Ignore certain warnings
+let g:OmniSharp_diagnostic_overrides = {
+\ 'CSE0003': { 'type': 'None'},
+\ 'CC0038': {'type': 'None'},
+\ 'CS1701': {'type': 'I'},
+\ 'IDE0058': {'type': 'None'},
+\ 'IDE0008': {'type': 'None'},
+\ 'RemoveUnnecessaryImportsFixable': {'type': 'I'}
+\}
+
 " Cursor style
 let &t_ti.="\e[1 q"
 let &t_SI.="\e[5 q"
@@ -138,11 +149,20 @@ map sh <C-w>h
 map sk <C-w>k
 map sj <C-w>j
 map sl <C-w>l
+map si <C-w>+
+map su <C-w>-
 " Resize window
 nmap <C-w><left> <C-w><
 nmap <C-w><right> <C-w>>
 nmap <C-w><up> <C-w>+
 nmap <C-w><down> <C-w>-
+
+" Misc Keybindings
+nmap t o<Esc>
+nmap T O<Esc>
+map <F1> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
+\ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
+\ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
 
 " Terminal mode
 :tnoremap <Esc> <C-\><C-n>
