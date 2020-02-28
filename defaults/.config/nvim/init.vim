@@ -91,6 +91,9 @@ augroup omnisharp_commands
     autocmd FileType cs nnoremap <buffer> <C-k> :OmniSharpNavigateUp<CR>
     autocmd FileType cs nnoremap <buffer> <C-j> :OmniSharpNavigateDown<CR>
 
+    " Run tests
+    autocmd FileType cs nnoremap <buffer> <leader>rt :OmniSharpRunTest<CR>
+
     " Find all code errors/warnings for the current solution and populate the quickfix window
     autocmd FileType cs nnoremap <buffer> <Leader>cc :OmniSharpGlobalCodeCheck<CR>
 augroup END
@@ -122,6 +125,7 @@ let g:OmniSharp_diagnostic_overrides = {
 \ 'CS1701': {'type': 'I'},
 \ 'IDE0058': {'type': 'None'},
 \ 'IDE0008': {'type': 'None'},
+\ 'CC0045': {'type': 'I'},
 \ 'RemoveUnnecessaryImportsFixable': {'type': 'I'}
 \}
 
