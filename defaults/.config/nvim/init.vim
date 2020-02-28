@@ -5,18 +5,18 @@ Plug 'preservim/nerdtree'
 Plug 'easymotion/vim-easymotion'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'arcticicestudio/nord-vim'
 Plug 'prabirshrestha/asyncomplete.vim'
 Plug 'OmniSharp/omnisharp-vim'
-Plug 'aklt/plantuml-syntax'
 Plug 'pangloss/vim-javascript'
-Plug 'arcticicestudio/nord-vim'
 Plug 'junegunn/fzf', { 'do': './install --bin' }
 Plug 'junegunn/fzf.vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'joshdick/onedark.vim'
 Plug 'dense-analysis/ale'
 Plug 'editorconfig/editorconfig-vim'
+Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
+Plug 'frazrepo/vim-rainbow'
 
 call plug#end()
 
@@ -40,6 +40,7 @@ set showmatch
 set termguicolors
 set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
 let g:airline#extensions#tabline#enabled = 1
+let g:rainbow_active = 1
 
 " EasyMotion stuff
 let g:EasyMotion_do_mapping = 0 " Disable default mappings
