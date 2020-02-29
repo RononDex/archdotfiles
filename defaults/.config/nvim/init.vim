@@ -7,7 +7,6 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'prabirshrestha/asyncomplete.vim'
 Plug 'OmniSharp/omnisharp-vim'
-Plug 'pangloss/vim-javascript'
 Plug 'junegunn/fzf', { 'do': './install --bin' }
 Plug 'junegunn/fzf.vim'
 Plug 'sheerun/vim-polyglot'
