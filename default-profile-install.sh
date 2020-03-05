@@ -25,6 +25,8 @@ if [[ "$SHELL" != "/bin/zsh" ]]; then
     chsh -s /bin/zsh
 fi
 
+curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
+
 echo "Configuring pacman ..."
 sudo cp defaults/pacman.conf /etc/pacman.conf
 sudo cp defaults/mirrorlist /etc/pacman.d/mirrorlist

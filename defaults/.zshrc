@@ -138,6 +138,28 @@ export PS1="[%* - %D] %d: "
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 source /usr/share/nvm/init-nvm.sh
 
+# ZPLUG config
+source ~/.zplug/init.zsh
+
+zplug 'wfxr/forgit'
+
+# Can manage local plugins
+zplug "~/.zsh", from:local
+
+# Load theme file
+zplug 'dracula/zsh', as:theme
+
+# Install plugins if there are plugins that have not been installed
+if ! zplug check --verbose; then
+    printf "Install? [y/N]: "
+    if read -q; then
+        echo; zplug install
+    fi
+fi
+
+# Then, source plugins and add commands to $PATH
+zplug load --verbose
+
 # All default aliases
 if [ -d ~/.scripts ]; then
   if [ -f ~/.scripts/alias.sh ]; then

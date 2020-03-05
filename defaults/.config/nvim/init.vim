@@ -18,6 +18,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'frazrepo/vim-rainbow'
 Plug 'universal-ctags/ctags'
 Plug 'majutsushi/tagbar'
+Plug 'rbgrouleff/bclose.vim'
 
 call plug#end()
 
@@ -173,6 +174,7 @@ map <F1> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<
 " Terminal mode
 :tnoremap <Esc> <C-\><C-n>
 nmap <leader>nt ss:terminal<CR>20su
+nmap <leader>q :Bclose<CR>
 
 " Tagbar
 nmap <F8> :TagbarToggle<CR>
@@ -185,6 +187,7 @@ let $FZF_DEFAULT_COMMAND = 'find .'
 nmap <leader>gb :Gblame<CR>
 nmap <leader>gs :G<CR>
 nmap <leader>gp :Gpull<CR>
+nmap <leader>gm :Gdiff<CR>
 
 " Airline configuraiton
 let g:airline#extensions#tabline#enabled = 1
