@@ -143,9 +143,6 @@ source ~/.zplug/init.zsh
 
 zplug 'wfxr/forgit'
 
-# Can manage local plugins
-zplug "~/.zsh", from:local
-
 # Load theme file
 zplug 'dracula/zsh', as:theme
 
@@ -158,7 +155,7 @@ if ! zplug check --verbose; then
 fi
 
 # Then, source plugins and add commands to $PATH
-zplug load --verbose
+zplug load
 
 # All default aliases
 if [ -d ~/.scripts ]; then

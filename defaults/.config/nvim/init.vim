@@ -19,6 +19,7 @@ Plug 'frazrepo/vim-rainbow'
 Plug 'universal-ctags/ctags'
 Plug 'majutsushi/tagbar'
 Plug 'rbgrouleff/bclose.vim'
+Plug 'valkeen/nerdtree-execute'
 
 call plug#end()
 
@@ -137,12 +138,15 @@ let &t_SI.="\e[5 q"
 let &t_EI.="\e[1 q"
 let &t_te.="\e[0 q"
 
+"NERDTree
 " Auto close Nerdtree if its the only window left
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree")
       \ && b:NERDTree.isTabTree()) | q | endif
 let NERDTreeShowHidden=1
 nmap <leader>bb :NERDTree<Return>
 nmap <leader>bv :NERDTreeVCS<Return>
+nnoremap <silent> <leader>bf :NERDTreeFind<CR>
+let NERDTreeAutoDeleteBuffer = 1
 
 " Split window
 nmap ss :split<Return><C-w>w
