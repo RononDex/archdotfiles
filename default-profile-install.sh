@@ -26,6 +26,7 @@ if [[ "$SHELL" != "/bin/zsh" ]]; then
 fi
 
 curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
+zplug update
 
 echo "Configuring pacman ..."
 sudo cp defaults/pacman.conf /etc/pacman.conf
