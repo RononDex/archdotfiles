@@ -129,6 +129,8 @@ let g:OmniSharp_diagnostic_overrides = {
 \ 'IDE0058': {'type': 'None'},
 \ 'IDE0008': {'type': 'None'},
 \ 'CC0045': {'type': 'I'},
+\ 'CC0071': {'type': 'I'},
+\ 'CC0003': {'type': 'W'},
 \ 'RemoveUnnecessaryImportsFixable': {'type': 'I'}
 \}
 
