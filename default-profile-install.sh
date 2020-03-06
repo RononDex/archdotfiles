@@ -45,7 +45,7 @@ sudo pacman -Sy java-runtime-common jre-openjdk ntfs-3g autofs --noconfirm --nee
 sudo pacman -Sy vim neovim bash-completion libftdi ccfits network-manager-applet xorg xorg-xinit lightdm adobe-source-code-pro-fonts --noconfirm --needed
 sudo pacman -Sy python python-pip samba opencv pkgconfig gtest gmock wxgtk2 libmpdclient bc ranger xorg-server binutils keychain --needed --noconfirm
 sudo pacman -Sy htop gtop unzip shadow perl-anyevent-i3 perl-json-xs git-lfs python-pywal fzf arandr pass --needed --noconfirm
-sudo pacman -Sy zsh-syntax-highlighting openvpn networkmanager-openvpn zathura zathura-cb zathura-pdf-mupdf zathura-ps neomutt lynx ttf-dejavu --needed --noconfirm
+sudo pacman -Sy zsh-syntax-highlighting openvpn diff-so-fancy networkmanager-openvpn zathura zathura-cb zathura-pdf-mupdf zathura-ps neomutt lynx ttf-dejavu --needed --noconfirm
 
 git lfs install
 git lfs pull
@@ -79,6 +79,12 @@ if grep -q "~/.scripts/gitalias" "~/.gitconfig" ; then
 else
     echo "[include]" >> ~/.gitconfig
     echo "    path = ~/.scripts/gitalias" >> ~/.gitconfig
+fi
+if grep -q "~/.scripts/gitsetup" "~/.gitconfig" ; then
+    echo "Git config already set up"
+else
+    echo "[include]" >> ~/.gitconfig
+    echo "    path = ~/.scripts/gitsetup" >> ~/.gitconfig
 fi
 
 echo "Installing AUR packages"
