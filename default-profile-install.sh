@@ -74,17 +74,17 @@ echo "Setting up vim..."
 BasicVimInstall
 
 echo "Setting up git"
-if grep -q "~/.scripts/gitalias" "~/.gitconfig" ; then
+if grep -q "gitalias" "$HOME/.gitconfig" ; then
     echo "Git aliases already set up"
 else
     echo "[include]" >> ~/.gitconfig
     echo "    path = ~/.scripts/gitalias" >> ~/.gitconfig
 fi
-if grep -q "~/.scripts/gitsetup" "~/.gitconfig" ; then
+if grep -q "gitconfig" "$HOME/.gitconfig" ; then
     echo "Git config already set up"
 else
     echo "[include]" >> ~/.gitconfig
-    echo "    path = ~/.scripts/gitsetup" >> ~/.gitconfig
+    echo "    path = ~/.scripts/gitconfig" >> ~/.gitconfig
 fi
 
 echo "Installing AUR packages"
