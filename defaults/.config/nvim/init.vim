@@ -19,7 +19,7 @@ Plug 'frazrepo/vim-rainbow'
 Plug 'universal-ctags/ctags'
 Plug 'majutsushi/tagbar'
 Plug 'rbgrouleff/bclose.vim'
-Plug 'valkeen/nerdtree-execute'
+Plug 'ivalkeen/nerdtree-execute'
 
 call plug#end()
 
