@@ -33,11 +33,33 @@ sh profile-enabler.sh
 This will take a while to run, go grab a coffee or exercise :)
 Once the script has finished, simply reboot into your finished and ready to use system (**you might have to enter `exit` once during the installation process, it sometimes gets stuck in the zsh after installing it. After entering `exit` it will continue installation**)
 
-# data structure
+To upgrade your system (including the AUR packages) just enter `up` in your terminal. This will do a git pull of the dotfiles repository, and rerun the profile-enabler.sh with your installed profile.
+
+# How it works
+
+1. Copy all files from the folder `defaults` to your home directory
+1. Run `default-profile-install.sh` which will install all the default stuff that is the same across all pc's
+1. Run profile-enabler.sh lcoated in your chosen profile folder `profiles/[profileName]/profile-enabler.sh`
+
+So to create your own profile, simply fork this repository and create your own profile in the `profiles` folder. The only mandatory files are `xprofile`, `bashprofile` and `profile-enabler.sh`
+
+## Software installed by default (for all profiles)
+For an up to date list check the file itself here https://github.com/RononDex/archdotfiles/raw/master/default-profile-install.sh
+
+- zsh (with oh-my-zsh and powerlevel10k)
+- networkmanager
+- fonts
+- pulseaudio
+- ranger
+- zathura
+- ...
+
+# Data Structure
 
 This repository is structured into the following folders:
 
 1. defaults: Contains all the default files that install all the base files into ~/
 2. profiles: Contains one subfolder per profile, with overrides for the base profile.
+3. functions: Contains several functions reused throughout the different shell scripts
 
 ![Screenshot](https://github.com/RononDex/archdotfiles/raw/master/Screenshot.png)
