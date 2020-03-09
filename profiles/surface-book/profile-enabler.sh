@@ -32,7 +32,7 @@ sudo systemctl enable bluetooth
 sudo systemctl start bluetooth
 
 echo "Installing AUR packages..."
-echo "polybar..."
+InstallAurPackage "nrclient2-free" "https://aur.archlinux.org/nrclient2-free.git"
 InstallAurPackage "nvm" "https://aur.archlinux.org/nvm.git"
 InstallAurPackage "polybar" "https://aur.archlinux.org/polybar.git"
 InstallAurPackage "steam-fonts" "https://aur.archlinux.org/steam-fonts.git"

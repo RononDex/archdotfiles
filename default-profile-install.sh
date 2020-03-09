@@ -45,7 +45,7 @@ sudo pacman -Sy java-runtime-common jre-openjdk ntfs-3g autofs --noconfirm --nee
 sudo pacman -Sy vim neovim bash-completion libftdi ccfits network-manager-applet xorg xorg-xinit lightdm adobe-source-code-pro-fonts --noconfirm --needed
 sudo pacman -Sy python python-pip samba opencv pkgconfig gtest gmock wxgtk2 libmpdclient bc ranger xorg-server binutils keychain --needed --noconfirm
 sudo pacman -Sy htop gtop unzip shadow perl-anyevent-i3 perl-json-xs git-lfs python-pywal fzf arandr pass --needed --noconfirm
-sudo pacman -Sy zsh-syntax-highlighting openvpn diff-so-fancy networkmanager-openvpn zathura zathura-cb zathura-pdf-mupdf zathura-ps neomutt lynx ttf-dejavu --needed --noconfirm
+sudo pacman -Sy zsh-syntax-highlighting xfce4-power-manager openvpn zsh-autosuggestions diff-so-fancy networkmanager-openvpn zathura zathura-cb zathura-pdf-mupdf zathura-ps neomutt lynx ttf-dejavu --needed --noconfirm
 
 git lfs install
 git lfs pull
@@ -66,6 +66,8 @@ if [ ! -d ~/.oh-my-zsh/themes/powerlevel10k ]; then
     echo "Cloning powerlevel10k"
     git clone https://github.com/romkatv/powerlevel10k.git ~/.oh-my-zsh/themes/powerlevel10k
 fi
+
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 
 echo "Copying default ranger config ..."
 ranger --copy-config=all
@@ -90,7 +92,6 @@ fi
 echo "Installing AUR packages"
 InstallAurPackage "nerd-fonts-complete" "https://aur.archlinux.org/nerd-fonts-complete.git"
 InstallAurPackage "xinit-xsession" "https://aur.archlinux.org/xinit-xsession.git"
-InstallAurPackage "nrclient2-free" "https://aur.archlinux.org/nrclient2-free.git"
 InstallAurPackage "cava" "https://aur.archlinux.org/cava.git"
 InstallAurPackage "dcron" "https://aur.archlinux.org/dcron.git"
 

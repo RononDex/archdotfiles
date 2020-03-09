@@ -34,6 +34,7 @@ rm -rf ~/.omnisharp
 cp -Raf $scriptDir/../surface-book/overrides/omnisharp ~/.omnisharp
 
 echo "Installing AUR packages..."
+InstallAurPackage "nrclient2-free" "https://aur.archlinux.org/nrclient2-free.git"
 InstallAurPackage "nvm" "https://aur.archlinux.org/nvm.git"
 InstallAurPackage "polybar" "https://aur.archlinux.org/polybar.git"
 InstallAurPackage "steam-fonts" "https://aur.archlinux.org/steam-fonts.git"
