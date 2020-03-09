@@ -52,6 +52,7 @@ For an up to date list check the file itself here https://github.com/RononDex/ar
 - pulseaudio
 - ranger
 - zathura
+- lightdm (with webkit litarvan theme)
 - ...
 
 # Data Structure
