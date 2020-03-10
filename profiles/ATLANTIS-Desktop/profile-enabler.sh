@@ -52,6 +52,7 @@ InstallAurPackage "freerdp-git" "https://aur.archlinux.org/freerdp-git.git"
 InstallAurPackage "openh264-git" "https://aur.archlinux.org/openh264-git.git"
 InstallAurPackage "mutt-wizard-git" "https://aur.archlinux.org/mutt-wizard-git.git"
 InstallAurPackage "protonmail-bridge" "https://aur.archlinux.org/protonmail-bridge.git"
+InstallAurPackage "snapd" "https://aur.archlinux.org/snapd.git"
 MakePackage "SteamVR-OpenHMD"
 
 echo "Installing screenkey"
@@ -89,6 +90,8 @@ sudo systemctl enable ckb-next-daemon
 sudo systemctl start ckb-next-daemon
 sudo systemctl enable nrclient
 sudo systemctl start nrclient
+sudo systemctl enable --now snapd.socket
+sudo ln -s /var/lib/snapd/snap /snap
 
 echo "Setup mail"
 mw cron 5
@@ -102,6 +105,10 @@ sudo usermod -a -G users ${currentUser}
 
 chmod +x ~/.profile/bashprofile
 chmod +x ~/.i3/workspaces/load-workspaces.sh
+
+echo "Setting up teams-for-linux"
+sudo snap install teams-for-linux
+snap connect teams-for-linux:camera core:camera
 
 echo "Setting up shares ..."
 SetupAutofsForSmbShare "ATLANTIS-SRV" "/Documents ://192.168.1.12/Documents /Downloads ://192.168.1.12/Downloads /Software ://192.168.1.12/Software /Astrophotography ://192.168.1.12/Astrophotography /Backup ://192.168.1.12/Backup"
