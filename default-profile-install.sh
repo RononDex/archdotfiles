@@ -33,6 +33,7 @@ uname -m | grep "aarch64"
 if [ $? == 0 ]; then
     echo "ARM system detected ..."
     sudo cp defaults/mirrorlistARM /etc/pacman.d/mirrorlist
+    sudo cp defaults/pacmanARM.conf /etc/pacman.conf
 else
     sudo cp defaults/mirrorlist /etc/pacman.d/mirrorlist
     sudo cp defaults/pacman.conf /etc/pacman.conf
