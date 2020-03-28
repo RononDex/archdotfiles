@@ -4,4 +4,4 @@
 ##
 
 ## Switzerland
-Server = http://mirror.archlinuxarm.org/$repo/$arch
+Server = http://mirror.archlinuxarm.org/$arch/$repo
