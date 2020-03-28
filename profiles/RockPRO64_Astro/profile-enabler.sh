@@ -33,4 +33,4 @@ sudo usermod -a -G input ${currentUser}
 sudo usermod -a -G video ${currentUser}
 sudo usermod -a -G iucp ${currentUser}
 
-sudo chown cobra ~/.xinitrc
+sudo chown ${currentUser} ~/.xinitrc
