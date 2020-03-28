@@ -29,13 +29,13 @@ curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/instal
 zplug update
 
 echo "Configuring pacman ..."
-sudo cp defaults/pacman.conf /etc/pacman.conf
 uname -m | grep "aarch64"
 if [ $? == 0 ]; then
     echo "ARM system detected ..."
     sudo cp defaults/mirrorlistARM /etc/pacman.d/mirrorlist
 else
     sudo cp defaults/mirrorlist /etc/pacman.d/mirrorlist
+    sudo cp defaults/pacman.conf /etc/pacman.conf
 fi
 sudo chmod 744 /etc/pacman.conf
 sudo chmod 744 /etc/pacman.d/mirrorlist
