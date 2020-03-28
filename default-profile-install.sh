@@ -30,8 +30,8 @@ zplug update
 
 echo "Configuring pacman ..."
 sudo cp defaults/pacman.conf /etc/pacman.conf
-uname -m
-if [ $? == "aarch64" ]; then
+uname -m | grep "aarch64"
+if [ $? == 0 ]; then
     echo "ARM system detected ..."
     sudo cp defaults/mirrorlistARM /etc/pacman.d/mirrorlist
 else
