@@ -30,7 +30,11 @@ zplug update
 
 echo "Configuring pacman ..."
 sudo cp defaults/pacman.conf /etc/pacman.conf
-sudo cp defaults/mirrorlist /etc/pacman.d/mirrorlist
+if [[ $(uname -m) = "aarch64"]]; then
+    sudo cp defaults/mirrorlistARM /etc/pacman.d/mirrorlist
+else
+    sudo cp defaults/mirrorlist /etc/pacman.d/mirrorlist
+fi
 sudo chmod 744 /etc/pacman.conf
 sudo chmod 744 /etc/pacman.d/mirrorlist
 
