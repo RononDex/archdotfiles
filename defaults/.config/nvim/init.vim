@@ -44,6 +44,7 @@ set termguicolors
 set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
 let g:airline#extensions#tabline#enabled = 1
 let g:rainbow_active = 1
+set clipboard=unnamed   " Tell vim to use sytem clipboard for yank and paste by default
 
 " EasyMotion stuff
 let g:EasyMotion_do_mapping = 0 " Disable default mappings
