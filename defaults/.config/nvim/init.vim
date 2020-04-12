@@ -20,6 +20,8 @@ Plug 'universal-ctags/ctags'
 Plug 'majutsushi/tagbar'
 Plug 'rbgrouleff/bclose.vim'
 Plug 'ivalkeen/nerdtree-execute'
+Plug 'mhinz/neovim-remote'
+Plug 'lervag/vimtex'
 
 call plug#end()
 
@@ -197,6 +199,15 @@ nmap <leader>gb :Gblame<CR>
 nmap <leader>gs :G<CR>
 nmap <leader>gp :Gpull<CR>
 nmap <leader>gm :Gdiff<CR>
+
+" Latex config
+let g:polyglot_disabled = ['latex']
+let g:vimtex_compiler_progname = 'nvr'
+let g:vimtex_view_general_viewer = 'zathura'
+let g:vimtex_view_method = 'zathura'
+
+
+nmap <leader>lc :VimtexCompile<CR>
 
 " Airline configuraiton
 let g:airline#extensions#tabline#enabled = 1
