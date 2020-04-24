@@ -69,8 +69,8 @@ cp -ra $scriptDir/defaults/. ~/
 # Copy profile files
 echo
 echo "Copying profile files..."
-mkdir -p ~/.profile
-cp -ra ${profileName}/. ~/.profile/
+mkdir -p ~/.scripts
+cp -ra ${profileName}/. ~/.scripts/
 
 # Run default profile-installer
 echo

@@ -1,0 +1,6 @@
+#!/bin/bash
+d() {
+    cd ~/packages/archdotfiles
+    "${EDITOR:-vi}"
+}
+

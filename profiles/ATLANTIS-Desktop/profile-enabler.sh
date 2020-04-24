@@ -103,7 +103,8 @@ sudo usermod -a -G video ${currentUser}
 sudo usermod -a -G uucp ${currentUser}
 sudo usermod -a -G users ${currentUser}
 
-chmod +x ~/.profile/bashprofile
+chmod +x ~/.scripts/bashprofile
+chmod +x ~/.scripts/xprofile
 chmod +x ~/.i3/workspaces/load-workspaces.sh
 
 echo "Setting up teams-for-linux"

@@ -10,8 +10,8 @@ PS1='[\u@\h \W]\$ '
 
 # All default aliases
 if [ -d ~/.scripts ]; then
-    if [ -f ~/.scripts/alias.sh ]; then
-        source ~/.scripts/alias.sh
+    if [ -f ~/.scripts/aliasrc ]; then
+        source ~/.scripts/aliasrc
     fi
 fi
 
@@ -23,8 +23,10 @@ if [ -d ~/.scripts ]; then
 fi
 
 # Load and execute custom profiles
-if [ -d ~/.profile ]; then
-    if [ -f ~/.profile/bashprofile ]; then
-        source ~/.profile/bashprofile
+if [ -d ~/.scripts ]; then
+    if [ -f ~/.scripts/bashprofile ]; then
+        source ~/.scripts/bashprofile
     fi
 fi
+
+source ~/.profile

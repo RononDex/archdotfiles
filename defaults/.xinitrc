@@ -33,9 +33,9 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
 fi
 
 # Load and execute custom profiles
-if [ -d ~/.profile ] ; then
-    if [ -f ~/.profile/xprofile ] ; then
-        source ~/.profile/xprofile
+if [ -d ~/.scripts ] ; then
+    if [ -f ~/.scripts/xprofile ] ; then
+        source ~/.scripts/xprofile
     fi
 fi
 
