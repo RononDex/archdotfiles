@@ -47,7 +47,8 @@ set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
 set number relativenumber
 let g:airline#extensions#tabline#enabled = 1
 let g:rainbow_active = 1
-set clipboard=unnamed   " Tell vim to use sytem clipboard for yank and paste by default
+let g:python3_host_prog = "/usr/bin/python3"
+set clipboard+=unnamedplus
 
 " Configure automatic toggling of hybrid line numbers
 augroup numbertoggle

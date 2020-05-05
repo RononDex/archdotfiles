@@ -42,3 +42,4 @@ bindkey "${FZF_MARKER_MAIN_KEY:-\C-h}" _fzf_marker_main_widget
 bindkey "${FZF_MARKER_PLACEHOLDER_KEY:-\C-v}" _fzf_marker_placeholder_widget
 
 alias vim=nvim
+alias c="xclip -selection clipboard"
