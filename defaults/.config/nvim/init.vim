@@ -57,6 +57,18 @@ augroup numbertoggle
     autocmd BufLeave,FocusLost,InsertEnter * set norelativenumber
 augroup end
 
+" Linting
+let g:ale_linters = {
+    \ 'python': ['pylint'],
+    \ 'vim': ['vint'],
+    \ 'cpp': ['clang'],
+    \ 'c': ['clang'],
+    \'javascript': ['prettier'],
+    \'css': ['prettier'],
+\}
+let g:ale_linters_explicit = 1
+let g:ale_fix_on_save = 1
+
 " EasyMotion stuff
 let g:EasyMotion_do_mapping = 0 " Disable default mappings
 nnoremap <space> <NOP>
