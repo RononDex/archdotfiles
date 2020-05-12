@@ -58,15 +58,6 @@ augroup numbertoggle
 augroup end
 
 " Linting
-let g:ale_linters = {
-    \ 'python': ['pylint'],
-    \ 'vim': ['vint'],
-    \ 'cpp': ['clang'],
-    \ 'c': ['clang'],
-    \'javascript': ['prettier'],
-    \'css': ['prettier'],
-\}
-let g:ale_linters_explicit = 1
 let g:ale_fix_on_save = 1
 
 " EasyMotion stuff
@@ -235,4 +226,3 @@ let g:airline#extensions#tabline#enabled = 1
 
 " Color sheme
 colorscheme onedark
-let g:spacegray_low_contrast = 1
