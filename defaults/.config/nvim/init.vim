@@ -22,6 +22,7 @@ Plug 'rbgrouleff/bclose.vim'
 Plug 'ivalkeen/nerdtree-execute'
 Plug 'mhinz/neovim-remote'
 Plug 'lervag/vimtex'
+Plug 'puremourning/vimspector'
 
 call plug#end()
 
