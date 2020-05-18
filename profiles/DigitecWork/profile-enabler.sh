@@ -52,6 +52,7 @@ InstallAurPackage "xrdp" "https://aur.archlinux.org/xrdp.git"
 InstallAurPackage "xorgxrdp" "https://aur.archlinux.org/xorgxrdp.git"
 InstallAurPackage "mutt-wizard-git" "https://aur.archlinux.org/mutt-wizard-git.git"
 InstallAurPackage "protonmail-bridge" "https://aur.archlinux.org/protonmail-bridge.git"
+InstallAurPackage "snapd" "https://aur.archlinux.org/snapd.git"
 
 echo "Installing screenkey"
 sudo pacman -Sy python2-setuptools --needed --noconfirm
@@ -74,7 +75,7 @@ wget https://raw.githubusercontent.com/microsoft/artifacts-credprovider/master/h
 sh ~/Downloads/installcredprovider.sh
 
 wget https://dot.net/v1/dotnet-install.sh -O ~/Downloads/dotnet-install.sh
-sudo ~/Downloads/dotnet-install.sh --install-dir /opt/dotnet -channel Current -version latest
+sudo ~/Downloads/dotnet-install.sh -channel Current -version latest --install-dir /usr/share/dotnet/
 
 echo "Setting up xrdp ..."
 sudo rm /etc/X11/Xwrapper.config
@@ -88,6 +89,8 @@ sudo systemctl enable xrdp
 sudo systemctl start xrdp
 sudo systemctl enable xrdp-sesman
 sudo systemctl start xrdp-sesman
+sudo systemctl enable --now snapd.socket
+sudo ln -s /var/lib/snapd/snap /snap
 
 currentUser=$(whoami)
 sudo usermod -a -G lp ${currentUser}
@@ -95,6 +98,14 @@ sudo usermod -a -G input ${currentUser}
 sudo usermod -a -G video ${currentUser}
 sudo usermod -a -G uucp ${currentUser}
 sudo usermod -a -G users ${currentUser}
+
+chmod +x ~/.scripts/bashprofile
+chmod +x ~/.scripts/xprofile
+chmod +x ~/.i3/workspaces/load-workspaces.sh
+
+echo "Setting up teams-for-linux"
+sudo snap install teams-for-linux
+snap connect teams-for-linux:camera core:camera
 
 echo "Setup mail"
 mw cron 5

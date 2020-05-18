@@ -3,11 +3,7 @@
 # --------------------------------------------
 # Actions / exports when X11 is initialized
 # --------------------------------------------
-#
-# --------------------------------------------
-# Surface book HiDPI and input settings
-# --------------------------------------------
-export EDITOR=vim
+export EDITOR=nvim
 export display=:1                                       # Set default display
 export MSBuildSDKsPath=/usr/share/dotnet/sdk/$(dotnet --version)/Sdks
 
