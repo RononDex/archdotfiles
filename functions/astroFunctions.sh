@@ -33,3 +33,9 @@ InstallPHD2() {
     make
     sudo ln -sf /home/cobra/packages/phd2/compiled/phd2.bin /usr/bin/phd2
 }
+
+InstallAstrometryNet() {
+    InstallAurPackage  "python-astropy-helpers" "https://aur.archlinux.org/python-astropy-helpers.git"
+    InstallAurPackage "python-astropy" "https://aur.archlinux.org/python-astropy.git"
+    InstallAurPackage "astrometry.net" "https://aur.archlinux.org/astrometry.net.git"
+}

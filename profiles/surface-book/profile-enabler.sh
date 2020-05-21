@@ -96,8 +96,7 @@ CloneOrUpdateGitRepoToPackages "indi-3rdparty" "--depth=1 https://github.com/ind
 InstallIndiDriver "indi-gphoto"
 InstallIndiDriver "libasi"
 InstallIndiDriver "indi-asi"
-InstallAurPackage "python-astropy" "https://aur.archlinux.org/python-astropy.git"
-InstallAurPackage "astrometry.net" "https://aur.archlinux.org/astrometry.net.git"
+InstallAstrometryNet
 CloneOrUpdateGitRepoToPackages "phd2" "https://github.com/OpenPHDGuiding/phd2.git"
 InstallPHD2
 
