@@ -5,3 +5,5 @@
     rbc = rebase --continue
     rbs = rebase --skip
     ca = commit --amend
+    cs = commit -S -m
+    c = commit -m
