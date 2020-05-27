@@ -95,6 +95,7 @@ InstallAurPackage "erfa" "https://aur.archlinux.org/erfa.git"
 CloneOrUpdateGitRepoToPackages "indi-3rdparty" "--depth=1 https://github.com/indilib/indi-3rdparty"
 InstallIndiDriver "indi-gphoto"
 InstallIndiDriver "libasi"
+InstallIndiDriver "libqhy"
 InstallIndiDriver "indi-asi"
 InstallAstrometryNet
 CloneOrUpdateGitRepoToPackages "phd2" "https://github.com/OpenPHDGuiding/phd2.git"
