@@ -172,6 +172,10 @@ let &t_SI.="\e[5 q"
 let &t_EI.="\e[1 q"
 let &t_te.="\e[0 q"
 
+" Make it easy to move in wrapped lines
+nnoremap k gk
+nnoremap j gj
+
 "NERDTree
 " Auto close Nerdtree if its the only window left
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree")
@@ -196,6 +200,9 @@ map sj <C-w>j
 map sl <C-w>l
 map si <C-w>+
 map su <C-w>-
+map sg <C-w><
+map sh <C-w>>
+
 " Resize window
 nmap <C-w><left> <C-w><
 nmap <C-w><right> <C-w>>
