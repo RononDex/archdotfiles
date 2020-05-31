@@ -200,8 +200,8 @@ map sj <C-w>j
 map sl <C-w>l
 map si <C-w>+
 map su <C-w>-
-map sg <C-w><
-map sh <C-w>>
+map so <C-w><
+map sp <C-w>>
 
 " Resize window
 nmap <C-w><left> <C-w><
