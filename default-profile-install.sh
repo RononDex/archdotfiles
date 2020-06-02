@@ -102,6 +102,7 @@ InstallAurPackage "nerd-fonts-complete" "https://aur.archlinux.org/nerd-fonts-co
 InstallAurPackage "xinit-xsession" "https://aur.archlinux.org/xinit-xsession.git"
 InstallAurPackage "cava" "https://aur.archlinux.org/cava.git"
 InstallAurPackage "dcron" "https://aur.archlinux.org/dcron.git"
+InstallAurPackage "cryptocoins-git" "https://aur.archlinux.org/packages/cryptocoins-git"
 
 echo "Enabling services ..."
 sudo systemctl enable dcron
