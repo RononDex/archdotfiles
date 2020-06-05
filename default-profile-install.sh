@@ -29,15 +29,18 @@ fi
 curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
 zplug update
 
+isArm=$false
 echo "Configuring pacman ..."
 uname -m | grep "aarch64"
 if [ $? == 0 ]; then
     echo "ARM system detected ..."
     sudo cp defaults/mirrorlistARM /etc/pacman.d/mirrorlist
     sudo cp defaults/pacmanARM.conf /etc/pacman.conf
+    isArm=$true
 else
     sudo cp defaults/mirrorlist /etc/pacman.d/mirrorlist
     sudo cp defaults/pacman.conf /etc/pacman.conf
+    isArm=$false
 fi
 sudo chmod 744 /etc/pacman.conf
 sudo chmod 744 /etc/pacman.d/mirrorlist
@@ -52,8 +55,17 @@ sudo pacman -Sy lightdm-webkit-theme-litarvan feh xfce4-terminal picom alsa puls
 sudo pacman -Sy java-runtime-common jre-openjdk ntfs-3g autofs xdotool --noconfirm --needed
 sudo pacman -Sy vim neovim bash-completion libftdi ccfits network-manager-applet xorg xorg-xinit lightdm adobe-source-code-pro-fonts --noconfirm --needed
 sudo pacman -Sy python python-pip samba opencv pkgconfig gtest gmock wxgtk2 libmpdclient bc ranger xorg-server binutils keychain --needed --noconfirm
-sudo pacman -Sy htop zlib curl exfat-utils gtop unzip shadow perl-anyevent-i3 perl-json-xs git-lfs python-pywal fzf arandr pass --needed --noconfirm
+sudo pacman -Sy htop imagemagick zlib curl exfat-utils gtop unzip shadow perl-anyevent-i3 perl-json-xs git-lfs python-pywal fzf arandr pass --needed --noconfirm
 sudo pacman -Sy zsh-syntax-highlighting xfce4-power-manager openvpn zsh-autosuggestions diff-so-fancy networkmanager-openvpn powerline-fonts zathura zathura-cb zathura-pdf-mupdf zathura-ps neomutt lynx ttf-dejavu --needed --noconfirm
+
+# Install Architecture specific stuff
+if [$isArm]
+
+else
+
+fi
+
+
 
 git lfs install
 git lfs pull
