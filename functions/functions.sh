@@ -68,6 +68,7 @@ BasicVimInstall() {
     fi
 
     InstallAurPackage "neovim-plug" "https://aur.archlinux.org/neovim-plug.git"
+    pip3 install pynvim
 }
 
 SetupBackgroundsFolderForBing() {
