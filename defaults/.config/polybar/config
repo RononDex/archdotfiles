@@ -204,7 +204,7 @@ interface = wlp3s0
 interval = 3.0
 ping-interval = 10
 
-format-connected = WLAN: <ramp-signal> <label-connected>
+format-connected = <ramp-signal> <label-connected>
 label-connected = "%essid% ↑%upspeed% ↓%downspeed%"
 upspeed = %upspeed%
 label-disconnected =    not connected

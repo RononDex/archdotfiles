@@ -1,3 +1,1 @@
-#!/bin/sh
-
-export PATH=~/.scripts:$PATH
+/home/cobra/.zprofile

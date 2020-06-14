@@ -8,7 +8,9 @@ sudo pacman -Sy wget git --noconfirm --needed
 
 echo "Updating file permissions ..."
 chmod +x ~/.xinitrc
+chmod +x ~/.config/.xinitrc
 chmod +x ~/.profile
+chmod +x ~/.zprofile
 chmod +x ~/.profile/xprofile
 chmod +x ~/.profile/bashprofile
 chmod +x ~/.config/i3/config
