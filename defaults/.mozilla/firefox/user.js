@@ -91,9 +91,6 @@ user_pref("browser.send_pings.require_same_host", true);
 // Disable website reading how much battery your mobile device or laptop has.
 user_pref("dom.battery.enabled", false);
 
-// Disables acceptance of session cookies.
-user_pref("network.cookie.alwaysAcceptSessionCookies", false);
-
 // Link prefetching is when a webpage hints to the browser that certain pages are likely to be visited, 
 // so the browser downloads them immediately so they can be displayed immediately when the user requests it. 
 user_pref("network.predictor.enabled", false);
