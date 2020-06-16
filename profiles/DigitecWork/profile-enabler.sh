@@ -44,7 +44,6 @@ InstallAurPackage "polybar" "https://aur.archlinux.org/polybar.git"
 InstallAurPackage "bitwarden" "https://aur.archlinux.org/bitwarden.git"
 InstallAurPackage "visual-studio-code-bin" "https://aur.archlinux.org/visual-studio-code-bin.git"
 InstallAurPackage "ckb-next" "https://aur.archlinux.org/ckb-next.git"
-InstallAurPackage "nodejs-azure-cli" "https://aur.archlinux.org/nodejs-azure-cli.git"
 InstallAurPackage "rider" "https://aur.archlinux.org/rider.git"
 InstallAurPackage "freerdp-git" "https://aur.archlinux.org/freerdp-git.git"
 InstallAurPackage "openh264-git" "https://aur.archlinux.org/openh264-git.git"
@@ -71,8 +70,7 @@ then
 fi
 
 echo "Installing AzureDev Ops credential provider"
-wget https://raw.githubusercontent.com/microsoft/artifacts-credprovider/master/helpers/installcredprovider.sh -O ~/Downloads/installcredprovider.sh
-sh ~/Downloads/installcredprovider.sh
+InstallAurPackage "azure-cli" "https://aur.archlinux.org/azure-cli.git"
 
 wget https://dot.net/v1/dotnet-install.sh -O ~/Downloads/dotnet-install.sh
 sudo ~/Downloads/dotnet-install.sh -channel Current -version latest --install-dir /usr/share/dotnet/
