@@ -11,8 +11,8 @@ chmod +x ~/.xinitrc
 chmod +x ~/.config/.xinitrc
 chmod +x ~/.profile
 chmod +x ~/.zprofile
-chmod +x ~/.profile/xprofile
-chmod +x ~/.profile/bashprofile
+chmod +x ~/.scripts/xprofile
+chmod +x ~/.scripts/bashprofile
 chmod +x ~/.config/i3/config
 chmod +x ~/.config/polybar/config
 chmod +x ~/.config/polybar/launch.sh
