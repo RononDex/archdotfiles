@@ -33,8 +33,8 @@ zplug update
 
 isArm=$false
 echo "Configuring pacman ..."
-uname -m | grep "arm"
-if [ $? == 0 ]; then
+architecture=$(uname -m | grep "arm")
+if [[ $architecture == *"arm"* ]]; then
     echo "ARM system detected ..."
     sudo cp defaults/mirrorlistARM /etc/pacman.d/mirrorlist
     sudo cp defaults/pacmanARM.conf /etc/pacman.conf
