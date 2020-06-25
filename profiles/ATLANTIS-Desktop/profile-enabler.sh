@@ -10,6 +10,7 @@ sudo cp $scriptDir/overrides/litarvan/styles.css /usr/share/lightdm-webkit/theme
 cp $scriptDir/overrides/polybar/constants ~/.config/polybar/constants
 sudo cp $scriptDir/overrides/xorg/10-monitor.conf /etc/X11/xorg.conf.d/10-monitor.conf
 sudo cp $scriptDir/overrides/xorg/20-keybord.conf /etc/X11/xorg.conf.d/20-keyboard.conf
+sudo cp $scriptDir/overrides/xorg/30-mouse.conf /etc/X11/xorg.conf.d/30-mouse.conf
 
 mkdir ~/.i3
 mkdir ~/.i3/workspaces
@@ -21,7 +22,7 @@ cp $scriptDir/overrides/.i3/scripts/launch-autostart.sh ~/.i3/scripts/launch-aut
 
 echo "Installing stuff..."
 sudo pacman -Sy i3-gaps nvidia vlc dunst libnotify notification-daemon dmenu flameshot teamspeak3 cabextract blueman signal-desktop --noconfirm --needed
-sudo pacman -Sy lib32-nvidia-utils remmina pulseaudio-bluetooth prusa-slicer texlive-most --noconfirm --needed
+sudo pacman -Sy lib32-nvidia-utils remmina pulseaudio-bluetooth prusa-slicer xf86-input-evdev texlive-most --noconfirm --needed
 sudo nvidia-xconfig
 
 if [ ! -d ~/.omnisharp ]
