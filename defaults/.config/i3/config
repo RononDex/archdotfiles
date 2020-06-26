@@ -170,6 +170,9 @@ bindsym $mod+r mode "resize"
 # Lockscreen
 bindsym $mod+shift+a exec light-locker-command -l
 
+# Cycle external screen mode
+bindsym $mod+shift+p exec --no-startup-id ~/.scripts/cycleExternalMonitorMode
+
 # Ranger
 bindsym $mod+n exec "sh ~/.scripts/launchScripts/launchRanger.sh"
 
