@@ -48,7 +48,9 @@ sudo chmod 744 /etc/pacman.conf
 sudo chmod 744 /etc/pacman.d/mirrorlist
 
 rm ~/pacman.conf
+rm ~/pacmanARM.conf
 rm ~/mirrorlist
+rm ~/mirrorlistARM
 
 echo "Installing stuff..."
 sudo pacman -Sy powerline-fonts gcc boost ffmpeg make cmake otf-fira-code otf-fira-mono otf-fira-sans ttf-fira-code ttf-fira-mono ttf-fira-sans bash-completion zsh zsh-completions git --noconfirm --needed
@@ -123,10 +125,9 @@ sudo systemctl enable dcron
 sudo systemctl start dcron
 
 echo "Applying default cron-config ..."
-crontab ~/.defaultCronConfig
+crontab ~/.config/defaultCronConfig
 
 echo "Copying some default files ..."
-cp $scriptDir/defaults/vscode_custom.css ~/vscode_custom.css
 sudo rm -rf /usr/share/backgrounds/*
 SetupBackgroundsFolderForBing
 sh ~/.scripts/updateLoginBackground.sh # Execute it ones, to get a new background

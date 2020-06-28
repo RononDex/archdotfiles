@@ -14,7 +14,6 @@ Plug 'joshdick/onedark.vim'
 Plug 'dense-analysis/ale'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'tpope/vim-fugitive'
-Plug 'airblade/vim-gitgutter'
 Plug 'frazrepo/vim-rainbow'
 Plug 'universal-ctags/ctags'
 Plug 'majutsushi/tagbar'
@@ -232,8 +231,11 @@ let $FZF_DEFAULT_COMMAND = 'find .'
 " Git stuff
 nmap <leader>gb :Gblame<CR>
 nmap <leader>gs :G<CR>
-nmap <leader>gp :Gpull<CR>
-nmap <leader>gm :Gdiff<CR>
+nmap <leader>gu :Gpull<CR>
+nmap <leader>gp :GPush<CR>
+nmap <leader>gm :Gvdiff<CR>
+nmap <leader>gh :diffget //2 <bar> diffup<CR>
+nmap <leader>gl :diffget //3 <bar> diffup<CR>
 
 " Latex config
 let g:vimtex_compiler_progname = 'nvr'
