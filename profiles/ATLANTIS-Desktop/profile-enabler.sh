@@ -22,7 +22,7 @@ cp $scriptDir/overrides/.i3/scripts/launch-autostart.sh ~/.i3/scripts/launch-aut
 
 echo "Installing stuff..."
 sudo pacman -Sy i3-gaps nvidia vlc dunst libnotify notification-daemon dmenu flameshot teamspeak3 cabextract blueman signal-desktop --noconfirm --needed
-sudo pacman -Sy lib32-nvidia-utils remmina pulseaudio-bluetooth prusa-slicer xf86-input-evdev texlive-most --noconfirm --needed
+sudo pacman -Sy lib32-nvidia-utils remmina freerdp xf86-input-evdev pulseaudio-bluetooth prusa-slicer texlive-most --noconfirm --needed
 sudo nvidia-xconfig
 
 if [ ! -d ~/.omnisharp ]
@@ -49,7 +49,6 @@ InstallAurPackage "ckb-next" "https://aur.archlinux.org/ckb-next.git"
 InstallAurPackage "openhmd-git" "https://aur.archlinux.org/openhmd-git.git"
 InstallAurPackage "SteamVR-OpenHMD" "https://github.com/ChristophHaag/SteamVR-OpenHMD"
 InstallAurPackage "vdf" "https://github.com/ValvePython/vdf"
-InstallAurPackage "freerdp-git" "https://aur.archlinux.org/freerdp-git.git"
 InstallAurPackage "openh264-git" "https://aur.archlinux.org/openh264-git.git"
 InstallAurPackage "mutt-wizard-git" "https://aur.archlinux.org/mutt-wizard-git.git"
 InstallAurPackage "protonmail-bridge" "https://aur.archlinux.org/protonmail-bridge.git"
