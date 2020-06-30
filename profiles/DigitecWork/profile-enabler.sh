@@ -25,7 +25,7 @@ cp -f $scriptDir/overrides/.i3/workspaces/workspace-1.json ~/.i3/workspaces/work
 cp -f $scriptDir/overrides/.i3/scripts/launch-autostart.sh ~/.i3/scripts/launch-autostart.sh
 
 echo "Installing stuff..."
-sudo pacman -Sy i3-gaps mesa dunst libnotify notification-daemon vlc dmenu flameshot light-locker cabextract signal-desktop --noconfirm --needed
+sudo pacman -Sy i3-gaps mesa dunst libnotify notification-daemon vlc dmenu freerdp flameshot light-locker cabextract signal-desktop --noconfirm --needed
 sudo pacman -Sy remmina openldap xf86-video-intel --noconfirm --needed
 sudo pacman -Sy nginx-mainline --noconfirm --needed
 
@@ -45,7 +45,6 @@ InstallAurPackage "bitwarden" "https://aur.archlinux.org/bitwarden.git"
 InstallAurPackage "visual-studio-code-bin" "https://aur.archlinux.org/visual-studio-code-bin.git"
 InstallAurPackage "ckb-next" "https://aur.archlinux.org/ckb-next.git"
 InstallAurPackage "rider" "https://aur.archlinux.org/rider.git"
-InstallAurPackage "freerdp-git" "https://aur.archlinux.org/freerdp-git.git"
 InstallAurPackage "openh264-git" "https://aur.archlinux.org/openh264-git.git"
 InstallAurPackage "xrdp" "https://aur.archlinux.org/xrdp.git"
 InstallAurPackage "xorgxrdp" "https://aur.archlinux.org/xorgxrdp.git"
