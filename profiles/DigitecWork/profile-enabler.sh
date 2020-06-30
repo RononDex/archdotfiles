@@ -51,7 +51,6 @@ InstallAurPackage "xrdp" "https://aur.archlinux.org/xrdp.git"
 InstallAurPackage "xorgxrdp" "https://aur.archlinux.org/xorgxrdp.git"
 InstallAurPackage "mutt-wizard-git" "https://aur.archlinux.org/mutt-wizard-git.git"
 InstallAurPackage "protonmail-bridge" "https://aur.archlinux.org/protonmail-bridge.git"
-InstallAurPackage "snapd" "https://aur.archlinux.org/snapd.git"
 
 echo "Installing screenkey"
 sudo pacman -Sy python2-setuptools --needed --noconfirm
@@ -87,10 +86,8 @@ sudo systemctl enable xrdp
 sudo systemctl start xrdp
 sudo systemctl enable xrdp-sesman
 sudo systemctl start xrdp-sesman
-sudo systemctl enable --now snapd.socket
 sudo systemctl enable nrclient
 sudo systemctl start nrclient
-sudo ln -s /var/lib/snapd/snap /snap
 
 currentUser=$(whoami)
 sudo usermod -a -G lp ${currentUser}
@@ -102,10 +99,6 @@ sudo usermod -a -G users ${currentUser}
 chmod +x ~/.scripts/bashprofile
 chmod +x ~/.scripts/xprofile
 chmod +x ~/.i3/workspaces/load-workspaces.sh
-
-echo "Setting up teams-for-linux"
-sudo snap install teams-for-linux
-snap connect teams-for-linux:camera core:camera
 
 echo "Setup mail"
 mw cron 5
