@@ -39,6 +39,7 @@ rm -rf ~/.omnisharp
 cp -Raf $scriptDir/../surface-book/overrides/omnisharp ~/.omnisharp
 
 echo "Installing AUR packages..."
+InstallAurPackage "nrclient2-free" "https://aur.archlinux.org/nrclient2-free.git"
 InstallAurPackage "nvm" "https://aur.archlinux.org/nvm.git"
 InstallAurPackage "polybar" "https://aur.archlinux.org/polybar.git"
 InstallAurPackage "bitwarden" "https://aur.archlinux.org/bitwarden.git"
@@ -87,6 +88,8 @@ sudo systemctl start xrdp
 sudo systemctl enable xrdp-sesman
 sudo systemctl start xrdp-sesman
 sudo systemctl enable --now snapd.socket
+sudo systemctl enable nrclient
+sudo systemctl start nrclient
 sudo ln -s /var/lib/snapd/snap /snap
 
 currentUser=$(whoami)
@@ -116,7 +119,7 @@ then
 fi
 
 echo "Setting up shares ..."
-# SetupAutofsForSmbShare "ATLANTIS-SRV" "/Documents ://192.168.1.12/Documents /Downloads ://192.168.1.12/Downloads /Software ://192.168.1.12/Software /Astrophotography ://192.168.1.12/Astrophotography /Backup ://192.168.1.12/Backup"
+SetupAutofsForSmbShare "ATLANTIS-SRV" "/Documents ://10.0.0.2/Documents /Downloads ://10.0.0.2/Downloads /Software ://10.0.0.2/Software /Astrophotography ://10.0.0.2/Astrophotography /Backup ://10.0.0.2/Backup"
 
 echo "Setting up nginx ..."
 if grep -q "fastcgi_param  SCRIPT_FILENAME    \$document_root\$fastcgi_script_name;" "/etc/nginx/fastcgi_params" ; then
