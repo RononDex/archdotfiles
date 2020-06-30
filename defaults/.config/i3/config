@@ -177,7 +177,7 @@ bindsym $mod+shift+p exec --no-startup-id ~/.scripts/cycleExternalMonitorMode
 bindsym $mod+n exec "sh ~/.scripts/launchScripts/launchRanger.sh"
 
 # Screenshot controls
-bindsym $mod+shift+p exec flameshot full -c
+bindsym $mod+p exec flameshot full -c
 bindsym $mod+shift+s exec flameshot gui
 
 # Backlight controls
