@@ -21,7 +21,7 @@ cp $scriptDir/overrides/.i3/workspaces/workspace-1.json ~/.i3/workspaces/workspa
 cp $scriptDir/overrides/.i3/scripts/launch-autostart.sh ~/.i3/scripts/launch-autostart.sh
 
 echo "Installing stuff..."
-sudo pacman -Sy i3-gaps nvidia vlc dunst libnotify notification-daemon dmenu flameshot teamspeak3 cabextract blueman signal-desktop --noconfirm --needed
+sudo pacman -Sy i3-gaps nvidia dunst libnotify notification-daemon dmenu flameshot nextcloud-client teamspeak3 cabextract blueman signal-desktop --noconfirm --needed
 sudo pacman -Sy lib32-nvidia-utils remmina freerdp xf86-input-evdev pulseaudio-bluetooth prusa-slicer texlive-most --noconfirm --needed
 sudo nvidia-xconfig
 
