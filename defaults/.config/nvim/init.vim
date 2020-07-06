@@ -90,6 +90,7 @@ noremap <leader>0 :tablast<cr>
 filetype indent plugin on
 let g:OmniSharp_server_stdio = 1
 let g:OmniSharp_server_display_loading = 1
+let g:OmniSharp_highlighting = 3
 let g:OmniSharp_highlight_types = 3
 let g:OmniSharp_selector_ui = 'fzf'
 let g:OmniSharp_diagnostic_showid = 1
@@ -158,8 +159,10 @@ let g:OmniSharp_diagnostic_overrides = {
 \ 'CS1701': {'type': 'I'},
 \ 'IDE0058': {'type': 'None'},
 \ 'IDE0008': {'type': 'None'},
-\ 'CC0045': {'type': 'I'},
+\ 'CC0045': {'type': 'None'},
+\ 'CC0042': {'type': 'None'},
 \ 'CC0071': {'type': 'I'},
+\ 'MA0076': {'type': 'None'},
 \ 'CC0003': {'type': 'W'},
 \ 'CC0088': { 'type': 'None'},
 \ 'RemoveUnnecessaryImportsFixable': {'type': 'I'}
