@@ -69,8 +69,6 @@ else
     sudo pacman -Sy gtop --noconfirm --needed
 fi
 
-
-
 git lfs install
 git lfs pull
 
@@ -89,6 +87,10 @@ if [ ! -d ~/.oh-my-zsh/themes/powerlevel10k ]; then
     cd ~/.oh-my-zsh/themes
     echo "Cloning powerlevel10k"
     git clone https://github.com/romkatv/powerlevel10k.git ~/.oh-my-zsh/themes/powerlevel10k
+else
+    cd ~/.oh-my-zsh/themes/powerlevel10k
+    echo "Updating powerlevel10k"
+    git pull
 fi
 
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
