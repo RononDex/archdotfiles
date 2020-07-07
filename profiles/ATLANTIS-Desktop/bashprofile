@@ -7,7 +7,7 @@ export DOTNET_CLI_TELEMETRY_OPTOUT=1                                        # Op
 (cat ~/.cache/wal/sequences &)
 eval $(keychain --eval --quiet id_rsa)                                      # Initializes the keychain
 
-setleds -D +num                                                             # Turn on NumLock by default
+# setleds -D +num                                                             # Turn on NumLock by default
 (wal -R -e -n -q &)                                                         # Reload pywal theme
 
 # Turn off screensaver
