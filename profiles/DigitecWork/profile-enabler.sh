@@ -10,7 +10,6 @@ cp $scriptDir/overrides/.ssh/config ~/.ssh/config
 sudo cp $scriptDir/overrides/xorg/20-keybord.conf /etc/X11/xorg.conf.d/20-keyboard.conf
 sudo cp $scriptDir/overrides/xorg/20-intel.conf /etc/X11/xorg.conf.d/20-intel.conf
 cp $scriptDir/overrides/polybar/network-traffic.sh ~/.config/polybar/network-traffic.sh
-cp $scriptDir/overrides/xfce4/terminalrc ~/.config/xfce4/terminal/terminalrc
 mkdir ~/.screenlayout
 cp $scriptDir/overrides/.screenlayout/3-screens.sh ~/.screenlayout/3-screens.sh
 
