@@ -5,3 +5,4 @@ alias vim=nvim
 alias c="xclip -selection clipboard"
 alias ed=editdotfiles
 alias dev=opendev
+alias up=updateDotFiles

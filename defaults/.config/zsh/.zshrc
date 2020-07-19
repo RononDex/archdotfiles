@@ -155,20 +155,6 @@ if [ -d ~/.scripts ]; then
   fi
 fi
 
-# Alias for system update
-if [ -d ~/.scripts ]; then
-  if [ -f ~/.scripts/setProfileUpdateAlias.sh ]; then
-    source ~/.scripts/setProfileUpdateAlias.sh
-  fi
-fi
-
-# Alias for system update
-if [ -d ~/.scripts ]; then
-    if [ -f ~/.scripts/setProfileUpdateAlias.sh ]; then
-        source ~/.scripts/setProfileUpdateAlias.sh
-    fi
-fi
-
 # Load zsh-syntax-highlighting; should be last.
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
 

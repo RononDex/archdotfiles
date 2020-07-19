@@ -84,7 +84,7 @@ fi
 profileDirName=$(basename $profileName)
 echo "$profileDirName"
 echo "#!/bin/sh" >~/.scripts/setProfileUpdateAlias.sh
-echo "alias up='sh $scriptDirRoot/profile-enabler.sh $profileDirName'" >>~/.scripts/setProfileUpdateAlias.sh
+echo "sh $scriptDirRoot/profile-enabler.sh $profileDirName" >>~/.scripts/updateDotFiles
 
 echo
 echo "DONE!"
