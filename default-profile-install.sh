@@ -11,8 +11,6 @@ chmod +x ~/.xinitrc
 chmod +x ~/.config/.xinitrc
 chmod +x ~/.profile
 chmod +x ~/.zprofile
-chmod +x ~/.scripts/xprofile
-chmod +x ~/.scripts/bashprofile
 chmod +x ~/.config/i3/config
 chmod +x ~/.config/polybar/config
 chmod +x ~/.config/polybar/launch.sh
@@ -22,14 +20,6 @@ chmod +x ~/.i3/scripts/launch-picom.sh
 chmod +x ~/.i3/scripts/launch-autostart.sh
 chmod +x ~/.i3/scripts/set-background.sh
 chmod -R +x ~/.scripts
-
-echo "Changing default shell to zsh"
-if [[ "$SHELL" != "/bin/zsh" ]]; then
-    chsh -s /bin/zsh
-fi
-
-curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
-zplug update
 
 isArm=$false
 echo "Configuring pacman ..."
@@ -52,6 +42,8 @@ rm ~/pacmanARM.conf
 rm ~/mirrorlist
 rm ~/mirrorlistARM
 
+source ~/.profile
+
 echo "Installing stuff..."
 sudo pacman -Sy powerline-fonts gcc boost ffmpeg make cmake otf-fira-code otf-fira-mono otf-fira-sans ttf-fira-code ttf-fira-mono ttf-fira-sans bash-completion zsh zsh-completions git --noconfirm --needed
 sudo pacman -Sy bash-completion networkmanager gnome-keyring network-manager-applet xorg xorg-xinit lightdm light-locker firefox adobe-source-code-pro-fonts neofetch xclip --noconfirm --needed
@@ -63,8 +55,8 @@ sudo pacman -Sy htop imagemagick zlib curl exfat-utils unzip shadow perl-anyeven
 sudo pacman -Sy zsh-syntax-highlighting xfce4-power-manager openvpn zsh-autosuggestions calc diff-so-fancy networkmanager-openvpn powerline-fonts zathura zathura-cb zathura-pdf-mupdf zathura-ps neomutt lynx ttf-dejavu --needed --noconfirm
 
 # Install Architecture specific stuff
-if [$isArm]
-
+if [ $isArm ]; then
+    for nothing in; do nothing; done
 else
     sudo pacman -Sy gtop --noconfirm --needed
 fi
@@ -72,26 +64,39 @@ fi
 git lfs install
 git lfs pull
 
+echo "Changing default shell to zsh"
+if [[ "$SHELL" != "/bin/zsh" ]]; then
+    chsh -s /bin/zsh
+fi
+
+echo "Setting up oh-my-zsh ..."
+if [ ! -d ${ZSH} ]; then
+    ZSH=${ZSH} sh -c "$(wget -O- https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" --unattended --keep-zshrc
+fi
+
+if [ ! -d ${ZSH}/themes/powerlevel10k ]; then
+    cd ${ZSH}/themes
+    echo "Cloning powerlevel10k"
+    git clone https://github.com/romkatv/powerlevel10k.git ${ZSH}/themes/powerlevel10k
+else
+    cd ${ZSH}/themes/powerlevel10k
+    echo "Updating powerlevel10k"
+    git pull
+fi
+
+if [ ! -d ${ZPLUG_HOME} ]; then
+    git clone https://github.com/zplug/zplug $ZPLUG_HOME
+else
+    cd ${ZPLUG_HOME}
+    git pull
+fi
+
+zplug update
+
 sudo systemctl enable NetworkManager
 sudo systemctl start NetworkManager
 sudo systemctl enable autofs
 sudo systemctl start autofs
-
-echo "Setting up oh-my-zsh ..."
-if [ ! -d ~/.oh-my-zsh ]; then
-    cd ~
-    sh -c "$(wget -O- https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" --unattended
-fi
-
-if [ ! -d ~/.oh-my-zsh/themes/powerlevel10k ]; then
-    cd ~/.oh-my-zsh/themes
-    echo "Cloning powerlevel10k"
-    git clone https://github.com/romkatv/powerlevel10k.git ~/.oh-my-zsh/themes/powerlevel10k
-else
-    cd ~/.oh-my-zsh/themes/powerlevel10k
-    echo "Updating powerlevel10k"
-    git pull
-fi
 
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 

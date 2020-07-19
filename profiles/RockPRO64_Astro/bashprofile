@@ -1,3 +1,0 @@
-#!/bin/sh
-(wal -R -e -q -n &)                    # Reload pywal theme
-eval $(keychain --eval --quiet id_rsa) # Initializes the keychain

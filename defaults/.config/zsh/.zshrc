@@ -1,3 +1,26 @@
+# Load all env variables
+source ~/.zprofile
+
+# Load and execute custom profiles
+if [ -d ~/.scripts ]; then
+  if [ -f ~/.scripts/bashprofile ]; then
+    source ~/.scripts/bashprofile
+  fi
+fi
+
+# ZPLUG config
+source ${ZPLUG_HOME}/init.zsh
+
+zplug 'wfxr/forgit'
+
+# Load theme file
+zplug 'dracula/zsh', as:theme
+
+# Install plugins if there are plugins that have not been installed
+if ! zplug check --verbose; then
+    echo; zplug install
+fi
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.config/zsh/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -11,7 +34,6 @@ autoload -U colors && colors
 # History in cache directory:
 HISTSIZE=10000
 SAVEHIST=10000
-HISTFILE=~/.cache/zsh/history
 
 # Basic auto/tab complete:
 autoload -U compinit
@@ -33,9 +55,6 @@ bindkey -v '^?' backward-delete-char
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
-
-# Path to your oh-my-zsh installation.
-export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -87,9 +106,6 @@ ZSH_THEME=powerlevel10k/powerlevel10k
 # see 'man strftime' for details.
 # HIST_STAMPS="mm/dd/yyyy"
 
-# Would you like to use another custom folder than $ZSH/custom?
-# ZSH_CUSTOM=/path/to/new-custom-folder
-
 # Which plugins would you like to load?
 # Standard plugins can be found in ~/.oh-my-zsh/plugins/*
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
@@ -127,23 +143,7 @@ export PS1="[%* - %D] %d: "
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-source /usr/share/nvm/init-nvm.sh
 
-# ZPLUG config
-source ~/.zplug/init.zsh
-
-zplug 'wfxr/forgit'
-
-# Load theme file
-zplug 'dracula/zsh', as:theme
-
-# Install plugins if there are plugins that have not been installed
-if ! zplug check --verbose; then
-    printf "Install? [y/N]: "
-    if read -q; then
-        echo; zplug install
-    fi
-fi
 
 # Then, source plugins and add commands to $PATH
 zplug load
@@ -159,13 +159,6 @@ fi
 if [ -d ~/.scripts ]; then
   if [ -f ~/.scripts/setProfileUpdateAlias.sh ]; then
     source ~/.scripts/setProfileUpdateAlias.sh
-  fi
-fi
-
-# Load and execute custom profiles
-if [ -d ~/.scripts ]; then
-  if [ -f ~/.scripts/bashprofile ]; then
-    source ~/.scripts/bashprofile
   fi
 fi
 
