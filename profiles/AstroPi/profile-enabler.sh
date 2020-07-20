@@ -47,6 +47,7 @@ CloneOrUpdateGitRepoToPackages "indi-3rdparty" "--depth=1 https://github.com/ind
 InstallIndiDriver "indi-gphoto"
 InstallIndiDriver "libasi"
 InstallIndiDriver "indi-asi"
+InstallIndiDriver "libqhy"
 InstallAurPackage "python-astropy" "https://aur.archlinux.org/python-astropy.git"
 InstallAurPackage "astrometry.net" "https://aur.archlinux.org/astrometry.net.git"
 CloneOrUpdateGitRepoToPackages "phd2" "https://github.com/OpenPHDGuiding/phd2.git"
@@ -64,3 +65,6 @@ sudo usermod -a -G uucp ${currentUser}
 sudo usermod -a -G users ${currentUser}
 
 sudo chown ${currentUser} ~/.xinitrc
+
+chmod +x ~/.scripts/bashprofile
+chmod +x ~/.scripts/xprofile
