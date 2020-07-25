@@ -1,1 +1,4 @@
 #!/bin/sh
+
+export EDITOR=nvim
+(wal -R -e -n -q &)                                                         # Reload pywal theme

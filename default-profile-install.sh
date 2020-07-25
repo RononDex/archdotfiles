@@ -47,7 +47,7 @@ sudo pacman -Sy powerline-fonts fakeroot gcc boost ffmpeg make cmake otf-fira-co
 sudo pacman -Sy bash-completion networkmanager gnome-keyring network-manager-applet xorg xorg-xinit lightdm light-locker firefox adobe-source-code-pro-fonts neofetch xclip --noconfirm --needed
 sudo pacman -Sy lightdm-webkit-theme-litarvan feh xfce4-terminal picom alsa pulseaudio pulseaudio-jack pulseaudio-alsa pavucontrol arc-gtk-theme arc-icon-theme nautilus --noconfirm --needed
 sudo pacman -Sy java-runtime-common jre-openjdk ntfs-3g autofs xdotool --noconfirm --needed
-sudo pacman -Sy vim neovim bash-completion libftdi ccfits network-manager-applet xorg xorg-xinit lightdm adobe-source-code-pro-fonts --noconfirm --needed
+sudo pacman -Sy vim neovim bash-completion libftdi ccfits network-manager-applet xorg xorg-xinit adobe-source-code-pro-fonts --noconfirm --needed
 sudo pacman -Sy python python-pip samba opencv pkgconfig gtest gmock wxgtk2 libmpdclient bc ranger xorg-server binutils keychain --needed --noconfirm
 sudo pacman -Sy htop imagemagick zlib curl exfat-utils unzip shadow perl-anyevent-i3 perl-json-xs git-lfs python-pywal fzf arandr pass --needed --noconfirm
 sudo pacman -Sy zsh-syntax-highlighting xfce4-power-manager openvpn zsh-autosuggestions calc diff-so-fancy networkmanager-openvpn powerline-fonts zathura zathura-cb zathura-pdf-mupdf zathura-ps lynx ttf-dejavu --needed --noconfirm
