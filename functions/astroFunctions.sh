@@ -25,6 +25,19 @@ InstallPlanetaryImager() {
     make all && sudo make install
 }
 
+InstallAstrometryNet() {
+    cd ~/packages
+    mkdir astrometryNet
+    cd astrometryNet
+    wget http://astrometry.net/downloads/astrometry.net-latest.tar.gz
+    tar xvzf astrometry.net-latest.tar.gz
+    cd astrometry.net-*
+    make
+    make py
+    make extra
+    make install  # to put it in /usr/local/astrometry
+}
+
 InstallPHD2() {
     cd ~/packages/phd2
     mkdir -p compiled

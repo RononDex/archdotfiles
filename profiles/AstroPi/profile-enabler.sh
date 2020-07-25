@@ -51,7 +51,7 @@ InstallIndiDriver "libasi"
 InstallIndiDriver "indi-asi"
 InstallIndiDriver "libqhy"
 pip install astropy
-InstallAurPackage "astrometry.net" "https://aur.archlinux.org/astrometry.net.git"
+InstallAstrometryNet
 CloneOrUpdateGitRepoToPackages "phd2" "https://github.com/OpenPHDGuiding/phd2.git"
 InstallPHD2
 
