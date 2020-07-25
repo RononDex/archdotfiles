@@ -25,22 +25,20 @@ isArm=$false
 echo "Configuring pacman ..."
 architecture=$(uname -m | grep "arm")
 if [[ $architecture == *"arm"* ]]; then
+    echo -n "$RED"
     echo "ARM system detected ..."
-    sudo cp defaults/mirrorlistARM /etc/pacman.d/mirrorlist
-    sudo cp defaults/pacmanARM.conf /etc/pacman.conf
+    echo -n "$NC"
     isArm=$true
 else
     sudo cp defaults/mirrorlist /etc/pacman.d/mirrorlist
     sudo cp defaults/pacman.conf /etc/pacman.conf
+    sudo chmod 744 /etc/pacman.conf
+    sudo chmod 744 /etc/pacman.d/mirrorlist
     isArm=$false
 fi
-sudo chmod 744 /etc/pacman.conf
-sudo chmod 744 /etc/pacman.d/mirrorlist
 
 rm ~/pacman.conf
-rm ~/pacmanARM.conf
 rm ~/mirrorlist
-rm ~/mirrorlistARM
 
 source ~/.profile
 
