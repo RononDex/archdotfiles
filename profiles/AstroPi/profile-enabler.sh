@@ -2,7 +2,6 @@
 scriptDir="$(cd "$(dirname "${BASH_SOURCE[0]}")" >/dev/null 2>&1 && pwd)"
 
 . $scriptDir/../../functions/astroFunctions.sh
-. $scriptDir/../../functions/bitbox.sh
 
 echo "Please ensure that Arch Linux ARM was correclty setup prior to launching this profile installer!"
 echo "Exit with Ctrl+C if not setup properly yet"
@@ -14,6 +13,9 @@ cp $scriptDir/overrides/xfce4/terminalrc ~/.config/xfce4/terminal/terminalrc
 sudo cp $scriptDir/overrides/lightdm.conf /etc/lightdm/lightdm.conf
 sudo cp $scriptDir/overrides/ssh/sshd_config /etc/ssh/sshd_config
 sudo cp $scriptDir/overrides/lightdm-webkit2-greeter.conf /etc/lightdm/lightdm-webkit2-greeter.conf
+sudo cp $scriptDir/overrides/xrdp/startwm.sh /etc/xrdp/startwm.sh
+
+sudo chmod +x /etc/xrdp/startwm.sh
 
 echo "Setting up XFCE"
 sudo pacman -Sy xfce4 firefox --noconfirm --needed
