@@ -10,6 +10,7 @@ echo "Copying some files..."
 sudo cp $scriptDir/overrides/xorg/20-keybord.conf /etc/X11/xorg.conf.d/20-keyboard.conf
 cp $scriptDir/overrides/.xinitrc ~/.xinitrc
 cp $scriptDir/overrides/xfce4/terminalrc ~/.config/xfce4/terminal/terminalrc
+cp $scriptDir/overrides/xfce4/xfce4-desktop.xml ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-desktop.xml
 sudo cp $scriptDir/overrides/lightdm.conf /etc/lightdm/lightdm.conf
 sudo cp $scriptDir/overrides/ssh/sshd_config /etc/ssh/sshd_config
 sudo cp $scriptDir/overrides/lightdm-webkit2-greeter.conf /etc/lightdm/lightdm-webkit2-greeter.conf
@@ -59,8 +60,11 @@ MakePackage "indi"
 CloneOrUpdateGitRepoToPackages "indi-3rdparty" "--depth=1 https://github.com/indilib/indi-3rdparty"
 InstallIndiDriver "indi-gphoto"
 InstallIndiDriver "libasi"
+InstallIndiDriver "libatik"
+InstallIndiDriver "indi-atik"
 InstallIndiDriver "indi-asi"
 InstallIndiDriver "libqhy"
+InstallIndiDriver "indi-qhy"
 InstallAstrometryNet
 CloneOrUpdateGitRepoToPackages "phd2" "https://github.com/OpenPHDGuiding/phd2.git"
 InstallPHD2
