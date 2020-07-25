@@ -35,9 +35,9 @@ CloneOrUpdateGitRepoToPackages "phd2" "https://github.com/OpenPHDGuiding/phd2.gi
 InstallPHD2
 
 echo "Enabling services"
-sudo systemctl enable nrclient
-sudo systemctl start nrclient
 sudo systemctl enable lightdm.service
+sudo systemctl enable xrdp
+sudo systemctl start xrdp
 
 echo "Setting up Touchscreen"
 if grep -q "MOZ_USE_XINPUT2 DEFAULT=1" "/etc/security/pam_env.conf"; then
