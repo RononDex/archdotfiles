@@ -26,10 +26,12 @@ InstallPlanetaryImager() {
 }
 
 InstallAstroPy() {
-    cd ~/packages
-    git clone --recursive git://github.com/astropy/astropy.git
-    cd astropy
-    pip3 install . -v
+    if [ ! -d ${HOME}/packages/astropy ]; then
+        cd ~/packages
+        git clone --recursive git://github.com/astropy/astropy.git
+        cd astropy
+        pip3 install . -v
+    fi
 }
 
 InstallAstrometryNet() {
