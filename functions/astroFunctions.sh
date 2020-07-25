@@ -25,6 +25,13 @@ InstallPlanetaryImager() {
     make all && sudo make install
 }
 
+InstallAstroPy() {
+    cd ~/packages
+    git clone --recursive git://github.com/astropy/astropy.git
+    cd astropy
+    pip3 install . -v
+}
+
 InstallAstrometryNet() {
     cd ~/packages
     mkdir astrometryNet

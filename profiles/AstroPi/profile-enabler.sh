@@ -50,7 +50,7 @@ InstallIndiDriver "indi-gphoto"
 InstallIndiDriver "libasi"
 InstallIndiDriver "indi-asi"
 InstallIndiDriver "libqhy"
-pip install astropy
+InstallAstroPy
 InstallAstrometryNet
 CloneOrUpdateGitRepoToPackages "phd2" "https://github.com/OpenPHDGuiding/phd2.git"
 InstallPHD2
