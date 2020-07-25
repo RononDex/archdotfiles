@@ -12,14 +12,21 @@ sudo cp $scriptDir/overrides/xorg/20-keybord.conf /etc/X11/xorg.conf.d/20-keyboa
 cp $scriptDir/overrides/.xinitrc ~/.xinitrc
 cp $scriptDir/overrides/xfce4/terminalrc ~/.config/xfce4/terminal/terminalrc
 sudo cp $scriptDir/overrides/lightdm.conf /etc/lightdm/lightdm.conf
+sudo cp $scriptDir/overrides/ssh/sshd_config /etc/ssh/sshd_config
 sudo cp $scriptDir/overrides/lightdm-webkit2-greeter.conf /etc/lightdm/lightdm-webkit2-greeter.conf
 
 echo "Setting up XFCE"
 sudo pacman -Sy xfce4 firefox --noconfirm --needed
 
-echo "Setting up network .."
-InstallAurPackage "nrclient2-free" "https://aur.archlinux.org/nrclient2-free.git"
+echo "Installing stuff ..."
+InstallAurPackage "xrdp" "https://aur.archlinux.org/xrdp.git"
+InstallAurPackage "xorgxrdp" "https://aur.archlinux.org/xorgxrdp-git.git"
 
+echo "Setting up xrdp ..."
+sudo rm /etc/X11/Xwrapper.config
+echo "allowed_users=anybody" | sudo tee /etc/X11/Xwrapper.config
+
+echo "Setting up network .."
 InstallAurPackage "libhdf5" "https://aur-dev.archlinux.org/libhdf5.git"
 
 CloneOrUpdateGitRepoToPackages "indi" "https://github.com/indilib/indi"
@@ -55,9 +62,6 @@ InstallIndiDriver "libqhy"
 InstallAstrometryNet
 CloneOrUpdateGitRepoToPackages "phd2" "https://github.com/OpenPHDGuiding/phd2.git"
 InstallPHD2
-
-echo "Setting up shares ..."
-SetupAutofsForSmbShare "ATLANTIS-SRV" "/Documents ://10.0.0.2/Documents /Downloads ://10.0.0.2/Downloads /Software ://10.0.0.2/Software /Astrophotography ://10.0.0.2/Astrophotography /Backup ://10.0.0.2/Backup"
 
 echo "Adjust user permissions"
 currentUser=$(whoami)
