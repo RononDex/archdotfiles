@@ -44,15 +44,14 @@ echo "Setting up astronomy stuff .."
 sudo pacman -Sy gpsd libdc1394 kstars --noconfirm --needed
 sudo pacman -Sy --noconfirm --needed wcslib opencv ccfits breeze-icons binutils patch cmake make libraw libindi gpsd gcc
 
+InstallAstroPy
 CloneOrUpdateGitRepoToPackages "indi" "https://github.com/indilib/indi"
 MakePackage "indi"
-InstallAurPackage "erfa" "https://aur.archlinux.org/erfa.git"
 CloneOrUpdateGitRepoToPackages "indi-3rdparty" "--depth=1 https://github.com/indilib/indi-3rdparty"
 InstallIndiDriver "indi-gphoto"
 InstallIndiDriver "libasi"
 InstallIndiDriver "indi-asi"
 InstallIndiDriver "libqhy"
-InstallAstroPy
 InstallAstrometryNet
 CloneOrUpdateGitRepoToPackages "phd2" "https://github.com/OpenPHDGuiding/phd2.git"
 InstallPHD2
