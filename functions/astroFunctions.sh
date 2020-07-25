@@ -42,10 +42,10 @@ InstallAstrometryNet() {
     tar xvzf astrometry.net-latest.tar.gz
     rm astrometry.net-latest.tar.gz
     cd  "$(\ls -1dt ./*/ | head -n 1)"
-    make
-    make py
-    make extra
-    make install  # to put it in /usr/local/astrometry
+    sudo make
+    sudo make py
+    sudo make extra
+    sudo make install  # to put it in /usr/local/astrometry
 }
 
 InstallPHD2() {
