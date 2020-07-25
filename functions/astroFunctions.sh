@@ -40,7 +40,8 @@ InstallAstrometryNet() {
     cd astrometryNet
     wget http://astrometry.net/downloads/astrometry.net-latest.tar.gz
     tar xvzf astrometry.net-latest.tar.gz
-    cd astrometry.net-*
+    rm astrometry.net-latest.tar.gz
+    cd  "$(\ls -1dt ./*/ | head -n 1)"
     make
     make py
     make extra
