@@ -54,7 +54,7 @@ sudo pacman -Sy zsh-syntax-highlighting xfce4-power-manager openvpn zsh-autosugg
 
 # Install Architecture specific stuff
 if [ $isArm ]; then
-    for nothing in; do nothing; done
+    sudo pacman -Sy fakeroot --noconfirm --needed
 else
     sudo pacman -Sy gtop --noconfirm --needed
 fi
