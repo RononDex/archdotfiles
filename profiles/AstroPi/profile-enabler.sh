@@ -10,6 +10,7 @@ echo "Exit with Ctrl+C if not setup properly yet"
 echo "Copying some files..."
 sudo cp $scriptDir/overrides/xorg/20-keybord.conf /etc/X11/xorg.conf.d/20-keyboard.conf
 cp $scriptDir/overrides/.xinitrc ~/.xinitrc
+cp $scriptDir/overrides/xfce4/terminalrc ~/.config/xfce4/terminal/terminalrc
 
 echo "Setting up XFCE"
 sudo pacman -Sy xfce4 firefox --noconfirm --needed
@@ -27,6 +28,7 @@ InstallPHD2
 echo "Enabling services"
 sudo systemctl enable nrclient
 sudo systemctl start nrclient
+sudo systemctl enable lightdm.service
 
 echo "Setting up Touchscreen"
 if grep -q "MOZ_USE_XINPUT2 DEFAULT=1" "/etc/security/pam_env.conf"; then
@@ -48,7 +50,7 @@ InstallIndiDriver "indi-gphoto"
 InstallIndiDriver "libasi"
 InstallIndiDriver "indi-asi"
 InstallIndiDriver "libqhy"
-InstallAurPackage "python-astropy" "https://aur.archlinux.org/python-astropy.git"
+pip install astropy
 InstallAurPackage "astrometry.net" "https://aur.archlinux.org/astrometry.net.git"
 CloneOrUpdateGitRepoToPackages "phd2" "https://github.com/OpenPHDGuiding/phd2.git"
 InstallPHD2
@@ -68,3 +70,4 @@ sudo chown ${currentUser} ~/.xinitrc
 
 chmod +x ~/.scripts/bashprofile
 chmod +x ~/.scripts/xprofile
+chmod +x ~/.config/xfce4/terminal/terminalrc
