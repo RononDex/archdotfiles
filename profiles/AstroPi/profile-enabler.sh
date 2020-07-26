@@ -19,7 +19,7 @@ sudo cp $scriptDir/overrides/xrdp/startwm.sh /etc/xrdp/startwm.sh
 sudo chmod +x /etc/xrdp/startwm.sh
 
 echo "Setting up XFCE"
-sudo pacman -Sy xfce4 firefox --noconfirm --needed
+sudo pacman -Sy xfce4 firefox dnsmasq --noconfirm --needed
 
 echo "Installing stuff ..."
 InstallAurPackage "xrdp" "https://aur.archlinux.org/xrdp.git"
