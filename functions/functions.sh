@@ -26,7 +26,7 @@ CloneOrUpdateGitRepoToPackages() {
 InstallFxLoadFx3() {
     mkdir ~/packages/fxload
     cp $scriptDirRoot/lib/fxload_fx3_code.tar.gz ~/packages/fxload/fxload_fx3_code.tar.gz
-    cd ~/packges/fxload
+    cd ~/packages/fxload
     tar -xzvf fxload_fx3_code.tar.gz
     cd ~/packages/fxload/fxload_fx3_code
     make
