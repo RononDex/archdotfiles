@@ -59,7 +59,7 @@ SetupAutofsForSmbShare() {
 SetupHotspot() {
     if [ ! -f  ~/.scripts/networking/startHotspot$2 ]; then
         BAND='a'
-        if $3 -eq true; then $BAND='a'; else $BAND='bg'; fi
+        if $3 -eq true; then $BAND="a"; else $BAND="bg"; fi
 
         passwd="test"
         confirmedPasswd="asdf"
@@ -79,7 +79,7 @@ SetupHotspot() {
 
         sh ~/.scripts/networking/setupHotspot $1 $2 $BAND $passwd
         echo "#!/bin/sh" > ~/.scripts/networking/startHotspot$2
-        echo "nmcli con up ${2}" >> ~/.scripts/networking/startHotspot$2
+        echo "nmcli con up \"${2}\"" >> ~/.scripts/networking/startHotspot$2
     fi
 }
 
