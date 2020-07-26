@@ -31,6 +31,12 @@ echo "allowed_users=anybody" | sudo tee /etc/X11/Xwrapper.config
 
 echo "Setting up network .."
 SetupHotspot "wlan0" "ATLANTIS-ASTRO-PI1-AP" true
+sudo mkdir /usr/share/scripts
+sudo cp ~/.scripts/networking/startHotspotATLANTIS-ASTRO-PI1-AP /usr/share/scripts/startHotspot.sh
+sudo cp $scriptDir/overrides/hotspot.service /etc/systemd/system/hotspot.service
+sudo systemctl daemon-reload
+sudo systemctl enable mymonitor.service
+sudo chmod u+x /usr/share/scripts/startHotspot.sh
 InstallAurPackage "libhdf5" "https://aur-dev.archlinux.org/libhdf5.git"
 
 echo "Enabling services"
