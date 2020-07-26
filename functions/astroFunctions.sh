@@ -48,3 +48,40 @@ InstallPHD2() {
     make
     sudo ln -sf /home/cobra/packages/phd2/compiled/phd2.bin /usr/bin/phd2
 }
+
+DownloadIndexFiles() {
+    if [ ! -d ~/AstrometryIndexes ]; then
+        echo "Downloading astrometry index files ..."
+        mkdir ~/AstrometryIndexes
+        cd ~/AstrometryIndexes
+        wget http://data.astrometry.net/4200/index-4211.fits
+        wget http://data.astrometry.net/4200/index-4210.fits
+        wget http://data.astrometry.net/4200/index-4209.fits
+        wget http://data.astrometry.net/4200/index-4208.fits
+
+       for i in {0..11}
+       do
+            wget http://data.astrometry.net/4200/index-4207-$i.fits
+       done
+
+       for i in {0..11}
+       do
+            wget http://data.astrometry.net/4200/index-4206-$i.fits
+       done
+
+       for i in {0..11}
+       do
+            wget http://data.astrometry.net/4200/index-4205-$i.fits
+       done
+
+       for i in {0..47}
+       do
+            wget http://data.astrometry.net/4200/index-4204-$i.fits
+       done
+
+       for i in {0..47}
+       do
+            wget http://data.astrometry.net/4200/index-4205-$i.fits
+       done
+    fi
+}

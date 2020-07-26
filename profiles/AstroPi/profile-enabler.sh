@@ -69,6 +69,7 @@ InstallIndiDriver "indi-asi"
 InstallIndiDriver "libqhy"
 InstallIndiDriver "indi-qhy"
 InstallAstrometryNet
+DownloadIndexFiles
 CloneOrUpdateGitRepoToPackages "phd2" "https://github.com/OpenPHDGuiding/phd2.git"
 InstallPHD2
 
