@@ -1,12 +1,4 @@
 
-InstallIndiDrivers() {
-    mkdir -p ~/packages/indi-3rdparty/build
-    cd ~/packages/indi-3rdparty/build
-    cmake -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_BUILD_TYPE=Debug ~/packages/indi-3rdparty
-    make -j4
-    sudo make install
-}
-
 InstallIndiDriver() {
     mkdir ~/packages/indi-3rdparty/build/
     cd ~/packages/indi-3rdparty/build/

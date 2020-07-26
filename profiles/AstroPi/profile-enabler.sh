@@ -32,11 +32,6 @@ echo "allowed_users=anybody" | sudo tee /etc/X11/Xwrapper.config
 echo "Setting up network .."
 InstallAurPackage "libhdf5" "https://aur-dev.archlinux.org/libhdf5.git"
 
-CloneOrUpdateGitRepoToPackages "indi" "https://github.com/indilib/indi"
-InstallIndiDrivers
-CloneOrUpdateGitRepoToPackages "phd2" "https://github.com/OpenPHDGuiding/phd2.git"
-InstallPHD2
-
 echo "Enabling services"
 sudo systemctl enable lightdm.service
 sudo systemctl enable xrdp
