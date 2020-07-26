@@ -58,12 +58,12 @@ SetupAutofsForSmbShare() {
 # $3: 5GHz (true) or 2.4GHz (false)
 SetupHotspot() {
     if [ ! -f  ~/.scripts/networking/startHotspot$2 ]; then
-        BAND='a'
-        if $3 -eq true; then $BAND="a"; else $BAND="bg"; fi
+        BAND="a"
+        if $3 -eq true; then BAND="a"; else BAND="bg"; fi
 
         passwd="test"
         confirmedPasswd="asdf"
-        while [ $passwd -ne $confirmedPasswd ]
+        while [ $passwd != $confirmedPasswd ]
         do
             echo "Enter password for hotspot ${2}:"
             stty_orig=`stty -g` # save original terminal setting.
