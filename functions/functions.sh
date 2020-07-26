@@ -23,6 +23,14 @@ CloneOrUpdateGitRepoToPackages() {
     fi
 }
 
+InstallFxLoadFx3() {
+    mkdir ~/packages/fxload
+    cp $scriptDirRoot/lib/fxload_fx3_code.tar.gz ~/packages/fxload/fxload_fx3_code.tar.gz
+    cd ~/packages/fxload/fxload_fx3_code
+    make
+    sudo make install
+}
+
 # $1: Name of share / server
 # $2: shares to mount (command)
 SetupAutofsForSmbShare() {
