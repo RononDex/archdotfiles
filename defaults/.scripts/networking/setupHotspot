@@ -6,11 +6,11 @@ CON_NAME=$2
 BAND=$3
 PASSWD=$4
 
-nmcli con show $CON_NAME
+nmcli con show "$CON_NAME"
 #Setup the connection if it does not exist yet
 if [ $? -ne 0 ]; then
-    nmcli con add type wifi ifname $IFNAME con-name $CON_NAME autoconnect yes ssid $CON_NAME
-    nmcli con modify $CON_NAME 802-11-wireless.mode ap 802-11-wireless.band $BAND ipv4.method shared
-    nmcli con modify $CON_NAME wifi-sec.key-mgmt wpa-psk
-    nmcli con modify $CON_NAME wifi-sec.psk $PASSWD
+    nmcli con add type wifi ifname $IFNAME con-name "$CON_NAME" autoconnect yes ssid "$CON_NAME"
+    nmcli con modify "$CON_NAME" 802-11-wireless.mode ap 802-11-wireless.band $BAND ipv4.method shared
+    nmcli con modify "$CON_NAME" wifi-sec.key-mgmt wpa-psk
+    nmcli con modify "$CON_NAME" wifi-sec.psk $PASSWD
 fi
