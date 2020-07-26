@@ -66,15 +66,15 @@ SetupHotspot() {
         while [ $passwd != $confirmedPasswd ]
         do
             echo "Enter password for hotspot ${2}:"
-            stty_orig=`stty -g` # save original terminal setting.
-            stty -echo          # turn-off echoing.
-            read passwd         # read the password
-            stty $stty_orig     # restore terminal setting.
+            stty_orig=`stty -g`         # save original terminal setting.
+            stty -echo                  # turn-off echoing.
+            read passwd                 # read the password
+            stty $stty_orig             # restore terminal setting.
             echo "Confirm password:"
-            stty_orig=`stty -g` # save original terminal setting.
-            stty -echo          # turn-off echoing.
-            read confirmedPasswd# read the password
-            stty $stty_orig     # restore terminal setting.
+            stty_orig=`stty -g`         # save original terminal setting.
+            stty -echo                  # turn-off echoing.
+            read confirmedPasswd        # read the password
+            stty $stty_orig             # restore terminal setting.
         done
 
         sh ~/.scripts/networking/setupHotspot $1 $2 $BAND $passwd
