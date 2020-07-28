@@ -162,12 +162,12 @@ Off
     </newSwitchVector>
     <newNumberVector device="QHY CCD QHY163M-7c64ca4" name="CCD_GAIN">
         <oneNumber name="GAIN">
-100
+200
         </oneNumber>
     </newNumberVector>
     <newNumberVector device="QHY CCD QHY163M-7c64ca4" name="CCD_OFFSET">
         <oneNumber name="OFFSET">
-      50
+      75
         </oneNumber>
     </newNumberVector>
     <newNumberVector device="QHY CCD QHY163M-7c64ca4" name="USB_TRAFFIC">

@@ -1,10 +1,27 @@
 [Align]
+AlignExposure=5
 AstrometryConfFile=*Internal astrometry.cfg*
+AstrometryDetectParity=true
+AstrometryImageScaleHigh=51.986
+AstrometryImageScaleLow=39.325
+AstrometryPositionDE=43.68861111111111
+AstrometryPositionRA=315.03333333333336
+AstrometrySolverBinary=/usr/local/astrometry/bin/solve-field
+AstrometrySolverType=1
+AstrometryUseImageScale=false
+AstrometryWCSInfo=/usr/local/astrometry/bin/wcsinfo
+DefaultAlignFilterWheel=Atik EFW2
 SolverBinningIndex=3
 
 [Capture]
+CaptureDirectory=/data
 DefaultCaptureFilterWheel=--
-GuidingSettle=5
+EnforceAutofocusOnTemperature=true
+GuidingSettle=10
+ResetMountModelAfterMeridian=true
+fileSettingsUseDuration=true
+fileSettingsUseFilter=true
+fileSettingsUseTimestamp=true
 
 [Catalogs]
 ShowCatalogNames=_Internet_Resolved,_Manual_Additions
@@ -55,6 +72,9 @@ TargetColor=#dd0000
 UserLabelColor=#aaaaaa
 VisibleSatColor=#00ff00
 
+[DarkLibrary]
+shutterlessCCDs=QHY CCD QHY163M-7c64ca4
+
 [DownloadDialog Settings]
 Height 1440=425
 Width 2560=700
@@ -64,13 +84,27 @@ EkosWindowHeight=755
 EkosWindowWidth=985
 profile=G11 | QHY163
 
+[Focus]
+FocusAutoStarEnabled=true
+FocusGaussianKernelSize=3
+FocusMaxSingleStep=500
+FocusSubFrame=false
+
 [GUI]
-PositionFocusBox=774,0
-PositionGeoBox=0,664
+PositionFocusBox=490,0
+PositionGeoBox=0,830
 RunStartupWizard=false
+WindowHeight=934
+WindowWidth=740
 
 [Guide]
+DECProportionalGain=133.3
+DitherEnabled=true
+DitherFrames=2
+GuideAutoStarEnabled=true
+GuideSubframeEnabled=true
 GuiderType=1
+RAProportionalGain=133.3
 
 [Location]
 CityName=Zürich
@@ -82,29 +116,33 @@ Longitude=8.533055555555556
 TimeZone=1
 
 [MainWindow]
-Height 1000=429
+Height 1000=934
 Height 1200=768
-Height 1440=768
-State=AAAA/wAAAAD9AAAAAAAABAAAAAKvAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAUAAAAaAGsAcwB0AGEAcgBzAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAAAAAAAAAABYAdgBpAGUAdwBUAG8AbwBsAEIAYQByAQAAAcH/////AAAAAAAAAAAAAAAWAEkATgBEAEkAVABvAG8AbABCAGEAcgEAAAN6/////wAAAAAAAAAAAAAAIABUAGUAbABlAHMAYwBvAHAAZQBUAG8AbwBsAEIAYQByAAAAAAD/////AAAAAAAAAAAAAAAWAEQAbwBtAGUAVABvAG8AbABCAGEAcgAAAAAA/////wAAAAAAAAAA
+Height 1440=934
+State=AAAA/wAAAAD9AAAAAAAAAuQAAANVAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAUAAAAaAGsAcwB0AGEAcgBzAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAAAAAAAAAABYAdgBpAGUAdwBUAG8AbwBsAEIAYQByAQAAAcH/////AAAAAAAAAAAAAAAWAEkATgBEAEkAVABvAG8AbABCAGEAcgEAAAKx/////wAAAAAAAAAAAAAAIABUAGUAbABlAHMAYwBvAHAAZQBUAG8AbwBsAEIAYQByAAAAAAD/////AAAAAAAAAAAAAAAWAEQAbwBtAGUAVABvAG8AbABCAGEAcgAAAAAA/////wAAAAAAAAAA
 ToolBarsMovable=Disabled
-Width 1500=684
+Width 1500=740
 Width 1920=1024
-Width 2560=1024
+Width 2560=740
 
 [Scheduler]
-DawnOffset=-0.5
+DawnOffset=0.5
 DuskOffset=-0.5
 LeadTime=2
 PreDawnTime=0
+RememberJobProgress=false
 
 [TipOfDay]
 RunOnStart=false
 
 [View]
-FocusDec=180
-FocusRA=23.933333333333334
-IsTracking=true
-ZoomFactor=1857.5209267199994
+AutoSelectGrid=false
+FOVNames=
+FocusDec=42.61415121853295
+FocusRA=20.861758739780093
+ShowEquatorialGrid=true
+ShowHorizontalGrid=true
+ZoomFactor=2229.025112063999
 
 [Xplanet]
 XplanetBackgroundColorValue=#000000
