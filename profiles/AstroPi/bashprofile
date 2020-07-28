@@ -4,3 +4,9 @@ export EDITOR=nvim
 (wal -R -e -n -q &)                                                         # Reload pywal theme
 
 eval $(keychain --eval --quiet id_rsa)                                      # Initializes the keychain
+
+echo "Checklist:"
+echo "------------------"
+echo " 1. Set time using"
+echo "    sudo timedatectl set-time \"2012-10-30 18:17:16\""
+echo " 2. log out and log in again to apply time"
