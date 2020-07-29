@@ -15,6 +15,10 @@ sudo cp $scriptDir/overrides/lightdm.conf /etc/lightdm/lightdm.conf
 sudo cp $scriptDir/overrides/ssh/sshd_config /etc/ssh/sshd_config
 sudo cp $scriptDir/overrides/lightdm-webkit2-greeter.conf /etc/lightdm/lightdm-webkit2-greeter.conf
 sudo cp $scriptDir/overrides/xrdp/startwm.sh /etc/xrdp/startwm.sh
+sudo cp $scriptDir/overrides/samba/smb.conf /etc/samba/smb.conf
+sudo mkdir /data
+sudo chown cobra:cobra /data
+sudo chmod 700 /data
 
 sudo chmod +x /etc/xrdp/startwm.sh
 
