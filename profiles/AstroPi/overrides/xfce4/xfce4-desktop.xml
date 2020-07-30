@@ -53,4 +53,7 @@
     <property name="window-width" type="int" value="653"/>
     <property name="window-height" type="int" value="619"/>
   </property>
+  <property name="desktop-icons" type="empty">
+    <property name="style" type="int" value="0"/>
+  </property>
 </channel>
