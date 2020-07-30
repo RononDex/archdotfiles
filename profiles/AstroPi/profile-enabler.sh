@@ -16,6 +16,11 @@ sudo cp $scriptDir/overrides/ssh/sshd_config /etc/ssh/sshd_config
 sudo cp $scriptDir/overrides/lightdm-webkit2-greeter.conf /etc/lightdm/lightdm-webkit2-greeter.conf
 sudo cp $scriptDir/overrides/xrdp/startwm.sh /etc/xrdp/startwm.sh
 sudo cp $scriptDir/overrides/samba/smb.conf /etc/samba/smb.conf
+mkdir -p ~/.local/share/kstars/astrometry
+cp $scriptDir/overrides/kstars/astrometry.cfg ~/.local/share/kstars/astrometry/astrometry.cfg
+mkdir ~/.indi
+cp $scriptDir/overrides/indi/* ~/.indi/
+cp $scriptDir/overrides/kstars/kstarsrc ~/.config/kstarsrc
 sudo mkdir /data
 sudo chown cobra:cobra /data
 sudo chmod 700 /data
@@ -47,6 +52,8 @@ echo "Enabling services"
 sudo systemctl enable lightdm.service
 sudo systemctl enable xrdp
 sudo systemctl start xrdp
+sudo systemctl enable smb.service
+sudo systemctl start smb.service
 
 echo "Setting up Touchscreen"
 if grep -q "MOZ_USE_XINPUT2 DEFAULT=1" "/etc/security/pam_env.conf"; then
