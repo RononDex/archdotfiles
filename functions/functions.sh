@@ -43,9 +43,13 @@ SetupAutofsForSmbShare() {
     fi
 
     if ! grep -q "$1" "/etc/autofs/auto.master"; then
-        echo "/shares /etc/autofs/auto.$1 --timeout=600 --ghost" | sudo tee -a /etc/autofs/auto.master
+        sudo mkdir /shares/$1
+        echo "/shares/$1 /etc/autofs/auto.$1 --timeout=600 --ghost" | sudo tee -a /etc/autofs/auto.master
 
-        echo "$1 -fstype=cifs,rw,noperm,uid=1000,credentials=/etc/autofs/$1-credentials $2" | sudo tee /etc/autofs/auto.$1
+        for ((i=2; i<=$#; i+=2)); do
+            j=$((i+1))
+            echo "${!i} -fstype=cifs,rw,noperm,uid=1000,credentials=/etc/autofs/$1-credentials ${!j}" | sudo tee -a /etc/autofs/auto.$1 
+        done
 
         echo "Username for $1 share: "
         read username
