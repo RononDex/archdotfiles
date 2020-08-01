@@ -83,5 +83,10 @@ DownloadIndexFiles() {
        do
             wget http://data.astrometry.net/4200/index-4203-$i.fits
        done
+
+       for i in {00..47}
+       do
+            wget http://data.astrometry.net/4200/index-4202-$i.fits
+       done
     fi
 }
