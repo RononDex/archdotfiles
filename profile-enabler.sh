@@ -70,7 +70,14 @@ cp -ra $scriptDir/defaults/. ~/
 echo
 echo "Copying profile files..."
 mkdir -p ~/.scripts
+
+rm ~/.profile
+rm ~/.xinitrc
+
 cp -ra ${profileName}/. ~/.scripts/
+
+ln -s ~/.zprofile ~/.profile
+ln -s ~/.config/.xinitrc ~/.xinitrc
 
 # Run default profile-installer
 echo

@@ -1,1 +1,0 @@
-/home/cobra/.config/.xinitrc
