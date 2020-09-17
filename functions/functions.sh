@@ -19,7 +19,9 @@ CloneOrUpdateGitRepoToPackages() {
         git clone $2
     else
         cd ~/packages/$1
+        git stash
         git pull
+        git stash pop
     fi
 }
 
