@@ -39,4 +39,4 @@ if [ -d ~/.profile ] ; then
     fi
 fi
 
-exec startxfce4
+exec startlxde
