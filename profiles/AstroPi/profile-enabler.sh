@@ -28,7 +28,7 @@ sudo chmod 700 /data
 sudo chmod +x /etc/xrdp/startwm.sh
 
 echo "Setting up XFCE"
-sudo pacman -Sy xfce4 xfce4-cpugraph-plugin firefox dnsmasq --noconfirm --needed
+sudo pacman -Sy lxde firefox dnsmasq --noconfirm --needed
 
 echo "Installing stuff ..."
 InstallAurPackage "xrdp" "https://aur.archlinux.org/xrdp.git"
