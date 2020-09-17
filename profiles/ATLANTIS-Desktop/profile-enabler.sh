@@ -51,7 +51,7 @@ InstallAurPackage "openh264-git" "https://aur.archlinux.org/openh264-git.git"
 InstallAurPackage "mutt-wizard-git" "https://aur.archlinux.org/mutt-wizard-git.git"
 InstallAurPackage "protonmail-bridge" "https://aur.archlinux.org/protonmail-bridge.git"
 InstallAurPackage "teams" "https://aur.archlinux.org/teams.git"
-InstallAurPackage "blanket" "https://aur.archlinux.org/blanket.git"
+InstallAurPackage "tmpmail-git" "https://aur.archlinux.org/tmpmail-git.git"
 MakePackage "SteamVR-OpenHMD"
 
 echo "Installing screenkey"
@@ -64,7 +64,7 @@ ln -s /usr/lib/steamvr/openhmd ~/.steam/steam/steamapps/common/SteamVR/drivers/o
 
 
 gpg --recv-key A87FF9DF48BF1C90
-gpg --recv-key 4773BD5E130D1D45
+sudo gpg --recv-key 4773BD5E130D1D45
 InstallAurPackage "spotify" "https://aur.archlinux.org/spotify.git"
 
 echo "installing astro stuff..."
