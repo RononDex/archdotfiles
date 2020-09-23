@@ -20,3 +20,6 @@
     old = "red bold"
     new = "green bold"
     whitespace = "red reverse"
+
+[commit]
+    gpgsign = true
