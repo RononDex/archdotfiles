@@ -3,10 +3,12 @@ call plug#begin()
 
 Plug 'preservim/nerdtree'
 Plug 'easymotion/vim-easymotion'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+Plug 'itchyny/lightline.vim'
+Plug 'shinchu/lightline-gruvbox.vim'
+Plug 'maximbaz/lightline-ale'
 Plug 'prabirshrestha/asyncomplete.vim'
 Plug 'OmniSharp/omnisharp-vim'
+Plug 'nickspoons/vim-sharpenup'
 Plug 'junegunn/fzf', { 'do': './install --bin' }
 Plug 'junegunn/fzf.vim'
 Plug 'sheerun/vim-polyglot'
@@ -22,6 +24,7 @@ Plug 'ivalkeen/nerdtree-execute'
 Plug 'mhinz/neovim-remote'
 Plug 'lervag/vimtex'
 Plug 'puremourning/vimspector'
+Plug 'sirver/ultisnips'
 
 call plug#end()
 
@@ -43,6 +46,7 @@ set ignorecase
 set smartcase
 set showmatch
 set termguicolors
+set mouse=a
 set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
 set number relativenumber
 let g:airline#extensions#tabline#enabled = 1
@@ -87,88 +91,6 @@ noremap <leader>8 8gt
 noremap <leader>9 9gt
 noremap <leader>0 :tablast<cr>
 
-" Omnisharp config
-filetype indent plugin on
-let g:OmniSharp_server_stdio = 1
-let g:OmniSharp_server_display_loading = 1
-let g:OmniSharp_highlighting = 3
-let g:OmniSharp_highlight_types = 3
-let g:OmniSharp_selector_ui = 'fzf'
-let g:OmniSharp_diagnostic_showid = 1
-let g:OmniSharp_timeout = 5
-set previewheight=5
-let g:ale_linters = { 'cs': ['OmniSharp'] }
-
-augroup omnisharp_commands
-    autocmd!
-
-    " Show type information automatically when the cursor stops moving.
-    " Note that the type is echoed to the Vim command line, and will overwrite
-    " any other messages in this space including e.g. ALE linting messages.
-    autocmd CursorHold *.cs OmniSharpTypeLookup
-
-    " The following commands are contextual, based on the cursor position.
-    autocmd FileType cs nnoremap <buffer> gd :OmniSharpGotoDefinition<CR>
-    autocmd FileType cs nnoremap <buffer> <Leader>fi :OmniSharpFindImplementations<CR>
-    autocmd FileType cs nnoremap <buffer> <Leader>fs :OmniSharpFindSymbol<CR>
-    autocmd FileType cs nnoremap <buffer> <Leader>fu :OmniSharpFindUsages<CR>
-
-    " Finds members in the current buffer
-    autocmd FileType cs nnoremap <buffer> <Leader>fm :OmniSharpFindMembers<CR>
-
-    autocmd FileType cs nnoremap <buffer> <Leader>fx :OmniSharpFixUsings<CR>
-    autocmd FileType cs nnoremap <buffer> <Leader>tt :OmniSharpTypeLookup<CR>
-    autocmd FileType cs nnoremap <buffer> <Leader>dc :OmniSharpDocumentation<CR>
-    autocmd FileType cs nnoremap <buffer> <C-\> :OmniSharpSignatureHelp<CR>
-    autocmd FileType cs inoremap <buffer> <C-\> <C-o>:OmniSharpSignatureHelp<CR>
-
-    " Navigate up and down by method/property/field
-    autocmd FileType cs nnoremap <buffer> <C-k> :OmniSharpNavigateUp<CR>
-    autocmd FileType cs nnoremap <buffer> <C-j> :OmniSharpNavigateDown<CR>
-
-    " Run tests
-    autocmd FileType cs nnoremap <buffer> <leader>rt :OmniSharpRunTest<CR>
-
-    " Find all code errors/warnings for the current solution and populate the quickfix window
-    autocmd FileType cs nnoremap <buffer> <Leader>cc :OmniSharpGlobalCodeCheck<CR>
-augroup END
-
-" Contextual code actions (uses fzf, CtrlP or unite.vim when available)
-nnoremap <Leader><Space> :OmniSharpGetCodeActions<CR>
-" Run code actions with text selected in visual mode to extract method
-xnoremap <C-.> :call OmniSharp#GetCodeActions('visual')<CR>
-
-" Rename with dialog
-nnoremap <Leader>nm :OmniSharpRename<CR>
-nnoremap <F2> :OmniSharpRename<CR>
-" Rename without dialog - with cursor on the symbol to rename: `:Rename newname`
-command! -nargs=1 Rename :call OmniSharp#RenameTo("<args>")
-
-nnoremap <Leader>cf :OmniSharpCodeFormat<CR>
-
-" Start the omnisharp server for the current solution
-nnoremap <Leader>ss :OmniSharpStartServer<CR>
-nnoremap <Leader>sp :OmniSharpStopServer<CR>
-
-" Enable snippet completion
-let g:OmniSharp_want_snippet=1
-
-" Ignore certain warnings
-let g:OmniSharp_diagnostic_overrides = {
-\ 'CSE0003': { 'type': 'None'},
-\ 'CC0038': {'type': 'None'},
-\ 'CS1701': {'type': 'I'},
-\ 'IDE0058': {'type': 'None'},
-\ 'IDE0008': {'type': 'None'},
-\ 'CC0045': {'type': 'None'},
-\ 'CC0042': {'type': 'None'},
-\ 'CC0071': {'type': 'I'},
-\ 'MA0076': {'type': 'None'},
-\ 'CC0003': {'type': 'W'},
-\ 'CC0088': { 'type': 'None'},
-\ 'CC0046': { 'type': 'None'},
-\ 'RemoveUnnecessaryImportsFixable': {'type': 'I'}
-\}
 
 " Cursor style
 let &t_ti.="\e[1 q"
@@ -250,8 +172,9 @@ let g:vimtex_view_method = 'zathura'
 
 nmap <leader>lc :VimtexCompile<CR>
 
-" Airline configuraiton
-let g:airline#extensions#tabline#enabled = 1
-
 " Color sheme
 colorscheme onedark
+
+"Omnisharp config
+source ~/.config/nvim/omnisharp.vim
+
