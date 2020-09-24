@@ -15,7 +15,6 @@ scriptencoding utf-8
 "set completeopt=menuone,noinsert,noselect,popuphidden
 "set completepopup=highlight:Pmenu,border:off
 
-set backspace=indent,eol,start
 set expandtab
 set shiftround
 set shiftwidth=4
@@ -105,7 +104,7 @@ let g:lightline#ale#indicator_ok = "\uf00c "
 
 " Asyncomplete: {{{
 let g:asyncomplete_auto_popup = 1
-let g:asyncomplete_auto_completeopt = 0
+"let g:asyncomplete_auto_completeopt = 0
 " }}}
 
 " Sharpenup: {{{
