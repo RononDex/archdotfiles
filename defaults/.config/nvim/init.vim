@@ -49,7 +49,6 @@ set termguicolors
 set mouse=a
 set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
 set number relativenumber
-let g:airline#extensions#tabline#enabled = 1
 let g:rainbow_active = 1
 let g:python3_host_prog = "/usr/bin/python3"
 set clipboard+=unnamedplus

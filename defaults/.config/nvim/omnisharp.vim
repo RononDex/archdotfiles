@@ -21,12 +21,9 @@ set shiftwidth=4
 set softtabstop=-1
 set tabstop=8
 set textwidth=80
-set title
 
 set nofixendofline
 set nostartofline
-set splitbelow
-set splitright
 
 set signcolumn=yes
 
