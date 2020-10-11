@@ -28,6 +28,10 @@ Plug 'sirver/ultisnips'
 
 call plug#end()
 
+
+" Color sheme
+colorscheme onedark
+
 syntax on
 filetype plugin indent on
 let mapleader = ","
@@ -60,8 +64,36 @@ augroup numbertoggle
     autocmd BufLeave,FocusLost,InsertEnter * set norelativenumber
 augroup end
 
-" Linting
+" Linting / ALE config
 let g:ale_fix_on_save = 1
+"highlight clear ALEError
+"highlight clear ALEWarning
+"highlight ALEError term=underline cterm=underline
+highlight ALEWarning cterm=underline ctermfg=104 gui=underline guifg=#D19A66
+let g:ale_sign_error = '✘'
+let g:ale_sign_warning = '⚠'
+let g:ale_sign_info = 'i'
+let g:ale_sign_style_error = '✘'
+let g:ale_sign_style_warning = '⚠'
+let g:ale_linters = { 'cs': ['OmniSharp'] }
+
+nnoremap <leader>gd :ALEGoToDefinition<CR>
+nnoremap <leader>fu :ALEFindReferences<CR>
+nnoremap <leader>gh :ALEHover<CR>
+nnoremap <leader>fs :ALESymbolSearch<CR>
+nnoremap <leader><space> :ALEFixSuggest<CR>
+
+let g:ale_linters = { 'cs': ['OmniSharp'] }
+
+" Commenting blocks of code.
+autocmd FileType c,cpp,java,scala,cs    let b:comment_g = '// '
+autocmd FileType sh,ruby,python         let b:comment_g = '# '
+autocmd FileType conf,fstab             let b:comment_g = '# '
+autocmd FileType tex                    let b:comment_g = '% '
+autocmd FileType mail                   let b:comment_g = '> '
+autocmd FileType vim                    let b:comment_g = '" '
+noremap <silent> <leader>cc :<C-B>silent <C-E>s/^/<C-R>=escape(b:comment_g,'\/')<CR>/<CR>:nohlsearch<CR>
+noremap <silent> <leader>cu :<C-B>silent <C-E>s/^\V<C-R>=escape(b:comment_g,'\/')<CR>//e<CR>:nohlsearch<CR>
 
 " EasyMotion stuff
 let g:EasyMotion_do_mapping = 0 " Disable default mappings
@@ -89,7 +121,6 @@ noremap <leader>7 7gt
 noremap <leader>8 8gt
 noremap <leader>9 9gt
 noremap <leader>0 :tablast<cr>
-
 
 " Cursor style
 let &t_ti.="\e[1 q"
@@ -171,9 +202,5 @@ let g:vimtex_view_method = 'zathura'
 
 nmap <leader>lc :VimtexCompile<CR>
 
-" Color sheme
-colorscheme onedark
-
 "Omnisharp config
 source ~/.config/nvim/omnisharp.vim
-

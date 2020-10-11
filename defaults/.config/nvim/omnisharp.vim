@@ -19,29 +19,17 @@ set expandtab
 set shiftround
 set shiftwidth=4
 set softtabstop=-1
-set tabstop=8
-set textwidth=80
+set tabstop=4
+set textwidth=120
 
 set nofixendofline
 set nostartofline
 
 set signcolumn=yes
 
-set updatetime=1000
+set updatetime=400
 " }}}
 
-" Colors: {{{
-augroup ColorschemePreferences
-  autocmd!
-  " These preferences clear some background colours, allowing transparency
-  autocmd ColorScheme * highlight Normal     ctermbg=NONE guibg=NONE
-  autocmd ColorScheme * highlight SignColumn ctermbg=NONE guibg=NONE
-  autocmd ColorScheme * highlight Todo       ctermbg=NONE guibg=NONE
-  " Link ALE sign highlights to similar equivalents without background colours
-  autocmd ColorScheme * highlight link ALEErrorSign   WarningMsg
-  autocmd ColorScheme * highlight link ALEWarningSign ModeMsg
-  autocmd ColorScheme * highlight link ALEInfoSign    Identifier
-augroup END
 
 " Use truecolor in the terminal, when it is supported
 if has('termguicolors')
@@ -50,15 +38,7 @@ endif
 
 " }}}
 
-" ALE: {{{
-let g:ale_sign_error = '•'
-let g:ale_sign_warning = '•'
-let g:ale_sign_info = '·'
-let g:ale_sign_style_error = '·'
-let g:ale_sign_style_warning = '·'
 
-let g:ale_linters = { 'cs': ['OmniSharp'] }
-" }}}
 "
 "" Lightline: {{{
 let g:lightline = {
@@ -161,7 +141,7 @@ augroup omnisharp_commands
     " Show type information automatically when the cursor stops moving.
     " Note that the type is echoed to the Vim command line, and will overwrite
     " any other messages in this space including e.g. ALE linting messages.
-    autocmd CursorHold *.cs OmniSharpTypeLookup
+    "autocmd CursorHold *.cs OmniSharpTypeLookup
 
     " The following commands are contextual, based on the cursor position.
     autocmd FileType cs nnoremap <buffer> gd :OmniSharpGotoDefinition<CR>
