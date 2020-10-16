@@ -179,7 +179,7 @@ nmap <leader>nt ss:terminal<CR>20su
 nmap <leader>q :Bclose<CR>
 
 " Tagbar
-nmap <F8> :TagbarToggle<CR>
+nmap <leader>tt :TagbarToggle<CR>
 
 " FzF
 map <C-p> :Files<Return>
