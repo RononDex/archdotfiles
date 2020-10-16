@@ -39,4 +39,4 @@ if [ -d ~/.profile ] ; then
     fi
 fi
 
-exec startlxde
+dbus-launch startlxde
