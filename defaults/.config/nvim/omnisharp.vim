@@ -134,6 +134,7 @@ let g:OmniSharp_selector_ui = 'fzf'
 let g:OmniSharp_diagnostic_showid = 1
 let g:OmniSharp_timeout = 5
 let g:ale_linters = { 'cs': ['OmniSharp'] }
+let g:OmniSharp_diagnostic_listen = 0
 
 augroup omnisharp_commands
     autocmd!
@@ -165,13 +166,10 @@ augroup omnisharp_commands
     " Run tests
     autocmd FileType cs nnoremap <buffer> <leader>rt :OmniSharpRunTest<CR>
 
-    " Find all code errors/warnings for the current solution and populate the quickfix window
-    autocmd FileType cs nnoremap <buffer> <Leader>cc :OmniSharpGlobalCodeCheck<CR>
-
     " Contextual code actions (uses fzf, CtrlP or unite.vim when available)
     autocmd FileType cs nnoremap <Leader><Space> :OmniSharpGetCodeActions<CR>
     " Run code actions with text selected in visual mode to extract method
-    autocmd FileType cs xnoremap <C-.> :call OmniSharp#GetCodeActions('visual')<CR>
+    autocmd FileType cs xnoremap <Leader><Space> :call OmniSharp#GetCodeActions('visual')<CR>
 
     " Rename with dialog
     autocmd FileType cs nnoremap <Leader>nm :OmniSharpRename<CR>
