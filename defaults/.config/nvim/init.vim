@@ -17,8 +17,7 @@ Plug 'dense-analysis/ale'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'tpope/vim-fugitive'
 Plug 'frazrepo/vim-rainbow'
-Plug 'universal-ctags/ctags'
-Plug 'majutsushi/tagbar'
+Plug 'miyakogi/conoline.vim'
 Plug 'rbgrouleff/bclose.vim'
 Plug 'ivalkeen/nerdtree-execute'
 Plug 'mhinz/neovim-remote'
@@ -66,10 +65,10 @@ augroup end
 
 " Linting / ALE config
 let g:ale_fix_on_save = 1
-"highlight clear ALEError
-"highlight clear ALEWarning
-"highlight ALEError term=underline cterm=underline
+highlight clear ALEInfo
+highlight ALEInfo cterm=underline ctermfg=39 gui=underline guifg=#00afff
 highlight ALEWarning cterm=underline ctermfg=104 gui=underline guifg=#D19A66
+let g:conoline_auto_enable = 1
 let g:ale_sign_error = '✘'
 let g:ale_sign_warning = '⚠'
 let g:ale_sign_info = 'i'
