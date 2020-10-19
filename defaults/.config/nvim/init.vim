@@ -24,6 +24,7 @@ Plug 'mhinz/neovim-remote'
 Plug 'lervag/vimtex'
 Plug 'puremourning/vimspector'
 Plug 'sirver/ultisnips'
+Plug 'dyng/ctrlsf.vim'
 
 call plug#end()
 
@@ -198,8 +199,14 @@ nnoremap <leader>sr :%s/
 let g:vimtex_compiler_progname = 'nvr'
 let g:vimtex_view_general_viewer = 'zathura'
 let g:vimtex_view_method = 'zathura'
+nnoremap <leader>sg :CtrlSF<Space>
 
-
+" Global Search with CtrlSF
+let g:ctrlsf_regex_pattern = 1
+let g:ctrlsf_default_view_mode = 'compact'
+let g:ctrlsf_auto_focus = {
+    \ "at": "start"
+    \ }
 nmap <leader>lc :VimtexCompile<CR>
 
 "Omnisharp config
