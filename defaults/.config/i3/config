@@ -167,6 +167,10 @@ bindsym $mod+r mode "resize"
 ######   Start custom config
 ###############################################
 
+# Fix Teams Notifications
+for_window [title="Microsoft Teams Notification"] floating enable
+no_focus [title="Microsoft Teams Notification"] 
+
 # Lockscreen
 bindsym $mod+shift+a exec light-locker-command -l
 
