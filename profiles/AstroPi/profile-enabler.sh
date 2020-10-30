@@ -55,14 +55,6 @@ sudo systemctl start xrdp
 sudo systemctl enable smb.service
 sudo systemctl start smb.service
 
-echo "Setting up Touchscreen"
-if grep -q "MOZ_USE_XINPUT2 DEFAULT=1" "/etc/security/pam_env.conf"; then
-    echo "Touchscreen stuff already setup"
-else
-    echo "\r\nMOZ_USE_XINPUT2 DEFAULT=1\r\n" | sudo tee -a /etc/security/pam_env.conf
-    sudo mkdir /etc/nginx/sites-available
-fi
-
 echo "Setting up astronomy stuff .."
 sudo pacman -Sy gpsd libdc1394 kstars --noconfirm --needed
 sudo pacman -Sy --noconfirm --needed wcslib opencv ccfits netpbm breeze-icons binutils patch cmake make libraw libindi gpsd gcc
