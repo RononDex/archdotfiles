@@ -6,7 +6,7 @@ Using a profile enabler script to support different profiles / pc's and environm
 
 First, install Arch-Linux by following this guide: https://wiki.archlinux.org/index.php/Installation_guide
 
-After you have followed and finished that guide (takes about 10 minutes), DON'T REBOOT JUST YET!
+After you have followed and finished that guide and having a bootloader setup (takes about 10 minutes), DON'T REBOOT JUST YET!
 
 While still being chrooted into your local Arch-Linux install, install sudo and git:
 

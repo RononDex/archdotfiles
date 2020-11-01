@@ -32,6 +32,7 @@ cp -Raf $scriptDir/overrides/omnisharp ~/.omnisharp
 echo "Installing stuff..."
 sudo pacman -Sy i3-gaps nextcloud-client light xf86-input-wacom dunst libnotify notification-daemon vlc dmenu flameshot teamspeak3 blueman --noconfirm --needed
 sudo pacman -Sy texlive-most pulseaudio-bluetooth aspnet-runtime xournalpp remmina signal-desktop --needed --noconfirm
+sudo pacman -Sy linux-surface-headers linux-surface surface-ipts-firmware iptsd --needed --noconfirm
 sudo systemctl enable bluetooth
 sudo systemctl start bluetooth
 
