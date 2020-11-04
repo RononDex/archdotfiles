@@ -49,7 +49,7 @@ InstallAurPackage "openh264" "https://aur.archlinux.org/openh264.git"
 InstallAurPackage "freerdp-git" "https://aur.archlinux.org/freerdp-git.git"
 InstallAurPackage "mutt-wizard-git" "https://aur.archlinux.org/mutt-wizard-git.git"
 InstallAurPackage "protonmail-bridge" "https://aur.archlinux.org/protonmail-bridge.git"
-InstallAurPackage "snapd" "https://aur.archlinux.org/snapd.git"
+InstallAurPackage "teams" "https://aur.archlinux.org/teams.git"
 
 echo "Installing screenkey"
 sudo pacman -Sy python2-setuptools --needed --noconfirm
@@ -72,12 +72,6 @@ echo "Enabling services ..."
 sudo systemctl enable lightdm.service
 sudo systemctl enable nrclient
 sudo systemctl start nrclient
-sudo systemctl enable --now snapd.socket
-sudo ln -s /var/lib/snapd/snap /snap
-
-echo "Setting up teams-for-linux"
-sudo snap install teams-for-linux
-sudo snap connect teams-for-linux:camera core:camera
 
 echo "Setting up Touchscreen"
 if grep -q "MOZ_USE_XINPUT2 DEFAULT=1" "/etc/security/pam_env.conf"; then
