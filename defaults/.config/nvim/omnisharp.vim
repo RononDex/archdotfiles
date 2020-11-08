@@ -207,6 +207,8 @@ let g:OmniSharp_diagnostic_overrides = {
 \ 'RCS1006': { 'type': 'None'},
 \ 'CC0076': { 'type': 'None'},
 \ 'CC0035': { 'type': 'None'},
+\ 'RCS1183': { 'type': 'None'},
+\ 'IDE0022': { 'type': 'None'},
 \ 'RemoveUnnecessaryImportsFixable': {'type': 'I'}
 \}
 
