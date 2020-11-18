@@ -1,33 +1,3 @@
-// vim:ts=4:sw=4:et
-{
-    "border": "pixel",
-    "floating": "auto_off",
-    "layout": "splitv",
-    "percent": 0.233333333333333,
-    "type": "con",
-    "nodes": [
-        {
-            "border": "pixel",
-            "current_border_width": 1,
-            "floating": "auto_off",
-            "geometry": {
-               "height": 434,
-               "width": 654,
-               "x": 0,
-               "y": 0
-            },
-            "name": "Terminal - ranger",
-            "percent": 0.5,
-            "swallows": [
-               {
-                  "title": "^ranger$",
-               }
-            ],
-            "type": "con"
-        },
-    ]
-}
-
 {
     "border": "pixel",
     "current_border_width": 1,
@@ -38,22 +8,21 @@
        "x": 0,
        "y": 0
     },
-    "name": "Terminal - i3-save-tree --workspace 1 > ~/workspace-1.json",
-    "percent": 0.516666666666667,
+    "name": "MainTerminal2",
+    "percent": 0.7,
     "swallows": [
        {
-         "title": "^MainTerminal$",
+       "title": "^MainTerminal$"
        }
     ],
     "type": "con"
 }
 
 {
-    // splitv split container with 2 children
     "border": "pixel",
     "floating": "auto_off",
     "layout": "splitv",
-    "percent": 0.25,
+    "percent": 0.3,
     "type": "con",
     "nodes": [
         {
@@ -66,11 +35,11 @@
                "x": 0,
                "y": 0
             },
-            "name": "Terminal - htop",
-            "percent": 0.1,
+            "name": "htop",
+            "percent": 0.133333333333333,
             "swallows": [
                {
-                  "title": "^htop$",
+               "title": "^htop$"
                }
             ],
             "type": "con"
@@ -85,14 +54,34 @@
                "x": 0,
                "y": 0
             },
-            "name": "Terminal - cava",
-            "percent": 0.9,
+            "name": "ranger",
+            "percent": 0.433333333333333,
             "swallows": [
                {
-                  "title": "^cava$",
+               "title": "^ranger$"
+               }
+            ],
+            "type": "con"
+        },
+        {
+            "border": "pixel",
+            "current_border_width": 1,
+            "floating": "auto_off",
+            "geometry": {
+               "height": 434,
+               "width": 654,
+               "x": 0,
+               "y": 0
+            },
+            "name": "cava",
+            "percent": 0.433333333333333,
+            "swallows": [
+               {
+               "title": "^cava$"
                }
             ],
             "type": "con"
         }
     ]
 }
+
