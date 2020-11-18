@@ -63,7 +63,7 @@ echo $profileName
 # Copy defaults
 echo
 echo "Copying default files...."
-
+rm -rf ~/wallpapers
 cp -ra $scriptDir/defaults/. ~/
 
 # Copy profile files
