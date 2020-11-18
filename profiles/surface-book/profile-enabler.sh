@@ -18,6 +18,13 @@ cp $scriptDir/overrides/.i3/scripts/launch-autostart.sh ~/.i3/scripts/launch-aut
 cp $scriptDir/overrides/dunst/dunstrc ~/.config/dunst/dunstrc
 cp $scriptDir/overrides/pacman.conf /etc/pacman.conf
 
+echo "Setting up surface repo"
+wget -qO - https://raw.githubusercontent.com/linux-surface/linux-surface/master/pkg/keys/surface.asc \
+        | sudo pacman-key --add -
+sudo pacman-key --finger 56C464BAAC421453
+sudo pacman-key --lsign-key 56C464BAAC421453
+
+
 sudo chmod 744 /etc/pacman.conf
 
 
