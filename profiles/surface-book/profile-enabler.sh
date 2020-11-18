@@ -72,6 +72,7 @@ echo "Enabling services ..."
 sudo systemctl enable lightdm.service
 sudo systemctl enable nrclient
 sudo systemctl start nrclient
+sudo systemctl enable iptsd
 
 echo "Setting up Touchscreen"
 if grep -q "MOZ_USE_XINPUT2 DEFAULT=1" "/etc/security/pam_env.conf"; then
