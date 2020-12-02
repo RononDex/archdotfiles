@@ -25,6 +25,7 @@ Plug 'lervag/vimtex'
 Plug 'puremourning/vimspector'
 Plug 'sirver/ultisnips'
 Plug 'dyng/ctrlsf.vim'
+Plug 'rust-lang/rust.vim'
 
 call plug#end()
 
@@ -211,3 +212,4 @@ nmap <leader>lc :VimtexCompile<CR>
 
 "Omnisharp config
 source ~/.config/nvim/omnisharp.vim
+source ~/.config/nvim/rust.vim
