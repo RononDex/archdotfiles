@@ -76,7 +76,7 @@ let g:ale_sign_warning = '⚠'
 let g:ale_sign_info = 'i'
 let g:ale_sign_style_error = '✘'
 let g:ale_sign_style_warning = '⚠'
-let g:ale_linters = { 'cs': ['OmniSharp'] }
+let g:ale_linters = { 'cs': ['OmniSharp'], 'rust': ['rust-analyzer'] }
 
 nnoremap <leader>gd :ALEGoToDefinition<CR>
 nnoremap <leader>fu :ALEFindReferences<CR>
@@ -84,7 +84,7 @@ nnoremap <leader>gh :ALEHover<CR>
 nnoremap <leader>fs :ALESymbolSearch<CR>
 nnoremap <leader><space> :ALEFixSuggest<CR>
 
-let g:ale_linters = { 'cs': ['OmniSharp'] }
+let g:ale_linters = { 'cs': ['OmniSharp'], 'rust': ['rust-analyzer'] }
 
 " Commenting blocks of code.
 autocmd FileType c,cpp,java,scala,cs    let b:comment_g = '// '
