@@ -26,6 +26,7 @@ Plug 'puremourning/vimspector'
 Plug 'sirver/ultisnips'
 Plug 'dyng/ctrlsf.vim'
 Plug 'rust-lang/rust.vim'
+Plug 'racer-rust/vim-racer'
 
 call plug#end()
 
