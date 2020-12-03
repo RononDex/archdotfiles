@@ -27,6 +27,7 @@ Plug 'sirver/ultisnips'
 Plug 'dyng/ctrlsf.vim'
 Plug 'rust-lang/rust.vim'
 Plug 'racer-rust/vim-racer'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
 call plug#end()
 
@@ -78,6 +79,9 @@ let g:ale_sign_info = 'i'
 let g:ale_sign_style_error = '✘'
 let g:ale_sign_style_warning = '⚠'
 let g:ale_linters = { 'cs': ['OmniSharp'], 'rust': ['rust-analyzer'] }
+let g:ale_fixers = {
+      \   'rust': ['rustfmt'],
+      \}
 
 nnoremap <leader>gd :ALEGoToDefinition<CR>
 nnoremap <leader>fu :ALEFindReferences<CR>
@@ -86,6 +90,10 @@ nnoremap <leader>fs :ALESymbolSearch<CR>
 nnoremap <leader><space> :ALEFixSuggest<CR>
 
 let g:ale_linters = { 'cs': ['OmniSharp'], 'rust': ['rust-analyzer'] }
+
+" Deoplete
+let g:deoplete#enable_at_startup = 1
+let g:deoplete#sources = {'rust': ['ale', 'racer']}
 
 " Commenting blocks of code.
 autocmd FileType c,cpp,java,scala,cs    let b:comment_g = '// '
