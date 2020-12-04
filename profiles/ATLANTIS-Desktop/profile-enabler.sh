@@ -26,6 +26,9 @@ sudo pacman -Sy lib32-nvidia-utils remmina freerdp xf86-input-evdev pulseaudio-b
 sudo pacman -Sy rust rust-analyzer rust-racer --needed --noconfirm
 sudo nvidia-xconfig
 
+echo "Installing rust/cargo stuff ..."
+cargo install rustfmt
+
 if [ ! -d ~/.omnisharp ]
 then
     mkdir ~/.omnisharp
