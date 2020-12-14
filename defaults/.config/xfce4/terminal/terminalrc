@@ -32,4 +32,4 @@ FontName=Source Code Pro Semi-Bold 10
 ShortcutsNoHelpkey=TRUE
 ShortcutsNoMenukey=TRUE
 BackgroundImageShading=0.570000
-
+ScrollingBar=TERMINAL_SCROLLBAR_NONE

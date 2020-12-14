@@ -89,8 +89,6 @@ nnoremap <leader>gh :ALEHover<CR>
 nnoremap <leader>fs :ALESymbolSearch<CR>
 nnoremap <leader><space> :ALEFixSuggest<CR>
 
-let g:ale_linters = { 'cs': ['OmniSharp'], 'rust': ['rust-analyzer'] }
-
 " Deoplete
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#sources = {'rust': ['ale', 'racer']}
