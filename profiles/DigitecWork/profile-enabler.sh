@@ -116,6 +116,8 @@ sudo systemctl enable xrdp-sesman
 sudo systemctl start xrdp-sesman
 
 echo "Installing AzureDev Ops credential provider"
+wget https://raw.githubusercontent.com/microsoft/artifacts-credprovider/master/helpers/installcredprovider.sh -O ~/Downloads/installcredprovider.sh
+sh ~/Downloads/installcredprovider.sh
 InstallAurPackage "azure-cli" "https://aur.archlinux.org/azure-cli.git"
 
 wget https://dot.net/v1/dotnet-install.sh -O ~/Downloads/dotnet-install.sh
