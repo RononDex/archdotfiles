@@ -74,6 +74,13 @@ SetupAutofsForSmbShare "ATLANTIS-SRV" "Documents" "://10.0.0.2/Documents" "Downl
 ################################################
 # Setup Digitec working envoirement
 ################################################
+sudo cp $scriptDir/overrides/pacman.conf /etc/pacman.conf
+sudo pacman-key --keyserver hkp://keyserver.ubuntu.com -r 7568D9BB55FF9E5287D586017AE645C0CF8E292A
+sudo pacman-key --lsign-key 7568D9BB55FF9E5287D586017AE645C0CF8E292A
+sudo pacman -Sy
+sudo pacman -S pritunl-client-electron
+sudo pacman -S pritunl-client-electron-numix-theme
+
 sudo pacman -Sy dotnet-sdk dotnet-runtime dotnet-host --noconfirm --needed
 
 InstallAurPackage "visual-studio-code-bin" "https://aur.archlinux.org/visual-studio-code-bin.git"
