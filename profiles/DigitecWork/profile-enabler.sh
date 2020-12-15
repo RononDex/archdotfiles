@@ -1,6 +1,6 @@
 #!/bin/sh
 scriptDir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
-. ./functions.sh
+. ${scriptDir}/functions.sh
 
 ################################################
 # Setup Base OS
