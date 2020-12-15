@@ -77,9 +77,8 @@ SetupAutofsForSmbShare "ATLANTIS-SRV" "Documents" "://10.0.0.2/Documents" "Downl
 sudo cp $scriptDir/overrides/pacman.conf /etc/pacman.conf
 sudo pacman-key --keyserver hkp://keyserver.ubuntu.com -r 7568D9BB55FF9E5287D586017AE645C0CF8E292A
 sudo pacman-key --lsign-key 7568D9BB55FF9E5287D586017AE645C0CF8E292A
-sudo pacman -Sy
-sudo pacman -S pritunl-client-electron
-sudo pacman -S pritunl-client-electron-numix-theme
+sudo pacman -Sy pritunl-client-electron --noconfirm --needed
+sudo pacman -Sy pritunl-client-electron-numix-theme --noconfirm --needed
 
 sudo pacman -Sy dotnet-sdk dotnet-runtime dotnet-host --noconfirm --needed
 
