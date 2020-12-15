@@ -100,6 +100,11 @@ then
     mkdir ~/.omnisharp
 fi
 
+echo "Updating anti virus database..."
+sudo freshclam
+sudo systemctl start clamav-daemon
+sudo systemctl enable clamav-daemon
+
 echo "Setting up omnisharp for vscode..."
 rm -rf ~/.omnisharp
 cp -Raf $scriptDir/../surface-book/overrides/omnisharp ~/.omnisharp
