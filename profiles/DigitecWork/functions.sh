@@ -10,8 +10,10 @@ SetupDigitecVpn() {
     sudo pacman -Sy pritunl-client-electron-numix-theme --noconfirm --needed
 
     echo ""
-    echo -e "I ${PURPLE}Please open https://vpn.devinite.com in your browser and download the profile for pritunl${NC}"
-    echo -e "I ${LIGHTBLUE}You can then import the profile using pritunl-client-electron${NC}"
+    echo -e "I ${PURPLE}Please open https://vpn.devinite.com in your browser and login${NC}"
+    echo -e "I ${LIGHTBLUE}Then copy the pritunl:// url into this console and hit enter${NC}"
     echo "Hit any key to conitnue"
-    read
+    read pritunl_url
+
+    pritunl-client add $pritunl_url
 }
