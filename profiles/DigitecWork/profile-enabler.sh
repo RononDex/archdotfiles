@@ -80,7 +80,7 @@ sudo pacman-key --keyserver hkp://keyserver.ubuntu.com -r 7568D9BB55FF9E5287D586
 sudo pacman-key --lsign-key 7568D9BB55FF9E5287D586017AE645C0CF8E292A
 SetupDigitecVpn
 
-sudo pacman -Sy dotnet-sdk dotnet-runtime dotnet-host --noconfirm --needed
+sudo pacman -Sy clamav dotnet-sdk dotnet-runtime dotnet-host --noconfirm --needed
 
 InstallAurPackage "visual-studio-code-bin" "https://aur.archlinux.org/visual-studio-code-bin.git"
 InstallAurPackage "rider" "https://aur.archlinux.org/rider.git"

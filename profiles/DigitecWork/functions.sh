@@ -12,7 +12,6 @@ SetupDigitecVpn() {
     echo ""
     echo -e "I ${PURPLE}Please open https://vpn.devinite.com in your browser and login${NC}"
     echo -e "I ${LIGHTBLUE}Then copy the pritunl:// url into this console and hit enter${NC}"
-    echo "Hit any key to conitnue"
     read pritunl_url
 
     pritunl-client add $pritunl_url
