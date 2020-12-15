@@ -8,6 +8,7 @@ SetupDigitecVpn() {
     echo "Setting up vpn..."
     sudo pacman -Sy pritunl-client-electron --noconfirm --needed
     sudo pacman -Sy pritunl-client-electron-numix-theme --noconfirm --needed
+    sudo pacman -Sy wireguard-tools openresolv --noconfirm --needed
 
     echo ""
     echo -e "I ${PURPLE}Please open https://vpn.devinite.com in your browser and login${NC}"

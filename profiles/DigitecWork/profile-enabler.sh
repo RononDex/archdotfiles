@@ -103,7 +103,7 @@ fi
 echo "Updating anti virus database..."
 sudo freshclam
 sudo systemctl start clamav-daemon
-sudo systemctl enable clamav-daemon
+sudo systemctl start clamav-daemon
 
 echo "Setting up omnisharp for vscode..."
 rm -rf ~/.omnisharp
@@ -119,7 +119,7 @@ echo "Installing AzureDev Ops credential provider"
 InstallAurPackage "azure-cli" "https://aur.archlinux.org/azure-cli.git"
 
 wget https://dot.net/v1/dotnet-install.sh -O ~/Downloads/dotnet-install.sh
-sudo ~/Downloads/dotnet-install.sh -channel Current -version latest --install-dir /usr/share/dotnet/
+sudo sh ~/Downloads/dotnet-install.sh -channel Current -version latest --install-dir /usr/share/dotnet/
 
 echo "Setting up xrdp ..."
 sudo rm /etc/X11/Xwrapper.config
