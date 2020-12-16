@@ -61,8 +61,7 @@ InstallDigitecSpecificStuff() {
     sudo systemctl start xrdp-sesman
 
     echo "Installing AzureDev Ops credential provider"
-    wget https://raw.githubusercontent.com/microsoft/artifacts-credprovider/master/helpers/installcredprovider.sh -O
-    ~/Downloads/installcredprovider.sh
+    wget https://raw.githubusercontent.com/microsoft/artifacts-credprovider/master/helpers/installcredprovider.sh -O ~/Downloads/installcredprovider.sh
     sh ~/Downloads/installcredprovider.sh
     InstallAurPackage "azure-cli" "https://aur.archlinux.org/azure-cli.git"
 
