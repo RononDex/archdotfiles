@@ -11,12 +11,17 @@ SetupDigitecVpn() {
     sudo pacman -Sy pritunl-client-electron-numix-theme --noconfirm --needed
     sudo pacman -Sy wireguard-tools openresolv --noconfirm --needed
 
-    echo ""
-    echo -e "I ${PURPLE}Please open https://vpn.devinite.com in your browser and login${NC}"
-    echo -e "I ${LIGHTBLUE}Then copy the pritunl:// url into this console and hit enter${NC}"
-    read pritunl_url
+    if [ "$(ls -A ~/.config/pritunl/profiles)" ]; then
+        echo "VPN already setup"
+    else
+        echo ""
+        echo -e "${PURPLE}Please open https://vpn.devinite.com in your browser and login${NC}"
+        echo -e "${LIGHTBLUE}Then copy the pritunl:// url into this console and hit enter${NC}"
+        read pritunl_url
 
-    pritunl-client add $pritunl_url
+        pritunl-client add $pritunl_url
+    fi
+
 }
 
 InstallDigitecSpecificStuff() {
