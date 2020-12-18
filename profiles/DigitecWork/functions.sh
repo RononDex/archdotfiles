@@ -56,7 +56,7 @@ InstallDigitecSpecificStuff() {
     echo "Updating anti virus database..."
     sudo freshclam
     sudo systemctl start clamav-daemon
-    sudo systemctl start clamav-daemon
+    sudo systemctl enable clamav-daemon
 
     echo "Setting up omnisharp for vscode..."
     rm -rf ~/.omnisharp
