@@ -91,7 +91,10 @@ nnoremap <leader><space> :ALEFixSuggest<CR>
 
 " Deoplete
 let g:deoplete#enable_at_startup = 1
-let g:deoplete#sources = {'rust': ['ale', 'racer']}
+call deoplete#custom#option('sources', {
+		\ 'rust': ['ale', 'racer'],
+		\ 'csharp': ['ale', 'omnisharp'],
+		\})
 
 " Commenting blocks of code.
 autocmd FileType c,cpp,java,scala,cs    let b:comment_g = '// '
@@ -208,6 +211,7 @@ let g:vimtex_compiler_progname = 'nvr'
 let g:vimtex_view_general_viewer = 'zathura'
 let g:vimtex_view_method = 'zathura'
 nnoremap <leader>sg :CtrlSF<Space>
+nmap <leader>lc :VimtexCompile<CR>
 
 " Global Search with CtrlSF
 let g:ctrlsf_regex_pattern = 1
@@ -215,7 +219,6 @@ let g:ctrlsf_default_view_mode = 'compact'
 let g:ctrlsf_auto_focus = {
     \ "at": "start"
     \ }
-nmap <leader>lc :VimtexCompile<CR>
 
 "Omnisharp config
 source ~/.config/nvim/omnisharp.vim
