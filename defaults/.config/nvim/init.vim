@@ -193,7 +193,8 @@ nmap <leader>q :Bclose<CR>
 nmap <leader>tt :TagbarToggle<CR>
 
 " FzF
-map <C-p> :Files<Return>
+"map <C-p> :Files<Return>
+nnoremap <expr> <C-p> (len(system('git rev-parse')) ? ':Files' : ':GFiles --exclude-standard --others --cached')."\<cr>"
 let $FZF_DEFAULT_COMMAND = 'find .'
 
 " Git stuff
