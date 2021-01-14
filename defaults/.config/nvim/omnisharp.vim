@@ -119,10 +119,6 @@ let g:OmniSharp_popup_mappings = {
 \}
 
 let g:OmniSharp_want_snippet = 1
-
-let g:OmniSharp_highlight_groups = {
-\ 'ExcludedCode': 'NonText'
-\}
 " }}}
 
 filetype indent plugin on
@@ -182,6 +178,8 @@ augroup omnisharp_commands
     "Show documentations
     autocmd FileType cs nnoremap <Leader>ch :OmniSharpSignatureHelp<CR>
     autocmd FileType cs nnoremap <Leader>ct :OmniSharpDocumentation<CR>
+
+    autocmd FileType cs nmap <F1> :OmniSharpHighlightEcho<CR>
 augroup END
 
 
@@ -213,3 +211,18 @@ let g:OmniSharp_diagnostic_overrides = {
 \ 'RemoveUnnecessaryImportsFixable': {'type': 'I'}
 \}
 
+" Highlighting Groups
+let g:OmniSharp_highlight_groups = {
+\ 'Comment': 'Comment',
+\ 'Keyword': 'Keyword',
+\ 'StringLiteral': 'String',
+\ 'ClassName': 'StorageClass',
+\ 'DelegateName': 'StorageClass',
+\ 'EnumName': 'StorageClass',
+\ 'InterfaceName': 'StorageClass',
+\ 'ModuleName': 'StorageClass',
+\ 'StructName': 'StorageClass',
+\ 'ConstantName': 'Constant',
+\ 'NamespaceName': 'Include',
+\ 'ExcludedCode': 'NonText'
+\}

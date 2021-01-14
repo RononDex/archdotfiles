@@ -12,7 +12,7 @@ Plug 'nickspoons/vim-sharpenup'
 Plug 'junegunn/fzf', { 'do': './install --bin' }
 Plug 'junegunn/fzf.vim'
 Plug 'sheerun/vim-polyglot'
-Plug 'joshdick/onedark.vim'
+Plug 'drewtempelmeyer/palenight.vim'
 Plug 'dense-analysis/ale'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'tpope/vim-fugitive'
@@ -33,7 +33,8 @@ call plug#end()
 
 
 " Color sheme
-colorscheme onedark
+set background=dark
+colorscheme palenight
 
 syntax on
 filetype plugin indent on
@@ -224,3 +225,4 @@ let g:ctrlsf_auto_focus = {
 "Omnisharp config
 source ~/.config/nvim/omnisharp.vim
 source ~/.config/nvim/rust.vim
+source ~/.config/nvim/colorscheme.vim
