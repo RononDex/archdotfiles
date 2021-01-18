@@ -8,7 +8,8 @@ hi Keyword ctermfg=203 guifg=#ff5f5f
 hi Include ctermfg=215 guifg=#ffaf5f
 hi StorageClass ctermfg=209 guifg=#ff875f
 hi Function ctermfg=75 guifg=#5fafff
-hi ConstantName ctermfg=75 guifg=#5fafff
+hi Constant ctermfg=75 guifg=#5fafff
+" hi String ctermfg=120 guifg=#87ff87
 
 " ALE colors
 highlight clear ALEInfo
