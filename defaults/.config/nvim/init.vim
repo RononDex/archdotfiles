@@ -7,6 +7,7 @@ Plug 'itchyny/lightline.vim'
 Plug 'shinchu/lightline-gruvbox.vim'
 Plug 'maximbaz/lightline-ale'
 Plug 'prabirshrestha/asyncomplete.vim'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'OmniSharp/omnisharp-vim'
 Plug 'nickspoons/vim-sharpenup'
 Plug 'junegunn/fzf', { 'do': './install --bin' }
@@ -215,6 +216,17 @@ let g:vimtex_view_general_viewer = 'zathura'
 let g:vimtex_view_method = 'zathura'
 nnoremap <leader>sg :CtrlSF<Space>
 nmap <leader>lc :VimtexCompile<CR>
+
+" CoC config
+let g:coc_global_extensions = [
+  \ 'coc-snippets',
+  \ 'coc-pairs',
+  \ 'coc-tsserver',
+  \ 'coc-eslint', 
+  \ 'coc-prettier', 
+  \ 'coc-json', 
+  \ 'coc-omnisharp',
+  \ ]
 
 " Global Search with CtrlSF
 let g:ctrlsf_regex_pattern = 1
