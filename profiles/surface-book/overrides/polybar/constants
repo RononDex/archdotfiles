@@ -6,7 +6,7 @@ monitor = eDP-1
 modules-right = wireless-network battery1 battery2 date
 modules-left = powermenu pulseaudio backlight mpd
 
-tray-maxsize = 40
+tray-maxsize = 36
 height = 40
 
 [bar/bottom]
