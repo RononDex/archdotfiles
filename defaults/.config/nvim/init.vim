@@ -205,7 +205,7 @@ nmap <leader>gb :Gblame<CR>
 nmap <leader>gs :G<CR>
 nmap <leader>gu :Gpull<CR>
 nmap <leader>gp :GPush<CR>
-nmap <leader>gm :Gvdiff<CR>
+nmap <leader>gc :Gvdiff<CR>
 nmap <leader>gh :diffget //2 <bar> diffup<CR>
 nmap <leader>gl :diffget //3 <bar> diffup<CR>
 nnoremap <leader>sr :%s/
