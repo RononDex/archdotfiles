@@ -101,6 +101,7 @@ sudo usermod -a -G input ${currentUser}
 sudo usermod -a -G video ${currentUser}
 sudo usermod -a -G uucp ${currentUser}
 sudo usermod -a -G users ${currentUser}
+sudo usermod -a -G audio ${currentUser}
 
 chmod +x ~/.scripts/bashprofile
 chmod +x ~/.scripts/xprofile
