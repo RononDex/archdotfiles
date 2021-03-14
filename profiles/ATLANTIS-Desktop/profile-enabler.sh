@@ -23,6 +23,9 @@ echo "Installing stuff..."
 sudo pacman -Sy i3-gaps nvidia dunst libnotify notification-daemon dmenu flameshot nextcloud-client teamspeak3 cabextract blueman signal-desktop --noconfirm --needed
 sudo pacman -Sy lib32-nvidia-utils remmina freerdp xf86-input-evdev pulseaudio-bluetooth prusa-slicer texlive-most --noconfirm --needed
 sudo pacman -Sy rust rust-analyzer rust-racer --needed --noconfirm
+sudo pacman -Sy dotnet-host dotnet-runtime dotnet-sdk dotnet-targeting-pack --needed --noconfirm
+dotnet tool install -g BenchmarkDotNet.Tool
+dotnet tool update -g BenchmarkDotNet.Tool
 
 echo "Installing rust/cargo stuff ..."
 cargo install rustfmt
