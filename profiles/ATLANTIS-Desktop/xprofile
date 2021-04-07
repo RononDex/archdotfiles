@@ -17,3 +17,8 @@ setxkbmap ch -variant de                                # Set keyboard mapping t
 
 # Download new background photo
 sh ~/.scripts/updateLoginBackground.sh &
+
+# Setup the gpg agent
+export GPG_TTY="$(tty)"
+export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+gpgconf --launch gpg-agent

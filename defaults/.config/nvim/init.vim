@@ -6,7 +6,6 @@ Plug 'easymotion/vim-easymotion'
 Plug 'itchyny/lightline.vim'
 Plug 'shinchu/lightline-gruvbox.vim'
 Plug 'maximbaz/lightline-ale'
-Plug 'prabirshrestha/asyncomplete.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'OmniSharp/omnisharp-vim'
 Plug 'nickspoons/vim-sharpenup'

@@ -20,6 +20,7 @@ chmod +x ~/.i3/scripts/launch-picom.sh
 chmod +x ~/.i3/scripts/launch-autostart.sh
 chmod +x ~/.i3/scripts/set-background.sh
 chmod -R +x ~/.scripts
+chmod 700 ~/.gnupg -R
 
 isArm=$false
 echo "Configuring pacman ..."
@@ -43,7 +44,7 @@ rm ~/mirrorlist
 source ~/.profile
 
 echo "Installing stuff..."
-sudo pacman -Sy powerline-fonts fakeroot gcc boost ffmpeg make cmake otf-fira-mono otf-fira-sans ttf-fira-code ttf-fira-mono ttf-fira-sans bash-completion zsh zsh-completions --noconfirm --needed
+sudo pacman -Sy powerline-fonts fakeroot gcc boost ffmpeg make cmake otf-fira-mono otf-fira-sans ttf-fira-codea ttf-fira-mono ttf-fira-sans bash-completion zsh zsh-completions automake m4 autoconf --noconfirm --needed
 sudo pacman -Sy bash-completion networkmanager gnome-keyring network-manager-applet xorg xorg-xinit lightdm light-locker firefox adobe-source-code-pro-fonts neofetch xclip --noconfirm --needed
 sudo pacman -Sy lightdm-webkit-theme-litarvan feh xfce4-terminal picom alsa pulseaudio pulseaudio-jack pulseaudio-alsa pavucontrol arc-gtk-theme arc-icon-theme nautilus --noconfirm --needed
 sudo pacman -Sy java-runtime-common jre-openjdk ntfs-3g autofs xdotool --noconfirm --needed
@@ -51,6 +52,7 @@ sudo pacman -Sy vim neovim bash-completion libftdi ccfits network-manager-applet
 sudo pacman -Sy python python2 python-pip samba opencv pkgconfig gtest gmock wxgtk2 libmpdclient bc ranger xorg-server binutils keychain --needed --noconfirm
 sudo pacman -Sy htop imagemagick zlib curl exfat-utils unzip shadow perl-anyevent-i3 perl-json-xs git-lfs python-pywal fzf arandr pass --needed --noconfirm
 sudo pacman -Sy zsh-syntax-highlighting xfce4-power-manager openvpn zsh-autosuggestions calc diff-so-fancy networkmanager-openvpn powerline-fonts zathura zathura-cb zathura-pdf-mupdf zathura-ps lynx ttf-dejavu --needed --noconfirm
+sudo pacman -Sy ccid yubikey-manager yubikey-personalization --needed --noconfirm
 
 # Set default apps
 xdg-mime default zathura.desktop application/pdf
@@ -131,6 +133,8 @@ InstallAurPackage "cryptocoins-git" "https://aur.archlinux.org/packages/cryptoco
 echo "Enabling services ..."
 sudo systemctl enable dcron
 sudo systemctl start dcron
+sudo systemctl enable pcscd
+sudo systemctl start pcscd
 
 echo "Applying default cron-config ..."
 crontab ~/.config/defaultCronConfig

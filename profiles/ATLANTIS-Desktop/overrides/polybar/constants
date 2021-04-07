@@ -2,7 +2,7 @@
 dpi = 140
 
 [bar/top]
-monitor = DP-0
+monitor = DP-2
 modules-right = mpd pulseaudio network-traffic wireless-network battery1 battery2 date
 modules-left = powermenu mpd
 
@@ -10,7 +10,7 @@ height = 30
 tray-maxsize = 30
 
 [bar/bottom]
-monitor = DP-0
+monitor = DP-2
 modules-left = i3
 modules-right = cpu memory
 

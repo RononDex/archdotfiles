@@ -6,6 +6,7 @@
 # to clean up.
 
 export PATH=~/.scripts:$PATH
+export PATH=${PATH}:$(find ~/.scripts -type d | sed '/\/\\./d' | tr '\n' ':' | sed 's/:$//')
 
 # ~/ Clean-up:
 export XDG_CONFIG_HOME="$HOME/.config"
