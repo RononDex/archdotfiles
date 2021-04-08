@@ -6,7 +6,10 @@
 export DOTNET_CLI_TELEMETRY_OPTOUT=1 # Opt out of dotnet telemtry
 alias spotify="/usr/bin/spotify --force-device-scale-factor=2.0"
 (wal -R -e -q -n &)                    # Reload pywal theme
-eval $(keychain --eval --quiet id_rsa) # Initializes the keychain
+if test -f ~/.ssh/id_rsa
+then
+    eval $(keychain --eval --quiet id_rsa)                                  # Initializes the keychain
+fi
 
 # Turn off screensaver
 export DISPLAY=:0.0
