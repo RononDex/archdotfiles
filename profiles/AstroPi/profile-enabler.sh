@@ -24,6 +24,8 @@ cp $scriptDir/overrides/kstars/kstarsrc ~/.config/kstarsrc
 sudo mkdir /data
 sudo chown cobra:cobra /data
 sudo chmod 700 /data
+mkdir ~/.ssh
+cp $scriptDir/overrides/ssh/authorized_keys ~/.ssh/authorized_keys
 
 sudo chmod +x /etc/xrdp/startwm.sh
 
