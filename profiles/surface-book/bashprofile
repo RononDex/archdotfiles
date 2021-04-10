@@ -11,6 +11,11 @@ then
     eval $(keychain --eval --quiet id_rsa)                                  # Initializes the keychain
 fi
 
+# Setup the gpg agent
+export GPG_TTY="$(tty)"
+export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+gpgconf --launch gpg-agent
+
 # Turn off screensaver
 export DISPLAY=:0.0
 xset s off
