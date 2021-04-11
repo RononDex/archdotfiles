@@ -57,6 +57,8 @@ InstallAurPackage "teams" "https://aur.archlinux.org/teams.git"
 InstallAurPackage "tmpmail-git" "https://aur.archlinux.org/tmpmail-git.git"
 MakePackage "SteamVR-OpenHMD"
 
+SetupBitBox
+
 echo "Installing screenkey"
 sudo pacman -Sy python2-setuptools --needed --noconfirm
 InstallAurPackage "python2-distutils-extra" "https://aur.archlinux.org/python2-distutils-extra.git"
