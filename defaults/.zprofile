@@ -7,6 +7,7 @@
 
 export PATH=~/.scripts:$PATH
 export PATH=${PATH}:$(find ~/.scripts -type d | sed '/\/\\./d' | tr '\n' ':' | sed 's/:$//')
+export PATH=~/.local/bin:$PATH
 
 # ~/ Clean-up:
 export XDG_CONFIG_HOME="$HOME/.config"

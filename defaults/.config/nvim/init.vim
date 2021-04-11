@@ -27,6 +27,7 @@ Plug 'sirver/ultisnips'
 Plug 'dyng/ctrlsf.vim'
 Plug 'rust-lang/rust.vim'
 Plug 'racer-rust/vim-racer'
+Plug 'sbdchd/neoformat'
 
 call plug#end()
 
@@ -225,6 +226,9 @@ let g:ctrlsf_default_view_mode = 'compact'
 let g:ctrlsf_auto_focus = {
     \ "at": "start"
     \ }
+
+" Neoformat
+nmap <leader>cf :Neoformat<CR>
 
 "Omnisharp config
 source ~/.config/nvim/omnisharp.vim

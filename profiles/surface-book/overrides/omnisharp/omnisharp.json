@@ -4,6 +4,7 @@
     "enableAnalyzersSupport": true
   },
   "FormattingOptions": {
-    	"OrganizeImports": true
+    	"OrganizeImports": true,
+        "enableEditorConfigSupport": true
   }
 }
