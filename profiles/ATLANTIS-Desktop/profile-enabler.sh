@@ -2,6 +2,7 @@
 scriptDir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 
 . $scriptDir/../../functions/astroFunctions.sh
+. $scriptDir/../DigitecWork/functions.sh
 
 sudo cp $scriptDir/overrides/lightdm.conf /etc/lightdm/lightdm.conf
 sudo cp $scriptDir/overrides/lightdm-webkit2-greeter.conf /etc/lightdm/lightdm-webkit2-greeter.conf
@@ -56,6 +57,7 @@ InstallAurPackage "protonmail-bridge" "https://aur.archlinux.org/protonmail-brid
 InstallAurPackage "teams" "https://aur.archlinux.org/teams.git"
 InstallAurPackage "tmpmail-git" "https://aur.archlinux.org/tmpmail-git.git"
 MakePackage "SteamVR-OpenHMD"
+InstallDigitecSpecificStuffForVpnRdp
 
 SetupBitBox
 

@@ -24,14 +24,15 @@ SetupDigitecVpn() {
 
 }
 
-InstallDigitecSpecificStuff() {
-    sudo mkdir -p /var/deviniteRuntimeStorage
-    sudo chmod 777 /var/deviniteRuntimeStorage
-
+InstallDigitecSpecificStuffForVpnRdp() {
     sudo cp $scriptDir/overrides/pacman.conf /etc/pacman.conf
     sudo pacman-key --keyserver hkp://keyserver.ubuntu.com -r 7568D9BB55FF9E5287D586017AE645C0CF8E292A
     sudo pacman-key --lsign-key 7568D9BB55FF9E5287D586017AE645C0CF8E292A
     SetupDigitecVpn
+}
+
+InstallDigitecSpecificStuff() {
+    InstallDigitecSpecificStuffForVpnRdp
 
     sudo pacman -Sy clamav dotnet-sdk dotnet-runtime dotnet-host --noconfirm --needed
 
