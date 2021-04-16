@@ -47,7 +47,7 @@ background = ${bar/top.background}
 foreground = ${bar/top.foreground}
 
 line-color = ${bar/top.background}
-line-size = 2
+line-size = 4
 
 
 border-top-size = ${bar/top.border-bottom-size}
@@ -352,7 +352,6 @@ label-focused-foreground = #ffffff
 label-focused-background = #3f3f3f
 label-focused-underline = #fba922
 label-focused-padding = 4
-label-focused-font = 9
 
 ; Available tokens:
 ;   %name%
@@ -362,7 +361,6 @@ label-focused-font = 9
 ; Default: %icon%  %name%
 label-unfocused = %index%: %icon%
 label-unfocused-padding = 4
-label-unfocused-font = 9
 
 ; Available tokens:
 ;   %name%
@@ -373,7 +371,6 @@ label-unfocused-font = 9
 label-visible = %index%: %icon%
 label-visible-underline = #555555
 label-visible-padding = 4
-label-visible-font = 9
 
 ; Available tokens:
 ;   %name%
@@ -382,10 +379,10 @@ label-visible-font = 9
 ;   %output%
 ; Default: %icon%  %name%
 label-urgent = %index%: %icon%
-label-urgent-foreground = #000000
-label-urgent-background = #bd2c40
+label-urgent-foreground = #ffffff
+label-urgent-background = #330000
+label-urgent-underline = #e60000
 label-urgent-padding = 4
-label-urgent-font = 9
 
 ; Separator in between workspaces
 label-separator = |
