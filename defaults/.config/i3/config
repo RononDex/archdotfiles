@@ -95,13 +95,13 @@ bindsym $mod+a focus parent
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
 set $ws1 "1"
-set $ws2 "2"
-set $ws3 "3"
-set $ws4 "4"
-set $ws5 "5"
+set $ws2 "2:web"
+set $ws3 "3:code"
+set $ws4 "4:com"
+set $ws5 "5:work"
 set $ws6 "6"
-set $ws7 "7"
-set $ws8 "8"
+set $ws7 "7:workcom"
+set $ws8 "8:gaming"
 set $ws9 "9"
 set $ws10 "10"
 
@@ -167,9 +167,11 @@ bindsym $mod+r mode "resize"
 ######   Start custom config
 ###############################################
 
-# Fix Teams Notifications
-for_window [title="Microsoft Teams Notification"] floating enable
-no_focus [title="Microsoft Teams Notification"] 
+# Assigne apps to default worskpaces
+assign [class="^firefox$"] "2:web"
+assign [class="^signal$"] "4:com"
+assign [class="^TeamSpeak$"] "4:com"
+assign [class="^Steam$"] "8:gaming"
 
 # Lockscreen
 bindsym $mod+shift+a exec light-locker-command -l
@@ -198,8 +200,8 @@ gaps outer 4
 
 # Colors
 # class                 border  backgr. text    indicator child_border
-client.focused          #8C602E #285577 #ffffff #2e9ef4   #8C602E
-client.focused_inactive #8C602E #5f676a #ffffff #484e50   #8C602E
+client.focused          #ff9900 #285577 #ffffff #2e9ef4   #ff9900
+client.focused_inactive #ff9900 #5f676a #ffffff #484e50   #ff9900
 client.unfocused        #8C602E #222222 #888888 #292d2e   #8C602E
 client.urgent           #2f343a #900000 #ffffff #900000   #FF0000
 client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c

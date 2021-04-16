@@ -1,5 +1,5 @@
 #!/bin/sh
-scriptDir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+scriptDirHere ="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 
 SetupDigitecVpn() {
     PURPLE='\033[0;35m'
@@ -25,7 +25,7 @@ SetupDigitecVpn() {
 }
 
 InstallDigitecSpecificStuffForVpnRdp() {
-    sudo cp $scriptDir/overrides/pacman.conf /etc/pacman.conf
+    sudo cp $scriptDirHere/overrides/pacman.conf /etc/pacman.conf
     sudo pacman-key --keyserver hkp://keyserver.ubuntu.com -r 7568D9BB55FF9E5287D586017AE645C0CF8E292A
     sudo pacman-key --lsign-key 7568D9BB55FF9E5287D586017AE645C0CF8E292A
     SetupDigitecVpn
@@ -61,7 +61,7 @@ InstallDigitecSpecificStuff() {
 
     echo "Setting up omnisharp for vscode..."
     rm -rf ~/.omnisharp
-    cp -Raf $scriptDir/../surface-book/overrides/omnisharp ~/.omnisharp
+    cp -Raf $scriptDirHere/../surface-book/overrides/omnisharp ~/.omnisharp
 
     echo "Enabling services ..."
     sudo systemctl enable xrdp

@@ -33,6 +33,9 @@ font-3 = FuraMono Nerd Font Mono:size=15:antialias=true;9
 font-4 = SourceCodePro:size=7.5;3
 font-5 = Material Icons:size=7.5:antialias=true;3
 font-6 = NotoEmoji Nerd Font Mono:size=8:antialias=true;3
+font-7 = FontAwesome:size=10;0
+font-8 = "NotoEmoji Nerd Font:style=Book:size=10"
+font-9 = "NotoEmoji Nerd Font Mono:size=10:antialias=true;3"
 
 [bar/bottom]
 inherit = section/base
@@ -312,39 +315,82 @@ date = %%{F#999}%Y-%m-%d%%{F-}  %%{F#fff}%H:%M%%{F-}
 
 [module/i3]
 type = internal/i3
-format = <label-state> <label-mode>
+;format = <label-state> <label-mode>
 index-sort = true
 wrapping-scroll = false
+fuzzy-match = true
+strip-wsnumbers = true
 
 ; Only show workspaces on the same output as the bar
 ;pin-workspaces = true
 
-label-mode-padding = 2
-label-mode-foreground = #000
-#label-mode-background = ${colors.primary}
+format = <label-state>
 
-; focused = Active workspace on focused monitor
-label-focused-background = #444
-#label-focused-underline = ${module/bspwm.label-focused-underline}
-label-focused-padding = 3
+ws-icon-0 = 1;
+ws-icon-1 = 2:web;
+ws-icon-2 = 3:code;
+ws-icon-3 = 4:com;
+ws-icon-4 = 5:work;
+ws-icon-5 = 6;
+ws-icon-6 = 7:workcom;
+ws-icon-7 = 8:gaming;
+ws-icon-default = 
 
-; unfocused = Inactive workspace on any monitor
-label-unfocused-padding = 3
+label-mode = %mode%
 
-; visible = Active workspace on unfocused monitor
-#label-visible-background = ${self.label-focused-background}
-#label-visible-underline = ${self.label-focused-underline}
-label-visible-padding = 3
+label-mode-padding = 0
+label-mode-background = #e60053
 
-; urgent = Workspace with urgency hint set
-#label-urgent-background = ${module/bspwm.label-urgent-background}
-label-urgent-padding = 2
+; Available tokens:
+;   %name%
+;   %icon%
+;   %index%
+;   %output%
+; Default: %icon%  %name%
+label-focused = %index%: %icon%
+label-focused-foreground = #ffffff
+label-focused-background = #3f3f3f
+label-focused-underline = #fba922
+label-focused-padding = 4
+label-focused-font = 9
+
+; Available tokens:
+;   %name%
+;   %icon%
+;   %index%
+;   %output%
+; Default: %icon%  %name%
+label-unfocused = %index%: %icon%
+label-unfocused-padding = 4
+label-unfocused-font = 9
+
+; Available tokens:
+;   %name%
+;   %icon%
+;   %index%
+;   %output%
+; Default: %icon%  %name%
+label-visible = %index%: %icon%
+label-visible-underline = #555555
+label-visible-padding = 4
+label-visible-font = 9
+
+; Available tokens:
+;   %name%
+;   %icon%
+;   %index%
+;   %output%
+; Default: %icon%  %name%
+label-urgent = %index%: %icon%
+label-urgent-foreground = #000000
+label-urgent-background = #bd2c40
+label-urgent-padding = 4
+label-urgent-font = 9
 
 ; Separator in between workspaces
 label-separator = |
-label-separator-padding = 2
-
-ws-icon-0 =1;〉_
+label-separator-padding = 0
+label-separator-foreground = #ffb52a
 
 [module/network-traffic]
 type = custom/script
