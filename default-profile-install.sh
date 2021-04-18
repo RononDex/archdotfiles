@@ -52,7 +52,7 @@ sudo pacman -Sy vim neovim bash-completion libftdi ccfits network-manager-applet
 sudo pacman -Sy python python2 python-pip samba opencv pkgconfig gtest gmock wxgtk2 libmpdclient bc ranger xorg-server binutils keychain --needed --noconfirm
 sudo pacman -Sy htop imagemagick zlib curl exfat-utils unzip shadow perl-anyevent-i3 perl-json-xs git-lfs python-pywal fzf arandr pass --needed --noconfirm
 sudo pacman -Sy zsh-syntax-highlighting xfce4-power-manager openvpn zsh-autosuggestions calc diff-so-fancy networkmanager-openvpn powerline-fonts zathura zathura-cb zathura-pdf-mupdf zathura-ps lynx ttf-dejavu --needed --noconfirm
-sudo pacman -Sy gnupg pcsclite ccid yubikey-manager yubikey-personalization --needed --noconfirm
+sudo pacman -Sy dkms linux-headers gnupg pcsclite ccid yubikey-manager yubikey-personalization --needed --noconfirm
 
 # Set default apps
 xdg-mime default zathura.desktop application/pdf
