@@ -204,7 +204,7 @@ bar-progress-empty-foreground = #44
 
 [module/wireless-network]
 type = internal/network
-interface = ${base.wireless-adapter}
+interface = ${deviceconfig.wireless-interface}
 interval = 3.0
 ping-interval = 10
 

@@ -1,6 +1,8 @@
 [section/base]
 dpi = 140
-wireless-adapter = wlp6s0
+
+[deviceconfig]
+wireless-interface = wlp6s0
 
 [bar/top]
 monitor = DP-2
