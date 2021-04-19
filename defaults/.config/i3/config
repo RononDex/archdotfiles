@@ -169,8 +169,8 @@ bindsym $mod+r mode "resize"
 
 # Assigne apps to default worskpaces
 assign [class="^firefox$"] "2:web"
-assign [class="^signal$"] "4:com"
-assign [class="^TeamSpeak$"] "4:com"
+assign [class="^Signal$"] "4:com"
+assign [class="^TeamSpeak 3$"] "4:com"
 assign [class="^Steam$"] "8:gaming"
 
 # Lockscreen
