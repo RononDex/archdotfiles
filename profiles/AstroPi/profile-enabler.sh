@@ -16,6 +16,7 @@ sudo cp $scriptDir/overrides/ssh/sshd_config /etc/ssh/sshd_config
 sudo cp $scriptDir/overrides/lightdm-webkit2-greeter.conf /etc/lightdm/lightdm-webkit2-greeter.conf
 sudo cp $scriptDir/overrides/xrdp/startwm.sh /etc/xrdp/startwm.sh
 sudo cp $scriptDir/overrides/samba/smb.conf /etc/samba/smb.conf
+sudo cp $scriptDir/overrides/ntp/nrp.conf /etc/ntp.conf
 mkdir -p ~/.local/share/kstars/astrometry
 cp $scriptDir/overrides/kstars/astrometry.cfg ~/.local/share/kstars/astrometry/astrometry.cfg
 mkdir ~/.indi
@@ -35,6 +36,7 @@ sudo pacman -Sy lxde firefox dnsmasq gpsd --noconfirm --needed
 echo "Installing stuff ..."
 InstallAurPackage "xrdp" "https://aur.archlinux.org/xrdp.git"
 InstallAurPackage "xorgxrdp" "https://aur.archlinux.org/xorgxrdp-git.git"
+InstallAurPackage "raspi-config-git" "https://aur.archlinux.org/raspi-config-git.git"
 
 echo "Setting up xrdp ..."
 sudo rm /etc/X11/Xwrapper.config
