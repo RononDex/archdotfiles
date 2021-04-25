@@ -29,11 +29,13 @@ cp $scriptDir/overrides/ssh/authorized_keys ~/.ssh/authorized_keys
 
 sudo chmod +x /etc/xrdp/startwm.sh
 
-echo "Setting up gps"
+echo "Setting up gps and ntp"
 sudo pacman -Sy ntp --needed --noconfirm
 sudo cp $scriptDir/overrides/ntp/ntp.conf /etc/ntp.conf
 sudo cp $scriptDir/overrides/gpsd/gpsd.conf /etc/default/gpsd
 sudo ln -s /dev/ttyS0 /dev/gps0
+sudo systemctl enable ntpd
+sudo systemctl start ntpd
 
 echo "Setting up XFCE"
 sudo pacman -Sy lxde firefox dnsmasq gpsd --noconfirm --needed
