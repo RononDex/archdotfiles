@@ -34,6 +34,7 @@ sudo pacman -Sy ntp --needed --noconfirm
 sudo cp $scriptDir/overrides/ntp/ntp.conf /etc/ntp.conf
 sudo cp $scriptDir/overrides/gpsd/gpsd.conf /etc/default/gpsd
 sudo ln -s /dev/ttyS0 /dev/gps0
+sudo timedatectl set-ntp true
 sudo systemctl enable ntpd
 sudo systemctl start ntpd
 
