@@ -16,8 +16,6 @@ sudo cp $scriptDir/overrides/ssh/sshd_config /etc/ssh/sshd_config
 sudo cp $scriptDir/overrides/lightdm-webkit2-greeter.conf /etc/lightdm/lightdm-webkit2-greeter.conf
 sudo cp $scriptDir/overrides/xrdp/startwm.sh /etc/xrdp/startwm.sh
 sudo cp $scriptDir/overrides/samba/smb.conf /etc/samba/smb.conf
-sudo cp $scriptDir/overrides/ntp/ntp.conf /etc/ntp.conf
-sudo cp $scriptDir/overrides/gpsd/gpsd.conf /etc/default/gpsd
 mkdir -p ~/.local/share/kstars/astrometry
 cp $scriptDir/overrides/kstars/astrometry.cfg ~/.local/share/kstars/astrometry/astrometry.cfg
 mkdir ~/.indi
@@ -30,6 +28,12 @@ mkdir ~/.ssh
 cp $scriptDir/overrides/ssh/authorized_keys ~/.ssh/authorized_keys
 
 sudo chmod +x /etc/xrdp/startwm.sh
+
+echo "Setting up gps"
+sudo pacman -Sy ntp --needed --noconfirm
+sudo cp $scriptDir/overrides/ntp/ntp.conf /etc/ntp.conf
+sudo cp $scriptDir/overrides/gpsd/gpsd.conf /etc/default/gpsd
+sudo ln -s /dev/ttyS0 /dev/gps0
 
 echo "Setting up XFCE"
 sudo pacman -Sy lxde firefox dnsmasq gpsd --noconfirm --needed
