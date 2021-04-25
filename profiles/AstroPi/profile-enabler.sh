@@ -16,7 +16,8 @@ sudo cp $scriptDir/overrides/ssh/sshd_config /etc/ssh/sshd_config
 sudo cp $scriptDir/overrides/lightdm-webkit2-greeter.conf /etc/lightdm/lightdm-webkit2-greeter.conf
 sudo cp $scriptDir/overrides/xrdp/startwm.sh /etc/xrdp/startwm.sh
 sudo cp $scriptDir/overrides/samba/smb.conf /etc/samba/smb.conf
-sudo cp $scriptDir/overrides/ntp/nrp.conf /etc/ntp.conf
+sudo cp $scriptDir/overrides/ntp/ntp.conf /etc/ntp.conf
+sudo cp $scriptDir/overrides/gpsd/gpsd.conf /etc/default/gpsd
 mkdir -p ~/.local/share/kstars/astrometry
 cp $scriptDir/overrides/kstars/astrometry.cfg ~/.local/share/kstars/astrometry/astrometry.cfg
 mkdir ~/.indi
@@ -76,6 +77,7 @@ InstallIndiDriver "indi-atik"
 InstallIndiDriver "indi-asi"
 InstallIndiDriver "libqhy"
 InstallIndiDriver "indi-qhy"
+InstallIndiDriver "indi-gpsd"
 InstallAstrometryNet
 DownloadIndexFiles
 CloneOrUpdateGitRepoToPackages "phd2" "https://github.com/OpenPHDGuiding/phd2.git"
