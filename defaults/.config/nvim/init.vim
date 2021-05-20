@@ -125,6 +125,9 @@ noremap <leader>6 6gt
 noremap <leader>7 7gt
 noremap <leader>8 8gt
 noremap <leader>9 9gt
+noremap <leader>tn :tabnew<cr>
+noremap <leader>tc :tabclose<cr>
+noremap <leader>tt :tabnew<cr>:terminal<cr>
 noremap <leader>0 :tablast<cr>
 
 " Cursor style
@@ -183,9 +186,6 @@ map <leader>fg :Ag<CR>
 :tnoremap <Esc> <C-\><C-n>
 nmap <leader>nt ss:terminal<CR>20su
 nmap <leader>q :Bclose<CR>
-
-" Tagbar
-nmap <leader>tt :TagbarToggle<CR>
 
 " FzF
 "map <C-p> :Files<Return>
