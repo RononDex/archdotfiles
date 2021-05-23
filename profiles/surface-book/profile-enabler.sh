@@ -67,14 +67,6 @@ gpg --recv-key A87FF9DF48BF1C90
 gpg --recv-key 4773BD5E130D1D45
 InstallAurPackage "spotify" "https://aur.archlinux.org/spotify.git"
 
-echo "Installing fix for surface book eraser ..."
-sudo pip3 install -U evdev
-CloneOrUpdateGitRepoToPackages "linux-surface-fix-eraser" "https://github.com/StollD/linux-surface-fix-eraser"
-cd ~/packages/linux-surface-fix-eraser
-sudo cp linux-surface-fix-eraser.py /usr/local/bin/
-sudo cp linux-surface-fix-eraser.service /etc/systemd/system/
-sudo systemctl enable --now linux-surface-fix-eraser
-
 echo "Enabling services ..."
 sudo systemctl enable lightdm.service
 sudo systemctl enable nrclient
