@@ -16,7 +16,10 @@ cp $scriptDir/overrides/.i3/workspaces/load-workspaces.sh ~/.i3/workspaces/load-
 cp $scriptDir/overrides/.i3/workspaces/workspace-1.json ~/.i3/workspaces/workspace-1.json
 cp $scriptDir/overrides/.i3/scripts/launch-autostart.sh ~/.i3/scripts/launch-autostart.sh
 cp $scriptDir/overrides/dunst/dunstrc ~/.config/dunst/dunstrc
-cp $scriptDir/overrides/pacman.conf /etc/pacman.conf
+sudo cp $scriptDir/overrides/pacman.conf /etc/pacman.conf
+
+sudo pacman -Syy
+sudo pacman -Syu --noconfirm
 
 echo "Setting up surface repo"
 wget -qO - https://raw.githubusercontent.com/linux-surface/linux-surface/master/pkg/keys/surface.asc \

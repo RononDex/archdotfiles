@@ -1,0 +1,41 @@
+#!/bin/bash
+
+joinByChar() {
+  local IFS="$1"
+  shift
+  echo "$*"
+}
+
+connectedWifi=$(nmcli -t -f active dev wifi | egrep '^yes' | cut -d\' -f2)
+if ($connectedWifi == "yes")
+then
+    exit 0
+fi
+
+nmcli dev wifi rescan
+listOfWifis=$(nmcli -t -f ssid,signal dev wifi list)
+listOfKnownWifis=$(nmcli -t -f name connection show)
+
+mapfile -t listOfWifisArray <<< $listOfWifis
+mapfile -t listOfKnownWifisArray <<< $listOfKnownWifis
+
+declare -A map
+for name in listOfKnownWifis; do
+  map["$name"]=1
+done
+
+for i in "${listOfWifisArray[@]}"
+do
+    IFS=':'
+    read -ra wifiInfoSplitted <<< "$i"
+
+    regex="^($(IFS=\|; echo "${listOfKnownWifisArray[*]}"))$"
+
+    test=${wifiInfoSplitted[0]}
+
+    if [[ $test =~ $regex ]];
+    then
+        echo "found known wifi" $test
+    fi
+
+done
