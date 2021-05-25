@@ -27,9 +27,7 @@ wget -qO - https://raw.githubusercontent.com/linux-surface/linux-surface/master/
 sudo pacman-key --finger 56C464BAAC421453
 sudo pacman-key --lsign-key 56C464BAAC421453
 
-
 sudo chmod 744 /etc/pacman.conf
-
 
 if [ ! -d ~/.omnisharp ]; then
     mkdir ~/.omnisharp
