@@ -4,11 +4,13 @@ AstrometryConfFile=*Internal astrometry.cfg*
 AstrometryDetectParity=true
 AstrometryImageScaleHigh=36.204
 AstrometryImageScaleLow=27.387
-AstrometryPositionDE=43.68861111111111
-AstrometryPositionRA=315.03333333333336
+AstrometryPositionDE=64.71916666666667
+AstrometryPositionRA=231.40833333333333
+AstrometrySolverBinary=/usr/local/astrinetry/bin/solve-field
 AstrometrySolverType=1
+AstrometryWCSInfo=/usr/local/astrometry/bin/wcsinfo
 DefaultAlignFilterWheel=Atik EFW2
-PAHMountSpeedIndex=1
+PAHMountSpeedIndex=2
 SolverBinningIndex=1
 
 [Capture]
@@ -78,12 +80,15 @@ Height 1440=425
 Width 2560=700
 
 [Ekos]
-EkosWindowHeight=755
+EkosWindowHeight=985
 EkosWindowWidth=985
 profile=G11 | QHY163
 
 [Focus]
+DefaultFocusCCD=QHY CCD QHY163M-7c64ca4
+DefaultFocusFilterWheel=Atik EFW2
 FocusAutoStarEnabled=true
+FocusFramesCount=3
 FocusGaussianKernelSize=3
 FocusMaxSingleStep=500
 FocusSubFrame=false
@@ -127,9 +132,13 @@ RestorePositionForNextInstance=false
 State=AAAA/wAAAAD9AAAAAAAAAuQAAANTAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAUAAAAaAGsAcwB0AGEAcgBzAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAAAAAAAAAABYAdgBpAGUAdwBUAG8AbwBsAEIAYQByAQAAAdX/////AAAAAAAAAAAAAAAWAEkATgBEAEkAVABvAG8AbABCAGEAcgEAAAKv/////wAAAAAAAAAAAAAAIABUAGUAbABlAHMAYwBvAHAAZQBUAG8AbwBsAEIAYQByAAAAAAD/////AAAAAAAAAAAAAAAWAEQAbwBtAGUAVABvAG8AbABCAGEAcgAAAAAA/////wAAAAAAAAAA
 ToolBarsMovable=Disabled
 VNC-0 Height 1500x1000=934
+VNC-0 Height 2560x1440=934
 VNC-0 Width 1500x1000=740
+VNC-0 Width 2560x1440=740
 VNC-0 XPosition 1500x1000=2
+VNC-0 XPosition 2560x1440=0
 VNC-0 YPosition 1500x1000=23
+VNC-0 YPosition 2560x1440=0
 Width 1500=740
 Width 1920=1024
 Width 2560=740
@@ -143,6 +152,7 @@ RememberJobProgress=false
 
 [StellarSolver]
 AstrometryIndexFolderList=/home/cobra/.local/share/kstars/astrometry,/home/cobra/AstrometryIndexes
+SolverType=1
 
 [TipOfDay]
 RunOnStart=false
@@ -150,11 +160,11 @@ RunOnStart=false
 [View]
 AutoSelectGrid=false
 FOVNames=
-FocusDec=74.554619908847
-FocusRA=19.651020940257595
+FocusDec=59.229404409495906
+FocusRA=14.075362221925893
 ShowEquatorialGrid=true
 ShowHorizontalGrid=true
-ZoomFactor=2229.025112063999
+ZoomFactor=746.4959999999999
 
 [Xplanet]
 XplanetBackgroundColorValue=#000000
