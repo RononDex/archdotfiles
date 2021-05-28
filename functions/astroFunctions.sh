@@ -9,6 +9,16 @@ InstallIndiDriver() {
     sudo make install
 }
 
+InstallIndi() {
+    CloneOrUpdateGitRepoToPackages "indi" "https://github.com/indilib/indi"
+    cd ~/packages/indi
+    mkdir build
+    cd build
+    cmake -DCMAKE_INSTALL_PREFIX=/usr ..
+    make -j4
+    sudo make install
+}
+
 InstallPlanetaryImager() {
     cd ~/packages/PlanetaryImager
     mkdir build

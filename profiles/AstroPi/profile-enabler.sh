@@ -73,7 +73,7 @@ sudo pacman -Sy --noconfirm --needed wcslib opencv ccfits netpbm breeze-icons bi
 
 InstallAstroPy
 CloneOrUpdateGitRepoToPackages "indi" "https://github.com/indilib/indi"
-MakePackage "indi"
+InstallIndi
 CloneOrUpdateGitRepoToPackages "indi-3rdparty" "--depth=1 https://github.com/indilib/indi-3rdparty"
 InstallIndiDriver "fxload"
 InstallIndiDriver "fxload-libusb"
