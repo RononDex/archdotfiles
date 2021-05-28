@@ -1,5 +1,5 @@
 <INDIDriver>
-<newSwitchVector device='USBFocusV3' name='DEBUG'>
+<newSwitchVector device='Sesto Senso 2' name='DEBUG'>
   <oneSwitch name='ENABLE'>
       Off
   </oneSwitch>
@@ -7,12 +7,12 @@
       On
   </oneSwitch>
 </newSwitchVector>
-<newNumberVector device='USBFocusV3' name='POLLING_PERIOD'>
+<newNumberVector device='Sesto Senso 2' name='POLLING_PERIOD'>
   <oneNumber name='PERIOD_MS'>
       500
   </oneNumber>
 </newNumberVector>
-<newSwitchVector device='USBFocusV3' name='CONNECTION_MODE'>
+<newSwitchVector device='Sesto Senso 2' name='CONNECTION_MODE'>
   <oneSwitch name='CONNECTION_SERIAL'>
       On
   </oneSwitch>
@@ -20,14 +20,14 @@
       Off
   </oneSwitch>
 </newSwitchVector>
-<newTextVector device='USBFocusV3' name='DEVICE_PORT'>
+<newTextVector device='Sesto Senso 2' name='DEVICE_PORT'>
   <oneText name='PORT'>
-      /dev/ttyACM0
+      /dev/ttyUSB0
   </oneText>
 </newTextVector>
-<newSwitchVector device='USBFocusV3' name='DEVICE_BAUD_RATE'>
+<newSwitchVector device='Sesto Senso 2' name='DEVICE_BAUD_RATE'>
   <oneSwitch name='9600'>
-      On
+      Off
   </oneSwitch>
   <oneSwitch name='19200'>
       Off
@@ -39,21 +39,21 @@
       Off
   </oneSwitch>
   <oneSwitch name='115200'>
-      Off
+      On
   </oneSwitch>
   <oneSwitch name='230400'>
       Off
   </oneSwitch>
 </newSwitchVector>
-<newSwitchVector device='USBFocusV3' name='DEVICE_AUTO_SEARCH'>
-  <oneSwitch name='ENABLED'>
-      Off
-  </oneSwitch>
-  <oneSwitch name='DISABLED'>
+<newSwitchVector device='Sesto Senso 2' name='DEVICE_AUTO_SEARCH'>
+  <oneSwitch name='INDI_ENABLED'>
       On
   </oneSwitch>
+  <oneSwitch name='INDI_DISABLED'>
+      Off
+  </oneSwitch>
 </newSwitchVector>
-<newSwitchVector device='USBFocusV3' name='DEBUG_LEVEL'>
+<newSwitchVector device='Sesto Senso 2' name='DEBUG_LEVEL'>
   <oneSwitch name='DBG_ERROR'>
       On
   </oneSwitch>
@@ -67,7 +67,7 @@
       Off
   </oneSwitch>
 </newSwitchVector>
-<newSwitchVector device='USBFocusV3' name='LOGGING_LEVEL'>
+<newSwitchVector device='Sesto Senso 2' name='LOGGING_LEVEL'>
   <oneSwitch name='LOG_ERROR'>
       On
   </oneSwitch>
@@ -81,7 +81,7 @@
       Off
   </oneSwitch>
 </newSwitchVector>
-<newSwitchVector device='USBFocusV3' name='LOG_OUTPUT'>
+<newSwitchVector device='Sesto Senso 2' name='LOG_OUTPUT'>
   <oneSwitch name='CLIENT_DEBUG'>
       On
   </oneSwitch>
@@ -89,25 +89,12 @@
       Off
   </oneSwitch>
 </newSwitchVector>
-<newNumberVector device='USBFocusV3' name='FOCUS_MAX'>
+<newNumberVector device='Sesto Senso 2' name='FOCUS_MAX'>
   <oneNumber name='FOCUS_MAX_VALUE'>
-      100000
+      2097152
   </oneNumber>
 </newNumberVector>
-<newSwitchVector device='USBFocusV3' name='FOCUS_BACKLASH_TOGGLE'>
-  <oneSwitch name='INDI_ENABLED'>
-      Off
-  </oneSwitch>
-  <oneSwitch name='INDI_DISABLED'>
-      On
-  </oneSwitch>
-</newSwitchVector>
-<newNumberVector device='USBFocusV3' name='FOCUS_BACKLASH_STEPS'>
-  <oneNumber name='FOCUS_BACKLASH_VALUE'>
-      0
-  </oneNumber>
-</newNumberVector>
-<newNumberVector device='USBFocusV3' name='Presets'>
+<newNumberVector device='Sesto Senso 2' name='Presets'>
   <oneNumber name='PRESET_1'>
       0
   </oneNumber>
@@ -118,7 +105,7 @@
       0
   </oneNumber>
 </newNumberVector>
-<newSwitchVector device='USBFocusV3' name='USEJOYSTICK'>
+<newSwitchVector device='Sesto Senso 2' name='USEJOYSTICK'>
   <oneSwitch name='ENABLE'>
       Off
   </oneSwitch>
@@ -126,7 +113,7 @@
       On
   </oneSwitch>
 </newSwitchVector>
-<newTextVector device='USBFocusV3' name='JOYSTICKSETTINGS'>
+<newTextVector device='Sesto Senso 2' name='JOYSTICKSETTINGS'>
   <oneText name='Focus In'>
       BUTTON_1
   </oneText>
@@ -137,4 +124,34 @@
       BUTTON_3
   </oneText>
 </newTextVector>
+<newTextVector device='Sesto Senso 2' name='SNOOP_JOYSTICK'>
+  <oneText name='SNOOP_JOYSTICK_DEVICE'>
+      Joystick
+  </oneText>
+</newTextVector>
+<newNumberVector device='Sesto Senso 2' name='MOTOR_RATE'>
+  <oneNumber name='ACC'>
+      1
+  </oneNumber>
+  <oneNumber name='RUN'>
+      2
+  </oneNumber>
+  <oneNumber name='DEC'>
+      1
+  </oneNumber>
+</newNumberVector>
+<newNumberVector device='Sesto Senso 2' name='MOTOR_CURRENT'>
+  <oneNumber name='CURR_ACC'>
+      7
+  </oneNumber>
+  <oneNumber name='CURR_RUN'>
+      7
+  </oneNumber>
+  <oneNumber name='CURR_DEC'>
+      7
+  </oneNumber>
+  <oneNumber name='CURR_HOLD'>
+      3
+  </oneNumber>
+</newNumberVector>
 </INDIDriver>

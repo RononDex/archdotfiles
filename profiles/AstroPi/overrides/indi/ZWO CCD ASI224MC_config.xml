@@ -1,5 +1,5 @@
 <INDIDriver>
-<newSwitchVector device='QHY CCD QHY163M-7c64ca4' name='DEBUG'>
+<newSwitchVector device='ZWO CCD ASI224MC' name='DEBUG'>
   <oneSwitch name='ENABLE'>
       Off
   </oneSwitch>
@@ -7,12 +7,12 @@
       On
   </oneSwitch>
 </newSwitchVector>
-<newNumberVector device='QHY CCD QHY163M-7c64ca4' name='POLLING_PERIOD'>
+<newNumberVector device='ZWO CCD ASI224MC' name='POLLING_PERIOD'>
   <oneNumber name='PERIOD_MS'>
       1000
   </oneNumber>
 </newNumberVector>
-<newSwitchVector device='QHY CCD QHY163M-7c64ca4' name='DEBUG_LEVEL'>
+<newSwitchVector device='ZWO CCD ASI224MC' name='DEBUG_LEVEL'>
   <oneSwitch name='DBG_ERROR'>
       On
   </oneSwitch>
@@ -29,7 +29,7 @@
       Off
   </oneSwitch>
 </newSwitchVector>
-<newSwitchVector device='QHY CCD QHY163M-7c64ca4' name='LOGGING_LEVEL'>
+<newSwitchVector device='ZWO CCD ASI224MC' name='LOGGING_LEVEL'>
   <oneSwitch name='LOG_ERROR'>
       On
   </oneSwitch>
@@ -46,7 +46,7 @@
       Off
   </oneSwitch>
 </newSwitchVector>
-<newSwitchVector device='QHY CCD QHY163M-7c64ca4' name='LOG_OUTPUT'>
+<newSwitchVector device='ZWO CCD ASI224MC' name='LOG_OUTPUT'>
   <oneSwitch name='CLIENT_DEBUG'>
       On
   </oneSwitch>
@@ -54,7 +54,7 @@
       Off
   </oneSwitch>
 </newSwitchVector>
-<newTextVector device='QHY CCD QHY163M-7c64ca4' name='ACTIVE_DEVICES'>
+<newTextVector device='ZWO CCD ASI224MC' name='ACTIVE_DEVICES'>
   <oneText name='ACTIVE_TELESCOPE'>
       Losmandy Gemini
   </oneText>
@@ -65,13 +65,13 @@
       Focuser Simulator
   </oneText>
   <oneText name='ACTIVE_FILTER'>
-      QHY CCD QHY163M-7c64ca4
+      Atik EFW2
   </oneText>
   <oneText name='ACTIVE_SKYQUALITY'>
       SQM
   </oneText>
 </newTextVector>
-<newSwitchVector device='QHY CCD QHY163M-7c64ca4' name='UPLOAD_MODE'>
+<newSwitchVector device='ZWO CCD ASI224MC' name='UPLOAD_MODE'>
   <oneSwitch name='UPLOAD_CLIENT'>
       On
   </oneSwitch>
@@ -82,7 +82,7 @@
       Off
   </oneSwitch>
 </newSwitchVector>
-<newTextVector device='QHY CCD QHY163M-7c64ca4' name='UPLOAD_SETTINGS'>
+<newTextVector device='ZWO CCD ASI224MC' name='UPLOAD_SETTINGS'>
   <oneText name='UPLOAD_DIR'>
       /home/cobra
   </oneText>
@@ -90,7 +90,7 @@
       IMAGE_XXX
   </oneText>
 </newTextVector>
-<newSwitchVector device='QHY CCD QHY163M-7c64ca4' name='TELESCOPE_TYPE'>
+<newSwitchVector device='ZWO CCD ASI224MC' name='TELESCOPE_TYPE'>
   <oneSwitch name='TELESCOPE_PRIMARY'>
       On
   </oneSwitch>
@@ -98,7 +98,7 @@
       Off
   </oneSwitch>
 </newSwitchVector>
-<newSwitchVector device='QHY CCD QHY163M-7c64ca4' name='CCD_COMPRESSION'>
+<newSwitchVector device='ZWO CCD ASI224MC' name='CCD_COMPRESSION'>
   <oneSwitch name='CCD_COMPRESS'>
       Off
   </oneSwitch>
@@ -106,7 +106,7 @@
       On
   </oneSwitch>
 </newSwitchVector>
-<newNumberVector device='QHY CCD QHY163M-7c64ca4' name='CCD_FRAME'>
+<newNumberVector device='ZWO CCD ASI224MC' name='CCD_FRAME'>
   <oneNumber name='X'>
       0
   </oneNumber>
@@ -114,13 +114,13 @@
       0
   </oneNumber>
   <oneNumber name='WIDTH'>
-      4656
+      1304
   </oneNumber>
   <oneNumber name='HEIGHT'>
-      3522
+      976
   </oneNumber>
 </newNumberVector>
-<newNumberVector device='QHY CCD QHY163M-7c64ca4' name='CCD_BINNING'>
+<newNumberVector device='ZWO CCD ASI224MC' name='CCD_BINNING'>
   <oneNumber name='HOR_BIN'>
       1
   </oneNumber>
@@ -128,7 +128,18 @@
       1
   </oneNumber>
 </newNumberVector>
-<newSwitchVector device='QHY CCD QHY163M-7c64ca4' name='CCD_STREAM_ENCODER'>
+<newTextVector device='ZWO CCD ASI224MC' name='CCD_CFA'>
+  <oneText name='CFA_OFFSET_X'>
+      0
+  </oneText>
+  <oneText name='CFA_OFFSET_Y'>
+      0
+  </oneText>
+  <oneText name='CFA_TYPE'>
+      RGGB
+  </oneText>
+</newTextVector>
+<newSwitchVector device='ZWO CCD ASI224MC' name='CCD_STREAM_ENCODER'>
   <oneSwitch name='RAW'>
       On
   </oneSwitch>
@@ -136,7 +147,7 @@
       Off
   </oneSwitch>
 </newSwitchVector>
-<newTextVector device='QHY CCD QHY163M-7c64ca4' name='RECORD_FILE'>
+<newTextVector device='ZWO CCD ASI224MC' name='RECORD_FILE'>
   <oneText name='RECORD_FILE_DIR'>
       /home/cobra/indi__D_
   </oneText>
@@ -144,7 +155,7 @@
       indi_record__T_
   </oneText>
 </newTextVector>
-<newNumberVector device='QHY CCD QHY163M-7c64ca4' name='RECORD_OPTIONS'>
+<newNumberVector device='ZWO CCD ASI224MC' name='RECORD_OPTIONS'>
   <oneNumber name='RECORD_DURATION'>
       1
   </oneNumber>
@@ -152,7 +163,7 @@
       30
   </oneNumber>
 </newNumberVector>
-<newSwitchVector device='QHY CCD QHY163M-7c64ca4' name='CCD_STREAM_RECORDER'>
+<newSwitchVector device='ZWO CCD ASI224MC' name='CCD_STREAM_RECORDER'>
   <oneSwitch name='SER'>
       On
   </oneSwitch>
@@ -160,45 +171,78 @@
       Off
   </oneSwitch>
 </newSwitchVector>
-<newNumberVector device='QHY CCD QHY163M-7c64ca4' name='CCD_GAIN'>
-  <oneNumber name='GAIN'>
+<newNumberVector device='ZWO CCD ASI224MC' name='CCD_CONTROLS'>
+  <oneNumber name='Gain'>
+      300
+  </oneNumber>
+  <oneNumber name='WB_R'>
+      52
+  </oneNumber>
+  <oneNumber name='WB_B'>
+      95
+  </oneNumber>
+  <oneNumber name='Offset'>
+      1
+  </oneNumber>
+  <oneNumber name='BandWidth'>
+      40
+  </oneNumber>
+  <oneNumber name='Flip'>
+      0
+  </oneNumber>
+  <oneNumber name='AutoExpMaxGain'>
+      300
+  </oneNumber>
+  <oneNumber name='AutoExpMaxExpMS'>
+      30000
+  </oneNumber>
+  <oneNumber name='AutoExpTargetBrightness'>
       100
   </oneNumber>
-</newNumberVector>
-<newNumberVector device='QHY CCD QHY163M-7c64ca4' name='CCD_OFFSET'>
-  <oneNumber name='OFFSET'>
+  <oneNumber name='HardwareBin'>
+      0
+  </oneNumber>
+  <oneNumber name='HighSpeedMode'>
+      0
+  </oneNumber>
+  <oneNumber name='MonoBin'>
       0
   </oneNumber>
 </newNumberVector>
-<newNumberVector device='QHY CCD QHY163M-7c64ca4' name='USB_TRAFFIC'>
-  <oneNumber name='TRAFFIC'>
-      0
-  </oneNumber>
-</newNumberVector>
-<newSwitchVector device='QHY CCD QHY163M-7c64ca4' name='GPS_CONTROL'>
-  <oneSwitch name='INDI_ENABLED'>
+<newSwitchVector device='ZWO CCD ASI224MC' name='CCD_CONTROLS_MODE'>
+  <oneSwitch name='AUTO_Gain'>
       Off
   </oneSwitch>
-  <oneSwitch name='INDI_DISABLED'>
-      On
+  <oneSwitch name='AUTO_WB_R'>
+      Off
   </oneSwitch>
-</newSwitchVector>
-<newSwitchVector device='QHY CCD QHY163M-7c64ca4' name='SLAVING_MODE'>
-  <oneSwitch name='SLAVING_MASTER'>
-      On
+  <oneSwitch name='AUTO_WB_B'>
+      Off
   </oneSwitch>
-  <oneSwitch name='SLAVING_SLAVE'>
+  <oneSwitch name='AUTO_BandWidth'>
       Off
   </oneSwitch>
 </newSwitchVector>
-<newNumberVector device='QHY CCD QHY163M-7c64ca4' name='VCOX_FREQUENCY'>
-  <oneNumber name='FREQUENCY'>
+<newSwitchVector device='ZWO CCD ASI224MC' name='CCD_VIDEO_FORMAT'>
+  <oneSwitch name='ASI_IMG_RAW8'>
+      Off
+  </oneSwitch>
+  <oneSwitch name='ASI_IMG_RGB24'>
+      Off
+  </oneSwitch>
+  <oneSwitch name='ASI_IMG_Y8'>
+      Off
+  </oneSwitch>
+  <oneSwitch name='ASI_IMG_RAW16'>
+      On
+  </oneSwitch>
+</newSwitchVector>
+<newNumberVector device='ZWO CCD ASI224MC' name='BLINK'>
+  <oneNumber name='BLINK_COUNT'>
       0
   </oneNumber>
-</newNumberVector>
-<newNumberVector device='QHY CCD QHY163M-7c64ca4' name='USB_BUFFER'>
-  <oneNumber name='BUFFER'>
-      512
+  <oneNumber name='BLINK_DURATION'>
+      0
   </oneNumber>
 </newNumberVector>
 </INDIDriver>

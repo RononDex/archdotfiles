@@ -402,3 +402,8 @@ label-separator-foreground = #ffb52a
 type = custom/script
 exec = ~/.config/polybar/network-traffic.sh
 tail = true
+
+[module/rotate-screen]
+type = custom/ipc
+click-left = xrandr --output <monitor> --rotate <left|right> --auto
+format-foreground = ${colors.color4}

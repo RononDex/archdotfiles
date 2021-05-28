@@ -22,7 +22,7 @@ Off
     </newSwitchVector>
     <newTextVector device="Losmandy Gemini" name="DEVICE_PORT">
         <oneText name="PORT">
-/dev/ttyACM2
+/dev/ttyACM0
         </oneText>
     </newTextVector>
     <newSwitchVector device="Losmandy Gemini" name="DEVICE_BAUD_RATE">
@@ -46,10 +46,10 @@ Off
         </oneSwitch>
     </newSwitchVector>
     <newSwitchVector device="Losmandy Gemini" name="DEVICE_AUTO_SEARCH">
-        <oneSwitch name="ENABLED">
-On
+        <oneSwitch name="INDI_ENABLED">
+Off
         </oneSwitch>
-        <oneSwitch name="DISABLED">
+        <oneSwitch name="INDI_DISABLED">
 Off
         </oneSwitch>
     </newSwitchVector>
@@ -104,28 +104,22 @@ Dome Simulator
         </oneText>
     </newTextVector>
     <newSwitchVector device="Losmandy Gemini" name="DOME_POLICY">
-        <oneSwitch name="NO_ACTION">
-On
-        </oneSwitch>
-        <oneSwitch name="LOCK_PARKING">
+        <oneSwitch name="DOME_IGNORED">
 Off
         </oneSwitch>
-        <oneSwitch name="FORCE_CLOSE">
-Off
-        </oneSwitch>
-        <oneSwitch name="LOCK_AND_FORCE">
+        <oneSwitch name="DOME_LOCKS">
 Off
         </oneSwitch>
     </newSwitchVector>
     <newNumberVector device="Losmandy Gemini" name="GEOGRAPHIC_COORD">
         <oneNumber name="LAT">
-      47.36670000000000158
+      47.197589999999998156
         </oneNumber>
         <oneNumber name="LONG">
-      8.5330600000000007554
+      7.5918583330000002363
         </oneNumber>
         <oneNumber name="ELEV">
-      408.72000000000002728
+      439.5
         </oneNumber>
     </newNumberVector>
     <newSwitchVector device="Losmandy Gemini" name="TELESCOPE_SLEW_RATE">
@@ -191,6 +185,11 @@ BUTTON_2
         </oneText>
         <oneText name="UNPARKBUTTON">
 BUTTON_3
+        </oneText>
+    </newTextVector>
+    <newTextVector device="Losmandy Gemini" name="SNOOP_JOYSTICK">
+        <oneText name="SNOOP_JOYSTICK_DEVICE">
+Joystick
         </oneText>
     </newTextVector>
     <newSwitchVector device="Losmandy Gemini" name="MOTION_CONTROL_MODE">
