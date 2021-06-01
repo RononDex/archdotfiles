@@ -59,7 +59,9 @@ InstallAurPackage "tmpmail-git" "https://aur.archlinux.org/tmpmail-git.git"
 MakePackage "SteamVR-OpenHMD"
 InstallDigitecSpecificStuffForVpnRdp
 
-SetupBitBox
+echo "Setting up ledger nano"
+InstallAurPackage "ledger-udev" "https://aur.archlinux.org/ledger-udev.git"
+InstallAurPackage "ledger-live-bin" "https://aur.archlinux.org/ledger-live-bin.git"
 
 echo "Installing screenkey"
 sudo pacman -Sy python2-setuptools --needed --noconfirm
