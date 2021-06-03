@@ -37,6 +37,8 @@ InstallAstroPy() {
 }
 
 InstallAstrometryNet() {
+    pip install numpy
+    pip install fitsio
     cd ~/packages
     mkdir astrometryNet
     cd astrometryNet

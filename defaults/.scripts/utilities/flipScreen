@@ -1,0 +1,16 @@
+#!/bin/bash
+
+if [[ "${SCREEN_INVERTED}" == "0" || -z "${SCREEN_INVERTED}" ]];
+then
+    echo "inverting screen"
+    xrandr -o inverted
+    export SCREEN_INVERTED="1"
+    xinput set-prop "IPTS Touch" "Coordinate Transformation Matrix" -1 0 1 0 -1 1 0 0 1
+    xinput set-prop "IPTS Stylus" "Coordinate Transformation Matrix" -1 0 1 0 -1 1 0 0 1
+else
+    echo "setting screen to normal"
+    xrandr -o normal
+    export SCREEN_INVERTED="0"
+    xinput set-prop "IPTS Touch" "Coordinate Transformation Matrix" 1 0 0 0 1 0 0 0 1
+    xinput set-prop "IPTS Stylus" "Coordinate Transformation Matrix" 1 0 0 0 1 0 0 0 1
+fi
