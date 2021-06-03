@@ -1,14 +1,9 @@
 #!/bin/bash
 
-joinByChar() {
-  local IFS="$1"
-  shift
-  echo "$*"
-}
-
-connectedWifi=$(nmcli -t -f active dev wifi | egrep '^yes' | cut -d\' -f2)
-if ($connectedWifi == "yes")
+connectedWifi=$(nmcli -t -f active,ssid dev wifi | egrep '^yes' | cut -d\' -f2)
+if [[ "$connectedWifi" == *"yes:"* and "$connectedWifi" != *"AP"* and "$connectedWifi" != *"Hotspot"* ]]
 then
+    echo "Already connected"
     exit 0
 fi
 
@@ -19,17 +14,12 @@ listOfKnownWifis=$(nmcli -t -f name connection show)
 mapfile -t listOfWifisArray <<< $listOfWifis
 mapfile -t listOfKnownWifisArray <<< $listOfKnownWifis
 
-declare -A map
-for name in listOfKnownWifis; do
-  map["$name"]=1
-done
+regex="^($(IFS=\|; echo "${listOfKnownWifisArray[*]}"))$"
 
 for i in "${listOfWifisArray[@]}"
 do
     IFS=':'
     read -ra wifiInfoSplitted <<< "$i"
-
-    regex="^($(IFS=\|; echo "${listOfKnownWifisArray[*]}"))$"
 
     test=${wifiInfoSplitted[0]}
 
@@ -37,5 +27,4 @@ do
     then
         echo "found known wifi" $test
     fi
-
 done

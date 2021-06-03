@@ -40,11 +40,15 @@ cp -Raf $scriptDir/overrides/omnisharp ~/.omnisharp
 echo "Installing stuff..."
 sudo pacman -Sy i3-gaps nextcloud-client light xf86-input-wacom dunst libnotify notification-daemon vlc dmenu flameshot teamspeak3 blueman --noconfirm --needed
 sudo pacman -Sy texlive-most pulseaudio-bluetooth aspnet-runtime xournalpp remmina signal-desktop --needed --noconfirm
-sudo pacman -Sy linux-surface-headers linux-surface surface-ipts-firmware iptsd --needed --noconfirm
+sudo pacman -Sy acpi_call-dkms linux-surface-headers linux-surface surface-ipts-firmware iptsd --needed --noconfirm
 sudo systemctl enable bluetooth
 sudo systemctl start bluetooth
 
+echo "Turning on dGPU"
+echo "\_SB.PCI0.RP05.HGON" | sudo tee /proc/acpi/call
+
 echo "Installing AUR packages..."
+InstallAurPackage "libwacom-surface" "https://aur.archlinux.org/libwacom-surface.git"
 InstallAurPackage "nrclient2-free" "https://aur.archlinux.org/nrclient2-free.git"
 InstallAurPackage "nvm" "https://aur.archlinux.org/nvm.git"
 InstallAurPackage "polybar" "https://aur.archlinux.org/polybar.git"
