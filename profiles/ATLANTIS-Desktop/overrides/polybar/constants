@@ -10,7 +10,7 @@ modules-right = mpd network-traffic wireless-network date
 modules-left = mpd pulseaudio
 
 height = 30
-tray-maxsize = 30
+tray-maxsize = 24
 
 [bar/bottom]
 monitor = DP-2

@@ -9,7 +9,7 @@ wireless-interface = wlp3s0
 modules-right = wireless-network battery1 battery2 date
 modules-left = rotate-screen pulseaudio backlight mpd
 
-tray-maxsize = 36
+tray-maxsize = 32
 height = 40
 
 [bar/bottom]

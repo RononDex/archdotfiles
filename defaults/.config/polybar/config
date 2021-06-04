@@ -24,6 +24,7 @@ override-redirect = false
 
 spacing = 1
 padding-right = 3
+padding-left = 3
 module-margin = 2
 
 separator = |
