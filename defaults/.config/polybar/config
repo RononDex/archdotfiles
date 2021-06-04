@@ -4,6 +4,8 @@ include-file = ~/.config/polybar/constants
 [bar/top]
 inherit = section/base
 
+enable-ipc = true
+
 width = 100%
 
 background = #AA111111
@@ -39,6 +41,8 @@ font-9 = "NotoEmoji Nerd Font Mono:size=10:antialias=true;3"
 
 [bar/bottom]
 inherit = section/base
+
+enable-ipc = true
 
 bottom = true
 width = 100%
@@ -404,6 +408,8 @@ exec = ~/.config/polybar/network-traffic.sh
 tail = true
 
 [module/rotate-screen]
-type = custom/ipc
-click-left = xrandr --output <monitor> --rotate <left|right> --auto
-format-foreground = ${colors.color4}
+type = custom/text
+content = ↻
+click-left = flipScreen
+content-padding = 2
+content-font = 5

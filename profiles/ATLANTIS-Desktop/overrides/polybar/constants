@@ -6,8 +6,8 @@ wireless-interface = wlp6s0
 
 [bar/top]
 monitor = DP-2
-modules-right = mpd pulseaudio network-traffic wireless-network date
-modules-left = powermenu mpd
+modules-right = mpd network-traffic wireless-network date
+modules-left = mpd pulseaudio
 
 height = 30
 tray-maxsize = 30
