@@ -1,16 +1,25 @@
 #!/bin/bash
 
-if [[ "${SCREEN_INVERTED}" == "0" || -z "${SCREEN_INVERTED}" ]];
-then
-    echo "inverting screen"
+# Find the line in "xrandr -q --verbose" output that contains current screen orientation and "strip" out current orientation.
+
+rotation="$(xrandr -q --verbose | grep 'connected' | egrep -o  '\) (normal|left|inverted|right) \(' | egrep -o '(normal|left|inverted|right)')"
+
+# Using current screen orientation proceed to rotate screen and input devices.
+
+case "$rotation" in
+    normal)
+    # rotate to the left
     xrandr -o inverted
-    export SCREEN_INVERTED="1"
-    xinput set-prop "IPTS Touch" "Coordinate Transformation Matrix" -1 0 1 0 -1 1 0 0 1
-    xinput set-prop "IPTS Stylus" "Coordinate Transformation Matrix" -1 0 1 0 -1 1 0 0 1
-else
-    echo "setting screen to normal"
+    xsetwacom set "IPTS Stylus stylus" rotate half
+    xsetwacom set "IPTS Stylus eraser" rotate half
+    xsetwacom set "IPTS Touch touch" rotate half
+    ;;
+    inverted)
+    # rotate to the right
     xrandr -o normal
-    export SCREEN_INVERTED="0"
-    xinput set-prop "IPTS Touch" "Coordinate Transformation Matrix" 1 0 0 0 1 0 0 0 1
-    xinput set-prop "IPTS Stylus" "Coordinate Transformation Matrix" 1 0 0 0 1 0 0 0 1
-fi
+    xsetwacom set "IPTS Stylus stylus" rotate none
+    xsetwacom set "IPTS Stylus eraser" rotate none
+    xsetwacom set "IPTS Touch touch" rotate none
+    ;;
+esac
+
