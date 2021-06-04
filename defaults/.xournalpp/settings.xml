@@ -81,7 +81,7 @@
     <data name="default">
       <attribute name="color" type="hex" value="ffdeddda"/>
       <attribute name="drawingType" type="string" value="default"/>
-      <attribute name="size" type="string" value="thin"/>
+      <attribute name="size" type="string" value="medium"/>
       <attribute name="tool" type="string" value="pen"/>
     </data>
     <data name="eraser">
@@ -127,7 +127,19 @@
       <attribute name="deviceClass" type="int" value="2"/>
       <attribute name="deviceSource" type="int" value="1"/>
     </data>
+    <data name="IPTS Stylus eraser">
+      <attribute name="deviceClass" type="int" value="3"/>
+      <attribute name="deviceSource" type="int" value="2"/>
+    </data>
+    <data name="IPTS Stylus stylus">
+      <attribute name="deviceClass" type="int" value="2"/>
+      <attribute name="deviceSource" type="int" value="5"/>
+    </data>
     <data name="IPTS Touch">
+      <attribute name="deviceClass" type="int" value="4"/>
+      <attribute name="deviceSource" type="int" value="5"/>
+    </data>
+    <data name="IPTS Touch touch">
       <attribute name="deviceClass" type="int" value="4"/>
       <attribute name="deviceSource" type="int" value="5"/>
     </data>
