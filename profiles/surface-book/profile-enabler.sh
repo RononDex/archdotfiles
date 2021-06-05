@@ -50,7 +50,6 @@ echo "\_SB.PCI0.RP05.HGON" | sudo tee /proc/acpi/call
 
 echo "Installing AUR packages..."
 gpg --keyserver hkps://keyserver.ubuntu.com --recv-key E23B7E70B467F0BF
-InstallAurPackage "libwacom-surface" "https://aur.archlinux.org/libwacom-surface.git"
 InstallAurPackage "nrclient2-free" "https://aur.archlinux.org/nrclient2-free.git"
 InstallAurPackage "nvm" "https://aur.archlinux.org/nvm.git"
 InstallAurPackage "polybar" "https://aur.archlinux.org/polybar.git"

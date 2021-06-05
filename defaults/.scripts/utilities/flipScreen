@@ -10,16 +10,14 @@ case "$rotation" in
     normal)
     # rotate to the left
     xrandr -o inverted
-    xsetwacom set "IPTS Stylus stylus" rotate half
-    xsetwacom set "IPTS Stylus eraser" rotate half
-    xsetwacom set "IPTS Touch touch" rotate half
+    xinput set-prop "IPTS Touch" "Coordinate Transformation Matrix" -1 0 1 0 -1 1 0 0 1
+    xinput set-prop "IPTS Stylus" "libinput Calibration Matrix" -1 0 1 0 -1 1 0 0 1
     ;;
     inverted)
     # rotate to the right
     xrandr -o normal
-    xsetwacom set "IPTS Stylus stylus" rotate none
-    xsetwacom set "IPTS Stylus eraser" rotate none
-    xsetwacom set "IPTS Touch touch" rotate none
+    xinput set-prop "IPTS Touch" "Coordinate Transformation Matrix" 1 0 0 0 1 0 0 0 1
+    xinput set-prop "IPTS Stylus" "libinput Transformation Matrix" 1 0 0 0 1 0 0 0 1
     ;;
 esac
 
