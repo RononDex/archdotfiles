@@ -14,7 +14,7 @@
   <property name="mainWndHeight" value="937"/>
   <property name="maximized" value="false"/>
   <property name="showSidebar" value="true"/>
-  <property name="sidebarWidth" value="166"/>
+  <property name="sidebarWidth" value="168"/>
   <property name="sidebarOnRight" value="false"/>
   <property name="scrollbarOnLeft" value="true"/>
   <property name="menubarVisible" value="true"/>
@@ -73,7 +73,7 @@
   <property name="strokeFilterEnabled" value="false"/>
   <property name="doActionOnStrokeFiltered" value="false"/>
   <property name="trySelectOnStrokeFiltered" value="false"/>
-  <property name="experimentalInputSystemEnabled" value="true"/>
+  <property name="experimentalInputSystemEnabled" value="false"/>
   <property name="inputSystemTPCButton" value="false"/>
   <property name="inputSystemDrawOutsideWindow" value="true"/>
   <property name="font" font="Sans" size="12.00000000"/>
@@ -194,11 +194,11 @@
       <attribute name="drawingType" type="string" value="default"/>
     </data>
     <data name="pen">
-      <attribute name="color" type="hex" value="3333cc"/>
+      <attribute name="color" type="hex" value="00ff00"/>
       <attribute name="drawingType" type="string" value="default"/>
       <attribute name="fill" type="int" value="0"/>
       <attribute name="fillAlpha" type="int" value="128"/>
-      <attribute name="size" type="string" value="MEDIUM"/>
+      <attribute name="size" type="string" value="BIG"/>
       <attribute name="style" type="string" value="plain"/>
     </data>
     <data name="playObject">
