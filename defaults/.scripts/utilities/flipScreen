@@ -11,7 +11,7 @@ case "$rotation" in
     # rotate to the left
     xrandr -o inverted
     xinput set-prop "IPTS Touch" "Coordinate Transformation Matrix" -1 0 1 0 -1 1 0 0 1
-    xinput set-prop "IPTS Stylus" "libinput Calibration Matrix" -1 0 1 0 -1 1 0 0 1
+    xinput set-prop "IPTS Stylus" "libinput Transformation Matrix" -1 0 1 0 -1 1 0 0 1
     ;;
     inverted)
     # rotate to the right
