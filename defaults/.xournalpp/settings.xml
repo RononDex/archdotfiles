@@ -4,8 +4,8 @@
   <property name="pressureSensitivity" value="true"/>
   <property name="zoomGesturesEnabled" value="true"/>
   <property name="selectedToolbar" value="Portrait"/>
-  <property name="lastSavePath" value="/home/cobra/Downloads"/>
-  <property name="lastOpenPath" value="/home/cobra/Downloads"/>
+  <property name="lastSavePath" value=""/>
+  <property name="lastOpenPath" value=""/>
   <property name="lastImagePath" value=""/>
   <property name="zoomStep" value="10.00000000"/>
   <property name="zoomStepScroll" value="2.00000000"/>
@@ -14,9 +14,9 @@
   <property name="mainWndHeight" value="937"/>
   <property name="maximized" value="false"/>
   <property name="showSidebar" value="true"/>
-  <property name="sidebarWidth" value="168"/>
+  <property name="sidebarWidth" value="166"/>
   <property name="sidebarOnRight" value="false"/>
-  <property name="scrollbarOnLeft" value="true"/>
+  <property name="scrollbarOnLeft" value="false"/>
   <property name="menubarVisible" value="true"/>
   <property name="numColumns" value="1"/>
   <property name="numRows" value="1"/>
@@ -53,7 +53,7 @@
   <property name="snapGridTolerance" value="0.25000000"/>
   <property name="touchWorkaround" value="false"/>
   <property name="selectionBorderColor" value="-65536"/>
-  <property name="backgroundColor" value="-8948101"/>
+  <property name="backgroundColor" value="-2303275"/>
   <property name="selectionMarkerColor" value="-9265201"/>
   <!--The count of rendered PDF pages which will be cached.-->
   <!--Config for new pages-->
@@ -73,15 +73,15 @@
   <property name="strokeFilterEnabled" value="false"/>
   <property name="doActionOnStrokeFiltered" value="false"/>
   <property name="trySelectOnStrokeFiltered" value="false"/>
-  <property name="experimentalInputSystemEnabled" value="false"/>
+  <property name="experimentalInputSystemEnabled" value="true"/>
   <property name="inputSystemTPCButton" value="false"/>
   <property name="inputSystemDrawOutsideWindow" value="true"/>
   <property name="font" font="Sans" size="12.00000000"/>
   <data name="buttonConfig">
     <data name="default">
-      <attribute name="color" type="hex" value="ffdeddda"/>
+      <attribute name="color" type="hex" value="fff6f5f4"/>
       <attribute name="drawingType" type="string" value="default"/>
-      <attribute name="size" type="string" value="medium"/>
+      <attribute name="size" type="string" value="thin"/>
       <attribute name="tool" type="string" value="pen"/>
     </data>
     <data name="eraser">
@@ -102,12 +102,9 @@
       <attribute name="tool" type="string" value="none"/>
     </data>
     <data name="touch">
-      <attribute name="color" type="hex" value="ff000000"/>
       <attribute name="device" type="string" value=""/>
       <attribute name="disableDrawing" type="boolean" value="false"/>
-      <attribute name="drawingType" type="string" value="default"/>
-      <attribute name="size" type="string" value="none"/>
-      <attribute name="tool" type="string" value="pen"/>
+      <attribute name="tool" type="string" value="none"/>
     </data>
   </data>
   <data name="deviceClasses">
@@ -119,35 +116,11 @@
       <attribute name="deviceClass" type="int" value="2"/>
       <attribute name="deviceSource" type="int" value="1"/>
     </data>
-    <data name="IPTS Stylus Virtual Stylus Eraser (0)">
-      <attribute name="deviceClass" type="int" value="3"/>
-      <attribute name="deviceSource" type="int" value="2"/>
-    </data>
-    <data name="IPTS Stylus Virtual Stylus Pen (0)">
-      <attribute name="deviceClass" type="int" value="2"/>
-      <attribute name="deviceSource" type="int" value="1"/>
-    </data>
-    <data name="IPTS Stylus eraser">
-      <attribute name="deviceClass" type="int" value="3"/>
-      <attribute name="deviceSource" type="int" value="2"/>
-    </data>
-    <data name="IPTS Stylus stylus">
-      <attribute name="deviceClass" type="int" value="2"/>
-      <attribute name="deviceSource" type="int" value="5"/>
-    </data>
     <data name="IPTS Touch">
       <attribute name="deviceClass" type="int" value="4"/>
       <attribute name="deviceSource" type="int" value="5"/>
     </data>
-    <data name="IPTS Touch touch">
-      <attribute name="deviceClass" type="int" value="4"/>
-      <attribute name="deviceSource" type="int" value="5"/>
-    </data>
     <data name="Microsoft Surface Keyboard">
-      <attribute name="deviceClass" type="int" value="1"/>
-      <attribute name="deviceSource" type="int" value="0"/>
-    </data>
-    <data name="Microsoft Surface Keyboard Consumer Control">
       <attribute name="deviceClass" type="int" value="1"/>
       <attribute name="deviceSource" type="int" value="0"/>
     </data>
@@ -160,7 +133,6 @@
       <attribute name="deviceSource" type="int" value="6"/>
     </data>
   </data>
-  <data name="lastUsedPageBgColor"/>
   <data name="tools">
     <attribute name="current" type="string" value="pen"/>
     <data name="drawArrow">
@@ -194,11 +166,11 @@
       <attribute name="drawingType" type="string" value="default"/>
     </data>
     <data name="pen">
-      <attribute name="color" type="hex" value="00ff00"/>
+      <attribute name="color" type="hex" value="fff6f5f4"/>
       <attribute name="drawingType" type="string" value="default"/>
       <attribute name="fill" type="int" value="0"/>
       <attribute name="fillAlpha" type="int" value="128"/>
-      <attribute name="size" type="string" value="BIG"/>
+      <attribute name="size" type="string" value="THIN"/>
       <attribute name="style" type="string" value="plain"/>
     </data>
     <data name="playObject">
