@@ -12,7 +12,6 @@ cp $scriptDir/overrides/polybar/constants ~/.config/polybar/constants
 sudo cp $scriptDir/overrides/xorg/10-monitor.conf /etc/X11/xorg.conf.d/10-monitor.conf
 sudo cp $scriptDir/overrides/xorg/20-keybord.conf /etc/X11/xorg.conf.d/20-keyboard.conf
 sudo cp $scriptDir/overrides/xorg/21-touchpad.conf /etc/X11/xorg.conf.d/21-touchpad.conf
-sudo cp $scriptDir/overrides/xorg/60-wacom.conf /etc/X11/xorg.conf.d/60-wacom.conf
 cp $scriptDir/overrides/.i3/workspaces/load-workspaces.sh ~/.i3/workspaces/load-workspaces.sh
 cp $scriptDir/overrides/.i3/workspaces/workspace-1.json ~/.i3/workspaces/workspace-1.json
 cp $scriptDir/overrides/.i3/scripts/launch-autostart.sh ~/.i3/scripts/launch-autostart.sh
@@ -63,6 +62,11 @@ InstallAurPackage "freerdp-git" "https://aur.archlinux.org/freerdp-git.git"
 InstallAurPackage "mutt-wizard-git" "https://aur.archlinux.org/mutt-wizard-git.git"
 InstallAurPackage "protonmail-bridge" "https://aur.archlinux.org/protonmail-bridge.git"
 InstallAurPackage "teams" "https://aur.archlinux.org/teams.git"
+
+echo "Installing florence virtual keyboard ..."
+InstallAurPackage "rarian" "https://aur.archlinux.org/rarian.git"
+InstallAurPackage "gnome-doc-utils" "https://aur.archlinux.org/gnome-doc-utils.git"
+InstallAurPackage "florence" "https://aur.archlinux.org/florence.git"
 
 echo "Installing screenkey"
 sudo pacman -Sy python2-setuptools --needed --noconfirm
