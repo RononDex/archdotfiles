@@ -38,7 +38,7 @@ font-5 = Material Icons:size=7.5:antialias=true;3
 font-6 = NotoEmoji Nerd Font Mono:size=8:antialias=true;3
 font-7 = Monospace:size=14;2
 font-8 = "NotoEmoji Nerd Font:style=Book:size=10"
-font-9 = "NotoEmoji Nerd Font Mono:size=10:antialias=true;3"
+font-9 = "Fira Code:size=10.5:antialias=true;7"
 
 [bar/bottom]
 inherit = section/base
@@ -413,3 +413,9 @@ type = custom/text
 content = ↻
 click-left = flipScreen
 content-font = 8
+
+[module/virtual-keyboard]
+type = custom/text
+content = ⌨
+click-left = florence
+content-font = 10

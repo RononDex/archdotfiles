@@ -167,6 +167,14 @@ bindsym $mod+r mode "resize"
 ######   Start custom config
 ###############################################
 
+# Layout
+smart_gaps on
+smart_borders on
+for_window [class="^.*"] border pixel 1
+default_floating_border pixel 1
+gaps inner 10
+gaps outer 4
+
 # Assigne apps to default worskpaces
 assign [class="^firefox$"] "2:web"
 assign [class="^Signal$"] "4:com"
@@ -175,6 +183,8 @@ assign [class="^Steam$"] "8:gaming"
 
 # Define layout for certain edge cases
 for_window [class="Florence"] floating enable
+for_window [class="Florence"] pixel 1
+for_window [class="Florence"] sticky enable
 
 # Lockscreen
 bindsym $mod+shift+a exec light-locker-command -l
@@ -192,14 +202,6 @@ bindsym $mod+shift+s exec flameshot gui
 # Backlight controls
 bindsym $mod+ctrl+Up exec light -A 5
 bindsym $mod+ctrl+Down exec light -U 5
-
-# Layout
-smart_gaps on
-smart_borders on
-for_window [class="^.*"] border pixel 1
-new_window pixel 1
-gaps inner 10
-gaps outer 4
 
 # Colors
 # class                 border  backgr. text    indicator child_border
