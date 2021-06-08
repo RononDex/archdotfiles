@@ -173,6 +173,9 @@ assign [class="^Signal$"] "4:com"
 assign [class="^TeamSpeak 3$"] "4:com"
 assign [class="^Steam$"] "8:gaming"
 
+# Define layout for certain edge cases
+for_window [class="Florence"] floating enable
+
 # Lockscreen
 bindsym $mod+shift+a exec light-locker-command -l
 
