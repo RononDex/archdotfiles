@@ -1,23 +1,26 @@
 [Align]
-AlignExposure=5
+AlignExposure=3
 AstrometryConfFile=*Internal astrometry.cfg*
 AstrometryDetectParity=true
-AstrometryImageScaleHigh=36.204
-AstrometryImageScaleLow=27.387
-AstrometryPositionDE=64.71916666666667
-AstrometryPositionRA=231.40833333333333
-AstrometrySolverBinary=/usr/local/astrinetry/bin/solve-field
+AstrometryImageScaleHigh=51.986322843131205
+AstrometryImageScaleLow=39.3247055527294
+AstrometryPositionDE=40.29194444444444
+AstrometryPositionRA=208.80833333333334
+AstrometrySolverBinary=/usr/local/astrometry/bin/solve-field
 AstrometrySolverType=1
 AstrometryWCSInfo=/usr/local/astrometry/bin/wcsinfo
 DefaultAlignFilterWheel=Atik EFW2
 PAHMountSpeedIndex=2
+PAHRefreshUpdateError=true
 SolverBinningIndex=1
 
 [Capture]
 CaptureDirectory=/data
 DefaultCaptureFilterWheel=--
 EnforceAutofocusOnTemperature=true
-GuidingSettle=10
+EnforceRefocusEveryN=true
+GuidingSettle=15
+MaxTemperatureDiff=2
 ResetMountModelAfterMeridian=true
 fileSettingsUseDuration=true
 fileSettingsUseFilter=true
@@ -80,22 +83,32 @@ Height 1440=425
 Width 2560=700
 
 [Ekos]
-EkosWindowHeight=985
+EkosWindowHeight=830
 EkosWindowWidth=985
 profile=G11 | QHY163
+
+[FITSViewer]
+useFITSViewer=false
 
 [Focus]
 DefaultFocusCCD=QHY CCD QHY163M-7c64ca4
 DefaultFocusFilterWheel=Atik EFW2
 FocusAutoStarEnabled=true
-FocusFramesCount=3
+FocusFramesCount=2
+FocusGain=100
 FocusGaussianKernelSize=3
 FocusMaxSingleStep=500
+FocusMaxTravel=3000
 FocusSubFrame=false
+FocusTicks=200
+FocusTolerance=3
+FocusUseFullField=true
+GuideSettleTime=0.5
+InitialFocusOutSteps=3
 
 [GUI]
-PositionFocusBox=490,0
-PositionGeoBox=0,830
+PositionFocusBox=486,0
+PositionGeoBox=0,828
 RunStartupWizard=false
 WindowHeight=934
 WindowWidth=740
@@ -110,7 +123,11 @@ VerboseLogging=true
 DECProportionalGain=133.3
 DitherEnabled=true
 DitherFrames=2
+DitherPixels=8
+DitherSettle=15
 GuideAutoStarEnabled=true
+GuideExposure=3
+GuideMaxDeltaRMS=3
 GuideSubframeEnabled=true
 GuiderType=1
 RAProportionalGain=133.3
@@ -120,8 +137,8 @@ CityName=GPS Location
 CountryName=
 DST=EU
 Elevation=439
-Latitude=47.19759
-Longitude=7.591858333
+Latitude=47.197618333
+Longitude=7.591848333
 TimeZone=1
 
 [MainWindow]
@@ -143,15 +160,19 @@ Width 1500=740
 Width 1920=1024
 Width 2560=740
 
+[Mount]
+MeridianFlipOffset=0.3333333333333333
+
 [Scheduler]
-DawnOffset=0.5
-DuskOffset=-0.5
+DawnOffset=0.25
+DuskOffset=-0.25
 LeadTime=2
 PreDawnTime=0
-RememberJobProgress=false
 
 [StellarSolver]
 AstrometryIndexFolderList=/home/cobra/.local/share/kstars/astrometry,/home/cobra/AstrometryIndexes
+SolveOptionsProfile=0
+SolveSextractorType=2
 SolverType=1
 
 [TipOfDay]
@@ -160,11 +181,12 @@ RunOnStart=false
 [View]
 AutoSelectGrid=false
 FOVNames=
-FocusDec=59.229404409495906
-FocusRA=14.075362221925893
+FocusDec=-2.5005803452676068
+FocusObject=NGC 4079
+FocusRA=12.098641576093254
+IsTracking=true
 ShowEquatorialGrid=true
 ShowHorizontalGrid=true
-ZoomFactor=746.4959999999999
 
 [Xplanet]
 XplanetBackgroundColorValue=#000000
