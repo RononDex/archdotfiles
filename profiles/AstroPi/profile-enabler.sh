@@ -17,7 +17,7 @@ sudo cp $scriptDir/overrides/lightdm-webkit2-greeter.conf /etc/lightdm/lightdm-w
 sudo cp $scriptDir/overrides/xrdp/startwm.sh /etc/xrdp/startwm.sh
 sudo cp $scriptDir/overrides/samba/smb.conf /etc/samba/smb.conf
 sudo cp $scriptDir/overrides/modules/pps.conf /etc/modules-load.d/pps.conf
-sudo cp $scriptDir/overrides/udev/99-gps.conf /etc/udev/rules/99-gps.rules
+sudo cp $scriptDir/overrides/udev/99-gps.conf /etc/udev/rules.d/99-gps.rules
 sudo udevadm trigger 
 mkdir -p ~/.local/share/kstars/astrometry
 cp $scriptDir/overrides/kstars/astrometry.cfg ~/.local/share/kstars/astrometry/astrometry.cfg
