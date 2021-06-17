@@ -22,6 +22,8 @@ chmod +x ~/.i3/scripts/set-background.sh
 chmod -R +x ~/.scripts
 chmod 700 ~/.gnupg -R
 
+cp ~/Nextcloud/Wallpapers/* -r ~/wallpapers/
+
 isArm=$false
 echo "Configuring pacman ..."
 architecture=$(uname -m | grep "arm")
