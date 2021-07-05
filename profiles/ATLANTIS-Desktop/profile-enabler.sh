@@ -48,15 +48,12 @@ InstallAurPackage "protontricks" "https://aur.archlinux.org/protontricks.git"
 InstallAurPackage "bitwarden" "https://aur.archlinux.org/bitwarden.git"
 InstallAurPackage "visual-studio-code-bin" "https://aur.archlinux.org/visual-studio-code-bin.git"
 InstallAurPackage "ckb-next" "https://aur.archlinux.org/ckb-next.git"
-InstallAurPackage "openhmd-git" "https://aur.archlinux.org/openhmd-git.git"
-InstallAurPackage "SteamVR-OpenHMD" "https://github.com/ChristophHaag/SteamVR-OpenHMD"
 InstallAurPackage "vdf" "https://github.com/ValvePython/vdf"
 InstallAurPackage "openh264-git" "https://aur.archlinux.org/openh264-git.git"
 InstallAurPackage "mutt-wizard-git" "https://aur.archlinux.org/mutt-wizard-git.git"
 InstallAurPackage "protonmail-bridge" "https://aur.archlinux.org/protonmail-bridge.git"
 InstallAurPackage "teams" "https://aur.archlinux.org/teams.git"
 InstallAurPackage "tmpmail-git" "https://aur.archlinux.org/tmpmail-git.git"
-MakePackage "SteamVR-OpenHMD"
 InstallDigitecSpecificStuffForVpnRdp
 
 echo "Setting up ledger nano"
@@ -67,30 +64,6 @@ echo "Installing screenkey"
 sudo pacman -Sy python2-setuptools --needed --noconfirm
 InstallAurPackage "python2-distutils-extra" "https://aur.archlinux.org/python2-distutils-extra.git"
 InstallAurPackage "screenkey" "https://aur.archlinux.org/screenkey.git"
-
-# Setup Oculus HMD steam vr driver
-ln -s /usr/lib/steamvr/openhmd ~/.steam/steam/steamapps/common/SteamVR/drivers/openhmd
-
-
-gpg --recv-key A87FF9DF48BF1C90
-sudo gpg --recv-key 4773BD5E130D1D45
-InstallAurPackage "spotify" "https://aur.archlinux.org/spotify.git"
-
-echo "installing astro stuff..."
-InstallAurPackage "libhdf5" "https://aur-dev.archlinux.org/libhdf5.git"
-
-CloneOrUpdateGitRepoToPackages "indi" "https://github.com/indilib/indi"
-MakePackage "indi"
-InstallAurPackage "erfa" "https://aur.archlinux.org/erfa.git"
-CloneOrUpdateGitRepoToPackages "indi-3rdparty" "--depth=1 https://github.com/indilib/indi-3rdparty"
-InstallIndiDriver "indi-gphoto"
-InstallIndiDriver "libasi"
-InstallIndiDriver "indi-asi"
-InstallAurPackage "python-astropy" "https://aur.archlinux.org/python-astropy.git"
-InstallAurPackage "wcslib62" "https://aur.archlinux.org/wcslib62.git"
-InstallAurPackage "astrometry.net" "https://aur.archlinux.org/astrometry.net.git"
-CloneOrUpdateGitRepoToPackages "phd2" "https://github.com/OpenPHDGuiding/phd2.git"
-InstallPHD2
 
 echo "Enabling services ..."
 sudo systemctl enable lightdm.service

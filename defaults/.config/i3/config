@@ -203,6 +203,9 @@ bindsym $mod+shift+s exec flameshot gui
 bindsym $mod+ctrl+Up exec light -A 5
 bindsym $mod+ctrl+Down exec light -U 5
 
+# Open Todo List
+bindsym $mod+F2 exec xfce4-terminal --command="nvim /home/cobra/Nextcloud/Documents/todo"
+
 # Colors
 # class                 border  backgr. text    indicator child_border
 client.focused          #ff9900 #285577 #ffffff #2e9ef4   #ff9900
