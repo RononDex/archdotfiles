@@ -91,7 +91,7 @@ else
 fi
 
 echo "Setting up shares ..."
-SetupAutofsForSmbShare "ATLANTIS-SRV" "Documents" "://10.0.0.2/Documents" "Downloads" "://10.0.0.2/Downloads" "Software" "://10.0.0.2/Software" "Astrophotography" "://10.0.0.2/Astrophotography" "Backup" "://10.0.0.2/Backup"
+SetupAutofsForSmbShare "ATLANTIS-SRV" "Documents" "://10.142.0.1/Documents" "Downloads" "://10.142.0.1/Downloads" "Software" "://10.142.0.1/Software" "Astrophotography" "://10.142.0.1/Astrophotography" "Backup" "://10.142.0.1/Backup"
 SetupAutofsForSmbShare "ATLANTIS-ASTRO-PI1" "data" "://10.42.0.1/data"
 
 echo "Setting up astronomy stuff .."
